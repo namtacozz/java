@@ -87,23 +87,13 @@
       white-space: nowrap;
     }
 
-    /* Container: Full view across web, eliminating empty side gaps */
+    /* Container: Full view across web, consistent width across all questions */
     .test-container {
       width: min(1520px, 94vw);
       max-width: 100%;
       margin: auto;
       padding: 16px 0 65px;
       box-sizing: border-box;
-    }
-
-    @media (min-width: 961px) {
-      .test-container:not(.has-media-layout) {
-        width: min(1060px, 94vw);
-      }
-      .test-container:not(.has-media-layout) .question-grid-layout {
-        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-        align-items: start;
-      }
     }
 
     @keyframes cardTransitionIn {
