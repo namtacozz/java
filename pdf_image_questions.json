@@ -1,0 +1,1046 @@
+[
+  {
+    "page": 3,
+    "doc_idx": 2,
+    "img_xref": 19,
+    "img_size": [
+      477,
+      384
+    ],
+    "option_texts": [
+      "parent method",
+      "TestExceptionChild",
+      "Compile Time Error",
+      "Runtime Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 6,
+    "doc_idx": 5,
+    "img_xref": 27,
+    "img_size": [
+      521,
+      258
+    ],
+    "option_texts": [
+      "static block is invoked",
+      "Runtime error",
+      "Compile error",
+      "Border Layout",
+      "Card Layout",
+      "FlowLayout",
+      "Grid Layout",
+      "Layout mặc định của panel là gì ?"
+    ],
+    "bullet_count": 7,
+    "correct_letters": [
+      "B",
+      "F"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 8,
+    "doc_idx": 7,
+    "img_xref": 32,
+    "img_size": [
+      438,
+      440
+    ],
+    "option_texts": [
+      "a. 99 99 101",
+      "b. 99 100 101",
+      "c. 98 99 101",
+      "d. 99 100 102",
+      "e. 99 100 100"
+    ],
+    "bullet_count": 5,
+    "correct_letters": [
+      "D"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 11,
+    "doc_idx": 10,
+    "img_xref": 39,
+    "img_size": [
+      484,
+      311
+    ],
+    "option_texts": [
+      "70",
+      "Compile Time Error",
+      "NORTH, EAST, SOUTH, WEST, CENTER",
+      "NORTH, EAST, SOUTH, WEST, MIDDLE",
+      "UPPER, BOTTOM, MIDDLE, LEFT, RIGHT",
+      "BorderLayout có các vùng nào"
+    ],
+    "bullet_count": 5,
+    "correct_letters": [
+      "A",
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 14,
+    "doc_idx": 13,
+    "img_xref": 46,
+    "img_size": [
+      740,
+      441
+    ],
+    "option_texts": [
+      "common task completed rest of the code...",
+      "task1 is completed rest of the code",
+      "Compile Time Error"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 16,
+    "doc_idx": 15,
+    "img_xref": 51,
+    "img_size": [
+      451,
+      638
+    ],
+    "option_texts": [
+      "eating barking meowing",
+      "eating barking",
+      "meowing eating barking",
+      "Compile Time Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "D"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 17,
+    "doc_idx": 16,
+    "img_xref": 54,
+    "img_size": [
+      466,
+      274
+    ],
+    "option_texts": [
+      "A. 257",
+      "B. 100257",
+      "C. The code will not compile",
+      "D. Another value",
+      "A. everything",
+      "B. universal",
+      "D. life",
+      "C. null",
+      "What will be the output of the following program?",
+      "What will be the output (s) of the following code?\nint i = 42;\nString s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\");"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "A",
+      "E"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 19,
+    "doc_idx": 18,
+    "img_xref": 59,
+    "img_size": [
+      578,
+      695
+    ],
+    "option_texts": [
+      "1 ankit 45000",
+      "1 ankit 0",
+      "Compile Time Error"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [],
+    "first_line": "0/1"
+  },
+  {
+    "page": 20,
+    "doc_idx": 19,
+    "img_xref": 65,
+    "img_size": [
+      423,
+      319
+    ],
+    "option_texts": [
+      "Compile Time Error",
+      "A. 22",
+      "B. 21",
+      "C. 23",
+      "D. 33",
+      "What will be the output of the following program?"
+    ],
+    "bullet_count": 5,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "Compile Time Error"
+  },
+  {
+    "page": 21,
+    "doc_idx": 20,
+    "img_xref": 68,
+    "img_size": [
+      452,
+      176
+    ],
+    "option_texts": [
+      "11",
+      "12",
+      "10",
+      "9"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 22,
+    "doc_idx": 21,
+    "img_xref": 71,
+    "img_size": [
+      660,
+      383
+    ],
+    "option_texts": [
+      "40 60",
+      "Compile Time Error ( wrong type parameter)",
+      "Compile Time Error ( wrong return type)",
+      "Compile Time Error (no visibility mode)"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 23,
+    "doc_idx": 22,
+    "img_xref": 74,
+    "img_size": [
+      625,
+      477
+    ],
+    "option_texts": [
+      "1 1 2 2 3 3 4 4",
+      "1 2 3 4 1 2 3 4",
+      "1 2 3 4 5 1 2 3 4 5",
+      "1 1 2 2 3 3 4 4 5 5"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 26,
+    "doc_idx": 25,
+    "img_xref": 82,
+    "img_size": [
+      431,
+      190
+    ],
+    "option_texts": [
+      "true",
+      "false",
+      "A. B",
+      "B. hello",
+      "C. you",
+      "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\"",
+      "Đoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng\nlệnh như sau:",
+      "C:\\> java B hello you"
+    ],
+    "bullet_count": 6,
+    "correct_letters": [
+      "B",
+      "F"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 27,
+    "doc_idx": 26,
+    "img_xref": 86,
+    "img_size": [
+      687,
+      277
+    ],
+    "option_texts": [
+      "notify()",
+      "notifyAll()",
+      "resume()",
+      "wake()",
+      "running...",
+      "running... running...",
+      "Exception in thread \"main\" java.lang.IllegalThreadStateException",
+      "infinite running...",
+      "Nếu một luồng bị chặn lại bởi lời gọi hàm suspend(),  muốn thực hiện thì\ntrước đó phải gọi hàm"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "C",
+      "G"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 28,
+    "doc_idx": 27,
+    "img_xref": 89,
+    "img_size": [
+      463,
+      340
+    ],
+    "option_texts": [
+      "Lớp System.out.",
+      "Lớp System.console",
+      "Lớp System.in.",
+      "Lớp System.err.",
+      "Lớp System.stream",
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error",
+      "Lớp nào là lớp luồng I/O?"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "A",
+      "C",
+      "D",
+      "G"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 30,
+    "doc_idx": 29,
+    "img_xref": 94,
+    "img_size": [
+      691,
+      295
+    ],
+    "option_texts": [
+      "int",
+      "long",
+      "Compile Time Error",
+      "peek()",
+      "seek()",
+      "getFilePointer( )",
+      "find()",
+      "length()",
+      "Phương thức nào sau đây thuộc về lớp RandomAccessFile?"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "A",
+      "E",
+      "F",
+      "H"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 32,
+    "doc_idx": 31,
+    "img_xref": 99,
+    "img_size": [
+      661,
+      334
+    ],
+    "option_texts": [
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error",
+      "A. boolean a = (boolean) 1;",
+      "B. boolean b = (false && true);",
+      "C. float y =22.3;",
+      "D. Tất cả đều đúng",
+      "Biểu thức nào sau đây không gây ra lỗi?"
+    ],
+    "bullet_count": 7,
+    "correct_letters": [
+      "C",
+      "E"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 33,
+    "doc_idx": 32,
+    "img_xref": 102,
+    "img_size": [
+      462,
+      334
+    ],
+    "option_texts": [
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error",
+      "Thread()",
+      "Thread(String name)",
+      "Thread(Runnable r)",
+      "Thread(Runnable r,String name)",
+      "Thread(String name, Runnable r)",
+      "Các constructor thường được sử dụng của lớp Thread"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "B",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 35,
+    "doc_idx": 34,
+    "img_xref": 107,
+    "img_size": [
+      579,
+      413
+    ],
+    "option_texts": [
+      "ok downcasting performed",
+      "Compile Time Error",
+      "ClassCastException is thrown at runtime"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 37,
+    "doc_idx": 36,
+    "img_xref": 112,
+    "img_size": [
+      528,
+      412
+    ],
+    "option_texts": [
+      "Compile Time Error",
+      "nice fruits",
+      "Runtime Error"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 38,
+    "doc_idx": 37,
+    "img_xref": 115,
+    "img_size": [
+      738,
+      694
+    ],
+    "option_texts": [
+      "111 ankit java 0.0 112 sumit java 6000.0",
+      "111 ankit java 6000.0 112 sumit java 0.0",
+      "111 ankit java 6000.0 112 sumit java 6000.0",
+      "Compile Time Error",
+      "Compile Time Error"
+    ],
+    "bullet_count": 5,
+    "correct_letters": [],
+    "first_line": "0/1"
+  },
+  {
+    "page": 39,
+    "doc_idx": 38,
+    "img_xref": 118,
+    "img_size": [
+      690,
+      470
+    ],
+    "option_texts": [
+      "FlowLayout exLayout = new FlowLayout(FlowLayout.RIGHT);",
+      "FlowLayout mylayout = new Layout(new FlowLayout());",
+      "FlowLayout mylayout = new FlowLayout();",
+      "FlowLayout mylayout = new FlowLayout(new FlowLayout.RIGHT());",
+      "1 1 2 2 3 3 4 4",
+      "1 2 3 4 1 2 3 4",
+      "1 2 3 4 5 1 2 3 4 5",
+      "1 1 2 2 3 3 4 4 5 5",
+      "Các constructor của FlowLayout"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "A",
+      "C",
+      "E"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 40,
+    "doc_idx": 39,
+    "img_xref": 121,
+    "img_size": [
+      501,
+      267
+    ],
+    "option_texts": [
+      "Hello main",
+      "static block is invoked",
+      "static block is invoked Hello main",
+      "Compile Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 42,
+    "doc_idx": 41,
+    "img_xref": 126,
+    "img_size": [
+      659,
+      556
+    ],
+    "option_texts": [
+      "1 1 1",
+      "3 3 3",
+      "0 0 0",
+      "1 2 3"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 43,
+    "doc_idx": 42,
+    "img_xref": 129,
+    "img_size": [
+      431,
+      249
+    ],
+    "option_texts": [
+      "11",
+      "0",
+      "10",
+      "5",
+      "A. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi",
+      "B. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình",
+      "C. Chương trình không biên dịch và xuất ra lỗi",
+      "D. Tất cả đều sai",
+      "Lệnh System.out.println(\"CNTT\"); được thực hiện mấy lần",
+      "Khẳng định nào đúng với đoạn mã sau?\npublic class A{\npublic static void main(String s[]) {\nint i; \nSystem.out.print(\"i=\"+i); i=25;\n}\n}"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "B",
+      "G"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 45,
+    "doc_idx": 44,
+    "img_xref": 135,
+    "img_size": [
+      440,
+      381
+    ],
+    "option_texts": [
+      "constructor block constructor block",
+      "block constructor block constructor",
+      "constructor constructor block block",
+      "block block constructor constructor"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 46,
+    "doc_idx": 45,
+    "img_xref": 138,
+    "img_size": [
+      449,
+      495
+    ],
+    "option_texts": [
+      "block parent child",
+      "parent child block",
+      "parent block child"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 48,
+    "doc_idx": 47,
+    "img_xref": 143,
+    "img_size": [
+      486,
+      430
+    ],
+    "option_texts": [
+      "animal is eating",
+      "dog is eating",
+      "Compile Time Error"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 49,
+    "doc_idx": 48,
+    "img_xref": 146,
+    "img_size": [
+      422,
+      320
+    ],
+    "option_texts": [
+      "A. a=3,a=3",
+      "B. a=3,a=6",
+      "C. a=3,a=7",
+      "D. Another value",
+      "What will be the output of the following program?"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 50,
+    "doc_idx": 49,
+    "img_xref": 149,
+    "img_size": [
+      427,
+      421
+    ],
+    "option_texts": [
+      "hello a 10",
+      "hello a 0",
+      "0",
+      "Compile error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 51,
+    "doc_idx": 50,
+    "img_xref": 152,
+    "img_size": [
+      584,
+      664
+    ],
+    "option_texts": [
+      "111 ankit 5000.0 112 sumit 6000.0",
+      "111 ankit 5000 112 sumit 6000",
+      "0 null 0.0 0 null 0.0",
+      "Compile Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 52,
+    "doc_idx": 51,
+    "img_xref": 155,
+    "img_size": [
+      494,
+      213
+    ],
+    "option_texts": [
+      "Button",
+      "List",
+      "TextField",
+      "Choice",
+      "CheckBox",
+      "CheckboxMenuItem",
+      "A. true false true false",
+      "B. true true false true",
+      "C. false true false true",
+      "D. false false true true",
+      "Các nguồn gây ra sự kiện của ItemEvent là",
+      "What will be the output of the following program?"
+    ],
+    "bullet_count": 10,
+    "correct_letters": [
+      "B",
+      "D",
+      "E",
+      "F",
+      "H"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 54,
+    "doc_idx": 53,
+    "img_xref": 160,
+    "img_size": [
+      475,
+      242
+    ],
+    "option_texts": [
+      "Kết quả khác",
+      "1 1 4",
+      "1 1 5",
+      "1 3 5"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 55,
+    "doc_idx": 54,
+    "img_xref": 163,
+    "img_size": [
+      694,
+      548
+    ],
+    "option_texts": [
+      "1 1 1",
+      "3 3 3",
+      "1 2 3",
+      "Another answer"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "C"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 57,
+    "doc_idx": 56,
+    "img_xref": 168,
+    "img_size": [
+      498,
+      201
+    ],
+    "option_texts": [
+      "A. u=11,v=14",
+      "B. u=14,v=11",
+      "C. u=12,v=14",
+      "D. u=14,v=12",
+      "What will be the output of the following program? (u,v=?)"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 58,
+    "doc_idx": 57,
+    "img_xref": 171,
+    "img_size": [
+      456,
+      260
+    ],
+    "option_texts": [
+      "true true true 0",
+      "true false true 0",
+      "false false true 0",
+      "true false false 0",
+      "A. public interface A{ int a(); }",
+      "B. interface C{ int a; }",
+      "C. private interface D{}",
+      "D. abstract interface E{}",
+      "Câu nào định nghĩa interface đúng cách?"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "B",
+      "E"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 59,
+    "doc_idx": 58,
+    "img_xref": 174,
+    "img_size": [
+      460,
+      367
+    ],
+    "option_texts": [
+      "22",
+      "22.0",
+      "Compile Time Error"
+    ],
+    "bullet_count": 3,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 60,
+    "doc_idx": 59,
+    "img_xref": 177,
+    "img_size": [
+      484,
+      396
+    ],
+    "option_texts": [
+      "22 33",
+      "33 22",
+      "0 0",
+      "Compile Time Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 61,
+    "doc_idx": 60,
+    "img_xref": 180,
+    "img_size": [
+      404,
+      634
+    ],
+    "option_texts": [
+      "parent method",
+      "child method",
+      "Compile Time Error",
+      "Runtime Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 62,
+    "doc_idx": 61,
+    "img_xref": 183,
+    "img_size": [
+      425,
+      292
+    ],
+    "option_texts": [
+      "A. Chương trình sẽ biên dịch chính xác",
+      "B. Chương trình sẽ không biên dịch được vì không có catch",
+      "C. Chương trình sẽ không biên dịch được vì không có catch hoặc finally",
+      "D. Chương trình sẽ không biên dịch được vì không có finally",
+      "150",
+      "90",
+      "Compile Time Error",
+      "class Myprogram{\n     public static void main(String args[]){\n           try{ System.out.println(\"Hello\");}\n      }\n  }"
+    ],
+    "bullet_count": 7,
+    "correct_letters": [
+      "C",
+      "F"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 66,
+    "doc_idx": 65,
+    "img_xref": 192,
+    "img_size": [
+      490,
+      264
+    ],
+    "option_texts": [
+      "main with String[]",
+      "main with String",
+      "main without args",
+      "Compile Time Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 67,
+    "doc_idx": 66,
+    "img_xref": 195,
+    "img_size": [
+      433,
+      270
+    ],
+    "option_texts": [
+      "running",
+      "Compile Time Error (final cant be inherited)"
+    ],
+    "bullet_count": 2,
+    "correct_letters": [
+      "A"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 68,
+    "doc_idx": 67,
+    "img_xref": 198,
+    "img_size": [
+      526,
+      298
+    ],
+    "option_texts": [
+      "Print nothing",
+      "method is invoked",
+      "Compile error",
+      "Runtime error",
+      "public static void main (String args) {}",
+      "public static void main (String args[]) {}",
+      "public static void main (String[] args){}",
+      "public static void main (String[] b){}",
+      "Chọn đáp án đúng ?"
+    ],
+    "bullet_count": 8,
+    "correct_letters": [
+      "B",
+      "F",
+      "G",
+      "H"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 70,
+    "doc_idx": 69,
+    "img_xref": 203,
+    "img_size": [
+      440,
+      465
+    ],
+    "option_texts": [
+      "Hello Welcome",
+      "Hello",
+      "Welcome",
+      "Compile Time Error"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "D"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 72,
+    "doc_idx": 71,
+    "img_xref": 208,
+    "img_size": [
+      478,
+      171
+    ],
+    "option_texts": [
+      "static void main (String args[]){}",
+      "public static void main(String args[]) {}",
+      "public void main (String args[]){}",
+      "public static void main(String a[]) {}",
+      "true",
+      "False",
+      "notify()",
+      "notifyAll()",
+      "resume()",
+      "wake()",
+      "Chọn đáp án sai ?",
+      "Nếu một luồng bị chặn lại bởi lời gọi hàm wait(),  muốn tiếp tục thì phải\ngọi hàm"
+    ],
+    "bullet_count": 10,
+    "correct_letters": [
+      "A",
+      "C",
+      "E",
+      "G",
+      "H"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 76,
+    "doc_idx": 75,
+    "img_xref": 218,
+    "img_size": [
+      324,
+      185
+    ],
+    "option_texts": [
+      "m = 6",
+      "m = 12",
+      "Kết quả khác",
+      "m = 3"
+    ],
+    "bullet_count": 4,
+    "correct_letters": [
+      "D"
+    ],
+    "first_line": "1/1"
+  },
+  {
+    "page": 77,
+    "doc_idx": 76,
+    "img_xref": 221,
+    "img_size": [
+      740,
+      983
+    ],
+    "option_texts": [
+      "5 100 200 10 300 15 400 20 25 500",
+      "5 10 15 20 25 100 200 300 400 500"
+    ],
+    "bullet_count": 2,
+    "correct_letters": [
+      "B"
+    ],
+    "first_line": "1/1"
+  }
+]

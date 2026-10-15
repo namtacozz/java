@@ -1,0 +1,1766 @@
+[
+  {
+    "index": 0,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihTKi4uTBUlFx8PHy3EoRcbLTyrhIH7-mzYgPaoKcXn6rIeVyUX2ycjYGcd424rgNhV8-yoG1ctPhYDjeluUvuTUtiUhj_ehAyPCztiAfoSmgrQi05O0ZRGzvpkc8j1ilIRm0wCvmj-4gYm74-Iu2kHCwux6zXqmgkNl1iRJLm2j0ujpfdddGDmXbkDAxwwJwGlShSWug0DK5aGmlvlZIlkwCb4JDtnoqCTg8c=w691",
+    "options": [
+      "int",
+      "long",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "int"
+    ]
+  },
+  {
+    "index": 1,
+    "title": "class A{ int a=40; public static void main(String args[]){    System.out.println(a);   } }",
+    "image": null,
+    "options": [
+      "40",
+      "0",
+      "Compile Error"
+    ],
+    "correct": [
+      "Compile Error"
+    ]
+  },
+  {
+    "index": 2,
+    "title": "When a subclass method have the same name, parameter list, and return type as a method in the parent class, this method is said to be what?",
+    "image": null,
+    "options": [
+      "A. Extended",
+      "B. Overloaded",
+      "C. Overextended",
+      "D. Overridden"
+    ],
+    "correct": [
+      "D. Overridden"
+    ]
+  },
+  {
+    "index": 3,
+    "title": "Đâu là bộ từ khoá của java (slide 44)",
+    "image": null,
+    "options": [
+      "static, short , sleep, join",
+      "abstract, boolean, transient, volatile",
+      "thrown, finally, document, new",
+      "string, integer,  char, catch"
+    ],
+    "correct": [
+      "abstract, boolean, transient, volatile"
+    ]
+  },
+  {
+    "index": 4,
+    "title": "Chương trình dịch Java thực hiện theo các bước nào? (slide 29)",
+    "image": null,
+    "options": [
+      "Java codes -> interpreter -> bytecode -> run",
+      "Java codes -> compile -> run",
+      "Java codes  -> compiler -> bytecode -> interpreter",
+      "Java codes -> run directly"
+    ],
+    "correct": [
+      "Java codes  -> compiler -> bytecode -> interpreter"
+    ]
+  },
+  {
+    "index": 5,
+    "title": "Unhandled checked exceptions:",
+    "image": null,
+    "options": [
+      "A. Terminate the application",
+      "B. Are ignored at runtime",
+      "C. Cause the program to not compile",
+      "D. Are handled automatically by the JVM"
+    ],
+    "correct": [
+      "C. Cause the program to not compile"
+    ]
+  },
+  {
+    "index": 6,
+    "title": "Các nguồn gây ra sự kiện của ActionEvent là",
+    "image": null,
+    "options": [
+      "Button",
+      "List",
+      "TextField",
+      "Choice",
+      "CheckBox",
+      "MenuItem"
+    ],
+    "correct": [
+      "Button",
+      "List",
+      "TextField",
+      "MenuItem"
+    ]
+  },
+  {
+    "index": 7,
+    "title": "When two or more methods in the same class have the same name, they are said to be what?",
+    "image": null,
+    "options": [
+      "A. an implementation detail",
+      "B. overriden",
+      "C. an interface",
+      "D. overloaded"
+    ],
+    "correct": [
+      "D. overloaded"
+    ]
+  },
+  {
+    "index": 8,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkiiLwnuHE5XIRDr8GahSfYCm1isaJbXKoTat50QchnMn3K3MHn_qxP7IQa4dsuGZkg0x9PlU1pJ5mqtpdQb8JoMC3v6pfgJwqOaKtOTyl6SSUOQDHWx693BCrOPDrkSBqjCE3vRK1CWRATyWCfKopz_o_10yL5HP7lp-0RVG9QnlU8OoPnuhARMlaI6ryowBZqo_1UmbWm1xUuz3rvPgk2gTeoxR1oEQgaLj=w438",
+    "options": [
+      "a. 99 99 101",
+      "b. 99 100 101",
+      "c. 98 99 101",
+      "d. 99 100 102",
+      "e. 99 100 100"
+    ],
+    "correct": [
+      "d. 99 100 102"
+    ]
+  },
+  {
+    "index": 9,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkii3Ons_7lY4AhT7GLdaWN2gtRbMFUhegx2OH46TlO1DYQdtTvhyYeFtpWcRTKSjuzUNd4T7gPJh3G-ghyivzTbMePM_U-ss06KOMGGL-JdUliXLD0MEHmAyyIgJC0zgdIpyMfy1PasXseyevwmkvpkMuHUGmFp6r-uPqhG38CJcYrGnXgwSs2SkAAzJWdmqjxkMnb84Xx9YMoqjluqPOYRRkhz1Q-IEOF-1=w521",
+    "options": [
+      "static block is invoked",
+      "Runtime error",
+      "Compile error"
+    ],
+    "correct": [
+      "Runtime error"
+    ]
+  },
+  {
+    "index": 10,
+    "title": "What will be the output of the following program?",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihAT38VAs0iB-M3xRQLmeyHTsofISdLAoyGdZ_DiEe9VWQ3jZ9iUwma15RE3-tAQxWXt5GEGFKJKUIwSkvXwZXl-H_oa3V3xaESQwCAauWr2lQ4jlhxk0C2sE12f2JP8O9ykgpAsGX8_ElKhONErgH0KFGq2Q3esXzYSV01KOldSdxPKdP6_j38Uzdgxx1OcGy_xJAVi7su_b4JnJ0adkJmqHHNdJyHk758iUk=w494",
+    "options": [
+      "A. true false true false",
+      "B. true true false true",
+      "C. false true false true",
+      "D. false false true true"
+    ],
+    "correct": [
+      "B. true true false true"
+    ]
+  },
+  {
+    "index": 11,
+    "title": "Lớp nào là lớp luồng I/O?",
+    "image": null,
+    "options": [
+      "Lớp System.out.",
+      "Lớp System.console",
+      "Lớp System.in.",
+      "Lớp System.err.",
+      "Lớp System.stream"
+    ],
+    "correct": [
+      "Lớp System.out.",
+      "Lớp System.in.",
+      "Lớp System.err."
+    ]
+  },
+  {
+    "index": 12,
+    "title": "What will be the output of the following program? int a=10; do{ System.out.print(a%2); a/=2; }while(a!=0);",
+    "image": null,
+    "options": [
+      "A. 0101",
+      "B. 1011",
+      "C. 1010",
+      "D. Another answer"
+    ],
+    "correct": [
+      "A. 0101"
+    ]
+  },
+  {
+    "index": 13,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkiiEkel163273sEGOtqGCJ6UZEQYzmxXLBsMtcl0sbbjh14xK1DVLwaiRZK-Ji4H5aY1qtt73l3bTnq1cTkKlVooCxb9Ss1EQJjNrh01nSL7kRQY1VXXHbNDpmo-pxBaNox6sVOkc0YfZ7aVFRDj8VzldJb6nGtBTuKuIRSObuLRwQASrfXY5WqM39BSVuTC4BG8Mx30j6kDrYxZSeztQUymFLS6eBZVvDQ0=w324",
+    "options": [
+      "m = 6",
+      "m = 12",
+      "Kết quả khác",
+      "m = 3"
+    ],
+    "correct": [
+      "m = 3"
+    ]
+  },
+  {
+    "index": 14,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkii7rkXk_Lo_3vwMm6_WlEhRD-_df9h4v1tuiaTYcWjBNxl0STfiK6LIFskFuW7xXsk-tZCc0nxnj22yJP-wipdgpSE34wTvpHvi5MKxRsc_QrZ4yL20QSwe2tGLs4lgjDfC2ev7xaswrF8ZZhOdobX5oYTIsdZK_Z0Bov90PXI1CT-euQmgam1i3oTolwDji8GycjlLrGFc-IZ4w8CWXBWhWhZNkz-QRy0g=w486",
+    "options": [
+      "animal is eating",
+      "dog is eating",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "dog is eating"
+    ]
+  },
+  {
+    "index": 15,
+    "title": "Có bao nhiêu loại JDBC Driver",
+    "image": null,
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": [
+      "4"
+    ]
+  },
+  {
+    "index": 16,
+    "title": "Unhandled unchecked exceptions:",
+    "image": null,
+    "options": [
+      "A. Terminate the application",
+      "B. Are ignored at runtime",
+      "C. Cause the program to not compile",
+      "D. Are handled automatically by the JVM"
+    ],
+    "correct": [
+      "A. Terminate the application"
+    ]
+  },
+  {
+    "index": 17,
+    "title": "Chọn các hàm constructor của textArea",
+    "image": null,
+    "options": [
+      "TextArea( )",
+      "TextArea(int rows, int cols )",
+      "TextArea(int rows, int cols, String text)",
+      "TextArea(String text)",
+      "TextArea(String text, int rows, int cols)",
+      "TextArea(int cols)"
+    ],
+    "correct": [
+      "TextArea( )",
+      "TextArea(int rows, int cols )",
+      "TextArea(String text)",
+      "TextArea(String text, int rows, int cols)"
+    ]
+  },
+  {
+    "index": 18,
+    "title": "What will be the output of the following program?",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigPiBsqkgeuJyCjpmSmCyvTNema70SAPZnRpoExRRzZM3KXrO-Lw7HOIFmxwPlg3l7uXTOUxkGAbN2cb2R_a9JwL5POvXTd7NeN6TstRwL2tSz-1AXwcatMLpoxC8Urd_4sjLLL6aAtuPJtF1zX2Yo46FmMbg3e4A8z7gkQM6rCc5AzAbPWzR_pSbMxhroyEsoxrhr4Vgd5Sc53hfXKGWS8uWQUzEyHCIhzWRQ=w423",
+    "options": [
+      "A. 22",
+      "B. 21",
+      "C. 23",
+      "D. 33"
+    ],
+    "correct": [
+      "A. 22"
+    ]
+  },
+  {
+    "index": 19,
+    "title": "Để chuyển một chuỗi chứa giá trị nguyên (String) sang một số nguyên (int) thì sẽ dùng phương thức nào sau đây?",
+    "image": null,
+    "options": [
+      "A. tolnteger() thuộc lớp Integer",
+      "B. Parseln() thuộc lớp String",
+      "C. parselnt() thuộc lớp Integer",
+      "D. tolnteger() thuộc lớp string"
+    ],
+    "correct": [
+      "C. parselnt() thuộc lớp Integer"
+    ]
+  },
+  {
+    "index": 20,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkiiWrTj76hTPVML6ol3mJ8rDHsv3LpuTD1-UUxiBL9ihxPfhg8wya9rUAQzbvwNOOOZmb-IPxiGSb_-518F7H8WT2bmFwOnQ28S4RXIfcAAYK8v1kgIrphx2NVb_fpXNOE44Zk9XsfYyWzuX-IAHYW5_NYXgGLow2ctemSNyayJ0cclzLcHY2hJdd3XaH7HE4gYLiG3CdYpBDhNtSiCz3C2iGIZa7QB63GjSwS8=w579",
+    "options": [
+      "ok downcasting performed",
+      "Compile Time Error",
+      "ClassCastException is thrown at runtime"
+    ],
+    "correct": [
+      "ok downcasting performed"
+    ]
+  },
+  {
+    "index": 21,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkiiZoamRB7N8ICgE_SWdN9mreb0uSiA6KxEBHRl5n36RAsuOBD2W6nUSL0EiOrIXRFM1xc0JQTr2-UOESee4IuzaVR2JLfFKdRTTSWiexb_vlk2gKu-nHL3drLXOxyTyuS5rV0CNwyNFmEYDhQJCyiCb3s1hJ0ExCqLBmhQmAXdSg3JPBocXBJujvV7VT6Sm9_pNvu0OJxDWxfB0vWnO6alujGlm7Erxw09x4iU=w687",
+    "options": [
+      "running...",
+      "running... running...",
+      "Exception in thread \"main\" java.lang.IllegalThreadStateException",
+      "infinite running..."
+    ],
+    "correct": [
+      "Exception in thread \"main\" java.lang.IllegalThreadStateException"
+    ]
+  },
+  {
+    "index": 22,
+    "title": "What will be the output of the following program? class N{ public static void main(String s[]) { int x= 11 & 9; System.out.print(x); } }",
+    "image": null,
+    "options": [
+      "A. 8",
+      "B. 9",
+      "C. 10",
+      "D. 11"
+    ],
+    "correct": [
+      "B. 9"
+    ]
+  },
+  {
+    "index": 23,
+    "title": "Cho đoạn mã sau: int x=11; do{ x += 20; } while(x<10); Vòng lặp sẽ lặp bao nhiêu lần?",
+    "image": null,
+    "options": [
+      "A. 1",
+      "B. 10",
+      "C. 11",
+      "D. 0"
+    ],
+    "correct": [
+      "A. 1"
+    ]
+  },
+  {
+    "index": 24,
+    "title": "BorderLayout có tất cả bao nhiêu vùng ?",
+    "image": null,
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "correct": [
+      "5"
+    ]
+  },
+  {
+    "index": 25,
+    "title": "Phát biểu nào sau đây sai về từ khoá static?",
+    "image": null,
+    "options": [
+      "A.Một phương thức static có thể sử dụng tất cả các biến trong lớp",
+      "B.Một phương thức static có thể được gọi mà không cần khởi tạo đối tượng.",
+      "C.Từ khoá static không dùng trong khai báo lớp",
+      "D.Một thuộc tính static được dùng chung bởi tất cả các đối tượng thuộc lớp đó."
+    ],
+    "correct": [
+      "A.Một phương thức static có thể sử dụng tất cả các biến trong lớp"
+    ]
+  },
+  {
+    "index": 26,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihNsU6-6F8uOqFMZSQfM5QF99pIH-zUCtinj3b35Rt75fZXLT_tW3PKaaOuR_-iXPLMiYMinR8_Zb-E3e_kSZgYbiT_43LU0VbwyuRGGLWKK0sQA_ctHdmlwEQL7H0EFcRWPjWMcS0fVLL1R5kksHxSjJuna4kroyDc7VG2NQKgqsVrZyP0XWVLOhK682DBPmN6P2uEAPHj1uJb-VVowEyTlk2PdLODMkIQaTs=w456",
+    "options": [
+      "true true true 0",
+      "true false true 0",
+      "false false true 0",
+      "true false false 0"
+    ],
+    "correct": [
+      "true false true 0"
+    ]
+  },
+  {
+    "index": 27,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigt_erlXYAZSjwexsa0gPJ0HyeeecN2XaV8VjbnGt8t7zx59JpRKTVNMiwvdaKy_198abDCoPKnVxV7F1SuYXvrJnALVnTwYJnyZVX6ky8j2D2kSg1KmSlS8BX4uXm8HJvgeQwuocL6YHuixRFlnD27M2Nri0SFACx7oom3qwE8qE23dKdJkDYT_buaBx8BM0oW5HLxOT3XFJEd_ES2ad1GG9AvyNu4mO82dlg=w738",
+    "options": [
+      "111 ankit java 0.0         112 sumit java 6000.0",
+      "111 ankit java 6000.0         112 sumit java 0.0",
+      "111 ankit java 6000.0         112 sumit java 6000.0",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 28,
+    "title": "What will be the output of the following program? class M{ static int user=1; public static void main(String s[]){ System.out.print(++user); System.out.print(user++); } }",
+    "image": null,
+    "options": [
+      "A.2 2",
+      "B.2 3",
+      "C.2 1",
+      "D.1 1"
+    ],
+    "correct": [
+      "A.2 2"
+    ]
+  },
+  {
+    "index": 29,
+    "title": "Khi một mục trong List được double click, hoặc phím Enter trong trường văn bản được gõ, sự kiện nào diễn ra",
+    "image": null,
+    "options": [
+      "ItemEvent",
+      "TextEvent",
+      "ActionEvent",
+      "AdjustmentEvent"
+    ],
+    "correct": [
+      "ActionEvent"
+    ]
+  },
+  {
+    "index": 30,
+    "title": "Phương thức của lớp ByteArrayOutputStream?",
+    "image": null,
+    "options": [
+      "reset( )",
+      "writeByte()",
+      "size( )",
+      "writeTo( )",
+      "getBytes()"
+    ],
+    "correct": [
+      "reset( )",
+      "size( )",
+      "writeTo( )"
+    ]
+  },
+  {
+    "index": 31,
+    "title": "Các lớp sự kiện ngữ nghĩa (slide 191)",
+    "image": null,
+    "options": [
+      "ActionEvent, ItemListener, MouseListener, KeyEvent",
+      "ActionEvent, AdjustmentEvent, ItemEvent, TextEvent",
+      "ComponentEvent, KeyEvent, MouseEvent, ActionEvent",
+      "WindowEvent, ActionEvent, ItemEvent, TextEvent"
+    ],
+    "correct": [
+      "ActionEvent, AdjustmentEvent, ItemEvent, TextEvent"
+    ]
+  },
+  {
+    "index": 32,
+    "title": "Khi cần loại ra khỏi phần tử chứa một thành phần giao diện thì sử\ndụng các hàm",
+    "image": null,
+    "options": [
+      "void remove(int index)",
+      "void remove(Container cont, int index)",
+      "void remove(Component comp)",
+      "void removeAll()",
+      "void remove(Container cont, Component comp)",
+      "void remove(Container cont, Component comp, int index)"
+    ],
+    "correct": [
+      "void remove(int index)",
+      "void remove(Component comp)",
+      "void removeAll()"
+    ]
+  },
+  {
+    "index": 33,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijwDBrTTljm-7MHNrsMZZOQ7IrQSao6z-T9lQURt69ul8dRkBPfRxbtvu6DF3RPY-GgV6mg-19X9-Ajc0rLLHFtAja7hQV7YO3SwnNzyqLrmggNuiGcFezwi9AjkIZx7LWGVDc97hPwtO4dNaE6yQd6WoOKJzFuuMsOs1GJaLEPIgEeh8fU_66trVu71en-wsbRjcxGEbfgqNMXBJjH6jwA1VrdBcDCheD_dBA=w484",
+    "options": [
+      "70",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "70"
+    ]
+  },
+  {
+    "index": 34,
+    "title": "Lệnh System. out .println(\"CNTT\"); được thực hiện mấy lần",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkij9il2WbpMGPxjbMVJsJnEQK0O_yPeHfZtDvqkdvZs6BfYChHK5e3DMK_CTHFAbuBw4r19bOTbGGDkE_RURgxNSoTDplqhYlqxgomJDr9QryQbKx7Zam14JK_OnKa-lHZUcQinHJ_Q71SyDS1A9Ul-CnM3fdbdBb-vBX1exTRUedUvPvwsO7uWIznFekVRhg9m-OrXHUWPj4b10QJ09LWmF5E5sSZA7FNNY=w431",
+    "options": [
+      "11",
+      "0",
+      "10",
+      "5"
+    ],
+    "correct": [
+      "0"
+    ]
+  },
+  {
+    "index": 35,
+    "title": "Chọn câu lệnh đúng?",
+    "image": null,
+    "options": [
+      "A. int i, j; for (j=100; i < j; j--) { i += 2;}",
+      "B. for (int i=10; i=0; i--) {}",
+      "C. int j=10; for ( int i=0, j+=90; i < j; i++) { j--; }",
+      "D. for (int i=0, j=100; i < j; i++, --j) { }"
+    ],
+    "correct": [
+      "D. for (int i=0, j=100; i < j; i++, --j) { }"
+    ]
+  },
+  {
+    "index": 36,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihQwsT2JyWmUAxpwAV-YWQgJ9f1zdo-nh9xcxGlMMDjDk2x0D6bOLEGfFjkpTv4lDMj3UQEPDV3MU3fMNwF_7DDAOcYT4-Fk7OHstUptPzzFPobd86_zU6gMWIYK2uXyt28AaPfHmfCgcjDlPSjNTIMUQrtOavMKwHrNnDDdi14MPSOfQaiVoQVAqwTbUAKYjoZTaB_i-JZ9C1bmdOWEqz0BaCHvpMpB6I8xoU=w462",
+    "options": [
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "b method invoked"
+    ]
+  },
+  {
+    "index": 37,
+    "title": "Khẳng định nào đúng với đoạn mã sau? public class A{ public static void main(String s[]) { int i; System.out.print(\"i=\"+i); i=25; } }",
+    "image": null,
+    "options": [
+      "A. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi",
+      "B. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình",
+      "C. Chương trình không biên dịch và xuất ra lỗi",
+      "D. Tất cả đều sai"
+    ],
+    "correct": [
+      "C. Chương trình không biên dịch và xuất ra lỗi"
+    ]
+  },
+  {
+    "index": 38,
+    "title": "Các phương thức của lớp PrinterWriter",
+    "image": null,
+    "options": [
+      "checkError()",
+      "writeString()",
+      "setError()",
+      "getString()"
+    ],
+    "correct": [
+      "checkError()",
+      "setError()"
+    ]
+  },
+  {
+    "index": 39,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkii4vCRTPpIzsCQKT_aSG5bQW4Ow6XhXiHHYDVQIraL-x2W0m6Nt0iGpRkifMMeo5GRNQ8B_08OpkranXa_BHuIlXHtBdlQH8pbY3bwe7OkPBkn_mOXK2oLquywuaq9_fltgoOJNKCXOJ5-fry21upDwnWO1d43J0gwxHtxzL9OkH7HczKv5dHrHFWHcvlD8bs2rhw5xGHHi7i7IGZIPidlV-3JkhTsI6TUuqYw=w526",
+    "options": [
+      "Print nothing",
+      "method is invoked",
+      "Compile error",
+      "Runtime error"
+    ],
+    "correct": [
+      "method is invoked"
+    ]
+  },
+  {
+    "index": 40,
+    "title": "What will be the output of the following program?",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkij3AiadzskBwMoa6EgMipyOXi1xD2UhxGXx8ViSYyPvaEk9-IX0tvxwdt-1SjM1S9FepqHuPtlxFcAA4bnxbi2Tus2paa1HBDOhc0JbIZXAXDIQt4nL27TrMxourreLtKxHmbvubcyqxQGkEOCdyYC3XqTCDmmjYYNHfN1ptQ0d56ogzcxrmvOmTkpci_e7CDRKpi0vibx7FO_g1IGcEiAZSJvx2Br2n5dG=w466",
+    "options": [
+      "A. 257",
+      "B. 100257",
+      "C. The code will not compile",
+      "D. Another value"
+    ],
+    "correct": [
+      "A. 257"
+    ]
+  },
+  {
+    "index": 41,
+    "title": "Những phương thức nào sau đây thuộc lớp CharArrayWriter?",
+    "image": null,
+    "options": [
+      "reset( )",
+      "size( )",
+      "toCharArray( )",
+      "toString( )",
+      "writeTo( )"
+    ],
+    "correct": [
+      "reset( )",
+      "size( )",
+      "toCharArray( )",
+      "toString( )",
+      "writeTo( )"
+    ]
+  },
+  {
+    "index": 42,
+    "title": "Mức ưu tiên của các luồng có thể nhận giá trị tối đa là bao nhiêu",
+    "image": null,
+    "options": [
+      "1",
+      "5",
+      "10",
+      "Bao nhiêu cũng được"
+    ],
+    "correct": [
+      "10"
+    ]
+  },
+  {
+    "index": 43,
+    "title": "Nếu một luồng bị chặn lại bởi lời gọi hàm wait(),  muốn tiếp tục thì phải gọi hàm",
+    "image": null,
+    "options": [
+      "notify()",
+      "notifyAll()",
+      "resume()",
+      "wake()"
+    ],
+    "correct": [
+      "notify()",
+      "notifyAll()"
+    ]
+  },
+  {
+    "index": 44,
+    "title": "Câu nào là phương thức khởi tạo hợp lệ?",
+    "image": null,
+    "options": [
+      "A. File(String path);",
+      "B. File(String path, String name);",
+      "C. RandomAccessFile(File)",
+      "D. File(RandomAccessFile name)"
+    ],
+    "correct": [
+      "A. File(String path);",
+      "B. File(String path, String name);"
+    ]
+  },
+  {
+    "index": 45,
+    "title": "Khi một mục trong List/Choice được chọn hoặc bị loại bỏ sự kiện nào diễn ra",
+    "image": null,
+    "options": [
+      "ItemEvent",
+      "TextEvent",
+      "ActionEvent",
+      "AdjustmentEvent"
+    ],
+    "correct": [
+      "ItemEvent"
+    ]
+  },
+  {
+    "index": 46,
+    "title": "Những phương thức nào sau đây thuộc lớp StringWriter?",
+    "image": null,
+    "options": [
+      "A. read()",
+      "B. write()",
+      "C. getBuffer()",
+      "D. getString()"
+    ],
+    "correct": [
+      "B. write()",
+      "C. getBuffer()"
+    ]
+  },
+  {
+    "index": 47,
+    "title": "Tên biến nào sau đây hợp lệ ?",
+    "image": null,
+    "options": [
+      "case",
+      "Tất cả đều sai",
+      "1MyNumber",
+      "Int",
+      "char"
+    ],
+    "correct": [
+      "Int"
+    ]
+  },
+  {
+    "index": 48,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih5CQKiDhSKGjYUaiH0RVUNISBAwIAL_wYLCjxWH7m7uzxUI7E5V61zSX0Qe33e-yU2995fIdqVQvhJRrg9aX8iBZ8hj7hZ8mC8ZjsYGS6bDPCElKV4VKKX02wlUSdxK2PY_tgW3uIreXwxAie-z1yHLRY1iSlNxAVumFb0-mHStA9zRRBGrYkk-v8fGPqMM7bgMUePaurheu5GB1yG5NyT5O_oSCQmLRnLBL8=w477",
+    "options": [
+      "parent method",
+      "TestExceptionChild",
+      "Compile Time Error",
+      "Runtime Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 49,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih31Pfw-tRD6hkMbEOkdwieUEMFN2Vnxm2PO6XtbaUKHn1cKcGdCFKcAeghPbAbv5lRB8pWpsFYUCi-n0Sx_9rlHkmZiya5AHpPLHMcpNcIQ8Pw-ochsJcCMBVcCJ_pnIsFsgX8F7NC1P3RsF2Jl65CVA76DCc3EbaccgS86FCzBbKzI3vMHdxwvDJhCjngLr52_3-EVTy262pgcID0ZspnbFvwGyc4LTd2ReA=w449",
+    "options": [
+      "block      parent         child",
+      "parent       child         block",
+      "parent      block         child"
+    ],
+    "correct": [
+      "parent      block         child"
+    ]
+  },
+  {
+    "index": 50,
+    "title": "Các nguồn gây ra sự kiện của ItemEvent là",
+    "image": null,
+    "options": [
+      "Button",
+      "List",
+      "TextField",
+      "Choice",
+      "CheckBox",
+      "CheckboxMenuItem"
+    ],
+    "correct": [
+      "List",
+      "Choice",
+      "CheckBox",
+      "CheckboxMenuItem"
+    ]
+  },
+  {
+    "index": 51,
+    "title": "Câu lệnh nào sau đây hợp lệ?",
+    "image": null,
+    "options": [
+      "Math.round(8.88)",
+      "Math.max(s)",
+      "Math.mod(4, 10)",
+      "Tất cả đều đúng"
+    ],
+    "correct": [
+      "Math.round(8.88)"
+    ]
+  },
+  {
+    "index": 52,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigtVLHWKxFQyM4I-GsMAZjuwxOovQaCcKySC64Xta3jmC86WwLjvf4ih3vyxUEmjCzeklVJSAO9X6qvsTY4DxqhXE68NpQ_ikAJ4Sd4riN2aJsBboXjP2tFkojX93S0d5Bzg9jX4ScmiRpB17W-nAmzuHXdmzBqXA2IpeqGN6MRMhzwVkO90ljX4CXphCDri1gIkZLeGxzDG0P9g1RGujRMKZXc6yNQE6CX7fg=w660",
+    "options": [
+      "40 60",
+      "Compile Time Error ( wrong type parameter)",
+      "Compile Time Error ( wrong return type)",
+      "Compile Time Error (no visibility mode)"
+    ],
+    "correct": [
+      "40 60"
+    ]
+  },
+  {
+    "index": 53,
+    "title": "Phương thức main() nào được biên dịch?",
+    "image": null,
+    "options": [
+      "A. static public void main(String args[]) {}",
+      "B. public static void main(String []a) {}",
+      "C. static public void main(String arg[]) {}",
+      "D. All correct"
+    ],
+    "correct": [
+      "D. All correct"
+    ]
+  },
+  {
+    "index": 54,
+    "title": "Biểu thức nào sau đây không gây ra lỗi?",
+    "image": null,
+    "options": [
+      "A. boolean a = (boolean) 1;",
+      "B. boolean b = (false && true);",
+      "C. float y =22.3;",
+      "D. Tất cả đều đúng"
+    ],
+    "correct": [
+      "B. boolean b = (false && true);"
+    ]
+  },
+  {
+    "index": 55,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigPws6OGirkboU36G4sFEzb2m5pAwAbC8HTymqHuc9chym81iKg6wye9z4R1UMODVLcWlckAnxrsob861IUDYQFaF9bR8lo68Pjnatr6-veYfvrpZ7ZsUC1KN2Pv9M6Oo2rXEq4hSTzSXpBtug6q0qwn_auiPMbG74yDmFCJ-Mp625nXARPj8xYXWzK9T-tGryEW8Ba_UPjEkyEd2BymFZnKXRadVuMrXl2nnY=w584",
+    "options": [
+      "111 ankit 5000.0      112 sumit 6000.0",
+      "111 ankit 5000         112 sumit 6000",
+      "0 null 0.0         0 null 0.0",
+      "Compile Error"
+    ],
+    "correct": [
+      "0 null 0.0         0 null 0.0"
+    ]
+  },
+  {
+    "index": 56,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihs1wXVXBOSVatj_V9csRfCPvl1u7F84fvxipoySD4o8NiTXDlAjjdV-Sbc_QxE020Cv4-Fjj7OaIsS6xCvAp0aR7Pdf3wMSVlOCEMeSUGbdZo7PBaZmdT_KSnE0Jj4LYvn4oRoi2is-GTiJMkkjkuu77Y_Lb3Hjn39H7z09ReeAifzOMuFPmhl_o925aZSNNL09O85V8jI9F1tFUU-07jZr6bLWczlcRcppqQ=w452",
+    "options": [
+      "11",
+      "12",
+      "10",
+      "9"
+    ],
+    "correct": [
+      "11"
+    ]
+  },
+  {
+    "index": 57,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkig6rs0-splvhj0RDafKuVjMdzt8pzV3dZGalh-6kYa0FNk3b2MoWreWVDv6VYrOVQVTfPuQtuofjiE4953wdrnb9yr43Y9d3kHpyO432lpJqxKev2wMakduRWye4BnndqZtaGN-7aKH_1voxeZbd3Zslq9mQCDCris5oKCDvcDQ-2aanXT2cLa3S7YsuRBICC56H-_ujQobzVhEMVJoCd0eDMsTOWMyRuZODWc=w625",
+    "options": [
+      "1 1 2 2 3 3 4 4",
+      "1 2 3 4 1 2 3 4",
+      "1 2 3 4 5 1 2 3 4 5",
+      "1 1 2 2 3 3 4 4 5 5"
+    ],
+    "correct": [
+      "1 2 3 4 1 2 3 4"
+    ]
+  },
+  {
+    "index": 58,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihAT_A-GfxRETvNBlHvjtaOGqba_cWATCqpJJAUj5KsIs9GqVucptDw_sj3buXG_LO_O3G5SlPJsOLaTVKthIbDV5BTqtAtKZ6HSnUzGLg2-F-DohHFVQSB668G0pyICMhs4Y7atZKfTtp_ypMwhh9eeGvZ1th9ZiTN2_bfp5pIo5xd3RJmGJINCnNXLTyzAP2Px6snUd2-3AQCS9Y17wkbuI0okSgJJ1oE=w478",
+    "options": [
+      "true",
+      "False"
+    ],
+    "correct": [
+      "true"
+    ]
+  },
+  {
+    "index": 59,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigxAVBN6rMIawU5YL0ccBUnw5AX7kE44qPY0AHgGXRWI62QzFvf2T6vXng0803kSeGhlE3UNS6IlHh3WbzNBdtt8HxL-HDqC5wcpC_gx_susL_BFt2aoG4BTsJy-3XZSm6qqC99z0Qpv59pncGQGmYmsHCGMAf11dUAMG-Mo_NfeYtzuh4yCNxF_F2u_iS9j_eatRiGHUUfUr0bIY7yci3tohc2emfU4y61Gss=w740",
+    "options": [
+      "5 100 200 10 300 15 400 20 25 500",
+      "5 10 15 20 25 100 200 300 400 500",
+      "100 200 300 400 500 5 10 15 20 25",
+      "100 5 200 10 300 15 400 20 500 25"
+    ],
+    "correct": [
+      "5 10 15 20 25 100 200 300 400 500"
+    ]
+  },
+  {
+    "index": 60,
+    "title": "Các constructor của FlowLayout",
+    "image": null,
+    "options": [
+      "FlowLayout exLayout = new FlowLayout(FlowLayout.RIGHT);",
+      "FlowLayout mylayout = new Layout(new FlowLayout());",
+      "FlowLayout mylayout = new FlowLayout();",
+      "FlowLayout mylayout = new FlowLayout(new FlowLayout.RIGHT());"
+    ],
+    "correct": [
+      "FlowLayout exLayout = new FlowLayout(FlowLayout.RIGHT);",
+      "FlowLayout mylayout = new FlowLayout();"
+    ]
+  },
+  {
+    "index": 61,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigH1C1DkvEHsAY642MolTU0B55AovOXf_24IN5lX3MKAgo-bqgO05kw9ieCHBQkN-IyZ_RzYN2lAqi1h2MVCHSnyi2ejx7suRXyKy0Xzheb92aXvS_iNbCzhN7ife1jSLbnF9eOg8_QrLP_l__-OyraLeCG3EwjXecrc488Jdtz-CjuFRzMPftejYclKoSYP5PTfZD4v_qMtyxYxWGvNvWkP3ITj6YlxAdnGzk=w440",
+    "options": [
+      "constructor    block    constructor    block",
+      "block     constructor      block     constructor",
+      "constructor    constructor   block     block",
+      "block     block    constructor    constructor"
+    ],
+    "correct": [
+      "block     constructor      block     constructor"
+    ]
+  },
+  {
+    "index": 62,
+    "title": "class Myprogram{ public static void main(String args[]){ try{ System.out.println(\"Hello\");} } }",
+    "image": null,
+    "options": [
+      "A. Chương trình sẽ biên dịch chính xác",
+      "B. Chương trình sẽ không biên dịch được vì không có catch",
+      "C. Chương trình sẽ không biên dịch được vì không có catch hoặc finally",
+      "D. Chương trình sẽ không biên dịch được vì không có finally"
+    ],
+    "correct": [
+      "C. Chương trình sẽ không biên dịch được vì không có catch hoặc finally"
+    ]
+  },
+  {
+    "index": 63,
+    "title": "You want to find out the value of the last element of an array. You write the following code. What will happen when you compile and run it? public class MyAr{ public static void main(String argv[]){ int[] i = new int[5]; System.out.println(i[5]); } }",
+    "image": null,
+    "options": [
+      "a. An error at compile time",
+      "b. An error at run time",
+      "c. The value 0 will be output",
+      "d. The string \"null\" will be output"
+    ],
+    "correct": [
+      "b. An error at run time"
+    ]
+  },
+  {
+    "index": 64,
+    "title": "Chọn tất cả các phương thức add() đúng của lớp Container",
+    "image": null,
+    "options": [
+      "Component add(Component comp)",
+      "Component add(Component comp, int index)",
+      "Component add(Component comp, int rows, int cols)",
+      "Component add(Component comp, Object constraints)",
+      "Component add(Component comp, Object constraints, int count)",
+      "Component add(Component comp, Object constraints, int index)",
+      "Tất cả đều đúng"
+    ],
+    "correct": [
+      "Component add(Component comp)",
+      "Component add(Component comp, int index)",
+      "Component add(Component comp, Object constraints)",
+      "Component add(Component comp, Object constraints, int index)"
+    ]
+  },
+  {
+    "index": 65,
+    "title": "Finally clause:",
+    "image": null,
+    "options": [
+      "A. Are executed only after a try block executes with no exceptions",
+      "B. Are always executed after try and catch blocks",
+      "C. Are only executed if an exception is thrown but no matching catch clause is found",
+      "D. Are only executed if a catch clause is executed"
+    ],
+    "correct": [
+      "B. Are always executed after try and catch blocks"
+    ]
+  },
+  {
+    "index": 66,
+    "title": "What will be the output of the following program? (u,v=?)",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijB0N22bhW-kHpCH8eYjej1SEB0m--Ho3Hj07g4LJ4hTxCRW1bdoOC7EmiW-KJ4vQesCkZa6M2GbDzqy23q8RG4EVU8TSh0NsdpsH1FZ-_D36iMCnAk_a1TqwxAR5g5-eCx50q1s2zUKtClslwj_WF0U5XG-iWVBiBJj8Mem68c10XkHo-YPmXh4zLGUbW2XuyFYFTtLIBlKT-hGlR_g3D_WzkrdE0BGHmE33Y=w498",
+    "options": [
+      "A. u=11,v=14",
+      "B. u=14,v=11",
+      "C. u=12,v=14",
+      "D. u=14,v=12"
+    ],
+    "correct": [
+      "A. u=11,v=14"
+    ]
+  },
+  {
+    "index": 67,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijXBcWZmhIkyzi7vVKY-piW4Lokdt8d7iT-mLgaRMTcteJxjN9CuZnWmgLvO8cjgKEm4hyfcMCTy4gorIaeZMbZRsdSw0Utaq_VzTMittw0vNSjlx5o4oca48D_icA0rCoAnZK8IOkcX8krpHpxHx69A7drwUVBvRZdesPcSnJ0l_Hw1iSCYeklksVbFVhsAXCwURvWRZSpfrDyRFNDnANwGeFg43T_TCPhk5Y=w490",
+    "options": [
+      "main with String[]",
+      "main with String",
+      "main without args",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "main with String[]"
+    ]
+  },
+  {
+    "index": 68,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigWwvDQkVzkTpE3mC86iTF0bvZuSkNIP1bIpCj7_bwlXN3webTTvBjqZeQCA13X_fXA8_Lr_QRaGyq0Dzulmmzs3dKX-sE7n4uaMEqvkPMdHLUJohlgGq56NW1Jx4KDoGVigviRBCB-XHsI-rjYZ8S2FxU_yFbNOCLt-W79fJFwpTHjMjgVaBK5L1IG94zPEgyRK6QV7CayY4c0dS07GG68_n4V5g_zhVCf=w659",
+    "options": [
+      "1 1 1",
+      "3 3 3",
+      "0 0 0",
+      "1 2 3"
+    ],
+    "correct": [
+      "1 1 1"
+    ]
+  },
+  {
+    "index": 69,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijiyW2zz406a6OJSbBXoJy206rWz_3otgHYjL218huEdE1kiEBefoY8Y-djD5FFX1xYKmDtaKzKl-hD4a9qQLEJ5RwNcuN2NnJ0YmSvrETygLdQ6uJAIlJjFekmw4rdv4UdPxeV_QbyKEcWtDNsg_R7WDcjEhkmNMsd4gwUQA4niMFdDvn9NwH5CCiYTpXoTPF3AjSUYUNIuTHbyP5_OESwxPgLZGHauWQnIl0=w440",
+    "options": [
+      "Hello Welcome",
+      "Hello",
+      "Welcome",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 70,
+    "title": "Layout mặc định của panel là gì ?",
+    "image": null,
+    "options": [
+      "Border Layout",
+      "Card Layout",
+      "FlowLayout",
+      "Grid Layout"
+    ],
+    "correct": [
+      "FlowLayout"
+    ]
+  },
+  {
+    "index": 71,
+    "title": "Given this interface definition: interface A{ int pt1(int m); int pt2(int n); } Lớp nào sau đây sau khi implements interface mà không phải là 1 lớp abstract?",
+    "image": null,
+    "options": [
+      "A. class B implement A{ int pt1(){} int pt2(){} }",
+      "B. class B implements A{ int pt2(int n){} int pt1(int m){} }",
+      "C. class B implements A{ int pt1(int m){} int pt2(int n){} }",
+      "D. class B extends A{ int pt1(int m){} int pt2(int n){}"
+    ],
+    "correct": [
+      "B. class B implements A{ int pt2(int n){} int pt1(int m){} }",
+      "C. class B implements A{ int pt1(int m){} int pt2(int n){} }"
+    ]
+  },
+  {
+    "index": 72,
+    "title": "Những phương thức nào sau đây thuộc lớp InputStreamReader?",
+    "image": null,
+    "options": [
+      "A. read()",
+      "B. write()",
+      "C. getBuffer()",
+      "D. getString()"
+    ],
+    "correct": [
+      "A. read()"
+    ]
+  },
+  {
+    "index": 73,
+    "title": "Cho khai báo mảng 2 chiều như sau: int m[ ][ ]=new int[3][4]; Phần nào sau đây dùng để xác định số cột của mảng hai chiều?",
+    "image": null,
+    "options": [
+      "A. m.length();",
+      "B. m[0].length;",
+      "C. m.length(3);",
+      "D. m[].length;"
+    ],
+    "correct": [
+      "B. m[0].length;"
+    ]
+  },
+  {
+    "index": 74,
+    "title": "Chọn các hàm constructor của label",
+    "image": null,
+    "options": [
+      "Label()",
+      "Label(String labeltext)",
+      "Label(int column)",
+      "Label(int vgap, int hgap)",
+      "Label(String labeltext, int alignment)"
+    ],
+    "correct": [
+      "Label()",
+      "Label(String labeltext)",
+      "Label(String labeltext, int alignment)"
+    ]
+  },
+  {
+    "index": 75,
+    "title": "Chọn constructors phù hợp cho lớp BufferInputStream",
+    "image": null,
+    "options": [
+      "A. BufferInputStream(FileInputStream in, int size)",
+      "B. BufferInputStream(FileInputStream fin)",
+      "C. BufferInputStream(FileOutputStream fout)",
+      "D. BufferInputStream(RandomAccessFile raf)"
+    ],
+    "correct": [
+      "A. BufferInputStream(FileInputStream in, int size)",
+      "B. BufferInputStream(FileInputStream fin)"
+    ]
+  },
+  {
+    "index": 76,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkii2qJHI68a5Z2z-zMp9waBG5sjv-I8o7a8XhGGkz0Vy5J8G1NwySoOnOZ6-ADmEyhJw7s-HDvSzFB45vex9VBX_ZvI6pz0LnL56CdDAyAigaWIew5NGmGqE9RL_PNQfAWuB4FXuI_j-_HNy2ZC22wu5FEGgGK3OsyEpBiQ4iwxMISPs6ovMM4gmrWvJbA3Ao1uw4bNDk80ML0UTG9tAV2e6wtb8oz_reKKK_Kg=w484",
+    "options": [
+      "22 33",
+      "33 22",
+      "0 0",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "22 33"
+    ]
+  },
+  {
+    "index": 77,
+    "title": "Giả sử việc xử lý ngoại lệ đã được cài đặt. Câu nào sau đây sẽ tạo một đối tượng của lớp RandomAccessFile?",
+    "image": null,
+    "options": [
+      "A. RandomAccessFile ra=new RandomAccessFile(\"a.txt\",\"rw\");",
+      "B. RandomAccessFile ra=new RandomAccessFile(new DataInputStream());",
+      "C. RandomAccessFile ra=new RandomAccessFile(\"a.txt\");",
+      "D. RandomAccessFile ra=new RandomAccessFile(new File(\"a.txt\");"
+    ],
+    "correct": [
+      "A. RandomAccessFile ra=new RandomAccessFile(\"a.txt\",\"rw\");"
+    ]
+  },
+  {
+    "index": 78,
+    "title": "Cho biết kết quả khi chạy đoạn chương trình sau: int i = 1; for( i = 0; i = -1; i = 1){ System.out.print(i); if(i!=1) break; }",
+    "image": null,
+    "options": [
+      "0",
+      "Kết quả khác",
+      "Lỗi biên dịch",
+      "1"
+    ],
+    "correct": [
+      "Lỗi biên dịch"
+    ]
+  },
+  {
+    "index": 79,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkighk2g5EUsBBQzs123YmPE8sWeG8wTyBdFyz_l0qmLhocUvIMu_xUqW_-nqGRVmWcp631Fazk3djt09zGN_bvl-uqrNvqVPDeG_Q0tFFpdCp2aBrz9GZWq9mM2rRqCTiS-APKNhXBrjl1Ff4ZK50b4Y_P-Vk6G9pZ9Cj3kXpS7_lF9xw5xEPu_QlLpOIN6Fr_6DHOZRVKmDUFYw1kaP_vn_XJOqu5AiSPgawsk=w694",
+    "options": [
+      "1 1 1",
+      "3 3 3",
+      "1 2 3",
+      "Another answer"
+    ],
+    "correct": [
+      "1 2 3"
+    ]
+  },
+  {
+    "index": 80,
+    "title": "Khi phương thức được gọi thì các lệnh trong phương thức được thực hiện cho đến khi nào?",
+    "image": null,
+    "options": [
+      "A. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức",
+      "B. Cho đến hết phương thức",
+      "C. Cho đến khi gặp lệnh \"exit\"",
+      "D. Cho đến khi gặp lệnh \"break\""
+    ],
+    "correct": [
+      "A. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức"
+    ]
+  },
+  {
+    "index": 81,
+    "title": "Đoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng lệnh như sau: C:\\> java B hello you",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigzTGFi8UuyXB5Gt7LFtKGXtxaBZ-IVJv9FAO8jOQ0M8maxJaFPFhtbbXOGkMaUIELjndHWhdpOts6mDLJfeydN2JFjacriUyabNiBpmGxizO-yedGy8Fg9O6qWsnEGIbcV5M41Vf4SwmO0Hp4d77XDza22mPVqeaiZ87fwa9YKEDgNFRMTc1BL8RQj0BOVaMfsz1_D0sw1zeOpk5nuCWl4E53Qk77SbxI2=w417",
+    "options": [
+      "A. B",
+      "B. hello",
+      "C. you",
+      "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\""
+    ],
+    "correct": [
+      "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\""
+    ]
+  },
+  {
+    "index": 82,
+    "title": "Các hàm constructor của GridLayout",
+    "image": null,
+    "options": [
+      "GridLayout()",
+      "GridLayout(int rows, int columns)",
+      "GridLayout(int rows, int columns, int index)",
+      "GridLayout(int rows, int columns, int hoiongap, int verticalgap)"
+    ],
+    "correct": [
+      "GridLayout()",
+      "GridLayout(int rows, int columns)",
+      "GridLayout(int rows, int columns, int hoiongap, int verticalgap)"
+    ]
+  },
+  {
+    "index": 83,
+    "title": "Các hàm tạo lập để sắp hàng các thành phần giao diện của lớp FlowLayout",
+    "image": null,
+    "options": [
+      "FlowLayout()",
+      "FlowLayout(int aligment, int position, int index)",
+      "FlowLayout(int aligment)",
+      "FlowLayout(int aligment, int horizongap, int verticalgap)"
+    ],
+    "correct": [
+      "FlowLayout()",
+      "FlowLayout(int aligment)",
+      "FlowLayout(int aligment, int horizongap, int verticalgap)"
+    ]
+  },
+  {
+    "index": 84,
+    "title": "BorderLayout có các vùng nào",
+    "image": null,
+    "options": [
+      "NORTH, EAST, SOUTH, WEST, CENTER",
+      "NORTH, EAST, SOUTH, WEST, MIDDLE",
+      "UPPER, BOTTOM, MIDDLE, LEFT, RIGHT"
+    ],
+    "correct": [
+      "NORTH, EAST, SOUTH, WEST, CENTER"
+    ]
+  },
+  {
+    "index": 85,
+    "title": "Mức ưu tiên càng cao thì các đối tượng như thế nào",
+    "image": null,
+    "options": [
+      "To hơn",
+      "Nhanh hơn",
+      "Nhỏ hơn",
+      "Chậm hơn"
+    ],
+    "correct": [
+      "Nhanh hơn"
+    ]
+  },
+  {
+    "index": 86,
+    "title": "What will be the output (s) of the following code? int i = 42; String s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\");",
+    "image": null,
+    "options": [
+      "A. everything",
+      "B. universal",
+      "D. life",
+      "C. null"
+    ],
+    "correct": [
+      "A. everything"
+    ]
+  },
+  {
+    "index": 87,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijvmbYykBZWAV3E6FfwZR7Y_NDCjS_lIc6srZvHgbMg9350_U50qD25OZmga4oqwO4MLiBhYASU2qJM2YHRx9CI1T3UiX_-A-ImwwAbgknMn8AJzF3C7Z_eMysyF5s6kAMRyid3NIN25vMY8fZ5dqfl2UvNHydwlpuEV1vZqQK7U4rFJriWJJ6QwyWxe4_sG1TCDgK9qewcRKUbwyd9WZlFQ2u8FnMd05hRhQU=w433",
+    "options": [
+      "running",
+      "Compile Time Error (final cant be inherited)"
+    ],
+    "correct": [
+      "running"
+    ]
+  },
+  {
+    "index": 88,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkij7HN1_VvZVq7Tyh2a6934eQUOCkKLToyIWkvwT_iWPjY1gtdseCSQYp5FqzrZ0vNG3aTPH6HVR_ssC2PefouADc7eOVsfF6Wp17G0vCyie5XUungqJYs3YjBBHeFEpmCauTdiIw79t_PWYyrWE-drdF_6K0um1HMo5wdpORHxXCjHyqJjp2IdgbJU7GamlHE5MExa92k2ghl3dMtaZD8T_YNeS8pEL584Defg=w661",
+    "options": [
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 89,
+    "title": "What will be the output of the following program? public class TestPro{ public int x=4; public static void main(String s[]){ new TestPro().Show(); } public void Show() { int x=2; x=x+5; this.x=this.x - 2; x = x - this.x; System.out.print(x + \" \"); System.out.print(this.x) } }",
+    "image": null,
+    "options": [
+      "A. 2 5",
+      "B. 5 2",
+      "C. 2 7",
+      "D. 7 2"
+    ],
+    "correct": [
+      "B. 5 2"
+    ]
+  },
+  {
+    "index": 90,
+    "title": "Chọn đáp án sai ?",
+    "image": null,
+    "options": [
+      "static void main (String args[]){}",
+      "public static void main(String args[]) {}",
+      "public void main (String args[]){}",
+      "public static void main(String a[]) {}"
+    ],
+    "correct": [
+      "static void main (String args[]){}",
+      "public void main (String args[]){}"
+    ]
+  },
+  {
+    "index": 91,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigDZhyvL1NcbewkRd5Bf3HjoSblsSzDIp9xz9mZv2olgFQJnZ4jm8UtlPgxjVHAmpyR2c7u-9BrOK7mLVo-EhtXPQff5qW843b3l2KuECnei4_LW5AKX_ln-m_gpVqojqTwLjE8byF_rsXqVnWWOmCk8sxPLCn20e5C-kIK3-V_8oT3-XF-yRNoRU0kjeU8wadFvMOQzQmJhsX-LiRy3Wjq2jliZ3-zU46l=w431",
+    "options": [
+      "true",
+      "false"
+    ],
+    "correct": [
+      "false"
+    ]
+  },
+  {
+    "index": 92,
+    "title": "Các hàm constructor của BorderLayout",
+    "image": null,
+    "options": [
+      "BorderLayout()",
+      "BorderLayout(int horizongap, int verticalgap)",
+      "BorderLayout(int aligment, int horizongap, int verticalgap)",
+      "BorderLayout(int coordination)"
+    ],
+    "correct": [
+      "BorderLayout()",
+      "BorderLayout(int horizongap, int verticalgap)"
+    ]
+  },
+  {
+    "index": 93,
+    "title": "Các constructor thường được sử dụng của lớp Thread",
+    "image": null,
+    "options": [
+      "Thread()",
+      "Thread(String name)",
+      "Thread(Runnable r)",
+      "Thread(Runnable r,String name)",
+      "Thread(String name, Runnable r)"
+    ],
+    "correct": [
+      "Thread()",
+      "Thread(String name)",
+      "Thread(Runnable r)",
+      "Thread(Runnable r,String name)"
+    ]
+  },
+  {
+    "index": 94,
+    "title": "Chọn các hàm constructor của textfield",
+    "image": null,
+    "options": [
+      "TextField( )",
+      "TextField(int rows, int columns, String anchor)",
+      "TextField(int columns)",
+      "TextField(int rows, int columns)",
+      "TextField(String s)",
+      "TextField(String s, int columns)"
+    ],
+    "correct": [
+      "TextField( )",
+      "TextField(int columns)",
+      "TextField(String s)",
+      "TextField(String s, int columns)"
+    ]
+  },
+  {
+    "index": 95,
+    "title": "Đâu là kiểu khai báo mảng có 3 phần tử đúng?",
+    "image": null,
+    "options": [
+      "int size[] = new int(3);",
+      "int size[] = new int[3];",
+      "int[] size = new int(3);",
+      "int size[] = new int[3]{3, 4, 5};"
+    ],
+    "correct": [
+      "int size[] = new int[3];"
+    ]
+  },
+  {
+    "index": 96,
+    "title": "Câu lệnh nào sau đây khai báo đúng một mảng 6 số nguyên?",
+    "image": null,
+    "options": [
+      "A. int a[]={1,2,3,4,5,6}",
+      "B. int a[];",
+      "C. int a[] = new int[6];",
+      "D. int a[] = new int(6);"
+    ],
+    "correct": [
+      "C. int a[] = new int[6];"
+    ]
+  },
+  {
+    "index": 97,
+    "title": "Chọn constructors phù hợp cho lớp FileInputStream ?",
+    "image": null,
+    "options": [
+      "A. FileInputStream(File f)",
+      "B. FileInputStream(String s)",
+      "C. FileInputStream(FileDescriptor fd)",
+      "D. FileInputStream(RandomAccessFile raf)"
+    ],
+    "correct": [
+      "A. FileInputStream(File f)",
+      "B. FileInputStream(String s)",
+      "C. FileInputStream(FileDescriptor fd)"
+    ]
+  },
+  {
+    "index": 98,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih_WbAy-PAj9llCTK9-ruhE3zJmWDvkrze-Yf5oCBmig3nk-NYEBKaVm1spXsSBjplKF-JSp1DOwNjEwHu6tFboPB26YKmNGh0yuqgAPXwTTtubclZFxC7l8zotl6ubjG4kubC0cLTQl0X_8hC8quBtvJBQXAx1DcpsrQDL3VHpZanfkZcvP82c7nidJAcWOzcYtMEl1bAtcC2fnsbQUleG6bZ5B2TZtprxj2Y=w460",
+    "options": [
+      "22",
+      "22.0",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "22"
+    ]
+  },
+  {
+    "index": 99,
+    "title": "Lớp nào là lớp cơ sở cho mọi đối tượng lỗi",
+    "image": null,
+    "options": [
+      "A.String",
+      "B.Error",
+      "C.Throwable",
+      "D.Exception"
+    ],
+    "correct": [
+      "C.Throwable"
+    ]
+  },
+  {
+    "index": 100,
+    "title": "Những phương thức nào sau đây khai báo hợp lệ? public short M(){ byte m=120; return m; } public int N(){ long n=500; return n; } public Boolean P(){ boolean p=true; return p; } public long Q(){ float q=300F; return q; }",
+    "image": null,
+    "options": [
+      "A. M()",
+      "B. N()",
+      "C. P()",
+      "D. Q()"
+    ],
+    "correct": [
+      "A. M()"
+    ]
+  },
+  {
+    "index": 101,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkiiMxmUcWqkLd9T_dNoq1vMNnBo6Oy3_Zwfgz6h8ngodEyXE9orUjBaXLsGIiXpOJXB17di5UGwehPzhluXayeRsLc60UxeQ-RMOtWOUdQfEBRtEKh0xLNxNyPow2lcpn8f9TlwtzYW05MLRevi27865_N3HJeR3RD4BwiHnykYs8-5BkduA-W1BLI0kvda7pNwyJmK8xnl4ZV28g120xHbCL5q7F4cE3L3LvWc=w427",
+    "options": [
+      "hello a       10",
+      "hello a       0",
+      "0",
+      "Compile error"
+    ],
+    "correct": [
+      "hello a       10"
+    ]
+  },
+  {
+    "index": 102,
+    "title": "Nếu một luồng bị chặn lại bởi lời gọi hàm\nsuspend(),  muốn thực hiện thì trước đó phải gọi hàm",
+    "image": null,
+    "options": [
+      "notify()",
+      "notifyAll()",
+      "resume()",
+      "wake()"
+    ],
+    "correct": [
+      "resume()"
+    ]
+  },
+  {
+    "index": 103,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihIEBhTsk8qak8aeVXhvRt1gK4xFzxKz358xxQArtNnaqCsd4a1d8nk8LtgeyNldkJhwQbCjGlLjwJ__dqoimr6RJfZrDBC3H6ngd_9b0M3u-qNtnT0szM0A48RnfUSqfv9v566IqFZXIhqq9MN3d1r14mekvkA4nZcvp5z4D6yfzOOB5M2yyCKkRq_6AmUvimPbJJk8f66-vFPYOavF47CgoQd4KQ16FI8Vq8=w475",
+    "options": [
+      "Kết quả khác",
+      "1 1 4",
+      "1 1 5",
+      "1 3 5"
+    ],
+    "correct": [
+      "1 1 5"
+    ]
+  },
+  {
+    "index": 104,
+    "title": "Bạn nhập mã Java vào file nguồn. Bây giờ muốn lưu và biên dịch nó. Hãy chọn đáp án đúng",
+    "image": null,
+    "options": [
+      "Save it in a file called Yourclass.java and compile it with javac Yourclass.java",
+      "Save it in a file called Myclass.java and compile it with javac Myclass.java",
+      "Save it in a file called Myclass.jav and compile it with javac Myclass.java",
+      "None of the above",
+      "Save it in a file called Myclass.jav and compile it with javac Myclass"
+    ],
+    "correct": [
+      "Save it in a file called Yourclass.java and compile it with javac Yourclass.java",
+      "Save it in a file called Myclass.java and compile it with javac Myclass.java"
+    ]
+  },
+  {
+    "index": 105,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihLi2CnypO3GjUQpTI4AOCNDIbfxu32I0qYbFomKejKvHkJ0fkp5zXZM1nniSWhlRwF0pnnP27VkElrN0WvNwqP3KSKVtRxOTelU-fFuQZHGxyTmcQUw74CSSGqVdRy_qsmD40fuXWfuULZEQlGiRBLOY0AJbLWfTBoyrSOF96S1BcaIgUvFge-JXPTviD2zY5HtpfUpSOjim5m4CsXh1Vi3CS4VU8sEW3-=w528",
+    "options": [
+      "Compile Time Error",
+      "nice fruits",
+      "Runtime Error"
+    ],
+    "correct": [
+      "nice fruits"
+    ]
+  },
+  {
+    "index": 106,
+    "title": "Interface sẽ dùng visibility mode nào ?",
+    "image": null,
+    "options": [
+      "A. public",
+      "B. protected",
+      "C. private",
+      "D. It does not matter"
+    ],
+    "correct": [
+      "A. public"
+    ]
+  },
+  {
+    "index": 107,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihiqhTTc7p5aSCVXTnFsivwXk7SR_DpUZKnDB7tQeN7dMGysmgRkRRrdyyB18l-nJTQkUzpYeeft9ef0kB4S866Bhcq3m29owl6DixzIbqL8EfhkrrXc4HdqfeJy8HWMjBkHXxL0LYsLrMefLus1dr4lJ19fNwAnokxkmnx3pL8Mqn_-WbZJHRWztUuFMF4Rau-3OVFidhFShmDqlkIP3M1MPsQqv99lCx_2nA=w463",
+    "options": [
+      "a method invoked",
+      "b method invoked",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "b method invoked"
+    ]
+  },
+  {
+    "index": 108,
+    "title": "Hãy chọn đáp án đúng nếu muốn chạy file mã nguồn Simple",
+    "image": null,
+    "options": [
+      "To Compile: javac Simple.java          To Run: java Simple",
+      "To Compile: javac Simple                  To Run: java Simple.java",
+      "To Compile: java Simple.java             To Run: javac Simple",
+      "To Compile: java  Simple                   To Run: javac Simple.java"
+    ],
+    "correct": [
+      "To Compile: javac Simple.java          To Run: java Simple"
+    ]
+  },
+  {
+    "index": 109,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihp44KZGwEKf4-NqjywHOlAuLhP83xrwBdIBcTEnD6PM8lh3UAaXcR90GEH1cWDGudPWa2iH4FClvZcWR2jVGHkZZGiHghry9n2HkJLH-B2hA1EK2P8DI6AEee2M_nTaXL9duI6yt6Wi-LHfbowxDPRpvVx82pq0BDkR2OLOD56_hS_cl96XTwfvFy8HYsA1CIHq_m4NBLa703yq03zdAywZtZWZmiUFEGKz3Y=w451",
+    "options": [
+      "eating barking meowing",
+      "eating barking",
+      "meowing eating barking",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 110,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkijvo2732e1S7E4mETFwJb9eaLTcDx-1PwNnyNDwmYgzGS7NKAz9wvYsXPJ1wDuyApY2zxQh7Z2UCHcxt-6zmGPwd6T3OBHrEypfXwBCbxGfxb5kJnU1LVF209oHSGG772TLBUSA_TE6Z8nSBKU_Exf6q8USMqiYClbLo85vw-50MOzWHj4ohS1zLqQYvQmA4hSr0ljEryFln0Hqykd0s2GfSPArogH2m6uR1ws=w578",
+    "options": [
+      "1 ankit 45000",
+      "1 ankit 0",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 111,
+    "title": "_____ là vùng nhớ chia sẻ giữa các Thread, hàm ______ \n\nđược gọi mỗi lần trước khi đối tượng được thu gom rác.",
+    "image": null,
+    "options": [
+      "stack, finalize()",
+      "heap, finalize()",
+      "heap, dispose()",
+      "stack, close()"
+    ],
+    "correct": [
+      "heap, finalize()"
+    ]
+  },
+  {
+    "index": 112,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkihjprmVdrXvN0rMnJlJTUtB3an3DoFRNW41huBXsq_mUn9Bvb5ZAOu28jbenhkYxyC7gI6dbvztmIvDKrJCl1U-nGkbkwJuLaO7U0HSYtxz0EYnWKebXsvtlA1cmufLvS9C55WmPa1IpfPvhPspK2inddm9l77E_N4YPhMmmjV3oTyEhjCAPt5LU9liyYCvcIDHKOj6T0LhDJBRbgpma4AlVGRo3TqpqOyn=w404",
+    "options": [
+      "parent method",
+      "child method",
+      "Compile Time Error",
+      "Runtime Error"
+    ],
+    "correct": [
+      "child method"
+    ]
+  },
+  {
+    "index": 113,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih1EEAhJ8b6eu0szO9r3-t5BKOpwiUoaBlNnmOYgUGe0VClufqt66GacMbz3M79kAOrQzGhWnWP3WujpZg3v962fowcyZNACNI94TdN8Zyc5M_XB1es8E0wiKHS7sIH3lDJW6L8Afp8c1Jgld0THia6nm13lfRtqS0_AxsCe9SxVgdlKCEZ8C_599v8ISqxGa_9xMPYHcMQY23hycSUWTGSQirFfVx_2quTLd0=w740",
+    "options": [
+      "common task completed      rest of the code...",
+      "task1 is completed                 rest of the code",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "Compile Time Error"
+    ]
+  },
+  {
+    "index": 114,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkigoBKNz6IjIjRuHrfKEJ-OrkMmNc7N2L784QhDaaq3mgojTDzuHq6zEpTMh-A8mElNzEibZJ8pcT6YXpA1rnw6vRhIE9lYxuQzb0jWJ1yrOtzj2Gvd-MlYJBD9tW-Jl8Dr--n8DsG8bgl6auNdZz3EB5WLpHGpaUWwi4wYA1Ls1pDMEz8uSIwvBjSlTR1-ZA3YCOECVsZnUaHVUiNe1sfLn-rwPLYcXgHnf=w690",
+    "options": [
+      "1 1 2 2 3 3 4 4",
+      "1 2 3 4 1 2 3 4",
+      "1 2 3 4 5 1 2 3 4 5",
+      "1 1 2 2 3 3 4 4 5 5"
+    ],
+    "correct": [
+      "1 1 2 2 3 3 4 4"
+    ]
+  },
+  {
+    "index": 115,
+    "title": "Chọn đáp án đúng ?",
+    "image": null,
+    "options": [
+      "public static void main (String args) {}",
+      "public static void main (String args[]) {}",
+      "public static void main (String[] args){}",
+      "public static void main (String[] b){}"
+    ],
+    "correct": [
+      "public static void main (String args[]) {}",
+      "public static void main (String[] args){}",
+      "public static void main (String[] b){}"
+    ]
+  },
+  {
+    "index": 116,
+    "title": "Phương thức nào sau đây thuộc về lớp RandomAccessFile?",
+    "image": null,
+    "options": [
+      "peek()",
+      "seek()",
+      "getFilePointer( )",
+      "find()",
+      "length()"
+    ],
+    "correct": [
+      "seek()",
+      "getFilePointer( )",
+      "length()"
+    ]
+  },
+  {
+    "index": 117,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih0HMLsxssen-3lHRHnHiD82uGCr24SItVG4qhviF9r_5VZ0GyhxcnSFx-N5w4PgGz-AmP7hkgUnVGklhG5kvcp1WRpLrBIvCkNp8i-5LQ_mzY3O7M5foi4okEJwcKkfxOcnseNQsHyQHPp-4Rxc1VTB8oGRSIMpJCXqArOUnaxT2Rym3Ew9WTD6J5Sz-FTqP3C35xYZ721QlnON0zN3CMfgEafbLWffPVIG40=w501",
+    "options": [
+      "Hello main",
+      "static block is invoked",
+      "static block is invoked        Hello main",
+      "Compile Error"
+    ],
+    "correct": [
+      "static block is invoked        Hello main"
+    ]
+  },
+  {
+    "index": 118,
+    "title": "",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkih-5BU1fmFteG9ltfMCOVVGUZR4UVpsm_fVnDJ7k-tgDOLXDAHIM2RCDkY5LQXZV-aa-HXRbIiGmAs5MFu3MU0Bz--Av5u92LTRhgh9Axx95xntadZzQRwIUSlU5tBkScnRjXl2Z0XyWtlnQO0H3R2YqmTUc8r_kAp7Lh4ZaDQEK3JrIiLbuyYBKRteHKWfDyFBYxQYINi_xodcy5wShyCT0XFOBDtUR2jm=w425",
+    "options": [
+      "150",
+      "90",
+      "Compile Time Error"
+    ],
+    "correct": [
+      "90"
+    ]
+  },
+  {
+    "index": 119,
+    "title": "What will be the output of the following program?",
+    "image": "https://docs.google.com/forms-images-rt/ANbbkij4STYrPV829_Jmzq9O9O8n50qBr0R7ZtplRhsv62lHCRiRyFqzGjRn4z-lqKkmdAtGK_RXsP5MEzZYjwwURlSrU1whPufJhdc1Pa97oHmM1Eg7s4Fxji5ULQcfEQW5rKxUQhXT_SN2bxUmoqlfUaI0LWixEqGmJ9WsNe4ZcgF9G2hCSCXUR6BFfFVLiY4e6H_hBMkTTGacOarDxzLFSzHWXi4tvKtQW7Tmv3c=w422",
+    "options": [
+      "A. a=3,a=3",
+      "B. a=3,a=6",
+      "C. a=3,a=7",
+      "D. Another value"
+    ],
+    "correct": [
+      "A. a=3,a=3"
+    ]
+  },
+  {
+    "index": 120,
+    "title": "Hãy chọn Các component của GUI",
+    "image": null,
+    "options": [
+      "Containers",
+      "textfields",
+      "dropdownList",
+      "labels",
+      "textareas",
+      "dialog"
+    ],
+    "correct": [
+      "Containers",
+      "textfields",
+      "labels",
+      "textareas",
+      "dialog"
+    ]
+  },
+  {
+    "index": 121,
+    "title": "Câu nào định nghĩa interface đúng cách?",
+    "image": null,
+    "options": [
+      "A. public interface A{ int a(); }",
+      "B. interface C{ int a; }",
+      "C. private interface D{}",
+      "D. abstract interface E{}"
+    ],
+    "correct": [
+      "A. public interface A{ int a(); }"
+    ]
+  }
+]

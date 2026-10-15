@@ -1,0 +1,2307 @@
+[
+  {
+    "id": 1,
+    "originalId": 1,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 1: Chương trình dịch Java thực hiện theo các bước nào? (slide 29)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Java codes -> interpreter -> bytecode -> run"
+      },
+      {
+        "label": "B",
+        "text": "Java codes -> compile -> run"
+      },
+      {
+        "label": "C",
+        "text": "Java codes  -> compiler -> bytecode -> interpreter"
+      },
+      {
+        "label": "D",
+        "text": "Java codes -> run directly"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 2,
+    "originalId": 10,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 2: Đoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng lệnh như sau: \n\nC:\\> java B hello you",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_10.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. B"
+      },
+      {
+        "label": "B",
+        "text": "B. hello"
+      },
+      {
+        "label": "C",
+        "text": "C. you"
+      },
+      {
+        "label": "D",
+        "text": "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\""
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 3,
+    "originalId": 39,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 3: Bạn nhập mã Java vào file nguồn. Bây giờ muốn lưu và biên dịch nó. Hãy chọn đáp án đúng",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "Save it in a file called Yourclass.java and compile it with javac Yourclass.java"
+      },
+      {
+        "label": "B",
+        "text": "Save it in a file called Myclass.java and compile it with javac Myclass.java"
+      },
+      {
+        "label": "C",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass.java"
+      },
+      {
+        "label": "D",
+        "text": "None of the above"
+      },
+      {
+        "label": "E",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 4,
+    "originalId": 40,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 4: Hãy chọn đáp án đúng nếu muốn chạy file mã nguồn Simple",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "To Compile: javac Simple.java          To Run: java Simple"
+      },
+      {
+        "label": "B",
+        "text": "To Compile: javac Simple                  To Run: java Simple.java"
+      },
+      {
+        "label": "C",
+        "text": "To Compile: java Simple.java             To Run: javac Simple"
+      },
+      {
+        "label": "D",
+        "text": "To Compile: java  Simple                   To Run: javac Simple.java"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 5,
+    "originalId": 50,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 5: When a subclass method have the same name, parameter list, and return type as a method in the parent class, this method is said to be what?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Extended"
+      },
+      {
+        "label": "B",
+        "text": "B. Overloaded"
+      },
+      {
+        "label": "C",
+        "text": "C. Overextended"
+      },
+      {
+        "label": "D",
+        "text": "D. Overridden"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 6,
+    "originalId": 51,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 6: When two or more methods in the same class have the same name, they are said to be what?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. an implementation detail"
+      },
+      {
+        "label": "B",
+        "text": "B. overriden"
+      },
+      {
+        "label": "C",
+        "text": "C. an interface"
+      },
+      {
+        "label": "D",
+        "text": "D. overloaded"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 7,
+    "originalId": 55,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 7: Những phương thức nào sau đây khai báo hợp lệ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public short M(){\nbyte m=120;\nreturn m;\n}\npublic int N(){\nlong n=500;\nreturn n;\n}\npublic Boolean P(){\nboolean p=true;\nreturn p;\n}\npublic long Q(){\nfloat q=300F;\nreturn q;\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. M()"
+      },
+      {
+        "label": "B",
+        "text": "B. N()"
+      },
+      {
+        "label": "C",
+        "text": "C. P()"
+      },
+      {
+        "label": "D",
+        "text": "D. Q()"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 8,
+    "originalId": 56,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 8: Khi phương thức được gọi thì các lệnh trong phương thức được thực hiện cho đến khi nào?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức"
+      },
+      {
+        "label": "B",
+        "text": "B. Cho đến hết phương thức"
+      },
+      {
+        "label": "C",
+        "text": "C. Cho đến khi gặp lệnh \"exit\""
+      },
+      {
+        "label": "D",
+        "text": "D. Cho đến khi gặp lệnh \"break\""
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 9,
+    "originalId": 75,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 9: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_75.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "running"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error (final cant be inherited)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 10,
+    "originalId": 78,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 10: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_78.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "animal is eating"
+      },
+      {
+        "label": "B",
+        "text": "dog is eating"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 11,
+    "originalId": 79,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 11: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_79.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "ok downcasting performed"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "C",
+        "text": "ClassCastException is thrown at runtime"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 12,
+    "originalId": 2,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 12: Đâu là bộ từ khoá của java (slide 44)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "static, short , sleep, join"
+      },
+      {
+        "label": "B",
+        "text": "abstract, boolean, transient, volatile"
+      },
+      {
+        "label": "C",
+        "text": "thrown, finally, document, new"
+      },
+      {
+        "label": "D",
+        "text": "string, integer,  char, catch"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 13,
+    "originalId": 8,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 13: Tên biến nào sau đây hợp lệ ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "case"
+      },
+      {
+        "label": "B",
+        "text": "Tất cả đều sai"
+      },
+      {
+        "label": "C",
+        "text": "1MyNumber"
+      },
+      {
+        "label": "D",
+        "text": "Int"
+      },
+      {
+        "label": "E",
+        "text": "char"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 14,
+    "originalId": 29,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 14: Phương thức main() nào được biên dịch?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. static public void main(String args[]) {}"
+      },
+      {
+        "label": "B",
+        "text": "B. public static void main(String []a) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. static public void main(String arg[]) {}"
+      },
+      {
+        "label": "D",
+        "text": "D. All correct"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 15,
+    "originalId": 30,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 15: Khẳng định nào đúng với đoạn mã sau?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class A{\npublic static void main(String s[]) {\nint i; \nSystem.out.print(\"i=\"+i); i=25;\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi"
+      },
+      {
+        "label": "B",
+        "text": "B. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình"
+      },
+      {
+        "label": "C",
+        "text": "C. Chương trình không biên dịch và xuất ra lỗi"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều sai"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 16,
+    "originalId": 37,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 16: Chọn đáp án sai ?",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "static void main (String args[]){}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main(String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public void main (String args[]){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main(String a[]) {}"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 17,
+    "originalId": 38,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 17: Chọn đáp án đúng ?",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "public static void main (String args) {}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main (String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public static void main (String[] args){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main (String[] b){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": 18,
+    "originalId": 3,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 18: Đâu là kiểu khai báo mảng có 3 phần tử đúng?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "int size[] = new int(3);"
+      },
+      {
+        "label": "B",
+        "text": "int size[] = new int[3];"
+      },
+      {
+        "label": "C",
+        "text": "int[] size = new int(3);"
+      },
+      {
+        "label": "D",
+        "text": "int size[] = new int[3]{3, 4, 5};"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 19,
+    "originalId": 6,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 19: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_6.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "5 100 200 10 300 15 400 20 25 500"
+      },
+      {
+        "label": "B",
+        "text": "5 10 15 20 25 100 200 300 400 500"
+      },
+      {
+        "label": "C",
+        "text": "100 200 300 400 500 5 10 15 20 25"
+      },
+      {
+        "label": "D",
+        "text": "100 5 200 10 300 15 400 20 500 25"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 20,
+    "originalId": 7,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 20: Cho đoạn mã nguồn Java sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class A{   \n      int a=40;      \n\n      public static void main(String args[]){    System.out.println(a);   }  \n\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "40"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 21,
+    "originalId": 14,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 21: Cho khai báo mảng 2 chiều như sau:\nint m[ ][ ]=new int[3][4];\nPhần nào sau đây dùng để xác định số cột của mảng hai chiều?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. m.length();"
+      },
+      {
+        "label": "B",
+        "text": "B. m[0].length;"
+      },
+      {
+        "label": "C",
+        "text": "C. m.length(3);"
+      },
+      {
+        "label": "D",
+        "text": "D. m[].length;"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 22,
+    "originalId": 15,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 22: Câu lệnh nào sau đây khai báo đúng một mảng 6 số nguyên?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int a[]={1,2,3,4,5,6}"
+      },
+      {
+        "label": "B",
+        "text": "B. int a[];"
+      },
+      {
+        "label": "C",
+        "text": "C. int a[] = new int[6];"
+      },
+      {
+        "label": "D",
+        "text": "D. int a[] = new int(6);"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 23,
+    "originalId": 16,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 23: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class N{\n       public static void main(String s[])\n    {\n         int x= 11 & 9;\n         System.out.print(x);\n     }\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 8"
+      },
+      {
+        "label": "B",
+        "text": "B. 9"
+      },
+      {
+        "label": "C",
+        "text": "C. 10"
+      },
+      {
+        "label": "D",
+        "text": "D. 11"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 24,
+    "originalId": 17,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 24: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_17.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. true false true false"
+      },
+      {
+        "label": "B",
+        "text": "B. true true false true"
+      },
+      {
+        "label": "C",
+        "text": "C. false true false true"
+      },
+      {
+        "label": "D",
+        "text": "D. false false true true"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 25,
+    "originalId": 18,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 25: What will be the output of the following program? (u,v=?)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_18.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. u=11,v=14"
+      },
+      {
+        "label": "B",
+        "text": "B. u=14,v=11"
+      },
+      {
+        "label": "C",
+        "text": "C. u=12,v=14"
+      },
+      {
+        "label": "D",
+        "text": "D. u=14,v=12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 26,
+    "originalId": 19,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 26: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int a=10;\ndo{\nSystem.out.print(a%2); a/=2;\n}while(a!=0);",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 0101"
+      },
+      {
+        "label": "B",
+        "text": "B. 1011"
+      },
+      {
+        "label": "C",
+        "text": "C. 1010"
+      },
+      {
+        "label": "D",
+        "text": "D. Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 27,
+    "originalId": 20,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 27: Để chuyển một chuỗi chứa giá trị nguyên (String) sang một số nguyên (int) thì sẽ dùng phương thức nào sau đây?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. tolnteger() thuộc lớp Integer"
+      },
+      {
+        "label": "B",
+        "text": "B. Parseln() thuộc lớp String"
+      },
+      {
+        "label": "C",
+        "text": "C. parselnt() thuộc lớp Integer"
+      },
+      {
+        "label": "D",
+        "text": "D. tolnteger() thuộc lớp string"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 28,
+    "originalId": 21,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 28: Chọn câu lệnh đúng?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int i, j; for (j=100; i < j; j--) { i += 2;}"
+      },
+      {
+        "label": "B",
+        "text": "B. for (int i=10; i=0; i--) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. int j=10; for ( int i=0, j+=90; i < j; i++) { j--; }"
+      },
+      {
+        "label": "D",
+        "text": "D. for (int i=0, j=100; i < j; i++, --j) { }"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 29,
+    "originalId": 22,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 29: Biểu thức nào sau đây không gây ra lỗi?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. boolean a = (boolean) 1;"
+      },
+      {
+        "label": "B",
+        "text": "B. boolean b = (false && true);"
+      },
+      {
+        "label": "C",
+        "text": "C. float y =22.3;"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 30,
+    "originalId": 23,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 30: Cho đoạn mã sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int x=11;\ndo{ x += 20;\n} while(x<10);\nVòng lặp sẽ lặp bao nhiêu lần?",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 1"
+      },
+      {
+        "label": "B",
+        "text": "B. 10"
+      },
+      {
+        "label": "C",
+        "text": "C. 11"
+      },
+      {
+        "label": "D",
+        "text": "D. 0"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 31,
+    "originalId": 24,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 31: What will be the output (s) of the following code?\nint i = 42;\nString s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\");",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. everything"
+      },
+      {
+        "label": "B",
+        "text": "B. universal"
+      },
+      {
+        "label": "C",
+        "text": "D. life"
+      },
+      {
+        "label": "D",
+        "text": "C. null"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 32,
+    "originalId": 25,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 32: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_25.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "B",
+        "text": "1 1 4"
+      },
+      {
+        "label": "C",
+        "text": "1 1 5"
+      },
+      {
+        "label": "D",
+        "text": "1 3 5"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 33,
+    "originalId": 26,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 33: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_26.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "m = 6"
+      },
+      {
+        "label": "B",
+        "text": "m = 12"
+      },
+      {
+        "label": "C",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "D",
+        "text": "m = 3"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 34,
+    "originalId": 27,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 34: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_27.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a. 99 99 101"
+      },
+      {
+        "label": "B",
+        "text": "b. 99 100 101"
+      },
+      {
+        "label": "C",
+        "text": "c. 98 99 101"
+      },
+      {
+        "label": "D",
+        "text": "d. 99 100 102"
+      },
+      {
+        "label": "E",
+        "text": "e. 99 100 100"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 35,
+    "originalId": 28,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 35: You want to find out the value of the last element of an array. You write the following code. What will happen when you compile and run it?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class MyAr{\npublic static void main(String argv[]){\nint[] i = new int[5];\nSystem.out.println(i[5]);\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a. An error at compile time"
+      },
+      {
+        "label": "B",
+        "text": "b. An error at run time"
+      },
+      {
+        "label": "C",
+        "text": "c. The value 0 will be output"
+      },
+      {
+        "label": "D",
+        "text": "d. The string \"null\" will be output"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 36,
+    "originalId": 31,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 36: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_31.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 257"
+      },
+      {
+        "label": "B",
+        "text": "B. 100257"
+      },
+      {
+        "label": "C",
+        "text": "C. The code will not compile"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 37,
+    "originalId": 32,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 37: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_32.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 22"
+      },
+      {
+        "label": "B",
+        "text": "B. 21"
+      },
+      {
+        "label": "C",
+        "text": "C. 23"
+      },
+      {
+        "label": "D",
+        "text": "D. 33"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 38,
+    "originalId": 33,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 38: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_33.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. a=3,a=3"
+      },
+      {
+        "label": "B",
+        "text": "B. a=3,a=6"
+      },
+      {
+        "label": "C",
+        "text": "C. a=3,a=7"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 39,
+    "originalId": 34,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 39: Cho biết kết quả khi chạy đoạn chương trình sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int i = 1; \nfor( i = 0; i = -1; i = 1){\nSystem.out.print(i);\nif(i!=1) break;\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "C",
+        "text": "Lỗi biên dịch"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 40,
+    "originalId": 35,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 40: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_35.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "12"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "9"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 41,
+    "originalId": 36,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 41: Lệnh System.out.println(\"CNTT\"); được thực hiện mấy lần",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_36.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 42,
+    "originalId": 41,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 42: Câu lệnh nào sau đây hợp lệ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Math.round(8.88)"
+      },
+      {
+        "label": "B",
+        "text": "Math.max(s)"
+      },
+      {
+        "label": "C",
+        "text": "Math.mod(4, 10)"
+      },
+      {
+        "label": "D",
+        "text": "Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 43,
+    "originalId": 46,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 43: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_46.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "0 0 0"
+      },
+      {
+        "label": "D",
+        "text": "1 2 3"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 44,
+    "originalId": 47,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 44: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_47.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3"
+      },
+      {
+        "label": "D",
+        "text": "Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 45,
+    "originalId": 48,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 45: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class M{ static int user=1;\npublic static void main(String s[]){\nSystem.out.print(++user);\nSystem.out.print(user++);\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.2 2"
+      },
+      {
+        "label": "B",
+        "text": "B.2 3"
+      },
+      {
+        "label": "C",
+        "text": "C.2 1"
+      },
+      {
+        "label": "D",
+        "text": "D.1 1"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 46,
+    "originalId": 49,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 46: Phát biểu nào sau đây sai về từ khoá static?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.Một phương thức static có thể sử dụng tất cả các biến trong lớp"
+      },
+      {
+        "label": "B",
+        "text": "B.Một phương thức static có thể được gọi mà không cần khởi tạo đối tượng."
+      },
+      {
+        "label": "C",
+        "text": "C.Từ khoá static không dùng trong khai báo lớp"
+      },
+      {
+        "label": "D",
+        "text": "D.Một thuộc tính static được dùng chung bởi tất cả các đối tượng thuộc lớp đó."
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 47,
+    "originalId": 57,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 47: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class TestPro{\npublic int x=4;\npublic static void main(String s[]){\nnew TestPro().Show();\n}\npublic void Show() { \nint x=2; x=x+5;\nthis.x=this.x - 2;\nx = x - this.x;\nSystem.out.print(x + \" \");\nSystem.out.print(this.x)\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 2 5"
+      },
+      {
+        "label": "B",
+        "text": "B. 5 2"
+      },
+      {
+        "label": "C",
+        "text": "C. 2 7"
+      },
+      {
+        "label": "D",
+        "text": "D. 7 2"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 48,
+    "originalId": 58,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 48: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_58.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello main"
+      },
+      {
+        "label": "B",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "C",
+        "text": "static block is invoked        Hello main"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 49,
+    "originalId": 59,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 49: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_59.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "B",
+        "text": "Runtime error"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 50,
+    "originalId": 60,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 50: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_60.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit 5000.0      112 sumit 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit 5000         112 sumit 6000"
+      },
+      {
+        "label": "C",
+        "text": "0 null 0.0         0 null 0.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 51,
+    "originalId": 61,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 51: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_61.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "hello a       10"
+      },
+      {
+        "label": "B",
+        "text": "hello a       0"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 52,
+    "originalId": 62,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 52: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_62.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit java 0.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit java 6000.0         112 sumit java 0.0"
+      },
+      {
+        "label": "C",
+        "text": "111 ankit java 6000.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 53,
+    "originalId": 63,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 53: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_63.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Print nothing"
+      },
+      {
+        "label": "B",
+        "text": "method is invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      },
+      {
+        "label": "D",
+        "text": "Runtime error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 54,
+    "originalId": 64,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 54: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_64.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "eating barking meowing"
+      },
+      {
+        "label": "B",
+        "text": "eating barking"
+      },
+      {
+        "label": "C",
+        "text": "meowing eating barking"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 55,
+    "originalId": 65,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 55: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_65.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello Welcome"
+      },
+      {
+        "label": "B",
+        "text": "Hello"
+      },
+      {
+        "label": "C",
+        "text": "Welcome"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 56,
+    "originalId": 66,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 56: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_66.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "22 33"
+      },
+      {
+        "label": "B",
+        "text": "33 22"
+      },
+      {
+        "label": "C",
+        "text": "0 0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 57,
+    "originalId": 67,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 57: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_67.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "22"
+      },
+      {
+        "label": "B",
+        "text": "22.0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 58,
+    "originalId": 68,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 58: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_68.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "main with String[]"
+      },
+      {
+        "label": "B",
+        "text": "main with String"
+      },
+      {
+        "label": "C",
+        "text": "main without args"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 59,
+    "originalId": 69,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 59: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_69.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "40 60"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error ( wrong type parameter)"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error ( wrong return type)"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error (no visibility mode)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 60,
+    "originalId": 70,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 60: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_70.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "int"
+      },
+      {
+        "label": "B",
+        "text": "long"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 61,
+    "originalId": 71,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 61: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_71.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 62,
+    "originalId": 72,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 62: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_72.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 ankit 45000"
+      },
+      {
+        "label": "B",
+        "text": "1 ankit 0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 63,
+    "originalId": 73,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 63: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_73.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "constructor    block    constructor    block"
+      },
+      {
+        "label": "B",
+        "text": "block     constructor      block     constructor"
+      },
+      {
+        "label": "C",
+        "text": "constructor    constructor   block     block"
+      },
+      {
+        "label": "D",
+        "text": "block     block    constructor    constructor"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 64,
+    "originalId": 74,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 64: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_74.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "block      parent         child"
+      },
+      {
+        "label": "B",
+        "text": "parent       child         block"
+      },
+      {
+        "label": "C",
+        "text": "parent      block         child"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 65,
+    "originalId": 76,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 65: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_76.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "70"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 66,
+    "originalId": 77,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 66: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_77.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "150"
+      },
+      {
+        "label": "B",
+        "text": "90"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 67,
+    "originalId": 80,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 67: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_80.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true true true 0"
+      },
+      {
+        "label": "B",
+        "text": "true false true 0"
+      },
+      {
+        "label": "C",
+        "text": "false false true 0"
+      },
+      {
+        "label": "D",
+        "text": "true false false 0"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 68,
+    "originalId": 81,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 68: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_81.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "false"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 69,
+    "originalId": 82,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 69: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_82.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 70,
+    "originalId": 83,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 70: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_83.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 71,
+    "originalId": 84,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 71: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_84.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 72,
+    "originalId": 52,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 72: Given this interface definition:",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": "interface A{\nint pt1(int m);\nint pt2(int n);\n}\nLớp nào sau đây sau khi implements interface mà không phải là 1 lớp abstract?",
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. class B implement A{ int pt1(){} int pt2(){} }"
+      },
+      {
+        "label": "B",
+        "text": "B. class B implements A{ int pt2(int n){} int pt1(int m){} }"
+      },
+      {
+        "label": "C",
+        "text": "C. class B implements A{ int pt1(int m){} int pt2(int n){} }"
+      },
+      {
+        "label": "D",
+        "text": "D. class B extends A{ int pt1(int m){} int pt2(int n){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": 73,
+    "originalId": 53,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 73: Interface sẽ dùng visibility mode nào ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public"
+      },
+      {
+        "label": "B",
+        "text": "B. protected"
+      },
+      {
+        "label": "C",
+        "text": "C. private"
+      },
+      {
+        "label": "D",
+        "text": "D. It does not matter"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 74,
+    "originalId": 54,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 74: Câu nào định nghĩa interface đúng cách?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public interface A{ int a(); }"
+      },
+      {
+        "label": "B",
+        "text": "B. interface C{ int a; }"
+      },
+      {
+        "label": "C",
+        "text": "C. private interface D{}"
+      },
+      {
+        "label": "D",
+        "text": "D. abstract interface E{}"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  }
+]

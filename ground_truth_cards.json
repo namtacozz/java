@@ -1,0 +1,3105 @@
+[
+  {
+    "page": 1,
+    "rect": [
+      67.125,
+      118.125,
+      546.375,
+      376.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      237.8,
+      267.8,
+      297.8,
+      327.8
+    ],
+    "green_ys": [
+      269.7
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. m.length();\nB. m[0].length;\nC. m.length(3);\nD. m[].length;\nCho khai báo mảng 2 chiều như sau:\nint m[ ][ ]=new int[3][4];\nPhần nào sau đây dùng để xác định số cột của mảng hai chiều?\n"
+  },
+  {
+    "page": 1,
+    "rect": [
+      67.125,
+      386.625,
+      546.375,
+      600.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      460.5,
+      492.0,
+      522.0,
+      552.0
+    ],
+    "green_ys": [
+      463.2
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. read()\nB. write()\nC. getBuffer()\nD. getString()\nNhững phương thức nào sau đây thuộc lớp InputStreamReader?\n"
+  },
+  {
+    "page": 2,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      296.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 6,
+    "bullets": [
+      87.8,
+      119.2,
+      150.8,
+      182.2,
+      213.8,
+      246.8
+    ],
+    "green_ys": [
+      90.4,
+      153.4,
+      216.4,
+      249.4
+    ],
+    "correct_letters": [
+      "A",
+      "C",
+      "E",
+      "F"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nTextField( )\nTextField(int rows, int columns, String anchor)\nTextField(int columns)\nTextField(int rows, int columns)\nTextField(String s)\nTextField(String s, int columns)\nChọn các hàm constructor của textfield\n"
+  },
+  {
+    "page": 3,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      535.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      396.0,
+      426.0,
+      456.0,
+      486.0
+    ],
+    "green_ys": [
+      457.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nparent method\nTestExceptionChild\nCompile Time Error\nRuntime Error\n"
+  },
+  {
+    "page": 4,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      326.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 7,
+    "bullets": [
+      87.8,
+      120.8,
+      152.2,
+      183.8,
+      215.2,
+      246.8,
+      278.2
+    ],
+    "green_ys": [
+      90.4,
+      123.4,
+      186.4,
+      249.4
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "D",
+      "F"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nComponent add(Component comp)\nComponent add(Component comp, int index)\nComponent add(Component comp, int rows, int cols)\nComponent add(Component comp, Object constraints)\nComponent add(Component comp, Object constraints, int count)\nComponent add(Component comp, Object constraints, int index)\nTất cả đều đúng\nChọn tất cả các phương thức add() đúng của lớp Container\n"
+  },
+  {
+    "page": 4,
+    "rect": [
+      67.125,
+      336.375,
+      546.375,
+      592.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      410.2,
+      443.2,
+      476.2,
+      509.2,
+      542.2
+    ],
+    "green_ys": [
+      412.9,
+      445.9,
+      478.9,
+      511.9,
+      544.9
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nreset( )\nsize( )\ntoCharArray( )\ntoString( )\nwriteTo( )\nNhững phương thức nào sau đây thuộc lớp CharArrayWriter?\n"
+  },
+  {
+    "page": 5,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      269.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      130.5,
+      160.5,
+      190.5,
+      220.5
+    ],
+    "green_ys": [
+      222.4
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Extended\nB. Overloaded\nC. Overextended\nD. Overridden\nWhen a subclass method have the same name, parameter list, and return\ntype as a method in the parent class, this method is said to be what?\n"
+  },
+  {
+    "page": 5,
+    "rect": [
+      67.125,
+      279.375,
+      546.375,
+      487.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      348.0,
+      378.0,
+      408.0,
+      438.0
+    ],
+    "green_ys": [
+      409.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nJava codes -> interpreter -> bytecode -> run\nJava codes -> compile -> run\nJava codes -> compiler -> bytecode -> interpreter\nJava codes -> run directly\nChương trình dịch Java thực hiện theo các bước nào? (slide 29)\n"
+  },
+  {
+    "page": 6,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      410.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      301.5,
+      331.5,
+      361.5
+    ],
+    "green_ys": [
+      333.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nstatic block is invoked\nRuntime error\nCompile error\n"
+  },
+  {
+    "page": 6,
+    "rect": [
+      67.125,
+      420.375,
+      546.375,
+      628.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      489.0,
+      519.0,
+      549.0,
+      579.0
+    ],
+    "green_ys": [
+      550.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nBorder Layout\nCard Layout\nFlowLayout\nGrid Layout\nLayout mặc định của panel là gì ?\n"
+  },
+  {
+    "page": 7,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      114.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. public\nB. protected\nC. private\nD. It does not matter\nInterface sẽ dùng visibility mode nào ?\n"
+  },
+  {
+    "page": 7,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      484.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      345.0,
+      375.0,
+      405.0,
+      435.0
+    ],
+    "green_ys": [
+      346.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nItemEvent\nTextEvent\nActionEvent\nAdjustmentEvent\nKhi một mục trong List/Choice được chọn hoặc bị loại bỏ sự kiện nào diễn\nra\n"
+  },
+  {
+    "page": 8,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      607.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      438.0,
+      468.0,
+      498.0,
+      528.0,
+      558.0
+    ],
+    "green_ys": [
+      529.9
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\na. 99 99 101\nb. 99 100 101\nc. 98 99 101\nd. 99 100 102\ne. 99 100 100\n"
+  },
+  {
+    "page": 9,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      269.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      130.5,
+      160.5,
+      190.5,
+      220.5
+    ],
+    "green_ys": [
+      132.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. RandomAccessFile ra=new RandomAccessFile(\"a.txt\",\"rw\");\nB. RandomAccessFile ra=new RandomAccessFile(new DataInputStream());\nC. RandomAccessFile ra=new RandomAccessFile(\"a.txt\");\nD. RandomAccessFile ra=new RandomAccessFile(new File(\"a.txt\");\nGiả sử việc xử lý ngoại lệ đã được cài đặt. Câu nào sau đây sẽ tạo một đối\ntượng của lớp RandomAccessFile?\n"
+  },
+  {
+    "page": 9,
+    "rect": [
+      67.125,
+      279.375,
+      546.375,
+      496.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      353.2,
+      386.2,
+      417.8,
+      447.8
+    ],
+    "green_ys": [
+      355.9,
+      388.9
+    ],
+    "correct_letters": [
+      "A",
+      "B"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nA. BufferInputStream(FileInputStream in, int size)\nB. BufferInputStream(FileInputStream fin)\nC. BufferInputStream(FileOutputStream fout)\nD. BufferInputStream(RandomAccessFile raf)\nChọn constructors phù hợp cho lớp BufferInputStream \n"
+  },
+  {
+    "page": 9,
+    "rect": [
+      67.125,
+      505.875,
+      546.375,
+      728.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      589.5,
+      619.5,
+      649.5,
+      679.5
+    ],
+    "green_ys": [
+      651.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Terminate the application\nB. Are ignored at runtime\nC. Cause the program to not compile\nD. Are handled automatically by the JVM\nUnhandled checked exceptions:\n"
+  },
+  {
+    "page": 10,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      129.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nActionEvent, ItemListener, MouseListener, KeyEvent\nActionEvent, AdjustmentEvent, ItemEvent, TextEvent\nComponentEvent, KeyEvent, MouseEvent, ActionEvent\nWindowEvent, ActionEvent, ItemEvent, TextEvent\nCác lớp sự kiện ngữ nghĩa (slide 191)\n"
+  },
+  {
+    "page": 10,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      469.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      330.0,
+      360.0,
+      390.0,
+      420.0
+    ],
+    "green_ys": [
+      421.9
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. int i, j; for (j=100; i < j; j--) { i += 2;}\nB. for (int i=10; i=0; i--) {}\nC. int j=10; for ( int i=0, j+=90; i < j; i++) { j--; }\nD. for (int i=0, j=100; i < j; i++, --j) { }\nChọn câu lệnh đúng?\n"
+  },
+  {
+    "page": 11,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      420.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 2,
+    "bullets": [
+      341.2,
+      371.2
+    ],
+    "green_ys": [
+      343.2
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n70\nCompile Time Error\n"
+  },
+  {
+    "page": 11,
+    "rect": [
+      67.125,
+      430.125,
+      546.375,
+      607.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      498.8,
+      528.8,
+      558.8
+    ],
+    "green_ys": [
+      500.7
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nNORTH, EAST, SOUTH, WEST, CENTER\nNORTH, EAST, SOUTH, WEST, MIDDLE\nUPPER, BOTTOM, MIDDLE, LEFT, RIGHT\nBorderLayout có các vùng nào\n"
+  },
+  {
+    "page": 12,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      485.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      346.5,
+      376.5,
+      406.5,
+      436.5
+    ],
+    "green_ys": [
+      378.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 2 5\nB. 5 2\nC. 2 7\nD. 7 2\nWhat will be the output of the following program?\npublic class TestPro{\npublic int x=4;\npublic static void main(String s[]){\nnew TestPro().Show();\n}\npublic void Show() { \nint x=2; x=x+5;\nthis.x=this.x - 2;\nx = x - this.x;\nSystem.out.print(x + \" \");\nSystem.out.print(this.x)\n}\n}\n"
+  },
+  {
+    "page": 12,
+    "rect": [
+      67.125,
+      495.375,
+      546.375,
+      712.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      569.2,
+      602.2,
+      633.8,
+      663.8
+    ],
+    "green_ys": [
+      571.9,
+      604.9
+    ],
+    "correct_letters": [
+      "A",
+      "B"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nA. File(String path);\nB. File(String path, String name);\nC. RandomAccessFile(File)\nD. File(RandomAccessFile name)\nCâu nào là phương thức khởi tạo hợp lệ?\n"
+  },
+  {
+    "page": 13,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      323.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      184.5,
+      214.5,
+      244.5,
+      274.5
+    ],
+    "green_ys": [
+      246.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n0\nKết quả khác\nLỗi biên dịch\n1\nCho biết kết quả khi chạy đoạn chương trình sau:\nint i = 1; \nfor( i = 0; i = -1; i = 1){\nSystem.out.print(i);\nif(i!=1) break;\n}\n"
+  },
+  {
+    "page": 14,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      481.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      372.0,
+      402.0,
+      432.0
+    ],
+    "green_ys": [
+      433.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\ncommon task completed rest of the code...\ntask1 is completed rest of the code\nCompile Time Error\n"
+  },
+  {
+    "page": 15,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      308.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 6,
+    "bullets": [
+      102.8,
+      134.2,
+      165.8,
+      198.8,
+      230.2,
+      260.2
+    ],
+    "green_ys": [
+      105.4,
+      168.4,
+      201.4
+    ],
+    "correct_letters": [
+      "A",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nvoid remove(int index)\nvoid remove(Container cont, int index)\nvoid remove(Component comp)\nvoid removeAll()\nvoid remove(Container cont, Component comp)\nvoid remove(Container cont, Component comp, int index)\nKhi cần loại ra khỏi phần tử chứa một thành phần giao diện thì sử dụng các\nhàm  \n"
+  },
+  {
+    "page": 16,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      725.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      586.5,
+      616.5,
+      646.5,
+      676.5
+    ],
+    "green_ys": [
+      678.4
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\neating barking meowing\neating barking\nmeowing eating barking\nCompile Time Error\n"
+  },
+  {
+    "page": 17,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      485.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      346.5,
+      376.5,
+      406.5,
+      436.5
+    ],
+    "green_ys": [
+      348.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 257\nB. 100257\nC. The code will not compile\nD. Another value\nWhat will be the output of the following program?\n"
+  },
+  {
+    "page": 17,
+    "rect": [
+      67.125,
+      495.375,
+      546.375,
+      736.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      597.0,
+      627.0,
+      657.0,
+      687.0
+    ],
+    "green_ys": [
+      598.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. everything\nB. universal\nD. life\nC. null\nWhat will be the output (s) of the following code?\nint i = 42;\nString s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\"); \n"
+  },
+  {
+    "page": 18,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      114.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức\nB. Cho đến hết phương thức\nC. Cho đến khi gặp lệnh \"exit\"\nD. Cho đến khi gặp lệnh \"break\"\nKhi phương thức được gọi thì các lệnh trong phương thức được thực hiện\ncho đến khi nào?\n"
+  },
+  {
+    "page": 20,
+    "rect": [
+      67.125,
+      85.125,
+      546.375,
+      575.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      436.5,
+      466.5,
+      496.5,
+      526.5
+    ],
+    "green_ys": [
+      438.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 22\nB. 21\nC. 23\nD. 33\nWhat will be the output of the following program?\n"
+  },
+  {
+    "page": 21,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      379.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      240.0,
+      270.0,
+      300.0,
+      330.0
+    ],
+    "green_ys": [
+      241.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n11\n12\n10\n9\n"
+  },
+  {
+    "page": 22,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      503.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      364.5,
+      394.5,
+      424.5,
+      454.5
+    ],
+    "green_ys": [
+      366.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n40 60\nCompile Time Error ( wrong type parameter)\nCompile Time Error ( wrong return type)\nCompile Time Error (no visibility mode)\n"
+  },
+  {
+    "page": 23,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      584.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      445.5,
+      475.5,
+      505.5,
+      535.5
+    ],
+    "green_ys": [
+      477.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1 1 2 2 3 3 4 4\n1 2 3 4 1 2 3 4\n1 2 3 4 5 1 2 3 4 5\n1 1 2 2 3 3 4 4 5 5\n"
+  },
+  {
+    "page": 24,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      437.625
+    ],
+    "is_zero_one": true,
+    "bullet_count": 10,
+    "bullets": [
+      87.8,
+      120.8,
+      153.8,
+      186.8,
+      218.2,
+      249.8,
+      308.2,
+      335.2,
+      362.2,
+      389.2
+    ],
+    "green_ys": [
+      90.4,
+      123.4,
+      156.4,
+      252.4
+    ],
+    "correct_letters": [],
+    "isMultiple": false,
+    "card_text": "0/1\nButton\nList\nTextField\nChoice\nCheckBox\nMenuItem\nCâu trả lời đúng\nButton\nList\nTextField\nMenuItem\nCác nguồn gây ra sự kiện của ActionEvent là\n"
+  },
+  {
+    "page": 24,
+    "rect": [
+      67.125,
+      447.375,
+      546.375,
+      670.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      531.0,
+      561.0,
+      591.0,
+      621.0
+    ],
+    "green_ys": [
+      532.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Terminate the application\nB. Are ignored at runtime\nC. Cause the program to not compile\nD. Are handled automatically by the JVM\nUnhandled unchecked exceptions:\n"
+  },
+  {
+    "page": 25,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      129.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nint size[] = new int(3);\nint size[] = new int[3];\nint[] size = new int(3);\nint size[] = new int[3]{3, 4, 5};\nĐâu là kiểu khai báo mảng có 3 phần tử đúng?\n"
+  },
+  {
+    "page": 25,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      514.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 6,
+    "bullets": [
+      305.2,
+      338.2,
+      369.8,
+      401.2,
+      434.2,
+      465.8
+    ],
+    "green_ys": [
+      307.9,
+      340.9,
+      403.9,
+      436.9
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nTextArea( )\nTextArea(int rows, int cols )\nTextArea(int rows, int cols, String text)\nTextArea(String text)\nTextArea(String text, int rows, int cols)\nTextArea(int cols)\nChọn các hàm constructor của textArea\n"
+  },
+  {
+    "page": 26,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      329.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 2,
+    "bullets": [
+      250.5,
+      280.5
+    ],
+    "green_ys": [
+      282.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\ntrue\nfalse\n"
+  },
+  {
+    "page": 26,
+    "rect": [
+      67.125,
+      339.375,
+      546.375,
+      705.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      566.2,
+      596.2,
+      626.2,
+      656.2
+    ],
+    "green_ys": [
+      658.2
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. B\nB. hello\nC. you\nD. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\"\nĐoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng\nlệnh như sau: \nC:\\> java B hello you\n"
+  },
+  {
+    "page": 27,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      174.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nnotify()\nnotifyAll()\nresume()\nwake()\n  Nếu một luồng bị chặn lại bởi lời gọi hàm suspend(),  muốn thực hiện thì\ntrước đó phải gọi hàm   \n"
+  },
+  {
+    "page": 27,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      658.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      519.0,
+      549.0,
+      579.0,
+      609.0
+    ],
+    "green_ys": [
+      580.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nrunning...\nrunning... running...\nException in thread \"main\" java.lang.IllegalThreadStateException\ninfinite running...\n"
+  },
+  {
+    "page": 28,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      263.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      87.8,
+      119.2,
+      150.8,
+      183.8,
+      215.2
+    ],
+    "green_ys": [
+      90.4,
+      153.4,
+      186.4
+    ],
+    "correct_letters": [
+      "A",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nLớp System.out.\nLớp System.console\nLớp System.in.\nLớp System.err.\nLớp System.stream\nLớp nào là lớp luồng I/O?\n"
+  },
+  {
+    "page": 28,
+    "rect": [
+      67.125,
+      273.375,
+      546.375,
+      716.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      607.5,
+      637.5,
+      667.5
+    ],
+    "green_ys": [
+      639.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\na method invoked\nb method invoked\nCompile Time Error\n"
+  },
+  {
+    "page": 29,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      129.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nstatic, short , sleep, join\nabstract, boolean, transient, volatile\nthrown, finally, document, new\nstring, integer, char, catch\nĐâu là bộ từ khoá của java (slide 44)\n"
+  },
+  {
+    "page": 29,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      454.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      315.0,
+      345.0,
+      375.0,
+      405.0
+    ],
+    "green_ys": [
+      376.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1\n5\n10\nBao nhiêu cũng được\nMức ưu tiên của các luồng có thể nhận giá trị tối đa là bao nhiêu\n"
+  },
+  {
+    "page": 30,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      406.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      297.0,
+      327.0,
+      357.0
+    ],
+    "green_ys": [
+      298.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nint\nlong\nCompile Time Error\n"
+  },
+  {
+    "page": 30,
+    "rect": [
+      67.125,
+      415.875,
+      546.375,
+      650.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      473.2,
+      504.8,
+      537.8,
+      569.2,
+      600.8
+    ],
+    "green_ys": [
+      507.4,
+      540.4,
+      603.4
+    ],
+    "correct_letters": [
+      "B",
+      "C",
+      "E"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\npeek()\nseek()\ngetFilePointer( )\nfind()\nlength()\nPhương thức nào sau đây thuộc về lớp RandomAccessFile?\n"
+  },
+  {
+    "page": 31,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      129.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n4\n5\n6\n3\nBorderLayout có tất cả bao nhiêu vùng ?\n"
+  },
+  {
+    "page": 31,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      481.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      305.2,
+      338.2,
+      369.8,
+      399.8,
+      431.2
+    ],
+    "green_ys": [
+      307.9,
+      340.9,
+      433.9
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "E"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nLabel()\nLabel(String labeltext)\nLabel(int column)\nLabel(int vgap, int hgap)\nLabel(String labeltext, int alignment)\nChọn các hàm constructor của label\n"
+  },
+  {
+    "page": 32,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      440.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      331.5,
+      361.5,
+      391.5
+    ],
+    "green_ys": [
+      393.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\na method invoked\nb method invoked\nCompile Time Error\n"
+  },
+  {
+    "page": 32,
+    "rect": [
+      67.125,
+      450.375,
+      546.375,
+      673.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      534.0,
+      564.0,
+      594.0,
+      624.0
+    ],
+    "green_ys": [
+      565.9
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. boolean a = (boolean) 1;\nB. boolean b = (false && true);\nC. float y =22.3;\nD. Tất cả đều đúng\nBiểu thức nào sau đây không gây ra lỗi?\n"
+  },
+  {
+    "page": 33,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      467.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      358.5,
+      388.5,
+      418.5
+    ],
+    "green_ys": [
+      390.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\na method invoked\nb method invoked\nCompile Time Error\n"
+  },
+  {
+    "page": 33,
+    "rect": [
+      67.125,
+      477.375,
+      546.375,
+      730.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      551.2,
+      584.2,
+      617.2,
+      650.2,
+      681.8
+    ],
+    "green_ys": [
+      553.9,
+      586.9,
+      619.9,
+      652.9
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nThread()\nThread(String name)\nThread(Runnable r)\nThread(Runnable r,String name)\nThread(String name, Runnable r)\nCác constructor thường được sử dụng của lớp Thread\n"
+  },
+  {
+    "page": 34,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      269.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      130.5,
+      160.5,
+      190.5,
+      220.5
+    ],
+    "green_ys": [
+      192.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. tolnteger() thuộc lớp Integer\nB. Parseln() thuộc lớp String\nC. parselnt() thuộc lớp Integer\nD. tolnteger() thuộc lớp string\nĐể chuyển một chuỗi chứa giá trị nguyên (String) sang một số nguyên (int)\nthì sẽ dùng phương thức nào sau đây?\n"
+  },
+  {
+    "page": 35,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      526.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      417.8,
+      447.8,
+      477.8
+    ],
+    "green_ys": [
+      419.7
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nok downcasting performed\nCompile Time Error\nClassCastException is thrown at runtime\n"
+  },
+  {
+    "page": 36,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      263.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      87.8,
+      119.2,
+      150.8,
+      183.8,
+      215.2
+    ],
+    "green_ys": [
+      90.4,
+      153.4,
+      186.4
+    ],
+    "correct_letters": [
+      "A",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nreset( )\nwriteByte()\nsize( )\nwriteTo( )\ngetBytes()\nPhương thức của lớp ByteArrayOutputStream?\n"
+  },
+  {
+    "page": 37,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      526.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      417.0,
+      447.0,
+      477.0
+    ],
+    "green_ys": [
+      448.9
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nCompile Time Error\nnice fruits\nRuntime Error\n"
+  },
+  {
+    "page": 38,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      721.875
+    ],
+    "is_zero_one": true,
+    "bullet_count": 5,
+    "bullets": [
+      524.2,
+      554.2,
+      584.2,
+      614.2,
+      673.5
+    ],
+    "green_ys": [],
+    "correct_letters": [],
+    "isMultiple": false,
+    "card_text": "0/1\n111 ankit java 0.0 112 sumit java 6000.0\n111 ankit java 6000.0 112 sumit java 0.0\n111 ankit java 6000.0 112 sumit java 6000.0\nCompile Time Error\nCâu trả lời đúng\nCompile Time Error\n"
+  },
+  {
+    "page": 39,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      230.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      87.8,
+      119.2,
+      150.8,
+      182.2
+    ],
+    "green_ys": [
+      90.4,
+      153.4
+    ],
+    "correct_letters": [
+      "A",
+      "C"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nFlowLayout exLayout = new FlowLayout(FlowLayout.RIGHT);\nFlowLayout mylayout = new Layout(new FlowLayout());\nFlowLayout mylayout = new FlowLayout();\nFlowLayout mylayout = new FlowLayout(new FlowLayout.RIGHT());\nCác constructor của FlowLayout\n"
+  },
+  {
+    "page": 39,
+    "rect": [
+      67.125,
+      240.375,
+      546.375,
+      760.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      621.0,
+      651.0,
+      681.0,
+      711.0
+    ],
+    "green_ys": [
+      622.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1 1 2 2 3 3 4 4\n1 2 3 4 1 2 3 4\n1 2 3 4 5 1 2 3 4 5\n1 1 2 2 3 3 4 4 5 5\n"
+  },
+  {
+    "page": 40,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      447.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      308.2,
+      338.2,
+      368.2,
+      398.2
+    ],
+    "green_ys": [
+      370.2
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nHello main\nstatic block is invoked\nstatic block is invoked Hello main\nCompile Error\n"
+  },
+  {
+    "page": 41,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      539.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      400.5,
+      430.5,
+      460.5,
+      490.5
+    ],
+    "green_ys": [
+      402.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. M()\nB. N()\nC. P()\nD. Q()\nNhững phương thức nào sau đây khai báo hợp lệ?\npublic short M(){\nbyte m=120;\nreturn m;\n}\npublic int N(){\nlong n=500;\nreturn n;\n}\npublic Boolean P(){\nboolean p=true;\nreturn p;\n}\npublic long Q(){\nfloat q=300F;\nreturn q;\n}\n"
+  },
+  {
+    "page": 42,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      620.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      481.5,
+      511.5,
+      541.5,
+      571.5
+    ],
+    "green_ys": [
+      483.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1 1 1\n3 3 3\n0 0 0\n1 2 3\n"
+  },
+  {
+    "page": 43,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      433.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      294.8,
+      324.8,
+      354.8,
+      384.8
+    ],
+    "green_ys": [
+      326.7
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n11\n0\n10\n5\nLệnh System.out.println(\"CNTT\"); được thực hiện mấy lần\n"
+  },
+  {
+    "page": 43,
+    "rect": [
+      67.125,
+      443.625,
+      546.375,
+      756.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      617.2,
+      647.2,
+      677.2,
+      707.2
+    ],
+    "green_ys": [
+      679.2
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi\nB. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình\nC. Chương trình không biên dịch và xuất ra lỗi\nD. Tất cả đều sai\nKhẳng định nào đúng với đoạn mã sau?\npublic class A{\npublic static void main(String s[]) {\nint i; \nSystem.out.print(\"i=\"+i); i=25;\n}\n}\n"
+  },
+  {
+    "page": 44,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      266.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5,
+      217.5
+    ],
+    "green_ys": [
+      189.4
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1\n2\n3\n4\n5\nCó bao nhiêu loại JDBC Driver\n"
+  },
+  {
+    "page": 44,
+    "rect": [
+      67.125,
+      276.375,
+      546.375,
+      514.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      345.0,
+      375.0,
+      405.0,
+      435.0,
+      465.0
+    ],
+    "green_ys": [
+      436.9
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\ncase\nTất cả đều sai\n1MyNumber\nInt\nchar\nTên biến nào sau đây hợp lệ ?\n"
+  },
+  {
+    "page": 44,
+    "rect": [
+      67.125,
+      523.875,
+      546.375,
+      743.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      597.8,
+      630.8,
+      663.8,
+      695.2
+    ],
+    "green_ys": [
+      600.4,
+      633.4,
+      666.4
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "C"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nA. FileInputStream(File f)\nB. FileInputStream(String s)\nC. FileInputStream(FileDescriptor fd)\nD. FileInputStream(RandomAccessFile raf)\nChọn constructors phù hợp cho lớp FileInputStream ? \n"
+  },
+  {
+    "page": 45,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      532.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      393.8,
+      423.8,
+      453.8,
+      483.8
+    ],
+    "green_ys": [
+      425.7
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nconstructor block constructor block\nblock constructor block constructor\nconstructor constructor block block\nblock block constructor constructor\n"
+  },
+  {
+    "page": 46,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      588.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      479.2,
+      509.2,
+      539.2
+    ],
+    "green_ys": [
+      541.2
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nblock parent child\nparent child block\nparent block child\n"
+  },
+  {
+    "page": 47,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      144.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nstack, finalize()\nheap, finalize()\nheap, dispose()\nstack, close()\n_____ là vùng nhớ chia sẻ giữa các Thread, hàm ______  được gọi mỗi lần\ntrước khi đối tượng được thu gom rác.\n"
+  },
+  {
+    "page": 47,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      466.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      320.2,
+      353.2,
+      384.8,
+      416.2
+    ],
+    "green_ys": [
+      322.9,
+      355.9,
+      418.9
+    ],
+    "correct_letters": [
+      "A",
+      "B",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nGridLayout()\nGridLayout(int rows, int columns)\nGridLayout(int rows, int columns, int index)\nGridLayout(int rows, int columns, int hoiongap, int verticalgap)\nCác hàm constructor của GridLayout\n"
+  },
+  {
+    "page": 48,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      539.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      430.5,
+      460.5,
+      490.5
+    ],
+    "green_ys": [
+      462.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nanimal is eating\ndog is eating\nCompile Time Error\n"
+  },
+  {
+    "page": 49,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      520.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      381.0,
+      411.0,
+      441.0,
+      471.0
+    ],
+    "green_ys": [
+      382.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. a=3,a=3\nB. a=3,a=6\nC. a=3,a=7\nD. Another value\nWhat will be the output of the following program?\n"
+  },
+  {
+    "page": 50,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      562.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      423.8,
+      453.8,
+      483.8,
+      513.8
+    ],
+    "green_ys": [
+      425.7
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nhello a 10\nhello a 0\n0\nCompile error\n"
+  },
+  {
+    "page": 51,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      745.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      606.0,
+      636.0,
+      666.0,
+      696.0
+    ],
+    "green_ys": [
+      667.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n111 ankit 5000.0 112 sumit 6000.0\n111 ankit 5000 112 sumit 6000\n0 null 0.0 0 null 0.0\nCompile Error\n"
+  },
+  {
+    "page": 52,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      296.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 6,
+    "bullets": [
+      86.2,
+      117.8,
+      149.2,
+      180.8,
+      213.8,
+      246.8
+    ],
+    "green_ys": [
+      120.4,
+      183.4,
+      216.4,
+      249.4
+    ],
+    "correct_letters": [
+      "B",
+      "D",
+      "E",
+      "F"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nButton\nList\nTextField\nChoice\nCheckBox\nCheckboxMenuItem\nCác nguồn gây ra sự kiện của ItemEvent là\n"
+  },
+  {
+    "page": 52,
+    "rect": [
+      67.125,
+      306.375,
+      546.375,
+      684.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      545.2,
+      575.2,
+      605.2,
+      635.2
+    ],
+    "green_ys": [
+      577.2
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. true false true false\nB. true true false true\nC. false true false true\nD. false false true true\nWhat will be the output of the following program?\n"
+  },
+  {
+    "page": 53,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      99.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nMath.round(8.88)\nMath.max(s)\nMath.mod(4, 10)\nTất cả đều đúng\nCâu lệnh nào sau đây hợp lệ?\n"
+  },
+  {
+    "page": 53,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      469.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      330.0,
+      360.0,
+      390.0,
+      420.0
+    ],
+    "green_ys": [
+      391.9
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. int a[]={1,2,3,4,5,6}\nB. int a[];\nC. int a[] = new int[6];\nD. int a[] = new int(6);\nCâu lệnh nào sau đây khai báo đúng một mảng 6 số nguyên?\n"
+  },
+  {
+    "page": 53,
+    "rect": [
+      67.125,
+      478.875,
+      546.375,
+      686.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      547.5,
+      577.5,
+      607.5,
+      637.5
+    ],
+    "green_ys": [
+      579.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nTo hơn\nNhanh hơn\nNhỏ hơn\nChậm hơn\nMức ưu tiên càng cao thì các đối tượng như thế nào\n"
+  },
+  {
+    "page": 54,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      428.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      289.5,
+      319.5,
+      349.5,
+      379.5
+    ],
+    "green_ys": [
+      351.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nKết quả khác\n1 1 4\n1 1 5\n1 3 5\n"
+  },
+  {
+    "page": 55,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      596.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      457.5,
+      487.5,
+      517.5,
+      547.5
+    ],
+    "green_ys": [
+      519.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n1 1 1\n3 3 3\n1 2 3\nAnother answer\n"
+  },
+  {
+    "page": 56,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      114.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA.Một phương thức static có thể sử dụng tất cả các biến trong lớp\nB.Một phương thức static có thể được gọi mà không cần khởi tạo đối tượng.\nC.Từ khoá static không dùng trong khai báo lớp\nD.Một thuộc tính static được dùng chung bởi tất cả các đối tượng thuộc lớp đó.\nPhát biểu nào sau đây sai về từ khoá static?\n"
+  },
+  {
+    "page": 56,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      586.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      441.8,
+      473.2,
+      506.2,
+      537.8
+    ],
+    "green_ys": [
+      475.9,
+      508.9
+    ],
+    "correct_letters": [
+      "B",
+      "C"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nA. class B implement A{ int pt1(){} int pt2(){} }\nB. class B implements A{ int pt2(int n){} int pt1(int m){} }\nC. class B implements A{ int pt1(int m){} int pt2(int n){} }\nD. class B extends A{ int pt1(int m){} int pt2(int n){}\nGiven this interface definition:\ninterface A{\nint pt1(int m);\nint pt2(int n);\n}\nLớp nào sau đây sau khi implements interface mà không phải là 1 lớp\nabstract?\n"
+  },
+  {
+    "page": 57,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      397.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      258.8,
+      288.8,
+      318.8,
+      348.8
+    ],
+    "green_ys": [
+      260.7
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. u=11,v=14\nB. u=14,v=11\nC. u=12,v=14\nD. u=14,v=12\nWhat will be the output of the following program? (u,v=?)\n"
+  },
+  {
+    "page": 58,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      442.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      303.0,
+      333.0,
+      363.0,
+      393.0
+    ],
+    "green_ys": [
+      334.9
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\ntrue true true 0\ntrue false true 0\nfalse false true 0\ntrue false false 0\n"
+  },
+  {
+    "page": 58,
+    "rect": [
+      67.125,
+      451.875,
+      546.375,
+      674.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      535.5,
+      565.5,
+      595.5,
+      625.5
+    ],
+    "green_ys": [
+      537.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. public interface A{ int a(); }\nB. interface C{ int a; }\nC. private interface D{}\nD. abstract interface E{}\nCâu nào định nghĩa interface đúng cách?\n"
+  },
+  {
+    "page": 59,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      492.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      383.2,
+      413.2,
+      443.2
+    ],
+    "green_ys": [
+      385.2
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n22\n22.0\nCompile Time Error\n"
+  },
+  {
+    "page": 60,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      544.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      405.0,
+      435.0,
+      465.0,
+      495.0
+    ],
+    "green_ys": [
+      406.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n22 33\n33 22\n0 0\nCompile Time Error\n"
+  },
+  {
+    "page": 61,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      722.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      583.5,
+      613.5,
+      643.5,
+      673.5
+    ],
+    "green_ys": [
+      615.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nparent method\nchild method\nCompile Time Error\nRuntime Error\n"
+  },
+  {
+    "page": 62,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      323.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      184.5,
+      214.5,
+      244.5,
+      274.5
+    ],
+    "green_ys": [
+      246.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Chương trình sẽ biên dịch chính xác\nB. Chương trình sẽ không biên dịch được vì không có catch\nC. Chương trình sẽ không biên dịch được vì không có catch hoặc finally\nD. Chương trình sẽ không biên dịch được vì không có finally\nclass Myprogram{\n     public static void main(String args[]){\n           try{ System.out.println(\"Hello\");}\n      }\n  }\n"
+  },
+  {
+    "page": 62,
+    "rect": [
+      67.125,
+      333.375,
+      546.375,
+      740.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      631.5,
+      661.5,
+      691.5
+    ],
+    "green_ys": [
+      663.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n150\n90\nCompile Time Error\n"
+  },
+  {
+    "page": 63,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      204.4
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. static public void main(String args[]) {}\nB. public static void main(String []a) {}\nC. static public void main(String arg[]) {}\nD. All correct\nPhương thức main() nào được biên dịch?\n"
+  },
+  {
+    "page": 63,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      592.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      453.0,
+      483.0,
+      513.0,
+      543.0
+    ],
+    "green_ys": [
+      454.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA.2 2\nB.2 3\nC.2 1\nD.1 1\nWhat will be the output of the following program?\nclass M{ static int user=1;\npublic static void main(String s[]){\nSystem.out.print(++user);\nSystem.out.print(user++);\n}\n}\n"
+  },
+  {
+    "page": 64,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      263.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      178.5,
+      214.5
+    ],
+    "green_ys": [
+      144.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. Are executed only after a try block executes with no exceptions\nB. Are always executed after try and catch blocks\nC. Are only executed if an exception is thrown but no matching catch clause is\nfound\nD. Are only executed if a catch clause is executed\nFinally clause:\n"
+  },
+  {
+    "page": 64,
+    "rect": [
+      67.125,
+      273.375,
+      546.375,
+      568.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      429.0,
+      459.0,
+      489.0,
+      519.0
+    ],
+    "green_ys": [
+      430.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 1\nB. 10\nC. 11\nD. 0\nCho đoạn mã sau:\nint x=11;\ndo{ x += 20;\n} while(x<10);\nVòng lặp sẽ lặp bao nhiêu lần?\n"
+  },
+  {
+    "page": 65,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      275.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 5,
+    "bullets": [
+      102.8,
+      135.8,
+      167.2,
+      197.2,
+      227.2
+    ],
+    "green_ys": [
+      105.4,
+      138.4
+    ],
+    "correct_letters": [
+      "A",
+      "B"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nSave it in a file called Yourclass.java and compile it with javac Yourclass.java\nSave it in a file called Myclass.java and compile it with javac Myclass.java\nSave it in a file called Myclass.jav and compile it with javac Myclass.java\nNone of the above\nSave it in a file called Myclass.jav and compile it with javac Myclass\nBạn nhập mã Java vào file nguồn. Bây giờ muốn lưu và biên dịch nó. Hãy\nchọn đáp án đúng\n"
+  },
+  {
+    "page": 65,
+    "rect": [
+      67.125,
+      285.375,
+      546.375,
+      670.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      531.0,
+      561.0,
+      591.0,
+      621.0
+    ],
+    "green_ys": [
+      562.9
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\na. An error at compile time\nb. An error at run time\nc. The value 0 will be output\nd. The string \"null\" will be output\nYou want to find out the value of the last element of an array. You write the\nfollowing code. What will happen when you compile and run it?\npublic class MyAr{\npublic static void main(String argv[]){\nint[] i = new int[5];\nSystem.out.println(i[5]);\n}\n}\n"
+  },
+  {
+    "page": 66,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      445.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      306.0,
+      336.0,
+      366.0,
+      396.0
+    ],
+    "green_ys": [
+      307.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nmain with String[]\nmain with String\nmain without args\nCompile Time Error\n"
+  },
+  {
+    "page": 67,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      389.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 2,
+    "bullets": [
+      310.5,
+      340.5
+    ],
+    "green_ys": [
+      312.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nrunning\nCompile Time Error (final cant be inherited)\n"
+  },
+  {
+    "page": 68,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      470.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      331.5,
+      361.5,
+      391.5,
+      421.5
+    ],
+    "green_ys": [
+      363.4
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nPrint nothing\nmethod is invoked\nCompile error\nRuntime error\n"
+  },
+  {
+    "page": 68,
+    "rect": [
+      67.125,
+      480.375,
+      546.375,
+      685.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      537.8,
+      569.2,
+      602.2,
+      635.2
+    ],
+    "green_ys": [
+      571.9,
+      604.9,
+      637.9
+    ],
+    "correct_letters": [
+      "B",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\npublic static void main (String args) {}\npublic static void main (String args[]) {}\npublic static void main (String[] args){}\npublic static void main (String[] b){}\nChọn đáp án đúng ?\n"
+  },
+  {
+    "page": 69,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      323.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      184.5,
+      214.5,
+      244.5,
+      274.5
+    ],
+    "green_ys": [
+      186.4
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 0101\nB. 1011\nC. 1010\nD. Another answer\nWhat will be the output of the following program?\nint a=10;\ndo{\nSystem.out.print(a%2); a/=2;\n}while(a!=0);\n"
+  },
+  {
+    "page": 69,
+    "rect": [
+      67.125,
+      333.375,
+      546.375,
+      550.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      405.8,
+      437.2,
+      470.2,
+      501.8
+    ],
+    "green_ys": [
+      439.9,
+      472.9
+    ],
+    "correct_letters": [
+      "B",
+      "C"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nA. read()\nB. write()\nC. getBuffer()\nD. getString()\nNhững phương thức nào sau đây thuộc lớp StringWriter?\n"
+  },
+  {
+    "page": 70,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      595.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      456.8,
+      486.8,
+      516.8,
+      546.8
+    ],
+    "green_ys": [
+      548.7
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nHello Welcome\nHello\nWelcome\nCompile Time Error\n"
+  },
+  {
+    "page": 71,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      236.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      97.5,
+      127.5,
+      157.5,
+      187.5
+    ],
+    "green_ys": [
+      159.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA.String\nB.Error\nC.Throwable\nD.Exception\nLớp nào là lớp cơ sở cho mọi đối tượng lỗi\n"
+  },
+  {
+    "page": 71,
+    "rect": [
+      67.125,
+      246.375,
+      546.375,
+      454.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      315.0,
+      345.0,
+      375.0,
+      405.0
+    ],
+    "green_ys": [
+      316.9
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nTo Compile: javac Simple.java To Run: java Simple\nTo Compile: javac Simple To Run: java Simple.java\nTo Compile: java Simple.java To Run: javac Simple\nTo Compile: java Simple To Run: javac Simple.java\nHãy chọn đáp án đúng nếu muốn chạy file mã nguồn Simple\n"
+  },
+  {
+    "page": 71,
+    "rect": [
+      67.125,
+      463.875,
+      546.375,
+      704.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      565.5,
+      595.5,
+      625.5,
+      655.5
+    ],
+    "green_ys": [
+      657.4
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. an implementation detail\nB. overriden\nC. an interface\nD. overloaded\nWhen two or more methods in the same class have the same name, they\nare said to be what?\n"
+  },
+  {
+    "page": 72,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      230.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      87.8,
+      119.2,
+      150.8,
+      182.2
+    ],
+    "green_ys": [
+      90.4,
+      153.4
+    ],
+    "correct_letters": [
+      "A",
+      "C"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nstatic void main (String args[]){}\npublic static void main(String args[]) {}\npublic void main (String args[]){}\npublic static void main(String a[]) {}\nChọn đáp án sai ?\n"
+  },
+  {
+    "page": 72,
+    "rect": [
+      67.125,
+      240.375,
+      546.375,
+      526.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 2,
+    "bullets": [
+      447.8,
+      477.8
+    ],
+    "green_ys": [
+      449.7
+    ],
+    "correct_letters": [
+      "A"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\ntrue\nFalse\n"
+  },
+  {
+    "page": 72,
+    "rect": [
+      67.125,
+      536.625,
+      546.375,
+      753.375
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      610.5,
+      643.5,
+      675.0,
+      705.0
+    ],
+    "green_ys": [
+      613.2,
+      646.2
+    ],
+    "correct_letters": [
+      "A",
+      "B"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nnotify()\nnotifyAll()\nresume()\nwake()\n  Nếu một luồng bị chặn lại bởi lời gọi hàm wait(),  muốn tiếp tục thì phải\ngọi hàm    \n"
+  },
+  {
+    "page": 73,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      251.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      112.5,
+      142.5,
+      172.5,
+      202.5
+    ],
+    "green_ys": [
+      174.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nItemEvent\nTextEvent\nActionEvent\nAdjustmentEvent\nKhi một mục trong List được double click, hoặc phím Enter trong trường\nvăn bản được gõ, sự kiện nào diễn ra\n"
+  },
+  {
+    "page": 73,
+    "rect": [
+      67.125,
+      261.375,
+      546.375,
+      463.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      320.2,
+      353.2,
+      384.8,
+      414.8
+    ],
+    "green_ys": [
+      322.9,
+      355.9
+    ],
+    "correct_letters": [
+      "A",
+      "B"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nBorderLayout()\nBorderLayout(int horizongap, int verticalgap)\nBorderLayout(int aligment, int horizongap, int verticalgap)\nBorderLayout(int coordination)\nCác hàm constructor của BorderLayout\n"
+  },
+  {
+    "page": 73,
+    "rect": [
+      67.125,
+      472.875,
+      546.375,
+      677.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      531.8,
+      563.2,
+      594.8,
+      627.8
+    ],
+    "green_ys": [
+      534.4,
+      597.4,
+      630.4
+    ],
+    "correct_letters": [
+      "A",
+      "C",
+      "D"
+    ],
+    "isMultiple": true,
+    "card_text": "1/1\nFlowLayout()\nFlowLayout(int aligment, int position, int index)\nFlowLayout(int aligment)\nFlowLayout(int aligment, int horizongap, int verticalgap)\nCác hàm tạo lập để sắp hàng các thành phần giao diện của lớp FlowLayout\n"
+  },
+  {
+    "page": 74,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      293.625
+    ],
+    "is_zero_one": false,
+    "bullet_count": 3,
+    "bullets": [
+      184.5,
+      214.5,
+      244.5
+    ],
+    "green_ys": [
+      246.4
+    ],
+    "correct_letters": [
+      "C"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\n40\n0\nCompile Error\nclass A{   \n      int a=40;      \n      public static void main(String args[]){    System.out.println(a);   }  \n}        \n"
+  },
+  {
+    "page": 74,
+    "rect": [
+      67.125,
+      303.375,
+      546.375,
+      652.125
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      513.0,
+      543.0,
+      573.0,
+      603.0
+    ],
+    "green_ys": [
+      544.9
+    ],
+    "correct_letters": [
+      "B"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nA. 8\nB. 9\nC. 10\nD. 11\nWhat will be the output of the following program?\nclass N{\n       public static void main(String s[])\n    {\n         int x= 11 & 9;\n         System.out.print(x);\n     }\n}\n"
+  },
+  {
+    "page": 75,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      311.625
+    ],
+    "is_zero_one": true,
+    "bullet_count": 6,
+    "bullets": [
+      87.8,
+      119.2,
+      149.2,
+      179.2,
+      236.2,
+      263.2
+    ],
+    "green_ys": [
+      90.4
+    ],
+    "correct_letters": [],
+    "isMultiple": false,
+    "card_text": "0/1\ncheckError()\nwriteString()\nsetError()\ngetString()\nCâu trả lời đúng\ncheckError()\nsetError()\nCác phương thức của lớp PrinterWriter\n"
+  },
+  {
+    "page": 75,
+    "rect": [
+      67.125,
+      321.375,
+      546.375,
+      757.125
+    ],
+    "is_zero_one": true,
+    "bullet_count": 11,
+    "bullets": [
+      378.8,
+      410.2,
+      443.2,
+      476.2,
+      509.2,
+      542.2,
+      600.8,
+      627.8,
+      654.8,
+      681.8,
+      708.8
+    ],
+    "green_ys": [
+      412.9,
+      478.9,
+      511.9,
+      544.9
+    ],
+    "correct_letters": [],
+    "isMultiple": false,
+    "card_text": "0/1\nContainers\ntextfields\ndropdownList\nlabels\ntextareas\ndialog\nCâu trả lời đúng\nContainers\ntextfields\nlabels\ntextareas\ndialog\nHãy chọn Các component của GUI \n"
+  },
+  {
+    "page": 76,
+    "rect": [
+      67.125,
+      28.875,
+      546.375,
+      385.875
+    ],
+    "is_zero_one": false,
+    "bullet_count": 4,
+    "bullets": [
+      246.8,
+      276.8,
+      306.8,
+      336.8
+    ],
+    "green_ys": [
+      338.7
+    ],
+    "correct_letters": [
+      "D"
+    ],
+    "isMultiple": false,
+    "card_text": "1/1\nm = 6\nm = 12\nKết quả khác\nm = 3\n"
+  }
+]

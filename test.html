@@ -1,0 +1,5554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ViT - Ôn tập Java</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Global Reset & Theme Variables
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      line-height: 1.6;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fixed Top Progress Header: Centered at top, matching full view width */
+    .top-progress-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 20px 32px 0;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    /* Progress Tracker: Constant fixed width matching full view card */
+    .progress-track-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: min(1520px, 94vw);
+      max-width: 100%;
+    }
+
+    .progress-label {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #64748B;
+      min-width: 105px;
+      white-space: nowrap;
+    }
+
+    .progress-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: #E0562D;
+      width: 0.9%;
+      border-radius: 9999px;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progress-type-tag {
+      font-size: 12.5px;
+      font-weight: 700;
+      background: #FFF7ED;
+      color: #E0562D;
+      border: 1px solid #FFEDD5;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      white-space: nowrap;
+    }
+
+    /* Container: Full view across web, eliminating empty side gaps */
+    .test-container {
+      width: min(1520px, 94vw);
+      max-width: 100%;
+      margin: auto;
+      padding: 16px 0 65px;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 961px) {
+      .test-container:not(.has-media-layout) {
+        width: min(1060px, 94vw);
+      }
+      .test-container:not(.has-media-layout) .question-grid-layout {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        align-items: start;
+      }
+    }
+
+    @keyframes cardTransitionIn {
+      0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.99);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Question Card: Large full-view presentation, zoom scaled */
+    .question-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 28px 36px;
+      box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.07);
+      margin-bottom: 0;
+    }
+
+    .question-card.animating-in {
+      animation: cardTransitionIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* 2-Column Horizontal Grid: Generous proportions */
+    .question-grid-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    .question-left-col {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .question-right-col {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .question-subject-badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748B;
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .question-title {
+      font-size: 18.5px;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      white-space: pre-wrap;
+    }
+
+    /* Code Container */
+    .code-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px 22px;
+      margin: 10px 0 14px;
+      overflow-x: hidden;
+    }
+
+    .code-box pre {
+      margin: 0;
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #0F172A;
+      white-space: pre-wrap;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Image Wrapper */
+    .question-image-wrapper {
+      margin: 10px 0 14px;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #F8FAFC;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      max-height: 320px;
+    }
+
+    .question-image {
+      max-width: 100%;
+      max-height: 300px;
+      height: auto;
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Right Column: Prompt above ABCD */
+    .options-header-prompt {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 14px;
+      line-height: 1.45;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .options-header-prompt svg {
+      color: #E0562D;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* Options List */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-row {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 16px;
+      min-height: 48px;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 10px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      font-size: 15px;
+      color: #1E293B;
+      line-height: 1.45;
+    }
+
+    .option-row:not(.verified-correct):not(.verified-wrong):not(.verified-neutral-wrong):hover {
+      border-color: #CBD5E1;
+      background: #F8FAFC;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transform: translateX(4px);
+    }
+
+    /* Checked State */
+    .option-row.is-selected {
+      background: #FFF7ED;
+      border-color: #E0562D;
+    }
+
+    /* Option Badge (shows [A] or [✓] when selected) */
+    .option-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: #FFFFFF;
+      border: 1.5px solid #CBD5E1;
+      color: #0F172A;
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+      transition: all 0.15s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .option-row:hover .option-badge {
+      border-color: #94A3B8;
+    }
+
+    @keyframes badgePop {
+      0% { transform: scale(0.8); }
+      50% { transform: scale(1.18); }
+      100% { transform: scale(1); }
+    }
+
+    .option-row.is-selected .option-badge {
+      background: #E0562D;
+      border-color: #E0562D;
+      color: #FFFFFF;
+      font-weight: 800;
+      animation: badgePop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .option-text {
+      flex: 1;
+      padding-right: 70px;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    @keyframes verdictPopIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      70% {
+        transform: scale(1.12);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Verdict Badge in Top-Right Corner (Đúng / Sai) */
+    .verdict-tag {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: none;
+    }
+
+    @keyframes correctPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+        transform: scale(1.015);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+        transform: scale(1);
+      }
+    }
+
+    @keyframes wrongShake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    /* Highlighted States after Verification */
+    .option-row.verified-correct {
+      border: 2px solid #10B981 !important;
+      background: #ECFDF5 !important;
+      animation: correctPulse 0.45s ease-out;
+    }
+
+    .option-row.verified-correct .verdict-tag {
+      display: inline-block;
+      background: #10B981;
+      color: #FFFFFF;
+      animation: verdictPopIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .option-row.verified-correct .option-badge {
+      border-color: #10B981 !important;
+      background: #10B981 !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-row.verified-wrong {
+      border: 2px solid #EF4444 !important;
+      background: #FEF2F2 !important;
+      animation: wrongShake 0.38s ease-in-out;
+    }
+
+    .option-row.verified-wrong .verdict-tag {
+      display: inline-block;
+      background: #EF4444;
+      color: #FFFFFF;
+      animation: verdictPopIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .option-row.verified-wrong .option-badge {
+      border-color: #EF4444 !important;
+      background: #EF4444 !important;
+      color: #FFFFFF !important;
+    }
+
+    .option-row.verified-correct,
+    .option-row.verified-wrong,
+    .option-row.verified-neutral-wrong {
+      cursor: default;
+    }
+
+    .option-row.verified-neutral-wrong {
+      border-color: #E2E8F0;
+      opacity: 0.6;
+    }
+
+    .option-row.verified-neutral-wrong .verdict-tag {
+      display: none;
+    }
+
+    .option-row.verified-neutral-wrong .option-badge {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      color: #94A3B8;
+    }
+
+
+    /* Floating Action Bar (Fixed Bottom-Right) */
+    .test-actions-bar {
+      position: fixed;
+      bottom: 24px;
+      right: 28px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-next-question {
+      background: #E0562D;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      height: 48px;
+      padding: 0 24px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(224, 86, 45, 0.4), 0 2px 4px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .btn-next-question:hover:not(:disabled) {
+      background: #FF5722;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(224, 86, 45, 0.5);
+    }
+
+    .btn-next-question:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+      pointer-events: none;
+    }
+
+    /* Previous Question Button */
+    .btn-prev-question {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      color: #0F172A;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .btn-prev-question:hover:not(:disabled) {
+      background: #F1F5F9;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .btn-prev-question:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+      pointer-events: none;
+    }
+
+    /* Proof Image Button (Right next to Map button) */
+    .btn-proof-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1.5px solid #E2E8F0;
+      color: #0F172A;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .btn-proof-image:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    /* Sound Action Wrapper & Vertical Volume Popover */
+    .sound-action-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-sound-toggle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #E2E8F0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+
+    .btn-sound-toggle:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .btn-sound-toggle.is-muted {
+      background: #FFFFFF;
+      color: #94A3B8;
+      border: 1.5px solid #E2E8F0;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .btn-sound-toggle.is-muted:hover {
+      background: #F1F5F9;
+      color: #64748B;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Sound Volume Popover (Vertical YouTube Style Pill) */
+    .sound-volume-popover {
+      width: 44px;
+      height: 132px;
+      padding: 16px 0;
+      border-radius: 9999px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 12px 28px -4px rgba(15, 23, 42, 0.18), 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      bottom: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.2s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 105;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    /* Invisible hover bridge */
+    .sound-volume-popover::after {
+      content: '';
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+      height: 14px;
+      pointer-events: auto;
+    }
+
+    .sound-action-wrapper:hover .sound-volume-popover,
+    .sound-action-wrapper.is-dragging .sound-volume-popover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    .volume-slider-track {
+      width: 6px;
+      height: 100%;
+      background: #E2E8F0;
+      border-radius: 9999px;
+      position: relative;
+      cursor: pointer;
+      touch-action: none;
+      user-select: none;
+    }
+
+    .volume-slider-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #E0562D;
+      border-radius: 9999px;
+      pointer-events: none;
+      transition: height 0.04s ease-out;
+    }
+
+    .volume-slider-thumb {
+      position: absolute;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      background: #E0562D;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      transform: translate(-50%, 50%);
+      box-shadow: 0 2px 6px rgba(224, 86, 45, 0.45);
+      pointer-events: none;
+      transition: transform 0.1s ease, bottom 0.04s ease-out;
+    }
+
+    .sound-action-wrapper:hover .volume-slider-thumb,
+    .sound-action-wrapper.is-dragging .volume-slider-thumb {
+      transform: translate(-50%, 50%) scale(1.2);
+    }
+
+    /* Universal Button Tactile Press */
+    .btn-next-question:active,
+    .btn-map-toggle:active,
+    .map-cell:active,
+    .btn-reset-map:active,
+    .btn-prev-question:active,
+    .btn-proof-image:active,
+    .btn-sound-toggle:active,
+    .btn-timer-toggle:active,
+    .btn-reset-toggle:active {
+      transform: scale(0.93) !important;
+    }
+
+    /* Map Action Button & Popover */
+    .map-action-wrapper {
+      position: relative;
+      display: inline-flex;
+    }
+
+    .btn-map-toggle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #E0562D;
+      color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(224, 86, 45, 0.4), 0 2px 4px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .btn-map-toggle:hover {
+      background: #FF5722;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(224, 86, 45, 0.5);
+    }
+
+    /* Secondary Actions Bar (Fixed Bottom-Left) */
+    .test-secondary-actions-bar {
+      position: fixed;
+      bottom: 24px;
+      left: 28px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-reset-toggle,
+    .btn-timer-toggle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #E2E8F0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    .btn-reset-toggle:hover,
+    .btn-timer-toggle:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .btn-timer-toggle.is-counting {
+      width: auto;
+      min-width: 48px;
+      height: 48px;
+      padding: 0 16px;
+      border-radius: 9999px;
+      gap: 7px;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1.5px solid #E2E8F0;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    }
+
+    .btn-timer-toggle.is-counting:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .btn-timer-toggle .timer-digits {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .map-popover {
+      position: absolute;
+      bottom: calc(100% + 14px);
+      right: 0;
+      width: 400px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.2), 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Hover bridge */
+    .map-popover::after {
+      content: '';
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+      right: 0;
+      height: 16px;
+    }
+
+    .map-action-wrapper:hover .map-popover,
+    .map-action-wrapper:focus-within .map-popover,
+    .map-popover:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .map-popover-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .map-popover-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.01em;
+    }
+
+    .map-popover-progress {
+      font-size: 12px;
+      font-weight: 700;
+      color: #E0562D;
+      background: #FFF7ED;
+      padding: 2px 8px;
+      border-radius: 9999px;
+    }
+
+    .btn-reset-map {
+      background: none;
+      border: 1px solid #E2E8F0;
+      color: #64748B;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .btn-reset-map:hover {
+      background: #FEE2E2;
+      color: #DC2626;
+      border-color: #FCA5A5;
+    }
+
+    .map-scroll-area {
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 4px 6px 4px 4px;
+      margin-bottom: 0;
+    }
+
+    /* Custom slim scrollbar for map grid */
+    .map-scroll-area::-webkit-scrollbar {
+      width: 4px;
+    }
+    .map-scroll-area::-webkit-scrollbar-track {
+      background: #F1F5F9;
+      border-radius: 4px;
+    }
+    .map-scroll-area::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    /* Floating Mini-Screen Question Preview Card inside Map Popover */
+    .map-question-preview {
+      position: absolute;
+      right: calc(100% + 14px);
+      bottom: 0;
+      width: 340px;
+      max-height: 420px;
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.22), 0 4px 12px rgba(0, 0, 0, 0.06);
+      pointer-events: none;
+      z-index: 110;
+      box-sizing: border-box;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(10px) scale(0.96);
+      transition: opacity 0.18s cubic-bezier(0.22, 1, 0.36, 1), transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.18s ease;
+    }
+
+    .map-question-preview.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0) scale(1);
+    }
+
+    .map-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .map-preview-chapter {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #E0562D;
+      background: #FFF7ED;
+      border: 1px solid #FFEDD5;
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+
+    .map-preview-status {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      flex-shrink: 0;
+    }
+
+    .map-preview-status.is-correct {
+      background: #ECFDF5;
+      color: #10B981;
+      border: 1px solid #A7F3D0;
+    }
+
+    .map-preview-status.is-wrong {
+      background: #FEF2F2;
+      color: #EF4444;
+      border: 1px solid #FECACA;
+    }
+
+    .map-preview-status.is-unanswered {
+      background: #F1F5F9;
+      color: #64748B;
+      border: 1px solid #E2E8F0;
+    }
+
+    .map-preview-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.5;
+      margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .map-preview-media {
+      margin-top: 6px;
+    }
+
+    .map-preview-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      line-height: 1.45;
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 10px 12px;
+      border-radius: 10px;
+      max-height: 150px;
+      overflow: hidden;
+      position: relative;
+      white-space: pre;
+      margin: 0;
+    }
+
+    .map-preview-code::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      background: linear-gradient(to bottom, transparent, #0F172A);
+      pointer-events: none;
+    }
+
+    .map-preview-thumb {
+      max-height: 140px;
+      width: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid #E2E8F0;
+      background: #F8FAFC;
+      padding: 6px;
+      display: block;
+      box-sizing: border-box;
+    }
+
+    .chapter-section-header {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #475569;
+      background: #F1F5F9;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin: 10px 0 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chapter-section-header:first-child {
+      margin-top: 0;
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+
+    .map-cell {
+      aspect-ratio: 1 / 1;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all 0.15s ease;
+      user-select: none;
+      background: none;
+      padding: 0;
+      font-family: inherit;
+    }
+
+    .map-cell.status-unanswered {
+      background: #F1F5F9;
+      color: #475569;
+      border-color: #E2E8F0;
+    }
+
+    .map-cell.status-unanswered:hover {
+      background: #E2E8F0;
+      color: #0F172A;
+      border-color: #CBD5E1;
+      transform: translateY(-1px);
+    }
+
+    .map-cell.status-correct {
+      background: #10B981;
+      color: #FFFFFF;
+      border-color: #10B981;
+    }
+
+    .map-cell.status-correct:hover {
+      background: #059669;
+      transform: translateY(-1px);
+    }
+
+    .map-cell.status-wrong {
+      background: #EF4444;
+      color: #FFFFFF;
+      border-color: #EF4444;
+    }
+
+    .map-cell.status-wrong:hover {
+      background: #DC2626;
+      transform: translateY(-1px);
+    }
+
+    .map-cell.is-current {
+      position: relative;
+      z-index: 2;
+      border: 2px solid #E0562D !important;
+      box-shadow: 0 0 0 2px rgba(224, 86, 45, 0.35);
+    }
+
+    /* Image Lightbox Modal Overlay */
+    .image-lightbox-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-lightbox-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .image-lightbox-card {
+      background: #FFFFFF;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      max-width: min(980px, 94vw);
+      max-height: 90vh;
+      overflow: hidden;
+      transform: scale(0.96) translateY(8px);
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .image-lightbox-overlay.active .image-lightbox-card {
+      transform: scale(1) translateY(0);
+    }
+
+    .image-lightbox-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-bottom: 1px solid #F1F5F9;
+      background: #FAFAFA;
+      flex-shrink: 0;
+    }
+
+    .image-lightbox-title-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #E0562D;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .image-lightbox-close {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #64748B;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .image-lightbox-close:hover {
+      background: #E2E8F0;
+      color: #0F172A;
+    }
+
+    .image-lightbox-body {
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F8FAFC;
+    }
+
+    .image-lightbox-img {
+      max-width: 100%;
+      height: auto;
+      max-height: calc(90vh - 80px);
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E2E8F0;
+      cursor: default;
+    }
+
+    .question-image {
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+    .question-image:hover {
+      transform: scale(1.015);
+    }
+
+    /* ==========================================================================
+       Quote VFX Stage (Large Floating Arched Vector Typography)
+       ========================================================================== */
+    .quote-vfx-stage {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translate(-50%, 60px) scale(0.9);
+      z-index: 95;
+      pointer-events: none;
+      width: min(860px, calc(100vw - 360px));
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .quote-vfx-stage.active {
+      transform: translate(-50%, 0) scale(1);
+      opacity: 1;
+    }
+
+    /* Continuous zoom in/out slightly & floating up/down */
+    .quote-vfx-stage.active .quote-arc-svg {
+      animation: quoteBobPulse 2.3s ease-in-out infinite;
+    }
+
+    /* Wrong answer initial troll shake */
+    .quote-vfx-stage.shake .quote-arc-svg {
+      animation: quoteTrollShake 0.45s ease-in-out, quoteBobPulse 2.3s ease-in-out 0.45s infinite;
+    }
+
+    /* Smooth exit fade & drop */
+    .quote-vfx-stage.is-fading {
+      opacity: 0 !important;
+      transform: translate(-50%, 24px) scale(0.92) !important;
+      transition: opacity 0.55s ease-out, transform 0.55s ease-out !important;
+    }
+
+    @keyframes quoteBobPulse {
+      0% {
+        transform: translateY(0) scale(0.96);
+      }
+      50% {
+        transform: translateY(-16px) scale(1.05);
+      }
+      100% {
+        transform: translateY(0) scale(0.96);
+      }
+    }
+
+    @keyframes quoteTrollShake {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      20% { transform: translateY(-4px) rotate(-2.5deg); }
+      40% { transform: translateY(3px) rotate(2.5deg); }
+      60% { transform: translateY(-2px) rotate(-1.5deg); }
+      80% { transform: translateY(1px) rotate(1.2deg); }
+    }
+
+    .quote-arc-svg {
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.18));
+      transform-origin: center center;
+    }
+
+    .quote-arc-text {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      paint-order: stroke fill;
+      stroke: #FFFFFF;
+      stroke-width: 5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Hover effects enabled ONLY for fine-pointer desktop devices (Prevents sticky hovers on touch) */
+    @media (hover: hover) and (pointer: fine) {
+      .option-row:not(.is-selected):not(.verified-correct):not(.verified-wrong):not(.verified-neutral-wrong):hover {
+        border-color: #CBD5E1;
+        background: #F8FAFC;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transform: translateX(4px);
+      }
+      .option-row:hover .option-badge {
+        border-color: #94A3B8;
+      }
+      .btn-next-question:hover:not(:disabled) {
+        background: #FF5722;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(224, 86, 45, 0.45);
+      }
+      .btn-prev-question:hover:not(:disabled),
+      .btn-proof-image:hover,
+      .btn-sound-toggle:hover,
+      .btn-reset-toggle:hover,
+      .btn-timer-toggle:hover,
+      .btn-timer-toggle.is-counting:hover {
+        background: #F1F5F9;
+        color: #0F172A;
+        border-color: #CBD5E1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+      }
+      .btn-sound-toggle.is-muted:hover {
+        background: #F1F5F9;
+        color: #64748B;
+        border-color: #CBD5E1;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      }
+      .btn-map-toggle:hover {
+        background: #FF5722;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(224, 86, 45, 0.5);
+      }
+      .btn-reset-map:hover {
+        background: #FEE2E2;
+        color: #DC2626;
+        border-color: #FCA5A5;
+      }
+      .map-action-wrapper:hover .map-popover,
+      .map-action-wrapper:focus-within .map-popover,
+      .map-popover:hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sound-action-wrapper:hover .sound-volume-popover,
+      .sound-action-wrapper.is-dragging .sound-volume-popover,
+      .sound-volume-popover:hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+      }
+      .sound-action-wrapper:hover .volume-slider-thumb,
+      .sound-action-wrapper.is-dragging .volume-slider-thumb {
+        transform: translate(-50%, 50%) scale(1.2);
+      }
+      .map-cell.status-unanswered:hover {
+        background: #E2E8F0;
+        color: #0F172A;
+        transform: scale(1.08);
+      }
+      .map-cell.status-correct:hover {
+        background: #059669;
+        transform: scale(1.08);
+      }
+      .map-cell.status-wrong:hover {
+        background: #DC2626;
+        transform: scale(1.08);
+      }
+      .question-image:hover {
+        transform: scale(1.015);
+      }
+    }
+
+    /* Touch Popover Active States */
+    .map-popover.is-open {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+      pointer-events: auto !important;
+    }
+
+    .sound-volume-popover.is-open {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateX(-50%) translateY(0) !important;
+      pointer-events: auto !important;
+    }
+
+    /* Tablet & Responsive Media Queries */
+    @media (max-width: 960px) {
+      body {
+        justify-content: flex-start;
+      }
+      .top-progress-container {
+        padding: 16px 14px 0;
+      }
+      .progress-track-wrapper {
+        width: 100%;
+      }
+      .question-grid-layout,
+      .has-media-layout .question-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .test-container,
+      .test-container.has-media-layout {
+        margin: 0 auto;
+        padding: 14px 14px 90px;
+        max-width: 100%;
+      }
+      .quote-vfx-stage {
+        bottom: 80px;
+        width: min(860px, calc(100vw - 36px));
+      }
+    }
+
+    /* Mobile (<= 768px): Unified Bottom Dock & Top Utility Bar */
+    @media (max-width: 768px) {
+      .top-progress-container {
+        padding: 12px 14px 0;
+      }
+
+      /* Compact Secondary Tools Bar right below Progress Tracker */
+      .test-secondary-actions-bar {
+        position: static;
+        width: 100%;
+        max-width: min(1520px, 94vw);
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        padding: 6px 14px 0;
+        gap: 8px;
+        z-index: 10;
+      }
+
+      .btn-reset-toggle,
+      .btn-sound-toggle,
+      .btn-timer-toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+      }
+
+      .btn-timer-toggle.is-counting {
+        height: 36px;
+        min-width: 36px;
+        padding: 0 10px;
+        font-size: 12px;
+        gap: 5px;
+      }
+
+      .btn-timer-toggle.is-counting svg,
+      .btn-sound-toggle svg,
+      .btn-reset-toggle svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      /* Sound volume slider opens DOWNWARDS on mobile when bar is at top */
+      .sound-volume-popover {
+        top: calc(100% + 8px);
+        bottom: auto;
+        transform: translateX(-50%) translateY(-8px);
+      }
+
+      .sound-volume-popover::after {
+        top: -12px;
+        bottom: auto;
+        height: 12px;
+      }
+
+      .sound-action-wrapper:hover .sound-volume-popover,
+      .sound-action-wrapper.is-dragging .sound-volume-popover,
+      .sound-volume-popover.is-open {
+        transform: translateX(-50%) translateY(0) !important;
+      }
+
+      /* Hide floating preview card on touch/mobile screens */
+      .map-question-preview {
+        display: none !important;
+      }
+
+      /* Full-Width Frosted Glass Bottom Dock */
+      .test-actions-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid #E2E8F0;
+        box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        z-index: 99;
+        box-sizing: border-box;
+      }
+
+      .btn-prev-question,
+      .btn-proof-image,
+      .btn-map-toggle {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+      }
+
+      .btn-next-question {
+        flex: 1;
+        height: 44px;
+        padding: 0 16px;
+        font-size: 14px;
+        justify-content: center;
+      }
+
+      .test-container {
+        padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+
+      .quote-vfx-stage {
+        bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+        width: calc(100vw - 24px);
+      }
+    }
+
+    /* Small Phone (<= 640px): 2-Row Header & Map Bottom Sheet */
+    @media (max-width: 640px) {
+      /* 2-Row Top Progress Tracker */
+      .progress-track-wrapper {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+      }
+
+      .progress-label {
+        order: 1;
+        font-size: 13.5px;
+        min-width: auto;
+      }
+
+      .progress-type-tag {
+        order: 2;
+        margin-left: auto;
+        font-size: 11.5px;
+        padding: 3px 10px;
+        max-width: 65%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .progress-bar-bg {
+        order: 3;
+        flex: 0 0 100%;
+        height: 6px;
+      }
+
+      /* Touch-Friendly Map Bottom Sheet */
+      .map-popover {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+        width: auto;
+        max-width: none;
+        z-index: 100;
+        padding: 12px;
+      }
+
+      .map-grid {
+        grid-template-columns: repeat(9, 1fr);
+        gap: 4px;
+      }
+
+      .map-cell {
+        font-size: 10.5px;
+        border-radius: 5px;
+      }
+
+      .map-scroll-area {
+        max-height: 320px;
+        padding: 3px 5px 3px 3px;
+      }
+
+      .question-card {
+        padding: 18px 14px;
+      }
+
+      .option-text {
+        padding-right: 48px;
+        font-size: 13.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar (Fixed at top center, comfortable spacing, stable fixed width) -->
+  <header class="top-progress-container">
+    <div class="progress-track-wrapper">
+      <div class="progress-label" id="progress-text">Câu 1 / 74</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-type-tag" id="progress-tag">Chương 1 — Kiến thức cơ bản</div>
+    </div>
+  </header>
+
+  <!-- Secondary Actions Bar (Desktop: Fixed Bottom-Left; Mobile: Compact utility bar below top progress header) -->
+  <div class="test-secondary-actions-bar" aria-label="Bộ đếm thời gian, âm lượng và làm lại">
+    <!-- Timer Button -->
+    <button type="button" class="btn-timer-toggle is-counting" id="btn-timer-toggle" aria-label="Bộ đếm thời gian" title="Đang tính giờ làm bài (Click để đặt về 0 và dừng lại)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      <span class="timer-digits">00:00</span>
+    </button>
+
+    <!-- Sound Action Wrapper (Volume Popover + Toggle Button) -->
+    <div class="sound-action-wrapper" id="sound-action-wrapper">
+      <div class="sound-volume-popover" id="sound-volume-popover" aria-label="Chỉnh âm lượng">
+        <div class="volume-slider-track" id="volume-slider-track">
+          <div class="volume-slider-fill" id="volume-slider-fill"></div>
+          <div class="volume-slider-thumb" id="volume-slider-thumb"></div>
+        </div>
+      </div>
+      <button type="button" class="btn-sound-toggle" id="btn-sound-toggle" aria-label="Bật/Tắt âm thanh" title="Âm thanh (Bật/Tắt)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sound-toggle-icon">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Reset Exam Button -->
+    <button type="button" class="btn-reset-toggle" id="btn-reset-all" aria-label="Làm lại từ đầu" title="Xoá lịch sử & làm lại từ đầu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="23 4 23 10 17 10"></polyline>
+        <polyline points="1 20 1 14 7 14"></polyline>
+        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- MAIN TEST AREA -->
+  <main class="test-container">
+    <!-- Active Question Card Content -->
+    <div class="question-card" id="question-card">
+      <!-- Injected by JS -->
+    </div>
+
+    <!-- Actions Bar -->
+    <div class="test-actions-bar">
+      <!-- Previous Question Button -->
+      <button type="button" class="btn-prev-question" id="btn-prev-question" title="Câu trước (Phím ←)" aria-label="Câu trước">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+      </button>
+
+      <!-- Proof Image Button (Sát bên trái nút Map) -->
+      <button type="button" class="btn-proof-image" id="btn-proof-image" title="Đối chiếu đáp án gốc từ PDF (Phím P)" aria-label="Xem ảnh đối chiếu từ PDF">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+          <circle cx="8.5" cy="8.5" r="1.5"></circle>
+          <polyline points="21 15 16 10 5 21"></polyline>
+        </svg>
+      </button>
+
+      <!-- Question Map Popover Wrapper (Ở giữa nút quay lui/ảnh và nút xác nhận) -->
+      <div class="map-action-wrapper" id="map-action-wrapper">
+        <div class="map-popover" id="map-popover" role="tooltip" aria-hidden="true">
+          <!-- Floating Mini-Screen Question Preview Card -->
+          <div class="map-question-preview" id="map-question-preview" aria-hidden="true">
+            <div class="map-preview-header">
+              <span class="map-preview-chapter" id="map-preview-chapter"></span>
+              <span class="map-preview-status" id="map-preview-status"></span>
+            </div>
+            <div class="map-preview-title" id="map-preview-title"></div>
+            <div class="map-preview-media" id="map-preview-media"></div>
+          </div>
+
+          <div class="map-popover-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="map-popover-title">Map</span>
+              <button type="button" class="btn-reset-map" id="btn-reset-exam" title="Xoá lịch sử & làm lại từ đầu">Làm lại</button>
+            </div>
+            <span class="map-popover-progress" id="map-progress-count">0/74</span>
+          </div>
+          <div class="map-scroll-area" id="map-scroll-area">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <button type="button" class="btn-map-toggle" id="btn-map-toggle" aria-label="Bản đồ câu hỏi" title="Bản đồ câu hỏi (Phím M)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+            <line x1="8" y1="2" x2="8" y2="18"></line>
+            <line x1="16" y1="6" x2="16" y2="22"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Action (Xác nhận / Tiếp theo) -->
+      <button type="button" class="btn-next-question" id="btn-main-action">
+        <span id="btn-action-text">Xác nhận</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="btn-action-icon">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <!-- Quote VFX Stage (Bottom-Center Gap between actions) -->
+  <div id="quote-vfx-stage" class="quote-vfx-stage" aria-live="polite">
+    <!-- Injected dynamically by JS -->
+  </div>
+
+  <!-- Fullscreen Image Lightbox Overlay -->
+  <div id="image-lightbox" class="image-lightbox-overlay" role="dialog" aria-modal="true" aria-label="Đối chiếu đáp án PDF">
+    <div class="image-lightbox-card" id="image-lightbox-card">
+      <div class="image-lightbox-header">
+        <div class="image-lightbox-title-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          <span class="image-lightbox-badge" id="image-lightbox-title">Đối chiếu đáp án PDF</span>
+        </div>
+        <button type="button" class="image-lightbox-close" id="btn-close-lightbox" title="Đóng (Escape)" aria-label="Đóng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="image-lightbox-body">
+        <img id="image-lightbox-img" class="image-lightbox-img" src="" alt="Ảnh đối chiếu PDF" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Quotes Configuration (Works seamlessly over file://) -->
+  <script src="quotes.js"></script>
+  <script>
+    /* ==========================================================================
+       Java 74-Question Exam Suite - Scope: Mở đầu đến Chương 4 (Interface & Package)
+       ========================================================================== */
+    const BENCHMARK_QUESTIONS = [
+  {
+    "id": 1,
+    "originalId": 1,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 1: Chương trình dịch Java thực hiện theo các bước nào? (slide 29)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Java codes -> interpreter -> bytecode -> run"
+      },
+      {
+        "label": "B",
+        "text": "Java codes -> compile -> run"
+      },
+      {
+        "label": "C",
+        "text": "Java codes  -> compiler -> bytecode -> interpreter"
+      },
+      {
+        "label": "D",
+        "text": "Java codes -> run directly"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 2,
+    "originalId": 10,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 2: Đoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng lệnh như sau: \n\nC:\\> java B hello you",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_10.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. B"
+      },
+      {
+        "label": "B",
+        "text": "B. hello"
+      },
+      {
+        "label": "C",
+        "text": "C. you"
+      },
+      {
+        "label": "D",
+        "text": "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\""
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 3,
+    "originalId": 39,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 3: Bạn nhập mã Java vào file nguồn. Bây giờ muốn lưu và biên dịch nó. Hãy chọn đáp án đúng",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "Save it in a file called Yourclass.java and compile it with javac Yourclass.java"
+      },
+      {
+        "label": "B",
+        "text": "Save it in a file called Myclass.java and compile it with javac Myclass.java"
+      },
+      {
+        "label": "C",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass.java"
+      },
+      {
+        "label": "D",
+        "text": "None of the above"
+      },
+      {
+        "label": "E",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 4,
+    "originalId": 40,
+    "chapter": "Mở đầu : Giới thiệu tổng quan",
+    "chapterTag": "Mở đầu — Tổng quan",
+    "title": "Câu 4: Hãy chọn đáp án đúng nếu muốn chạy file mã nguồn Simple",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "To Compile: javac Simple.java          To Run: java Simple"
+      },
+      {
+        "label": "B",
+        "text": "To Compile: javac Simple                  To Run: java Simple.java"
+      },
+      {
+        "label": "C",
+        "text": "To Compile: java Simple.java             To Run: javac Simple"
+      },
+      {
+        "label": "D",
+        "text": "To Compile: java  Simple                   To Run: javac Simple.java"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 5,
+    "originalId": 50,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 5: When a subclass method have the same name, parameter list, and return type as a method in the parent class, this method is said to be what?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Extended"
+      },
+      {
+        "label": "B",
+        "text": "B. Overloaded"
+      },
+      {
+        "label": "C",
+        "text": "C. Overextended"
+      },
+      {
+        "label": "D",
+        "text": "D. Overridden"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 6,
+    "originalId": 51,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 6: When two or more methods in the same class have the same name, they are said to be what?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. an implementation detail"
+      },
+      {
+        "label": "B",
+        "text": "B. overriden"
+      },
+      {
+        "label": "C",
+        "text": "C. an interface"
+      },
+      {
+        "label": "D",
+        "text": "D. overloaded"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 7,
+    "originalId": 55,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 7: Những phương thức nào sau đây khai báo hợp lệ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public short M(){\nbyte m=120;\nreturn m;\n}\npublic int N(){\nlong n=500;\nreturn n;\n}\npublic Boolean P(){\nboolean p=true;\nreturn p;\n}\npublic long Q(){\nfloat q=300F;\nreturn q;\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. M()"
+      },
+      {
+        "label": "B",
+        "text": "B. N()"
+      },
+      {
+        "label": "C",
+        "text": "C. P()"
+      },
+      {
+        "label": "D",
+        "text": "D. Q()"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 8,
+    "originalId": 56,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 8: Khi phương thức được gọi thì các lệnh trong phương thức được thực hiện cho đến khi nào?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức"
+      },
+      {
+        "label": "B",
+        "text": "B. Cho đến hết phương thức"
+      },
+      {
+        "label": "C",
+        "text": "C. Cho đến khi gặp lệnh \"exit\""
+      },
+      {
+        "label": "D",
+        "text": "D. Cho đến khi gặp lệnh \"break\""
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 9,
+    "originalId": 75,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 9: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_75.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "running"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error (final cant be inherited)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 10,
+    "originalId": 78,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 10: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_78.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "animal is eating"
+      },
+      {
+        "label": "B",
+        "text": "dog is eating"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 11,
+    "originalId": 79,
+    "chapter": "Chương 1 : Sơ lược lập trình hướng đối tượng",
+    "chapterTag": "Chương 1 — Sơ lược OOP",
+    "title": "Câu 11: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_79.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "ok downcasting performed"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "C",
+        "text": "ClassCastException is thrown at runtime"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 12,
+    "originalId": 2,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 12: Đâu là bộ từ khoá của java (slide 44)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "static, short , sleep, join"
+      },
+      {
+        "label": "B",
+        "text": "abstract, boolean, transient, volatile"
+      },
+      {
+        "label": "C",
+        "text": "thrown, finally, document, new"
+      },
+      {
+        "label": "D",
+        "text": "string, integer,  char, catch"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 13,
+    "originalId": 8,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 13: Tên biến nào sau đây hợp lệ ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "case"
+      },
+      {
+        "label": "B",
+        "text": "Tất cả đều sai"
+      },
+      {
+        "label": "C",
+        "text": "1MyNumber"
+      },
+      {
+        "label": "D",
+        "text": "Int"
+      },
+      {
+        "label": "E",
+        "text": "char"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 14,
+    "originalId": 29,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 14: Phương thức main() nào được biên dịch?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. static public void main(String args[]) {}"
+      },
+      {
+        "label": "B",
+        "text": "B. public static void main(String []a) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. static public void main(String arg[]) {}"
+      },
+      {
+        "label": "D",
+        "text": "D. All correct"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 15,
+    "originalId": 30,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 15: Khẳng định nào đúng với đoạn mã sau?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class A{\npublic static void main(String s[]) {\nint i; \nSystem.out.print(\"i=\"+i); i=25;\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi"
+      },
+      {
+        "label": "B",
+        "text": "B. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình"
+      },
+      {
+        "label": "C",
+        "text": "C. Chương trình không biên dịch và xuất ra lỗi"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều sai"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 16,
+    "originalId": 37,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 16: Chọn đáp án sai ?",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "static void main (String args[]){}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main(String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public void main (String args[]){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main(String a[]) {}"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": 17,
+    "originalId": 38,
+    "chapter": "Chương 2 : Giới thiệu về Java",
+    "chapterTag": "Chương 2 — Giới thiệu Java",
+    "title": "Câu 17: Chọn đáp án đúng ?",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": null,
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "public static void main (String args) {}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main (String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public static void main (String[] args){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main (String[] b){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": 18,
+    "originalId": 3,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 18: Đâu là kiểu khai báo mảng có 3 phần tử đúng?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "int size[] = new int(3);"
+      },
+      {
+        "label": "B",
+        "text": "int size[] = new int[3];"
+      },
+      {
+        "label": "C",
+        "text": "int[] size = new int(3);"
+      },
+      {
+        "label": "D",
+        "text": "int size[] = new int[3]{3, 4, 5};"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 19,
+    "originalId": 6,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 19: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_6.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "5 100 200 10 300 15 400 20 25 500"
+      },
+      {
+        "label": "B",
+        "text": "5 10 15 20 25 100 200 300 400 500"
+      },
+      {
+        "label": "C",
+        "text": "100 200 300 400 500 5 10 15 20 25"
+      },
+      {
+        "label": "D",
+        "text": "100 5 200 10 300 15 400 20 500 25"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 20,
+    "originalId": 7,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 20: Cho đoạn mã nguồn Java sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class A{   \n      int a=40;      \n\n      public static void main(String args[]){    System.out.println(a);   }  \n\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "40"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 21,
+    "originalId": 14,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 21: Cho khai báo mảng 2 chiều như sau:\nint m[ ][ ]=new int[3][4];\nPhần nào sau đây dùng để xác định số cột của mảng hai chiều?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. m.length();"
+      },
+      {
+        "label": "B",
+        "text": "B. m[0].length;"
+      },
+      {
+        "label": "C",
+        "text": "C. m.length(3);"
+      },
+      {
+        "label": "D",
+        "text": "D. m[].length;"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 22,
+    "originalId": 15,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 22: Câu lệnh nào sau đây khai báo đúng một mảng 6 số nguyên?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int a[]={1,2,3,4,5,6}"
+      },
+      {
+        "label": "B",
+        "text": "B. int a[];"
+      },
+      {
+        "label": "C",
+        "text": "C. int a[] = new int[6];"
+      },
+      {
+        "label": "D",
+        "text": "D. int a[] = new int(6);"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 23,
+    "originalId": 16,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 23: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class N{\n       public static void main(String s[])\n    {\n         int x= 11 & 9;\n         System.out.print(x);\n     }\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 8"
+      },
+      {
+        "label": "B",
+        "text": "B. 9"
+      },
+      {
+        "label": "C",
+        "text": "C. 10"
+      },
+      {
+        "label": "D",
+        "text": "D. 11"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 24,
+    "originalId": 17,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 24: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_17.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. true false true false"
+      },
+      {
+        "label": "B",
+        "text": "B. true true false true"
+      },
+      {
+        "label": "C",
+        "text": "C. false true false true"
+      },
+      {
+        "label": "D",
+        "text": "D. false false true true"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 25,
+    "originalId": 18,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 25: What will be the output of the following program? (u,v=?)",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_18.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. u=11,v=14"
+      },
+      {
+        "label": "B",
+        "text": "B. u=14,v=11"
+      },
+      {
+        "label": "C",
+        "text": "C. u=12,v=14"
+      },
+      {
+        "label": "D",
+        "text": "D. u=14,v=12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 26,
+    "originalId": 19,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 26: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int a=10;\ndo{\nSystem.out.print(a%2); a/=2;\n}while(a!=0);",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 0101"
+      },
+      {
+        "label": "B",
+        "text": "B. 1011"
+      },
+      {
+        "label": "C",
+        "text": "C. 1010"
+      },
+      {
+        "label": "D",
+        "text": "D. Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 27,
+    "originalId": 20,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 27: Để chuyển một chuỗi chứa giá trị nguyên (String) sang một số nguyên (int) thì sẽ dùng phương thức nào sau đây?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. tolnteger() thuộc lớp Integer"
+      },
+      {
+        "label": "B",
+        "text": "B. Parseln() thuộc lớp String"
+      },
+      {
+        "label": "C",
+        "text": "C. parselnt() thuộc lớp Integer"
+      },
+      {
+        "label": "D",
+        "text": "D. tolnteger() thuộc lớp string"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 28,
+    "originalId": 21,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 28: Chọn câu lệnh đúng?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int i, j; for (j=100; i < j; j--) { i += 2;}"
+      },
+      {
+        "label": "B",
+        "text": "B. for (int i=10; i=0; i--) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. int j=10; for ( int i=0, j+=90; i < j; i++) { j--; }"
+      },
+      {
+        "label": "D",
+        "text": "D. for (int i=0, j=100; i < j; i++, --j) { }"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 29,
+    "originalId": 22,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 29: Biểu thức nào sau đây không gây ra lỗi?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. boolean a = (boolean) 1;"
+      },
+      {
+        "label": "B",
+        "text": "B. boolean b = (false && true);"
+      },
+      {
+        "label": "C",
+        "text": "C. float y =22.3;"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 30,
+    "originalId": 23,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 30: Cho đoạn mã sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int x=11;\ndo{ x += 20;\n} while(x<10);\nVòng lặp sẽ lặp bao nhiêu lần?",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 1"
+      },
+      {
+        "label": "B",
+        "text": "B. 10"
+      },
+      {
+        "label": "C",
+        "text": "C. 11"
+      },
+      {
+        "label": "D",
+        "text": "D. 0"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 31,
+    "originalId": 24,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 31: What will be the output (s) of the following code?\nint i = 42;\nString s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\");",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. everything"
+      },
+      {
+        "label": "B",
+        "text": "B. universal"
+      },
+      {
+        "label": "C",
+        "text": "D. life"
+      },
+      {
+        "label": "D",
+        "text": "C. null"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 32,
+    "originalId": 25,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 32: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_25.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "B",
+        "text": "1 1 4"
+      },
+      {
+        "label": "C",
+        "text": "1 1 5"
+      },
+      {
+        "label": "D",
+        "text": "1 3 5"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 33,
+    "originalId": 26,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 33: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_26.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "m = 6"
+      },
+      {
+        "label": "B",
+        "text": "m = 12"
+      },
+      {
+        "label": "C",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "D",
+        "text": "m = 3"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 34,
+    "originalId": 27,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 34: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_27.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a. 99 99 101"
+      },
+      {
+        "label": "B",
+        "text": "b. 99 100 101"
+      },
+      {
+        "label": "C",
+        "text": "c. 98 99 101"
+      },
+      {
+        "label": "D",
+        "text": "d. 99 100 102"
+      },
+      {
+        "label": "E",
+        "text": "e. 99 100 100"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 35,
+    "originalId": 28,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 35: You want to find out the value of the last element of an array. You write the following code. What will happen when you compile and run it?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class MyAr{\npublic static void main(String argv[]){\nint[] i = new int[5];\nSystem.out.println(i[5]);\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a. An error at compile time"
+      },
+      {
+        "label": "B",
+        "text": "b. An error at run time"
+      },
+      {
+        "label": "C",
+        "text": "c. The value 0 will be output"
+      },
+      {
+        "label": "D",
+        "text": "d. The string \"null\" will be output"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 36,
+    "originalId": 31,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 36: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_31.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 257"
+      },
+      {
+        "label": "B",
+        "text": "B. 100257"
+      },
+      {
+        "label": "C",
+        "text": "C. The code will not compile"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 37,
+    "originalId": 32,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 37: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_32.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 22"
+      },
+      {
+        "label": "B",
+        "text": "B. 21"
+      },
+      {
+        "label": "C",
+        "text": "C. 23"
+      },
+      {
+        "label": "D",
+        "text": "D. 33"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 38,
+    "originalId": 33,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 38: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_33.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. a=3,a=3"
+      },
+      {
+        "label": "B",
+        "text": "B. a=3,a=6"
+      },
+      {
+        "label": "C",
+        "text": "C. a=3,a=7"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 39,
+    "originalId": 34,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 39: Cho biết kết quả khi chạy đoạn chương trình sau:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int i = 1; \nfor( i = 0; i = -1; i = 1){\nSystem.out.print(i);\nif(i!=1) break;\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "C",
+        "text": "Lỗi biên dịch"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 40,
+    "originalId": 35,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 40: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_35.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "12"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "9"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 41,
+    "originalId": 36,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 41: Lệnh System.out.println(\"CNTT\"); được thực hiện mấy lần",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_36.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 42,
+    "originalId": 41,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 42: Câu lệnh nào sau đây hợp lệ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Math.round(8.88)"
+      },
+      {
+        "label": "B",
+        "text": "Math.max(s)"
+      },
+      {
+        "label": "C",
+        "text": "Math.mod(4, 10)"
+      },
+      {
+        "label": "D",
+        "text": "Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 43,
+    "originalId": 46,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 43: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_46.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "0 0 0"
+      },
+      {
+        "label": "D",
+        "text": "1 2 3"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 44,
+    "originalId": 47,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 44: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_47.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3"
+      },
+      {
+        "label": "D",
+        "text": "Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 45,
+    "originalId": 48,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 45: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class M{ static int user=1;\npublic static void main(String s[]){\nSystem.out.print(++user);\nSystem.out.print(user++);\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.2 2"
+      },
+      {
+        "label": "B",
+        "text": "B.2 3"
+      },
+      {
+        "label": "C",
+        "text": "C.2 1"
+      },
+      {
+        "label": "D",
+        "text": "D.1 1"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 46,
+    "originalId": 49,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 46: Phát biểu nào sau đây sai về từ khoá static?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.Một phương thức static có thể sử dụng tất cả các biến trong lớp"
+      },
+      {
+        "label": "B",
+        "text": "B.Một phương thức static có thể được gọi mà không cần khởi tạo đối tượng."
+      },
+      {
+        "label": "C",
+        "text": "C.Từ khoá static không dùng trong khai báo lớp"
+      },
+      {
+        "label": "D",
+        "text": "D.Một thuộc tính static được dùng chung bởi tất cả các đối tượng thuộc lớp đó."
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 47,
+    "originalId": 57,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 47: What will be the output of the following program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class TestPro{\npublic int x=4;\npublic static void main(String s[]){\nnew TestPro().Show();\n}\npublic void Show() { \nint x=2; x=x+5;\nthis.x=this.x - 2;\nx = x - this.x;\nSystem.out.print(x + \" \");\nSystem.out.print(this.x)\n}\n}",
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 2 5"
+      },
+      {
+        "label": "B",
+        "text": "B. 5 2"
+      },
+      {
+        "label": "C",
+        "text": "C. 2 7"
+      },
+      {
+        "label": "D",
+        "text": "D. 7 2"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 48,
+    "originalId": 58,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 48: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_58.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello main"
+      },
+      {
+        "label": "B",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "C",
+        "text": "static block is invoked        Hello main"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 49,
+    "originalId": 59,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 49: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_59.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "B",
+        "text": "Runtime error"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 50,
+    "originalId": 60,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 50: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_60.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit 5000.0      112 sumit 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit 5000         112 sumit 6000"
+      },
+      {
+        "label": "C",
+        "text": "0 null 0.0         0 null 0.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 51,
+    "originalId": 61,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 51: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_61.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "hello a       10"
+      },
+      {
+        "label": "B",
+        "text": "hello a       0"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 52,
+    "originalId": 62,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 52: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_62.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit java 0.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit java 6000.0         112 sumit java 0.0"
+      },
+      {
+        "label": "C",
+        "text": "111 ankit java 6000.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 53,
+    "originalId": 63,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 53: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_63.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Print nothing"
+      },
+      {
+        "label": "B",
+        "text": "method is invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      },
+      {
+        "label": "D",
+        "text": "Runtime error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 54,
+    "originalId": 64,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 54: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_64.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "eating barking meowing"
+      },
+      {
+        "label": "B",
+        "text": "eating barking"
+      },
+      {
+        "label": "C",
+        "text": "meowing eating barking"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 55,
+    "originalId": 65,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 55: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_65.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello Welcome"
+      },
+      {
+        "label": "B",
+        "text": "Hello"
+      },
+      {
+        "label": "C",
+        "text": "Welcome"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": 56,
+    "originalId": 66,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 56: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_66.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "22 33"
+      },
+      {
+        "label": "B",
+        "text": "33 22"
+      },
+      {
+        "label": "C",
+        "text": "0 0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 57,
+    "originalId": 67,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 57: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_67.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "22"
+      },
+      {
+        "label": "B",
+        "text": "22.0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 58,
+    "originalId": 68,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 58: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_68.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "main with String[]"
+      },
+      {
+        "label": "B",
+        "text": "main with String"
+      },
+      {
+        "label": "C",
+        "text": "main without args"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 59,
+    "originalId": 69,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 59: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_69.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "40 60"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error ( wrong type parameter)"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error ( wrong return type)"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error (no visibility mode)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 60,
+    "originalId": 70,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 60: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_70.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "int"
+      },
+      {
+        "label": "B",
+        "text": "long"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 61,
+    "originalId": 71,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 61: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_71.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 62,
+    "originalId": 72,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 62: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_72.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1 ankit 45000"
+      },
+      {
+        "label": "B",
+        "text": "1 ankit 0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 63,
+    "originalId": 73,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 63: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_73.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "constructor    block    constructor    block"
+      },
+      {
+        "label": "B",
+        "text": "block     constructor      block     constructor"
+      },
+      {
+        "label": "C",
+        "text": "constructor    constructor   block     block"
+      },
+      {
+        "label": "D",
+        "text": "block     block    constructor    constructor"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 64,
+    "originalId": 74,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 64: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_74.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "block      parent         child"
+      },
+      {
+        "label": "B",
+        "text": "parent       child         block"
+      },
+      {
+        "label": "C",
+        "text": "parent      block         child"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": 65,
+    "originalId": 76,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 65: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_76.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "70"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 66,
+    "originalId": 77,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 66: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_77.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "150"
+      },
+      {
+        "label": "B",
+        "text": "90"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 67,
+    "originalId": 80,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 67: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_80.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true true true 0"
+      },
+      {
+        "label": "B",
+        "text": "true false true 0"
+      },
+      {
+        "label": "C",
+        "text": "false false true 0"
+      },
+      {
+        "label": "D",
+        "text": "true false false 0"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 68,
+    "originalId": 81,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 68: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_81.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "false"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 69,
+    "originalId": 82,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 69: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_82.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 70,
+    "originalId": 83,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 70: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_83.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 71,
+    "originalId": 84,
+    "chapter": "Chương 3 : Các thành phần cơ bản - Cấu trúc chương trình Java",
+    "chapterTag": "Chương 3 — Thành phần cơ bản & Cấu trúc Java",
+    "title": "Câu 71: Chọn phương án chính xác:",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/q_84.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": 72,
+    "originalId": 52,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 72: Given this interface definition:",
+    "prompt": "Chọn một hoặc nhiều phương án đúng:",
+    "code": "interface A{\nint pt1(int m);\nint pt2(int n);\n}\nLớp nào sau đây sau khi implements interface mà không phải là 1 lớp abstract?",
+    "image": null,
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. class B implement A{ int pt1(){} int pt2(){} }"
+      },
+      {
+        "label": "B",
+        "text": "B. class B implements A{ int pt2(int n){} int pt1(int m){} }"
+      },
+      {
+        "label": "C",
+        "text": "C. class B implements A{ int pt1(int m){} int pt2(int n){} }"
+      },
+      {
+        "label": "D",
+        "text": "D. class B extends A{ int pt1(int m){} int pt2(int n){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": 73,
+    "originalId": 53,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 73: Interface sẽ dùng visibility mode nào ?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public"
+      },
+      {
+        "label": "B",
+        "text": "B. protected"
+      },
+      {
+        "label": "C",
+        "text": "C. private"
+      },
+      {
+        "label": "D",
+        "text": "D. It does not matter"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": 74,
+    "originalId": 54,
+    "chapter": "Chương 4 : Interface & Package",
+    "chapterTag": "Chương 4 — Interface & Package",
+    "title": "Câu 74: Câu nào định nghĩa interface đúng cách?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": null,
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public interface A{ int a(); }"
+      },
+      {
+        "label": "B",
+        "text": "B. interface C{ int a; }"
+      },
+      {
+        "label": "C",
+        "text": "C. private interface D{}"
+      },
+      {
+        "label": "D",
+        "text": "D. abstract interface E{}"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ]
+  }
+];
+
+    let currentQuestionIndex = 0;
+    let isAnswerVerified = false;
+    // Map to store user selected options per question id: { 1: Set(['B']), ... }
+    const userSelections = {};
+    // Map to store verification status per question id: { 1: 'unanswered' | 'correct' | 'wrong' }
+    const questionStatus = {};
+    BENCHMARK_QUESTIONS.forEach(q => {
+      questionStatus[q.id] = 'unanswered';
+    });
+
+    const STORAGE_KEY = 'vit_java_exam_state_v2';
+
+    function saveStateToStorage() {
+      try {
+        const serializableSelections = {};
+        for (const [qId, set] of Object.entries(userSelections)) {
+          if (set && set.size > 0) {
+            serializableSelections[qId] = Array.from(set);
+          }
+        }
+        const state = {
+          currentQuestionIndex,
+          userSelections: serializableSelections,
+          questionStatus
+        };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (err) {
+        console.warn('Could not save state to localStorage:', err);
+      }
+    }
+
+    function loadStateFromStorage() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const state = JSON.parse(raw);
+
+        if (typeof state.currentQuestionIndex === 'number' &&
+            state.currentQuestionIndex >= 0 &&
+            state.currentQuestionIndex < BENCHMARK_QUESTIONS.length) {
+          currentQuestionIndex = state.currentQuestionIndex;
+        }
+
+        if (state.questionStatus && typeof state.questionStatus === 'object') {
+          Object.assign(questionStatus, state.questionStatus);
+        }
+
+        if (state.userSelections && typeof state.userSelections === 'object') {
+          for (const [qId, arr] of Object.entries(state.userSelections)) {
+            if (Array.isArray(arr)) {
+              userSelections[qId] = new Set(arr);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('Could not load state from localStorage:', err);
+      }
+    }
+
+    // =========================================================================
+    // Procedural Sound Engine & Dynamic Volume Graph (Web Audio API - 100% Offline)
+    // =========================================================================
+    const SoundFX = (() => {
+      let ctx = null;
+      let masterGain = null;
+      let compressor = null;
+
+      const MUTE_STORAGE_KEY = 'vit_java_sound_muted';
+      const VOLUME_STORAGE_KEY = 'vit_java_sound_volume';
+
+      let isMuted = false;
+      let userVolume = 0.85;
+      let lastNonZeroVolume = 0.85;
+
+      try {
+        isMuted = localStorage.getItem(MUTE_STORAGE_KEY) === 'true';
+        const savedVol = localStorage.getItem(VOLUME_STORAGE_KEY);
+        if (savedVol !== null) {
+          const parsed = parseFloat(savedVol);
+          if (!isNaN(parsed) && parsed >= 0 && parsed <= 1) {
+            userVolume = parsed;
+            if (userVolume > 0) lastNonZeroVolume = userVolume;
+          }
+        }
+      } catch (e) {}
+
+      if (userVolume === 0) {
+        isMuted = true;
+      }
+
+      function updateMasterGain() {
+        if (!masterGain || !ctx) return;
+        const targetGain = isMuted ? 0 : Math.pow(userVolume, 1.3) * 2.2;
+        try {
+          masterGain.gain.cancelScheduledValues(ctx.currentTime);
+          masterGain.gain.setValueAtTime(targetGain, ctx.currentTime);
+        } catch (e) {
+          masterGain.gain.value = targetGain;
+        }
+      }
+
+      function getAudioContext() {
+        if (!ctx) {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) {
+            ctx = new AudioCtx();
+            try {
+              // Master Audio Graph: masterGain -> DynamicsCompressor -> destination
+              compressor = ctx.createDynamicsCompressor();
+              compressor.threshold.setValueAtTime(-12, ctx.currentTime);
+              compressor.knee.setValueAtTime(10, ctx.currentTime);
+              compressor.ratio.setValueAtTime(4, ctx.currentTime);
+              compressor.attack.setValueAtTime(0.003, ctx.currentTime);
+              compressor.release.setValueAtTime(0.15, ctx.currentTime);
+              compressor.connect(ctx.destination);
+
+              masterGain = ctx.createGain();
+              masterGain.connect(compressor);
+            } catch (err) {
+              console.warn('Compressor init failed:', err);
+              if (masterGain) masterGain.connect(ctx.destination);
+            }
+          }
+        }
+        if (ctx && ctx.state === 'suspended') {
+          ctx.resume().catch(() => {});
+        }
+        updateMasterGain();
+        return ctx;
+      }
+
+      function getDestination() {
+        const ac = getAudioContext();
+        if (!ac) return null;
+        return masterGain || ac.destination;
+      }
+
+      function playTone(opts) {
+        if (isMuted) return;
+        const ac = getAudioContext();
+        const dest = getDestination();
+        if (!ac || !dest) return;
+
+        try {
+          const osc = ac.createOscillator();
+          const gain = ac.createGain();
+
+          osc.type = opts.type || 'sine';
+          const now = ac.currentTime;
+
+          if (opts.freqRamp) {
+            osc.frequency.setValueAtTime(opts.freqRamp.start, now);
+            osc.frequency.exponentialRampToValueAtTime(
+              Math.max(1, opts.freqRamp.end),
+              now + opts.freqRamp.duration
+            );
+          } else if (opts.frequency) {
+            osc.frequency.setValueAtTime(opts.frequency, now);
+          }
+
+          const vol = opts.volume !== undefined ? opts.volume : 0.75;
+          gain.gain.setValueAtTime(vol, now);
+          const decayDuration = opts.decay || 0.1;
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + decayDuration);
+
+          osc.connect(gain);
+          gain.connect(dest);
+
+          osc.start(now);
+          osc.stop(now + decayDuration + 0.05);
+        } catch (err) {}
+      }
+
+      return {
+        get isMuted() {
+          return isMuted;
+        },
+        get volume() {
+          return userVolume;
+        },
+        get ctx() {
+          return ctx;
+        },
+        init() {
+          const ac = getAudioContext();
+          if (ac && (ac.state === 'suspended' || ac.state === 'interrupted')) {
+            ac.resume().catch(() => {});
+          }
+        },
+        setVolume(newVal, playFeedback = false) {
+          const clamped = Math.max(0, Math.min(1, newVal));
+          if (clamped === 0) {
+            isMuted = true;
+            userVolume = 0;
+          } else {
+            isMuted = false;
+            userVolume = clamped;
+            lastNonZeroVolume = clamped;
+          }
+          try {
+            localStorage.setItem(MUTE_STORAGE_KEY, isMuted ? 'true' : 'false');
+            localStorage.setItem(VOLUME_STORAGE_KEY, String(userVolume));
+          } catch (e) {}
+
+          updateMasterGain();
+          this.renderUI();
+
+          if (playFeedback && !isMuted) {
+            this.boop();
+          }
+        },
+        toggleMute() {
+          if (isMuted) {
+            isMuted = false;
+            userVolume = lastNonZeroVolume > 0 ? lastNonZeroVolume : 0.85;
+          } else {
+            isMuted = true;
+          }
+          try {
+            localStorage.setItem(MUTE_STORAGE_KEY, isMuted ? 'true' : 'false');
+            localStorage.setItem(VOLUME_STORAGE_KEY, String(userVolume));
+          } catch (e) {}
+
+          updateMasterGain();
+          this.renderUI();
+          if (!isMuted) {
+            this.click();
+          }
+          return isMuted;
+        },
+        renderUI() {
+          const btn = document.getElementById('btn-sound-toggle');
+          const fill = document.getElementById('volume-slider-fill');
+          const thumb = document.getElementById('volume-slider-thumb');
+
+          const effectiveLevel = isMuted ? 0 : userVolume;
+          const pct = Math.round(effectiveLevel * 100);
+
+          if (fill) {
+            fill.style.height = `${pct}%`;
+          }
+          if (thumb) {
+            thumb.style.bottom = `${pct}%`;
+          }
+
+          if (!btn) return;
+
+          if (isMuted || userVolume === 0) {
+            btn.classList.add('is-muted');
+            btn.title = 'Âm thanh: Đang tắt (Click để bật)';
+            btn.setAttribute('aria-label', 'Bật âm thanh');
+            btn.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sound-toggle-icon">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            `;
+          } else if (userVolume < 0.5) {
+            btn.classList.remove('is-muted');
+            btn.title = `Âm thanh: ${pct}% (Click để tắt)`;
+            btn.setAttribute('aria-label', `Âm thanh ${pct}%`);
+            btn.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sound-toggle-icon">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            `;
+          } else {
+            btn.classList.remove('is-muted');
+            btn.title = `Âm thanh: ${pct}% (Click để tắt)`;
+            btn.setAttribute('aria-label', `Âm thanh ${pct}%`);
+            btn.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="sound-toggle-icon">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            `;
+          }
+        },
+        initVolumeSlider() {
+          const wrapper = document.getElementById('sound-action-wrapper');
+          const track = document.getElementById('volume-slider-track');
+          if (!wrapper || !track) return;
+
+          let isDragging = false;
+          let lastBoopTime = 0;
+
+          function setVolumeFromEvent(e, isEnd = false) {
+            const rect = track.getBoundingClientRect();
+            const clientY = e.clientY;
+            const ratio = Math.max(0, Math.min(1, (rect.bottom - clientY) / rect.height));
+
+            const now = Date.now();
+            const shouldBoop = (now - lastBoopTime > 90) || isEnd;
+            if (shouldBoop) {
+              lastBoopTime = now;
+            }
+            SoundFX.setVolume(ratio, shouldBoop);
+          }
+
+          track.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            isDragging = true;
+            wrapper.classList.add('is-dragging');
+            if (track.setPointerCapture) {
+              try { track.setPointerCapture(e.pointerId); } catch (err) {}
+            }
+            setVolumeFromEvent(e);
+          });
+
+          track.addEventListener('pointermove', (e) => {
+            if (!isDragging) return;
+            setVolumeFromEvent(e);
+          });
+
+          const stopDragging = (e) => {
+            if (isDragging) {
+              isDragging = false;
+              wrapper.classList.remove('is-dragging');
+              if (track.releasePointerCapture) {
+                try { track.releasePointerCapture(e.pointerId); } catch (err) {}
+              }
+              setVolumeFromEvent(e, true);
+            }
+          };
+
+          track.addEventListener('pointerup', stopDragging);
+          track.addEventListener('pointercancel', stopDragging);
+
+          // Mouse wheel support
+          wrapper.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = -Math.sign(e.deltaY) * 0.08;
+            const currentVol = SoundFX.isMuted ? 0 : SoundFX.volume;
+            const newVol = Math.max(0, Math.min(1, currentVol + delta));
+            SoundFX.setVolume(newVol, true);
+          }, { passive: false });
+        },
+        // Option Select/Deselect: Soft tactile pop/boop (360Hz -> 540Hz over 75ms)
+        boop() {
+          if (isMuted) return;
+          playTone({
+            type: 'sine',
+            freqRamp: { start: 360, end: 540, duration: 0.075 },
+            decay: 0.075,
+            volume: 0.75
+          });
+        },
+        // All UI Buttons: Crisp mechanical micro-click (650Hz -> 220Hz over 35ms)
+        click() {
+          if (isMuted) return;
+          playTone({
+            type: 'triangle',
+            freqRamp: { start: 650, end: 220, duration: 0.035 },
+            decay: 0.038,
+            volume: 0.80
+          });
+        },
+        // Verify Correct: Bright 2-note chime (E5 659.25Hz -> B5 987.77Hz + overtone)
+        correct() {
+          if (isMuted) return;
+          const ac = getAudioContext();
+          const dest = getDestination();
+          if (!ac || !dest) return;
+
+          try {
+            const now = ac.currentTime;
+
+            // Note 1: 659.25Hz (E5) at 0ms
+            const osc1 = ac.createOscillator();
+            const gain1 = ac.createGain();
+            osc1.type = 'sine';
+            osc1.frequency.setValueAtTime(659.25, now);
+            gain1.gain.setValueAtTime(0.80, now);
+            gain1.gain.exponentialRampToValueAtTime(0.0001, now + 0.28);
+            osc1.connect(gain1);
+            gain1.connect(dest);
+            osc1.start(now);
+            osc1.stop(now + 0.3);
+
+            // Note 2: 987.77Hz (B5) at 110ms
+            const t2 = now + 0.11;
+            const osc2 = ac.createOscillator();
+            const gain2 = ac.createGain();
+            osc2.type = 'triangle';
+            osc2.frequency.setValueAtTime(987.77, t2);
+            gain2.gain.setValueAtTime(0.85, t2);
+            gain2.gain.exponentialRampToValueAtTime(0.0001, t2 + 0.42);
+            osc2.connect(gain2);
+            gain2.connect(dest);
+            osc2.start(t2);
+            osc2.stop(t2 + 0.45);
+
+            // Harmonic overtone: 1975.5Hz (B6)
+            const osc3 = ac.createOscillator();
+            const gain3 = ac.createGain();
+            osc3.type = 'sine';
+            osc3.frequency.setValueAtTime(1975.5, t2);
+            gain3.gain.setValueAtTime(0.35, t2);
+            gain3.gain.exponentialRampToValueAtTime(0.0001, t2 + 0.35);
+            osc3.connect(gain3);
+            gain3.connect(dest);
+            osc3.start(t2);
+            osc3.stop(t2 + 0.38);
+          } catch (e) {}
+        },
+        // Verify Wrong: Low-pitched double buzz/thud (210Hz -> 150Hz over 260ms)
+        wrong() {
+          if (isMuted) return;
+          const ac = getAudioContext();
+          const dest = getDestination();
+          if (!ac || !dest) return;
+
+          try {
+            const now = ac.currentTime;
+            // Pulse 1
+            const osc1 = ac.createOscillator();
+            const gain1 = ac.createGain();
+            osc1.type = 'sawtooth';
+            osc1.frequency.setValueAtTime(210, now);
+            osc1.frequency.linearRampToValueAtTime(150, now + 0.12);
+            gain1.gain.setValueAtTime(0.75, now);
+            gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+            osc1.connect(gain1);
+            gain1.connect(dest);
+            osc1.start(now);
+            osc1.stop(now + 0.13);
+
+            // Pulse 2
+            const t2 = now + 0.13;
+            const osc2 = ac.createOscillator();
+            const gain2 = ac.createGain();
+            osc2.type = 'sawtooth';
+            osc2.frequency.setValueAtTime(180, t2);
+            osc2.frequency.linearRampToValueAtTime(130, t2 + 0.14);
+            gain2.gain.setValueAtTime(0.75, t2);
+            gain2.gain.exponentialRampToValueAtTime(0.001, t2 + 0.14);
+            osc2.connect(gain2);
+            gain2.connect(dest);
+            osc2.start(t2);
+            osc2.stop(t2 + 0.15);
+          } catch (e) {}
+        }
+      };
+    })();
+
+    // Success Confetti Particles Burst
+    function triggerConfettiBurst(originElem) {
+      const rect = originElem ? originElem.getBoundingClientRect() : null;
+      const startX = rect ? rect.left + rect.width / 2 : window.innerWidth / 2;
+      const startY = rect ? rect.top + rect.height / 2 : window.innerHeight / 2;
+
+      const container = document.createElement('div');
+      container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+      document.body.appendChild(container);
+
+      const colors = ['#10B981', '#34D399', '#F59E0B', '#E0562D', '#3B82F6', '#8B5CF6'];
+      const count = 16;
+
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('div');
+        const angle = (i / count) * 2 * Math.PI + (Math.random() * 0.4 - 0.2);
+        const distance = 50 + Math.random() * 65;
+        const destX = Math.cos(angle) * distance;
+        const destY = Math.sin(angle) * distance - 25;
+        const color = colors[i % colors.length];
+        const size = 6 + Math.random() * 5;
+
+        dot.style.cssText = `
+          position: fixed;
+          left: ${startX}px;
+          top: ${startY}px;
+          width: ${size}px;
+          height: ${size}px;
+          background: ${color};
+          border-radius: 50%;
+          pointer-events: none;
+          transform: translate(-50%, -50%) scale(0.6);
+          opacity: 1;
+          transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.65s ease-out;
+        `;
+        container.appendChild(dot);
+
+        requestAnimationFrame(() => {
+          dot.style.transform = `translate(calc(-50% + ${destX}px), calc(-50% + ${destY}px)) scale(1)`;
+          dot.style.opacity = '0';
+        });
+      }
+
+      setTimeout(() => {
+        container.remove();
+      }, 700);
+    }
+
+    // =========================================================================
+    // Quote VFX Engine (Large Arched Vector Typography & Bobbing Pulse VFX)
+    // =========================================================================
+    const QUOTE_GRADIENT_SETS = [
+      ['#FF416C', '#FF4B2B', '#F9CA24'],
+      ['#7F00FF', '#E100FF', '#00F2FE'],
+      ['#FF0844', '#FFB199', '#FFE66D'],
+      ['#00F2FE', '#4FACFE', '#00C9FF'],
+      ['#F368E0', '#FF9F43', '#FF5252'],
+      ['#10B981', '#3B82F6', '#8B5CF6'],
+      ['#F72585', '#7209B7', '#4CC9F0'],
+      ['#FF8A00', '#E52E71', '#9B51E0']
+    ];
+
+    let lastPickedQuote = '';
+    let autoHideQuoteTimer = null;
+
+    function getRandomQuote(isCorrect) {
+      const quotesObj = (window.VIT_QUOTES && typeof window.VIT_QUOTES === 'object')
+        ? window.VIT_QUOTES
+        : { correct: [], wrong: [], anytime: [] };
+
+      const specificPool = isCorrect ? (quotesObj.correct || []) : (quotesObj.wrong || []);
+      const anytimePool = quotesObj.anytime || [];
+      const combinedPool = [...specificPool, ...anytimePool];
+
+      if (combinedPool.length === 0) {
+        return isCorrect ? "BẠN THẬT TÀY ĐẤY?" : "ĐẦU TRÂU?";
+      }
+
+      // Filter out the last picked quote if possible to avoid immediate repeating
+      const eligiblePool = combinedPool.length > 1
+        ? combinedPool.filter(q => q !== lastPickedQuote)
+        : combinedPool;
+
+      const picked = eligiblePool[Math.floor(Math.random() * eligiblePool.length)];
+      lastPickedQuote = picked;
+      return picked;
+    }
+
+    function showQuoteBanner(isCorrect) {
+      const stage = document.getElementById('quote-vfx-stage');
+      if (!stage) return;
+
+      if (autoHideQuoteTimer) {
+        clearTimeout(autoHideQuoteTimer);
+        autoHideQuoteTimer = null;
+      }
+
+      const quote = getRandomQuote(isCorrect);
+      const colors = QUOTE_GRADIENT_SETS[Math.floor(Math.random() * QUOTE_GRADIENT_SETS.length)];
+
+      // Dynamic font sizing: Short quotes are huge, long quotes stay on the arc comfortably
+      let fontSize = 38;
+      if (quote.length <= 14) {
+        fontSize = 46;
+      } else if (quote.length <= 24) {
+        fontSize = 38;
+      } else if (quote.length <= 34) {
+        fontSize = 32;
+      } else {
+        fontSize = 26;
+      }
+
+      const uniqueSuffix = Date.now();
+      const gradId = `quoteArcGrad_${uniqueSuffix}`;
+      const curveId = `quoteArcCurve_${uniqueSuffix}`;
+
+      // Render arched typography along the rainbow curve _.===._
+      stage.innerHTML = `
+        <svg viewBox="0 0 860 160" class="quote-arc-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="${colors[0]}" />
+              <stop offset="50%" stop-color="${colors[1]}" />
+              <stop offset="100%" stop-color="${colors[2]}" />
+            </linearGradient>
+            <path id="${curveId}" d="M 35 140 Q 430 14 825 140" fill="none" />
+          </defs>
+          <text class="quote-arc-text" font-size="${fontSize}px" fill="url(#${gradId})">
+            <textPath href="#${curveId}" xlink:href="#${curveId}" startOffset="50%" text-anchor="middle">
+              ${escapeHtml(quote)}
+            </textPath>
+          </text>
+        </svg>
+      `;
+
+      // Trigger animation
+      stage.classList.remove('active', 'shake', 'is-fading');
+      void stage.offsetWidth; // Reflow to reset transition/animations
+
+      stage.classList.add('active');
+      if (!isCorrect) {
+        stage.classList.add('shake');
+      }
+      // Quote stays active and pulsating until user advances to next question (renderCurrentQuestion calls hideQuoteBanner)
+    }
+
+    function hideQuoteBanner() {
+      const stage = document.getElementById('quote-vfx-stage');
+      if (!stage) return;
+      if (autoHideQuoteTimer) {
+        clearTimeout(autoHideQuoteTimer);
+        autoHideQuoteTimer = null;
+      }
+      stage.classList.remove('active', 'shake', 'is-fading');
+      stage.innerHTML = '';
+    }
+
+    // =========================================================================
+    // Timer & Reset Logic (Bottom-Left Secondary Actions)
+    // =========================================================================
+    let timerSeconds = 0;
+    let isTimerRunning = true; // Mặc định tự động đếm giờ từ khi mở web
+    let timerInterval = null;
+
+    const CLOCK_ICON_SVG = `
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+    `;
+
+    const MINI_CLOCK_ICON_SVG = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+    `;
+
+    function formatTime(totalSeconds) {
+      const hrs = Math.floor(totalSeconds / 3600);
+      const mins = Math.floor((totalSeconds % 3600) / 60);
+      const secs = totalSeconds % 60;
+      const mm = String(mins).padStart(2, '0');
+      const ss = String(secs).padStart(2, '0');
+      if (hrs > 0) {
+        const hh = String(hrs).padStart(2, '0');
+        return `${hh}:${mm}:${ss}`;
+      }
+      return `${mm}:${ss}`;
+    }
+
+    function renderTimerUI() {
+      const btn = document.getElementById('btn-timer-toggle');
+      if (!btn) return;
+
+      if (isTimerRunning) {
+        // Khi thời gian đang chạy: tự động hiển thị số thời gian đếm
+        btn.classList.add('is-counting');
+        btn.innerHTML = `${MINI_CLOCK_ICON_SVG}<span class="timer-digits">${formatTime(timerSeconds)}</span>`;
+        btn.title = "Đang đếm giờ (Click để đặt về 0 và dừng lại)";
+        btn.setAttribute('aria-label', `Thời gian làm bài: ${formatTime(timerSeconds)}`);
+      } else {
+        // Khi dừng: trở về icon đồng hồ
+        btn.classList.remove('is-counting');
+        btn.innerHTML = CLOCK_ICON_SVG;
+        btn.title = "Đồng hồ đang dừng (Click để bắt đầu đếm từ 00:00)";
+        btn.setAttribute('aria-label', 'Bắt đầu tính giờ');
+      }
+    }
+
+    function toggleTimer() {
+      SoundFX.click();
+      if (isTimerRunning) {
+        // Đang chạy -> ấn vào đặt thời gian về 0 và trở về icon đồng hồ
+        timerSeconds = 0;
+        isTimerRunning = false;
+      } else {
+        // Đang dừng ở icon đồng hồ -> ấn vào lại thì lại đếm từ 0
+        timerSeconds = 0;
+        isTimerRunning = true;
+      }
+      renderTimerUI();
+    }
+
+    function startTimer() {
+      if (timerInterval) clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
+        if (isTimerRunning) {
+          timerSeconds++;
+          renderTimerUI();
+        }
+      }, 1000);
+      renderTimerUI();
+    }
+
+    function resetExam() {
+      SoundFX.click();
+      if (confirm('Bạn có chắc chắn muốn xoá toàn bộ lịch sử câu hỏi đã làm và làm lại từ đầu không?')) {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {}
+
+        // Reset toàn bộ dữ liệu câu hỏi đã làm để trống không như mới
+        BENCHMARK_QUESTIONS.forEach(q => {
+          questionStatus[q.id] = 'unanswered';
+        });
+        for (const key of Object.keys(userSelections)) {
+          delete userSelections[key];
+        }
+        currentQuestionIndex = 0;
+        isAnswerVerified = false;
+
+        // Reset đồng hồ tự động đếm về 00:00
+        timerSeconds = 0;
+        isTimerRunning = true;
+        renderTimerUI();
+
+        hideQuoteBanner();
+        saveStateToStorage();
+        renderCurrentQuestion();
+      }
+    }
+
+    const CHECK_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+
+    function renderCurrentQuestion() {
+      hideQuoteBanner();
+      const q = BENCHMARK_QUESTIONS[currentQuestionIndex];
+      const card = document.getElementById('question-card');
+
+      // Adaptive layout: expand width only for questions with code or image
+      const container = document.querySelector('.test-container');
+      if (container) {
+        if (q.code || q.image) {
+          container.classList.add('has-media-layout');
+        } else {
+          container.classList.remove('has-media-layout');
+        }
+      }
+      const progressText = document.getElementById('progress-text');
+      const progressFill = document.getElementById('progress-fill');
+      const progressTag = document.getElementById('progress-tag');
+
+      // Ensure a Set exists for current question
+      if (!userSelections[q.id]) {
+        userSelections[q.id] = new Set();
+      }
+
+      const isAlreadyVerified = (questionStatus[q.id] !== 'unanswered');
+
+      // Update Header Progress
+      if (progressText) progressText.textContent = `Câu ${currentQuestionIndex + 1} / ${BENCHMARK_QUESTIONS.length}`;
+      if (progressFill) progressFill.style.width = `${((currentQuestionIndex + 1) / BENCHMARK_QUESTIONS.length) * 100}%`;
+      if (progressTag) progressTag.textContent = q.chapterTag || "Ôn tập Java";
+
+      // Left column: Chapter Badge, Title, Code / Image
+      let leftHtml = `
+        <div class="question-left-col">
+          <div class="question-subject-badge">${escapeHtml(q.chapter || "Java Core")}</div>
+          <h2 class="question-title">${escapeHtml(q.title)}</h2>
+      `;
+
+      if (q.code) {
+        leftHtml += `
+          <div class="code-box">
+            <pre><code>${escapeHtml(q.code)}</code></pre>
+          </div>
+        `;
+      }
+
+      if (q.image) {
+        leftHtml += `
+          <div class="question-image-wrapper">
+            <img src="${q.image}" alt="Đoạn mã câu hỏi" class="question-image" onclick="openLightbox('${q.image}')" />
+          </div>
+        `;
+      }
+
+      leftHtml += `</div>`;
+
+      // Right column: Options List (No explanation box)
+      const promptText = q.prompt || (q.isMultiple ? "Chọn các phương án đúng:" : "Chọn một phương án đúng nhất:");
+      let rightHtml = `
+        <div class="question-right-col">
+          <div class="options-header-prompt">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4"></polyline>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+            <span>${escapeHtml(promptText)}</span>
+          </div>
+      `;
+
+      if (q.options && q.options.length) {
+        rightHtml += `<div class="options-list" id="options-container">`;
+        q.options.forEach(opt => {
+          const isSelected = userSelections[q.id].has(opt.label);
+          let rowClasses = ['option-row'];
+          let verdictText = '';
+          let badgeHtml = isSelected ? CHECK_SVG : opt.label;
+
+          if (isSelected) {
+            rowClasses.push('is-selected');
+          }
+
+          if (isAlreadyVerified) {
+            const evalResult = getOptionEvaluation(q, opt.label, isSelected);
+            rowClasses.push(evalResult.rowClass);
+            verdictText = evalResult.verdictText;
+            badgeHtml = evalResult.badgeContent;
+          }
+
+          const cleanText = opt.text.replace(/^[A-Ga-g]\.\s*/, '');
+          rightHtml += `
+            <div class="${rowClasses.join(' ')}" data-label="${opt.label}">
+              <div class="option-badge" id="badge-${opt.label}">
+                ${badgeHtml}
+              </div>
+              <div class="option-text">${escapeHtml(cleanText)}</div>
+              <span class="verdict-tag" id="verdict-${opt.label}">${verdictText}</span>
+            </div>
+          `;
+        });
+        rightHtml += `</div>`;
+      }
+
+      rightHtml += `</div>`;
+
+      card.innerHTML = `<div class="question-grid-layout">${leftHtml}${rightHtml}</div>`;
+
+      // Re-trigger smooth card transition VFX
+      card.classList.remove('animating-in');
+      void card.offsetWidth;
+      card.classList.add('animating-in');
+
+      isAnswerVerified = isAlreadyVerified;
+      updateMainActionButtonState();
+      bindOptionClickEvents(q);
+      renderMapGrid();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /**
+     * Binds click handlers to toggle badge between letter and checkmark
+     */
+    function bindOptionClickEvents(q) {
+      const container = document.getElementById('options-container');
+      if (!container) return;
+
+      const rows = container.querySelectorAll('.option-row');
+      rows.forEach(row => {
+        row.addEventListener('click', (e) => {
+          // If answer was already verified, lock options
+          if (isAnswerVerified) return;
+
+          // If user was selecting/highlighting text, do not toggle
+          const selection = window.getSelection();
+          if (selection && selection.toString().trim().length > 0) {
+            return;
+          }
+
+          SoundFX.boop();
+
+          const label = row.getAttribute('data-label');
+          const badge = document.getElementById(`badge-${label}`);
+
+          if (userSelections[q.id].has(label)) {
+            userSelections[q.id].delete(label);
+            row.classList.remove('is-selected');
+            if (badge) badge.textContent = label;
+          } else {
+            // If single-choice question and not multiple, clear other selections
+            if (!q.isMultiple) {
+              userSelections[q.id].clear();
+              rows.forEach(r => {
+                r.classList.remove('is-selected');
+                const b = r.querySelector('.option-badge');
+                if (b) b.textContent = r.getAttribute('data-label');
+              });
+            }
+            userSelections[q.id].add(label);
+            row.classList.add('is-selected');
+            if (badge) badge.innerHTML = CHECK_SVG;
+          }
+          saveStateToStorage();
+          updateMainActionButtonState();
+        });
+      });
+    }
+
+    /**
+     * Updates the unified footer action button:
+     * - !isAnswerVerified: label "Xác nhận", checkmark icon, disabled if no option selected
+     * - isAnswerVerified: label "Tiếp theo" (or "Hoàn tất & Về trang chủ" on last question), arrow icon
+     */
+    function updateMainActionButtonState() {
+      const btnMainAction = document.getElementById('btn-main-action');
+      const btnText = document.getElementById('btn-action-text');
+      const btnIcon = document.getElementById('btn-action-icon');
+      const btnPrev = document.getElementById('btn-prev-question');
+      if (!btnText || !btnIcon || !btnMainAction) return;
+
+      const q = BENCHMARK_QUESTIONS[currentQuestionIndex];
+      const selected = userSelections[q.id] || new Set();
+
+      if (btnPrev) {
+        btnPrev.disabled = (currentQuestionIndex === 0);
+        btnPrev.style.visibility = (currentQuestionIndex === 0) ? 'hidden' : 'visible';
+      }
+
+      if (!isAnswerVerified) {
+        btnText.textContent = "Xác nhận";
+        btnIcon.innerHTML = `<polyline points="20 6 9 17 4 12"></polyline>`;
+        btnMainAction.disabled = (selected.size === 0);
+      } else {
+        btnMainAction.disabled = false;
+        if (currentQuestionIndex === BENCHMARK_QUESTIONS.length - 1) {
+          btnText.textContent = "Hoàn tất & Về trang chủ";
+        } else {
+          btnText.textContent = "Tiếp theo";
+        }
+        btnIcon.innerHTML = `<line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>`;
+      }
+    }
+
+    /**
+     * Evaluates an option's visual state based on question type and selections:
+     * - Multi-choice:
+     *   - Picked & correct: green "Đúng ✓", checkmark
+     *   - Not picked & correct (chọn thiếu): red "Thiếu ✗", letter
+     *   - Picked & not correct (chọn thừa / sai): red "Thừa ✗", checkmark
+     *   - Not picked & not correct: neutral, no tag, letter
+     * - Single-choice:
+     *   - Picked & correct: green "Đúng ✓", checkmark
+     *   - Picked & not correct: red "Sai ✗", checkmark
+     *   - Not picked & correct: green "Đúng ✓", letter
+     *   - Not picked & not correct: neutral, no tag, letter
+     */
+    function getOptionEvaluation(q, label, isSelected) {
+      const correctSet = new Set(q.correctAnswers || []);
+      const isCorrectOption = correctSet.has(label);
+
+      if (q.isMultiple) {
+        if (isCorrectOption && isSelected) {
+          return { rowClass: 'verified-correct', verdictText: 'Đúng ✓', badgeContent: CHECK_SVG };
+        } else if (isCorrectOption && !isSelected) {
+          return { rowClass: 'verified-wrong', verdictText: 'Thiếu ✗', badgeContent: label };
+        } else if (!isCorrectOption && isSelected) {
+          return { rowClass: 'verified-wrong', verdictText: 'Thừa ✗', badgeContent: CHECK_SVG };
+        } else {
+          return { rowClass: 'verified-neutral-wrong', verdictText: '', badgeContent: label };
+        }
+      } else {
+        if (isSelected && isCorrectOption) {
+          return { rowClass: 'verified-correct', verdictText: 'Đúng ✓', badgeContent: CHECK_SVG };
+        } else if (isSelected && !isCorrectOption) {
+          return { rowClass: 'verified-wrong', verdictText: 'Sai ✗', badgeContent: CHECK_SVG };
+        } else if (!isSelected && isCorrectOption) {
+          return { rowClass: 'verified-correct', verdictText: 'Đúng ✓', badgeContent: label };
+        } else {
+          return { rowClass: 'verified-neutral-wrong', verdictText: '', badgeContent: label };
+        }
+      }
+    }
+
+    /**
+     * Executes verification for the current question:
+     * Highlights options (green for correct picked, red for missed/excess, neutral for unpicked wrong).
+     */
+    function verifyCurrentQuestion() {
+      const q = BENCHMARK_QUESTIONS[currentQuestionIndex];
+      const selectedSet = userSelections[q.id];
+      if (!selectedSet || selectedSet.size === 0) return;
+      const correctSet = new Set(q.correctAnswers || []);
+
+      // Check correctness: exact match with no missing and no excess options
+      const isCorrect = (selectedSet.size === correctSet.size) &&
+                        ([...selectedSet].every(item => correctSet.has(item)));
+
+      questionStatus[q.id] = isCorrect ? 'correct' : 'wrong';
+
+      if (isCorrect) {
+        SoundFX.correct();
+        triggerConfettiBurst(document.getElementById('btn-main-action'));
+      } else {
+        SoundFX.wrong();
+      }
+
+      showQuoteBanner(isCorrect);
+
+      // Evaluate each option row
+      const rows = document.querySelectorAll('.option-row');
+      rows.forEach(row => {
+        const label = row.getAttribute('data-label');
+        const isUserPicked = selectedSet.has(label);
+        const evalResult = getOptionEvaluation(q, label, isUserPicked);
+        const verdictSpan = document.getElementById(`verdict-${label}`);
+        const badge = document.getElementById(`badge-${label}`);
+
+        row.classList.remove('verified-correct', 'verified-wrong', 'verified-neutral-wrong');
+        row.classList.add(evalResult.rowClass);
+
+        if (verdictSpan) {
+          verdictSpan.textContent = evalResult.verdictText;
+        }
+        if (badge) {
+          badge.innerHTML = evalResult.badgeContent;
+        }
+      });
+
+      isAnswerVerified = true;
+      updateMainActionButtonState();
+      renderMapGrid();
+      saveStateToStorage();
+    }
+
+    /**
+     * Jump directly to a question by index while preserving state
+     */
+    function goToQuestion(index) {
+      if (index < 0 || index >= BENCHMARK_QUESTIONS.length) return;
+      SoundFX.click();
+      currentQuestionIndex = index;
+      saveStateToStorage();
+      renderCurrentQuestion();
+    }
+    window.goToQuestion = goToQuestion;
+
+    /**
+     * Renders question map cells grouped by chapter in the hover popover
+     */
+    function renderMapGrid() {
+      const scrollArea = document.getElementById('map-scroll-area');
+      const progressCount = document.getElementById('map-progress-count');
+      if (!scrollArea) return;
+
+      let answeredCount = 0;
+      BENCHMARK_QUESTIONS.forEach(q => {
+        if (questionStatus[q.id] !== 'unanswered') answeredCount++;
+      });
+
+      // Group questions by chapter
+      const chapters = [];
+      let currentChapter = null;
+      BENCHMARK_QUESTIONS.forEach((q, idx) => {
+        if (!currentChapter || currentChapter.name !== q.chapter) {
+          currentChapter = { name: q.chapter, questions: [] };
+          chapters.push(currentChapter);
+        }
+        currentChapter.questions.push({ q, idx });
+      });
+
+      let html = '';
+      chapters.forEach(ch => {
+        html += `<div class="chapter-section-header">
+          <span>${escapeHtml(ch.name)}</span>
+          <span>${ch.questions.length} câu</span>
+        </div>`;
+        html += `<div class="map-grid">`;
+        ch.questions.forEach(item => {
+          const status = questionStatus[item.q.id] || 'unanswered';
+          const isCurrent = (item.idx === currentQuestionIndex);
+          html += `
+            <button type="button" class="map-cell status-${status} ${isCurrent ? 'is-current' : ''}" 
+                    data-q-index="${item.idx}"
+                    onclick="window.goToQuestion(${item.idx})" 
+                    aria-label="Đến câu ${item.q.id}">
+              ${item.q.id}
+            </button>
+          `;
+        });
+        html += `</div>`;
+      });
+
+      scrollArea.innerHTML = html;
+      if (progressCount) {
+        progressCount.textContent = `${answeredCount}/${BENCHMARK_QUESTIONS.length}`;
+      }
+    }
+
+    /**
+     * Floating Mini-Screen Question Preview on Hover in Map Popover
+     */
+    function initMapHoverPreview() {
+      const scrollArea = document.getElementById('map-scroll-area');
+      const previewCard = document.getElementById('map-question-preview');
+      const mapPopover = document.getElementById('map-popover');
+      const chapterEl = document.getElementById('map-preview-chapter');
+      const statusEl = document.getElementById('map-preview-status');
+      const titleEl = document.getElementById('map-preview-title');
+      const mediaEl = document.getElementById('map-preview-media');
+
+      if (!scrollArea || !previewCard || !mapPopover) return;
+
+      function hidePreview() {
+        previewCard.classList.remove('is-visible');
+      }
+
+      scrollArea.addEventListener('mouseover', (e) => {
+        const cell = e.target.closest('.map-cell');
+        if (!cell) return;
+
+        const idxAttr = cell.getAttribute('data-q-index');
+        if (idxAttr === null) return;
+        const idx = Number(idxAttr);
+        const q = BENCHMARK_QUESTIONS[idx];
+        if (!q) return;
+
+        // Populate chapter
+        if (chapterEl) {
+          chapterEl.textContent = q.chapterTag || q.chapter || 'Ôn tập';
+        }
+
+        // Populate status
+        const status = questionStatus[q.id] || 'unanswered';
+        if (statusEl) {
+          statusEl.className = 'map-preview-status';
+          if (status === 'correct') {
+            statusEl.classList.add('is-correct');
+            statusEl.textContent = 'Đúng ✓';
+          } else if (status === 'wrong') {
+            statusEl.classList.add('is-wrong');
+            statusEl.textContent = 'Sai ✗';
+          } else {
+            statusEl.classList.add('is-unanswered');
+            statusEl.textContent = 'Chưa làm';
+          }
+        }
+
+        // Populate title (stem only, NO options)
+        if (titleEl) {
+          titleEl.textContent = q.title || `Câu ${q.id}`;
+        }
+
+        // Populate media
+        if (mediaEl) {
+          if (q.code) {
+            mediaEl.style.display = 'block';
+            mediaEl.innerHTML = `<pre class="map-preview-code"><code>${escapeHtml(q.code)}</code></pre>`;
+          } else if (q.image) {
+            mediaEl.style.display = 'block';
+            mediaEl.innerHTML = `<img src="${escapeHtml(q.image)}" alt="Thumbnail câu hỏi" class="map-preview-thumb" />`;
+          } else {
+            mediaEl.style.display = 'none';
+            mediaEl.innerHTML = '';
+          }
+        }
+
+        // Dynamic Vertical Tracking:
+        // Position relative to mapPopover: align preview vertically near hovered cell without overflowing
+        const cellRect = cell.getBoundingClientRect();
+        const popRect = mapPopover.getBoundingClientRect();
+        const previewHeight = previewCard.offsetHeight || 220;
+
+        // Distance from bottom of mapPopover to the cell's center
+        const cellCenterFromPopBottom = popRect.bottom - (cellRect.top + cellRect.height / 2);
+        let bottomOffset = cellCenterFromPopBottom - (previewHeight / 2);
+
+        // Clamp so it never extends below popover bottom (0px) or above popover top
+        const minBottom = 0;
+        const maxBottom = Math.max(0, popRect.height - previewHeight);
+        bottomOffset = Math.max(minBottom, Math.min(maxBottom, bottomOffset));
+
+        previewCard.style.bottom = `${bottomOffset}px`;
+        previewCard.classList.add('is-visible');
+      });
+
+      scrollArea.addEventListener('mouseleave', hidePreview);
+
+      // Hide when clicking cell
+      scrollArea.addEventListener('click', (e) => {
+        if (e.target.closest('.map-cell')) {
+          hidePreview();
+        }
+      });
+
+      // Hide when popover loses hover or closes
+      mapPopover.addEventListener('mouseleave', hidePreview);
+    }
+
+    /**
+     * Handles clicking the unified action button:
+     * 1st click: verifies answer & changes label to "Tiếp theo"
+     * 2nd click: advances to next question or finishes to index.html
+     */
+    function handleMainAction() {
+      if (!isAnswerVerified) {
+        verifyCurrentQuestion();
+      } else {
+        SoundFX.click();
+        if (currentQuestionIndex < BENCHMARK_QUESTIONS.length - 1) {
+          currentQuestionIndex++;
+          saveStateToStorage();
+          renderCurrentQuestion();
+        } else {
+          window.location.href = 'index.html';
+        }
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function openLightbox(src, title) {
+      const lightbox = document.getElementById('image-lightbox');
+      const img = document.getElementById('image-lightbox-img');
+      const titleEl = document.getElementById('image-lightbox-title');
+      if (!lightbox || !img) return;
+      img.src = src;
+      if (titleEl) {
+        titleEl.textContent = title || 'Đối chiếu đáp án PDF';
+      }
+      lightbox.classList.add('active');
+    }
+    window.openLightbox = openLightbox;
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('image-lightbox');
+      const img = document.getElementById('image-lightbox-img');
+      if (!lightbox) return;
+      lightbox.classList.remove('active');
+      if (img) img.src = '';
+    }
+    window.closeLightbox = closeLightbox;
+
+    // App initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      loadStateFromStorage();
+      renderCurrentQuestion();
+      initMapHoverPreview();
+      SoundFX.renderUI();
+      SoundFX.initVolumeSlider();
+
+      // One-time iOS Safari audio unlock on first user interaction
+      function setupIOSAudioUnlock() {
+        const events = ['touchstart', 'pointerdown', 'click'];
+        const unlock = () => {
+          SoundFX.init();
+          events.forEach(evt => document.removeEventListener(evt, unlock, true));
+        };
+        events.forEach(evt => document.addEventListener(evt, unlock, { once: true, capture: true }));
+      }
+      setupIOSAudioUnlock();
+
+      // Touch-Friendly Sound Toggle
+      const btnSound = document.getElementById('btn-sound-toggle');
+      const soundWrapper = document.getElementById('sound-action-wrapper');
+      const soundPopover = document.getElementById('sound-volume-popover');
+      if (btnSound) {
+        btnSound.addEventListener('click', (e) => {
+          const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+          if (isTouch && soundPopover) {
+            e.stopPropagation();
+            if (!soundPopover.classList.contains('is-open')) {
+              soundPopover.classList.add('is-open');
+              SoundFX.click();
+              return;
+            }
+          }
+          SoundFX.toggleMute();
+        });
+      }
+
+      const btnProof = document.getElementById('btn-proof-image');
+      if (btnProof) {
+        btnProof.addEventListener('click', () => {
+          SoundFX.click();
+          const curQ = BENCHMARK_QUESTIONS[currentQuestionIndex];
+          if (curQ) {
+            const proofSrc = 'images/proofs/proof_' + curQ.id + '.png';
+            const cleanTitle = curQ.title ? curQ.title.split(':')[0] : ('Câu ' + curQ.id);
+            openLightbox(proofSrc, 'Đối chiếu đáp án PDF: ' + cleanTitle);
+          }
+        });
+      }
+
+      const btnCloseLb = document.getElementById('btn-close-lightbox');
+      if (btnCloseLb) {
+        btnCloseLb.addEventListener('click', (e) => {
+          e.stopPropagation();
+          SoundFX.click();
+          closeLightbox();
+        });
+      }
+
+      // Touch-Friendly Map Popover Toggle
+      const btnMap = document.getElementById('btn-map-toggle');
+      const mapWrapper = document.getElementById('map-action-wrapper');
+      const mapPopover = document.getElementById('map-popover');
+      if (btnMap && mapPopover) {
+        btnMap.addEventListener('click', (e) => {
+          e.stopPropagation();
+          SoundFX.click();
+          mapPopover.classList.toggle('is-open');
+        });
+      }
+
+      if (mapPopover) {
+        mapPopover.addEventListener('click', (e) => {
+          if (e.target && e.target.closest && e.target.closest('.map-cell')) {
+            mapPopover.classList.remove('is-open');
+          }
+        });
+      }
+
+      // Tap outside to close popovers on touch devices
+      document.addEventListener('click', (e) => {
+        if (soundWrapper && !soundWrapper.contains(e.target) && soundPopover) {
+          soundPopover.classList.remove('is-open');
+        }
+        if (mapWrapper && !mapWrapper.contains(e.target) && mapPopover) {
+          mapPopover.classList.remove('is-open');
+        }
+      });
+
+      // Swipe Gestures on Mobile Question Card
+      function setupSwipeGestures() {
+        const card = document.getElementById('question-card');
+        if (!card) return;
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        card.addEventListener('touchstart', (e) => {
+          if (e.touches.length !== 1) return;
+          const target = e.target;
+          if (target && target.closest && (target.closest('.code-box') || target.closest('.code-line') || target.closest('pre'))) {
+            const codeEl = target.closest('.code-box') || target.closest('pre');
+            if (codeEl && codeEl.scrollWidth > codeEl.clientWidth) {
+              return; // Allow horizontal code scrolling
+            }
+          }
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchStartTime = Date.now();
+        }, { passive: true });
+
+        card.addEventListener('touchend', (e) => {
+          if (!touchStartX || !touchStartTime) return;
+          const touchEndX = e.changedTouches[0].clientX;
+          const touchEndY = e.changedTouches[0].clientY;
+          const deltaX = touchEndX - touchStartX;
+          const deltaY = touchEndY - touchStartY;
+          const elapsedTime = Date.now() - touchStartTime;
+
+          touchStartX = 0;
+          touchStartY = 0;
+          touchStartTime = 0;
+
+          if (elapsedTime < 500 && Math.abs(deltaX) > 75 && Math.abs(deltaY) < 40) {
+            if (deltaX < 0) {
+              // Swipe Left -> Next Question
+              if (isAnswerVerified) {
+                handleMainAction();
+              } else if (currentQuestionIndex < BENCHMARK_QUESTIONS.length - 1) {
+                goToQuestion(currentQuestionIndex + 1);
+              }
+            } else {
+              // Swipe Right -> Previous Question
+              if (currentQuestionIndex > 0) {
+                goToQuestion(currentQuestionIndex - 1);
+              }
+            }
+          }
+        }, { passive: true });
+      }
+      setupSwipeGestures();
+
+      const btnMainAction = document.getElementById('btn-main-action');
+      if (btnMainAction) {
+        btnMainAction.addEventListener('click', handleMainAction);
+      }
+
+      const btnPrev = document.getElementById('btn-prev-question');
+      if (btnPrev) {
+        btnPrev.addEventListener('click', () => {
+          if (currentQuestionIndex > 0) {
+            goToQuestion(currentQuestionIndex - 1);
+          }
+        });
+      }
+
+      const btnResetExam = document.getElementById('btn-reset-exam');
+      if (btnResetExam) {
+        btnResetExam.addEventListener('click', resetExam);
+      }
+
+      const btnResetAll = document.getElementById('btn-reset-all');
+      if (btnResetAll) {
+        btnResetAll.addEventListener('click', resetExam);
+      }
+
+      const btnTimer = document.getElementById('btn-timer-toggle');
+      if (btnTimer) {
+        btnTimer.addEventListener('click', toggleTimer);
+      }
+
+      startTimer();
+
+      const lightbox = document.getElementById('image-lightbox');
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+      }
+
+      // Keyboard Navigation
+      document.addEventListener('keydown', (e) => {
+        const targetTag = e.target && e.target.tagName;
+        if (targetTag === 'INPUT' || targetTag === 'TEXTAREA' || (e.target && e.target.isContentEditable)) {
+          return;
+        }
+
+        const lb = document.getElementById('image-lightbox');
+        if (e.key === 'Escape') {
+          if (lb && lb.classList.contains('active')) {
+            closeLightbox();
+            return;
+          }
+          const mapPopover = document.getElementById('map-popover');
+          if (mapPopover && mapPopover.classList.contains('active')) {
+            mapPopover.classList.remove('active');
+            return;
+          }
+        }
+
+        if (e.key === 'p' || e.key === 'P' || e.key === 'i' || e.key === 'I') {
+          if (lb && lb.classList.contains('active')) {
+            closeLightbox();
+          } else {
+            const btnProofEl = document.getElementById('btn-proof-image');
+            if (btnProofEl) btnProofEl.click();
+          }
+          return;
+        }
+
+        if (lb && lb.classList.contains('active')) return;
+
+        const q = BENCHMARK_QUESTIONS[currentQuestionIndex];
+        if (!q) return;
+
+        // Keys 1-7 or A-G for options
+        const keyUpper = e.key.toUpperCase();
+        let optionIndex = -1;
+        if (e.key >= '1' && e.key <= '7') {
+          optionIndex = parseInt(e.key, 10) - 1;
+        } else if (keyUpper >= 'A' && keyUpper <= 'G') {
+          optionIndex = keyUpper.charCodeAt(0) - 65;
+        }
+
+        if (optionIndex >= 0 && q.options && optionIndex < q.options.length) {
+          if (!isAnswerVerified) {
+            const opt = q.options[optionIndex];
+            const row = document.querySelector(`.option-row[data-label="${opt.label}"]`);
+            if (row) {
+              row.click();
+            }
+          }
+          return;
+        }
+
+        // Enter: Main action if not disabled
+        if (e.key === 'Enter') {
+          const btnMain = document.getElementById('btn-main-action');
+          if (btnMain && !btnMain.disabled) {
+            e.preventDefault();
+            handleMainAction();
+          }
+          return;
+        }
+
+        // ArrowLeft: Previous question
+        if (e.key === 'ArrowLeft') {
+          if (currentQuestionIndex > 0) {
+            e.preventDefault();
+            goToQuestion(currentQuestionIndex - 1);
+          }
+          return;
+        }
+
+        // ArrowRight: Next question
+        if (e.key === 'ArrowRight') {
+          if (currentQuestionIndex < BENCHMARK_QUESTIONS.length - 1) {
+            e.preventDefault();
+            goToQuestion(currentQuestionIndex + 1);
+          }
+          return;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

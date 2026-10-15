@@ -1,0 +1,3748 @@
+[
+  {
+    "id": 1,
+    "title": "Chương trình dịch Java thực hiện theo các bước nào? (slide 29)",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_1.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Java codes -> interpreter -> bytecode -> run"
+      },
+      {
+        "label": "B",
+        "text": "Java codes -> compile -> run"
+      },
+      {
+        "label": "C",
+        "text": "Java codes  -> compiler -> bytecode -> interpreter"
+      },
+      {
+        "label": "D",
+        "text": "Java codes -> run directly"
+      }
+    ],
+    "correctAnswers": [
+      "C",
+      "D"
+    ],
+    "pdfPage": 4
+  },
+  {
+    "id": 2,
+    "title": "Đâu là bộ từ khoá của java (slide 44)",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "static, short , sleep, join"
+      },
+      {
+        "label": "B",
+        "text": "abstract, boolean, transient, volatile"
+      },
+      {
+        "label": "C",
+        "text": "thrown, finally, document, new"
+      },
+      {
+        "label": "D",
+        "text": "string, integer,  char, catch"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "pdfPage": 28
+  },
+  {
+    "id": 3,
+    "title": "Đâu là kiểu khai báo mảng có 3 phần tử đúng?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "int size[] = new int(3);"
+      },
+      {
+        "label": "B",
+        "text": "int size[] = new int[3];"
+      },
+      {
+        "label": "C",
+        "text": "int[] size = new int(3);"
+      },
+      {
+        "label": "D",
+        "text": "int size[] = new int[3]{3, 4, 5};"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "pdfPage": 24
+  },
+  {
+    "id": 4,
+    "title": "Các constructor thường được sử dụng của lớp Thread",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Thread()"
+      },
+      {
+        "label": "B",
+        "text": "Thread(String name)"
+      },
+      {
+        "label": "C",
+        "text": "Thread(Runnable r)"
+      },
+      {
+        "label": "D",
+        "text": "Thread(Runnable r,String name)"
+      },
+      {
+        "label": "E",
+        "text": "Thread(String name, Runnable r)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "pdfPage": 32
+  },
+  {
+    "id": 5,
+    "title": "Khi cần loại ra khỏi phần tử chứa một thành phần giao diện thì sử dụng các hàm",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "void remove(int index)"
+      },
+      {
+        "label": "B",
+        "text": "void remove(Container cont, int index)"
+      },
+      {
+        "label": "C",
+        "text": "void remove(Component comp)"
+      },
+      {
+        "label": "D",
+        "text": "void removeAll()"
+      },
+      {
+        "label": "E",
+        "text": "void remove(Container cont, Component comp)"
+      },
+      {
+        "label": "F",
+        "text": "void remove(Container cont, Component comp, int index)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "pdfPage": 14
+  },
+  {
+    "id": 6,
+    "title": "Câu 6: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_6.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 2 2 3 3 4 4"
+      },
+      {
+        "label": "B",
+        "text": "1 2 3 4 1 2 3 4"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3 4 5 1 2 3 4 5"
+      },
+      {
+        "label": "D",
+        "text": "1 1 2 2 3 3 4 4 5 5"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 22
+  },
+  {
+    "id": 7,
+    "title": "Câu 7: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_7.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 2 2 3 3 4 4"
+      },
+      {
+        "label": "B",
+        "text": "1 2 3 4 1 2 3 4"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3 4 5 1 2 3 4 5"
+      },
+      {
+        "label": "D",
+        "text": "1 1 2 2 3 3 4 4 5 5"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 22
+  },
+  {
+    "id": 8,
+    "title": "_____ là vùng nhớ chia sẻ giữa các Thread, hàm ______  được gọi mỗi lần trước khi đối tượng được thu gom rác.",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "stack, finalize()"
+      },
+      {
+        "label": "B",
+        "text": "heap, finalize()"
+      },
+      {
+        "label": "C",
+        "text": "heap, dispose()"
+      },
+      {
+        "label": "D",
+        "text": "stack, close()"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 46
+  },
+  {
+    "id": 9,
+    "title": "Câu 9: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_9.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "5 100 200 10 300 15 400 20 25 500"
+      },
+      {
+        "label": "B",
+        "text": "5 10 15 20 25 100 200 300 400 500"
+      },
+      {
+        "label": "C",
+        "text": "100 200 300 400 500 5 10 15 20 25"
+      },
+      {
+        "label": "D",
+        "text": "100 5 200 10 300 15 400 20 500 25"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 77
+  },
+  {
+    "id": 10,
+    "title": "Nếu một luồng bị chặn lại bởi lời gọi hàm suspend(),  muốn thực hiện thì trước đó phải gọi hàm",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "notify()"
+      },
+      {
+        "label": "B",
+        "text": "notifyAll()"
+      },
+      {
+        "label": "C",
+        "text": "resume()"
+      },
+      {
+        "label": "D",
+        "text": "wake()"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 26
+  },
+  {
+    "id": 11,
+    "title": "Nếu một luồng bị chặn lại bởi lời gọi hàm wait(),  muốn tiếp tục thì phải gọi hàm",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "notify()"
+      },
+      {
+        "label": "B",
+        "text": "notifyAll()"
+      },
+      {
+        "label": "C",
+        "text": "resume()"
+      },
+      {
+        "label": "D",
+        "text": "wake()"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 26
+  },
+  {
+    "id": 12,
+    "title": "Câu 12: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_12.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "running..."
+      },
+      {
+        "label": "B",
+        "text": "running... running..."
+      },
+      {
+        "label": "C",
+        "text": "Exception in thread \"main\" java.lang.IllegalThreadStateException"
+      },
+      {
+        "label": "D",
+        "text": "infinite running..."
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 26
+  },
+  {
+    "id": 13,
+    "title": "Câu 13: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_13.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "0 0 0"
+      },
+      {
+        "label": "D",
+        "text": "1 2 3"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 41
+  },
+  {
+    "id": 14,
+    "title": "Câu 14: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_14.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 1 1"
+      },
+      {
+        "label": "B",
+        "text": "3 3 3"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3"
+      },
+      {
+        "label": "D",
+        "text": "Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 54
+  },
+  {
+    "id": 15,
+    "title": "class A{   \n      int a=40;      \n\n      public static void main(String args[]){    System.out.println(a);   }  \n\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "40"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "pdfPage": 73
+  },
+  {
+    "id": 16,
+    "title": "Các lớp sự kiện ngữ nghĩa (slide 191)",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "ActionEvent, ItemListener, MouseListener, KeyEvent"
+      },
+      {
+        "label": "B",
+        "text": "ActionEvent, AdjustmentEvent, ItemEvent, TextEvent"
+      },
+      {
+        "label": "C",
+        "text": "ComponentEvent, KeyEvent, MouseEvent, ActionEvent"
+      },
+      {
+        "label": "D",
+        "text": "WindowEvent, ActionEvent, ItemEvent, TextEvent"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 9
+  },
+  {
+    "id": 17,
+    "title": "Tên biến nào sau đây hợp lệ ?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "case"
+      },
+      {
+        "label": "B",
+        "text": "Tất cả đều sai"
+      },
+      {
+        "label": "C",
+        "text": "1MyNumber"
+      },
+      {
+        "label": "D",
+        "text": "Int"
+      },
+      {
+        "label": "E",
+        "text": "char"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 43
+  },
+  {
+    "id": 18,
+    "title": "class Myprogram{\n     public static void main(String args[]){\n           try{ System.out.println(\"Hello\");}\n      }\n  }",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Chương trình sẽ biên dịch chính xác"
+      },
+      {
+        "label": "B",
+        "text": "B. Chương trình sẽ không biên dịch được vì không có catch"
+      },
+      {
+        "label": "C",
+        "text": "C. Chương trình sẽ không biên dịch được vì không có catch hoặc finally"
+      },
+      {
+        "label": "D",
+        "text": "D. Chương trình sẽ không biên dịch được vì không có finally"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 61
+  },
+  {
+    "id": 19,
+    "title": "What will be the output of the following program?\nclass M{ static int user=1;\npublic static void main(String s[]){\nSystem.out.print(++user);\nSystem.out.print(user++);\n}\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_19.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A.2 2"
+      },
+      {
+        "label": "B",
+        "text": "B.2 3"
+      },
+      {
+        "label": "C",
+        "text": "C.2 1"
+      },
+      {
+        "label": "D",
+        "text": "D.1 1"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 62
+  },
+  {
+    "id": 20,
+    "title": "Phát biểu nào sau đây sai về từ khoá static?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.Một phương thức static có thể sử dụng tất cả các biến trong lớp"
+      },
+      {
+        "label": "B",
+        "text": "B.Một phương thức static có thể được gọi mà không cần khởi tạo đối tượng."
+      },
+      {
+        "label": "C",
+        "text": "C.Từ khoá static không dùng trong khai báo lớp"
+      },
+      {
+        "label": "D",
+        "text": "D.Một thuộc tính static được dùng chung bởi tất cả các đối tượng thuộc lớp đó."
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 55
+  },
+  {
+    "id": 21,
+    "title": "When a subclass method have the same name, parameter list, and return type as a method in the parent class, this method is said to be what?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Extended"
+      },
+      {
+        "label": "B",
+        "text": "B. Overloaded"
+      },
+      {
+        "label": "C",
+        "text": "C. Overextended"
+      },
+      {
+        "label": "D",
+        "text": "D. Overridden"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "pdfPage": 4
+  },
+  {
+    "id": 22,
+    "title": "When two or more methods in the same class have the same name, they are said to be what?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. an implementation detail"
+      },
+      {
+        "label": "B",
+        "text": "B. overriden"
+      },
+      {
+        "label": "C",
+        "text": "C. an interface"
+      },
+      {
+        "label": "D",
+        "text": "D. overloaded"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "pdfPage": 70
+  },
+  {
+    "id": 23,
+    "title": "Finally clause:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Are executed only after a try block executes with no exceptions"
+      },
+      {
+        "label": "B",
+        "text": "B. Are always executed after try and catch blocks"
+      },
+      {
+        "label": "C",
+        "text": "C. Are only executed if an exception is thrown but no matching catch clause is found"
+      },
+      {
+        "label": "D",
+        "text": "D. Are only executed if a catch clause is executed"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D"
+    ],
+    "pdfPage": 63
+  },
+  {
+    "id": 24,
+    "title": "Unhandled unchecked exceptions:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Terminate the application"
+      },
+      {
+        "label": "B",
+        "text": "B. Are ignored at runtime"
+      },
+      {
+        "label": "C",
+        "text": "C. Cause the program to not compile"
+      },
+      {
+        "label": "D",
+        "text": "D. Are handled automatically by the JVM"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 8
+  },
+  {
+    "id": 25,
+    "title": "Unhandled checked exceptions:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Terminate the application"
+      },
+      {
+        "label": "B",
+        "text": "B. Are ignored at runtime"
+      },
+      {
+        "label": "C",
+        "text": "C. Cause the program to not compile"
+      },
+      {
+        "label": "D",
+        "text": "D. Are handled automatically by the JVM"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 8
+  },
+  {
+    "id": 26,
+    "title": "Đoạn chương trình trên sẽ in ra gì nếu chúng ta thực thi với thông số dòng lệnh như sau: \n\nC:\\> java B hello you",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. B"
+      },
+      {
+        "label": "B",
+        "text": "B. hello"
+      },
+      {
+        "label": "C",
+        "text": "C. you"
+      },
+      {
+        "label": "D",
+        "text": "D. Exception raised : \"java.lang.ArrayIndexOutOfBoundsException : 2\""
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 25
+  },
+  {
+    "id": 27,
+    "title": "Những phương thức nào sau đây thuộc lớp InputStreamReader?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. read()"
+      },
+      {
+        "label": "B",
+        "text": "B. write()"
+      },
+      {
+        "label": "C",
+        "text": "C. getBuffer()"
+      },
+      {
+        "label": "D",
+        "text": "D. getString()"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 1
+  },
+  {
+    "id": 28,
+    "title": "Những phương thức nào sau đây thuộc lớp StringWriter?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. read()"
+      },
+      {
+        "label": "B",
+        "text": "B. write()"
+      },
+      {
+        "label": "C",
+        "text": "C. getBuffer()"
+      },
+      {
+        "label": "D",
+        "text": "D. getString()"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 1
+  },
+  {
+    "id": 29,
+    "title": "Những phương thức nào sau đây thuộc lớp CharArrayWriter?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "reset( )"
+      },
+      {
+        "label": "B",
+        "text": "size( )"
+      },
+      {
+        "label": "C",
+        "text": "toCharArray( )"
+      },
+      {
+        "label": "D",
+        "text": "toString( )"
+      },
+      {
+        "label": "E",
+        "text": "writeTo( )"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "pdfPage": 3
+  },
+  {
+    "id": 30,
+    "title": "Lớp nào là lớp luồng I/O?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Lớp System.out."
+      },
+      {
+        "label": "B",
+        "text": "Lớp System.console"
+      },
+      {
+        "label": "C",
+        "text": "Lớp System.in."
+      },
+      {
+        "label": "D",
+        "text": "Lớp System.err."
+      },
+      {
+        "label": "E",
+        "text": "Lớp System.stream"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "pdfPage": 27
+  },
+  {
+    "id": 31,
+    "title": "Giả sử việc xử lý ngoại lệ đã được cài đặt. Câu nào sau đây sẽ tạo một đối tượng của lớp RandomAccessFile?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. RandomAccessFile ra=new RandomAccessFile(\"a.txt\",\"rw\");"
+      },
+      {
+        "label": "B",
+        "text": "B. RandomAccessFile ra=new RandomAccessFile(new DataInputStream());"
+      },
+      {
+        "label": "C",
+        "text": "C. RandomAccessFile ra=new RandomAccessFile(\"a.txt\");"
+      },
+      {
+        "label": "D",
+        "text": "D. RandomAccessFile ra=new RandomAccessFile(new File(\"a.txt\");"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 8
+  },
+  {
+    "id": 32,
+    "title": "Phương thức nào sau đây thuộc về lớp RandomAccessFile?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "peek()"
+      },
+      {
+        "label": "B",
+        "text": "seek()"
+      },
+      {
+        "label": "C",
+        "text": "getFilePointer( )"
+      },
+      {
+        "label": "D",
+        "text": "find()"
+      },
+      {
+        "label": "E",
+        "text": "length()"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "pdfPage": 29
+  },
+  {
+    "id": 33,
+    "title": "Các phương thức của lớp PrinterWriter",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "checkError()"
+      },
+      {
+        "label": "B",
+        "text": "writeString()"
+      },
+      {
+        "label": "C",
+        "text": "setError()"
+      },
+      {
+        "label": "D",
+        "text": "getString()"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "pdfPage": 74
+  },
+  {
+    "id": 34,
+    "title": "Phương thức của lớp ByteArrayOutputStream?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": "images/q_34.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "reset( )"
+      },
+      {
+        "label": "B",
+        "text": "writeByte()"
+      },
+      {
+        "label": "C",
+        "text": "size( )"
+      },
+      {
+        "label": "D",
+        "text": "writeTo( )"
+      },
+      {
+        "label": "E",
+        "text": "getBytes()"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "pdfPage": 35
+  },
+  {
+    "id": 35,
+    "title": "Câu nào là phương thức khởi tạo hợp lệ?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. File(String path);"
+      },
+      {
+        "label": "B",
+        "text": "B. File(String path, String name);"
+      },
+      {
+        "label": "C",
+        "text": "C. RandomAccessFile(File)"
+      },
+      {
+        "label": "D",
+        "text": "D. File(RandomAccessFile name)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 11
+  },
+  {
+    "id": 36,
+    "title": "Hãy chọn Các component của GUI",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Containers"
+      },
+      {
+        "label": "B",
+        "text": "textfields"
+      },
+      {
+        "label": "C",
+        "text": "dropdownList"
+      },
+      {
+        "label": "D",
+        "text": "labels"
+      },
+      {
+        "label": "E",
+        "text": "textareas"
+      },
+      {
+        "label": "F",
+        "text": "dialog"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D",
+      "E",
+      "F"
+    ],
+    "pdfPage": 74
+  },
+  {
+    "id": 37,
+    "title": "Chọn các hàm constructor của label",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Label()"
+      },
+      {
+        "label": "B",
+        "text": "Label(String labeltext)"
+      },
+      {
+        "label": "C",
+        "text": "Label(int column)"
+      },
+      {
+        "label": "D",
+        "text": "Label(int vgap, int hgap)"
+      },
+      {
+        "label": "E",
+        "text": "Label(String labeltext, int alignment)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "pdfPage": 30
+  },
+  {
+    "id": 38,
+    "title": "Chọn các hàm constructor của textfield",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "TextField( )"
+      },
+      {
+        "label": "B",
+        "text": "TextField(int rows, int columns, String anchor)"
+      },
+      {
+        "label": "C",
+        "text": "TextField(int columns)"
+      },
+      {
+        "label": "D",
+        "text": "TextField(int rows, int columns)"
+      },
+      {
+        "label": "E",
+        "text": "TextField(String s)"
+      },
+      {
+        "label": "F",
+        "text": "TextField(String s, int columns)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "E",
+      "F"
+    ],
+    "pdfPage": 1
+  },
+  {
+    "id": 39,
+    "title": "Chọn các hàm constructor của textArea",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "TextArea( )"
+      },
+      {
+        "label": "B",
+        "text": "TextArea(int rows, int cols )"
+      },
+      {
+        "label": "C",
+        "text": "TextArea(int rows, int cols, String text)"
+      },
+      {
+        "label": "D",
+        "text": "TextArea(String text)"
+      },
+      {
+        "label": "E",
+        "text": "TextArea(String text, int rows, int cols)"
+      },
+      {
+        "label": "F",
+        "text": "TextArea(int cols)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "pdfPage": 24
+  },
+  {
+    "id": 40,
+    "title": "Layout mặc định của panel là gì ?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Border Layout"
+      },
+      {
+        "label": "B",
+        "text": "Card Layout"
+      },
+      {
+        "label": "C",
+        "text": "FlowLayout"
+      },
+      {
+        "label": "D",
+        "text": "Grid Layout"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 5
+  },
+  {
+    "id": 41,
+    "title": "Các constructor của FlowLayout",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "FlowLayout exLayout = new FlowLayout(FlowLayout.RIGHT);"
+      },
+      {
+        "label": "B",
+        "text": "FlowLayout mylayout = new Layout(new FlowLayout());"
+      },
+      {
+        "label": "C",
+        "text": "FlowLayout mylayout = new FlowLayout();"
+      },
+      {
+        "label": "D",
+        "text": "FlowLayout mylayout = new FlowLayout(new FlowLayout.RIGHT());"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "pdfPage": 38
+  },
+  {
+    "id": 42,
+    "title": "BorderLayout có tất cả bao nhiêu vùng ?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "4"
+      },
+      {
+        "label": "B",
+        "text": "5"
+      },
+      {
+        "label": "C",
+        "text": "6"
+      },
+      {
+        "label": "D",
+        "text": "3"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 30
+  },
+  {
+    "id": 43,
+    "title": "BorderLayout có các vùng nào",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "NORTH, EAST, SOUTH, WEST, CENTER"
+      },
+      {
+        "label": "B",
+        "text": "NORTH, EAST, SOUTH, WEST, MIDDLE"
+      },
+      {
+        "label": "C",
+        "text": "UPPER, BOTTOM, MIDDLE, LEFT, RIGHT"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 10
+  },
+  {
+    "id": 44,
+    "title": "Chọn tất cả các phương thức add() đúng của lớp Container",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Component add(Component comp)"
+      },
+      {
+        "label": "B",
+        "text": "Component add(Component comp, int index)"
+      },
+      {
+        "label": "C",
+        "text": "Component add(Component comp, int rows, int cols)"
+      },
+      {
+        "label": "D",
+        "text": "Component add(Component comp, Object constraints)"
+      },
+      {
+        "label": "E",
+        "text": "Component add(Component comp, Object constraints, int count)"
+      },
+      {
+        "label": "F",
+        "text": "Component add(Component comp, Object constraints, int index)"
+      },
+      {
+        "label": "G",
+        "text": "Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "D",
+      "F"
+    ],
+    "pdfPage": 3
+  },
+  {
+    "id": 45,
+    "title": "Các hàm constructor của GridLayout",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "GridLayout()"
+      },
+      {
+        "label": "B",
+        "text": "GridLayout(int rows, int columns)"
+      },
+      {
+        "label": "C",
+        "text": "GridLayout(int rows, int columns, int index)"
+      },
+      {
+        "label": "D",
+        "text": "GridLayout(int rows, int columns, int hoiongap, int verticalgap)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "pdfPage": 46
+  },
+  {
+    "id": 46,
+    "title": "Các hàm tạo lập để sắp hàng các thành phần giao diện của lớp FlowLayout",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "FlowLayout()"
+      },
+      {
+        "label": "B",
+        "text": "FlowLayout(int aligment, int position, int index)"
+      },
+      {
+        "label": "C",
+        "text": "FlowLayout(int aligment)"
+      },
+      {
+        "label": "D",
+        "text": "FlowLayout(int aligment, int horizongap, int verticalgap)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "pdfPage": 72
+  },
+  {
+    "id": 47,
+    "title": "Các hàm constructor của BorderLayout",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "BorderLayout()"
+      },
+      {
+        "label": "B",
+        "text": "BorderLayout(int horizongap, int verticalgap)"
+      },
+      {
+        "label": "C",
+        "text": "BorderLayout(int aligment, int horizongap, int verticalgap)"
+      },
+      {
+        "label": "D",
+        "text": "BorderLayout(int coordination)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 72
+  },
+  {
+    "id": 48,
+    "title": "Khi một mục trong List được double click, hoặc phím Enter trong trường văn bản được gõ, sự kiện nào diễn ra",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "ItemEvent"
+      },
+      {
+        "label": "B",
+        "text": "TextEvent"
+      },
+      {
+        "label": "C",
+        "text": "ActionEvent"
+      },
+      {
+        "label": "D",
+        "text": "AdjustmentEvent"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 6
+  },
+  {
+    "id": 49,
+    "title": "Khi một mục trong List/Choice được chọn hoặc bị loại bỏ sự kiện nào diễn ra",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "ItemEvent"
+      },
+      {
+        "label": "B",
+        "text": "TextEvent"
+      },
+      {
+        "label": "C",
+        "text": "ActionEvent"
+      },
+      {
+        "label": "D",
+        "text": "AdjustmentEvent"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 6
+  },
+  {
+    "id": 50,
+    "title": "Các nguồn gây ra sự kiện của ActionEvent là",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Button"
+      },
+      {
+        "label": "B",
+        "text": "List"
+      },
+      {
+        "label": "C",
+        "text": "TextField"
+      },
+      {
+        "label": "D",
+        "text": "Choice"
+      },
+      {
+        "label": "E",
+        "text": "CheckBox"
+      },
+      {
+        "label": "F",
+        "text": "MenuItem"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "F"
+    ],
+    "pdfPage": 23
+  },
+  {
+    "id": 51,
+    "title": "Các nguồn gây ra sự kiện của ItemEvent là",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Button"
+      },
+      {
+        "label": "B",
+        "text": "List"
+      },
+      {
+        "label": "C",
+        "text": "TextField"
+      },
+      {
+        "label": "D",
+        "text": "Choice"
+      },
+      {
+        "label": "E",
+        "text": "CheckBox"
+      },
+      {
+        "label": "F",
+        "text": "CheckboxMenuItem"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "F"
+    ],
+    "pdfPage": 23
+  },
+  {
+    "id": 52,
+    "title": "Mức ưu tiên của các luồng có thể nhận giá trị tối đa là bao nhiêu",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "5"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "Bao nhiêu cũng được"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 28
+  },
+  {
+    "id": 53,
+    "title": "Mức ưu tiên càng cao thì các đối tượng như thế nào",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "To hơn"
+      },
+      {
+        "label": "B",
+        "text": "Nhanh hơn"
+      },
+      {
+        "label": "C",
+        "text": "Nhỏ hơn"
+      },
+      {
+        "label": "D",
+        "text": "Chậm hơn"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 52
+  },
+  {
+    "id": 54,
+    "title": "Có bao nhiêu loại JDBC Driver",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "3"
+      },
+      {
+        "label": "D",
+        "text": "4"
+      },
+      {
+        "label": "E",
+        "text": "5"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 43
+  },
+  {
+    "id": 55,
+    "title": "Chọn constructors phù hợp cho lớp FileInputStream ?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. FileInputStream(File f)"
+      },
+      {
+        "label": "B",
+        "text": "B. FileInputStream(String s)"
+      },
+      {
+        "label": "C",
+        "text": "C. FileInputStream(FileDescriptor fd)"
+      },
+      {
+        "label": "D",
+        "text": "D. FileInputStream(RandomAccessFile raf)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "pdfPage": 43
+  },
+  {
+    "id": 56,
+    "title": "Chọn constructors phù hợp cho lớp BufferInputStream",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. BufferInputStream(FileInputStream in, int size)"
+      },
+      {
+        "label": "B",
+        "text": "B. BufferInputStream(FileInputStream fin)"
+      },
+      {
+        "label": "C",
+        "text": "C. BufferInputStream(FileOutputStream fout)"
+      },
+      {
+        "label": "D",
+        "text": "D. BufferInputStream(RandomAccessFile raf)"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 8
+  },
+  {
+    "id": 57,
+    "title": "Given this interface definition:\ninterface A{\nint pt1(int m);\nint pt2(int n);\n}\nLớp nào sau đây sau khi implements interface mà không phải là 1 lớp abstract?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. class B implement A{ int pt1(){} int pt2(){} }"
+      },
+      {
+        "label": "B",
+        "text": "B. class B implements A{ int pt2(int n){} int pt1(int m){} }"
+      },
+      {
+        "label": "C",
+        "text": "C. class B implements A{ int pt1(int m){} int pt2(int n){} }"
+      },
+      {
+        "label": "D",
+        "text": "D. class B extends A{ int pt1(int m){} int pt2(int n){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "pdfPage": 55
+  },
+  {
+    "id": 58,
+    "title": "Interface sẽ dùng visibility mode nào ?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public"
+      },
+      {
+        "label": "B",
+        "text": "B. protected"
+      },
+      {
+        "label": "C",
+        "text": "C. private"
+      },
+      {
+        "label": "D",
+        "text": "D. It does not matter"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 6
+  },
+  {
+    "id": 59,
+    "title": "Câu nào định nghĩa interface đúng cách?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. public interface A{ int a(); }"
+      },
+      {
+        "label": "B",
+        "text": "B. interface C{ int a; }"
+      },
+      {
+        "label": "C",
+        "text": "C. private interface D{}"
+      },
+      {
+        "label": "D",
+        "text": "D. abstract interface E{}"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 57
+  },
+  {
+    "id": 60,
+    "title": "Cho khai báo mảng 2 chiều như sau:\nint m[ ][ ]=new int[3][4];\nPhần nào sau đây dùng để xác định số cột của mảng hai chiều?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. m.length();"
+      },
+      {
+        "label": "B",
+        "text": "B. m[0].length;"
+      },
+      {
+        "label": "C",
+        "text": "C. m.length(3);"
+      },
+      {
+        "label": "D",
+        "text": "D. m[].length;"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 1
+  },
+  {
+    "id": 61,
+    "title": "Câu lệnh nào sau đây khai báo đúng một mảng 6 số nguyên?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int a[]={1,2,3,4,5,6}"
+      },
+      {
+        "label": "B",
+        "text": "B. int a[];"
+      },
+      {
+        "label": "C",
+        "text": "C. int a[] = new int[6];"
+      },
+      {
+        "label": "D",
+        "text": "D. int a[] = new int(6);"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 52
+  },
+  {
+    "id": 62,
+    "title": "What will be the output of the following program?\nclass N{\n       public static void main(String s[])\n    {\n         int x= 11 & 9;\n         System.out.print(x);\n     }\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_62.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 8"
+      },
+      {
+        "label": "B",
+        "text": "B. 9"
+      },
+      {
+        "label": "C",
+        "text": "C. 10"
+      },
+      {
+        "label": "D",
+        "text": "D. 11"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "D"
+    ],
+    "pdfPage": 73
+  },
+  {
+    "id": 63,
+    "title": "What will be the output of the following program?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_63.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. true false true false"
+      },
+      {
+        "label": "B",
+        "text": "B. true true false true"
+      },
+      {
+        "label": "C",
+        "text": "C. false true false true"
+      },
+      {
+        "label": "D",
+        "text": "D. false false true true"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 51
+  },
+  {
+    "id": 64,
+    "title": "What will be the output of the following program? (u,v=?)",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_64.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. u=11,v=14"
+      },
+      {
+        "label": "B",
+        "text": "B. u=14,v=11"
+      },
+      {
+        "label": "C",
+        "text": "C. u=12,v=14"
+      },
+      {
+        "label": "D",
+        "text": "D. u=14,v=12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 56
+  },
+  {
+    "id": 65,
+    "title": "What will be the output of the following program?\nint a=10;\ndo{\nSystem.out.print(a%2); a/=2;\n}while(a!=0);",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_65.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 0101"
+      },
+      {
+        "label": "B",
+        "text": "B. 1011"
+      },
+      {
+        "label": "C",
+        "text": "C. 1010"
+      },
+      {
+        "label": "D",
+        "text": "D. Another answer"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 68
+  },
+  {
+    "id": 66,
+    "title": "Để chuyển một chuỗi chứa giá trị nguyên (String) sang một số nguyên (int) thì sẽ dùng phương thức nào sau đây?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. tolnteger() thuộc lớp Integer"
+      },
+      {
+        "label": "B",
+        "text": "B. Parseln() thuộc lớp String"
+      },
+      {
+        "label": "C",
+        "text": "C. parselnt() thuộc lớp Integer"
+      },
+      {
+        "label": "D",
+        "text": "D. tolnteger() thuộc lớp string"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 33
+  },
+  {
+    "id": 67,
+    "title": "Chọn câu lệnh đúng?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. int i, j; for (j=100; i < j; j--) { i += 2;}"
+      },
+      {
+        "label": "B",
+        "text": "B. for (int i=10; i=0; i--) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. int j=10; for ( int i=0, j+=90; i < j; i++) { j--; }"
+      },
+      {
+        "label": "D",
+        "text": "D. for (int i=0, j=100; i < j; i++, --j) { }"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C",
+      "D"
+    ],
+    "pdfPage": 9
+  },
+  {
+    "id": 68,
+    "title": "Biểu thức nào sau đây không gây ra lỗi?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. boolean a = (boolean) 1;"
+      },
+      {
+        "label": "B",
+        "text": "B. boolean b = (false && true);"
+      },
+      {
+        "label": "C",
+        "text": "C. float y =22.3;"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 31
+  },
+  {
+    "id": 69,
+    "title": "Cho đoạn mã sau:\nint x=11;\ndo{ x += 20;\n} while(x<10);\nVòng lặp sẽ lặp bao nhiêu lần?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_69.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 1"
+      },
+      {
+        "label": "B",
+        "text": "B. 10"
+      },
+      {
+        "label": "C",
+        "text": "C. 11"
+      },
+      {
+        "label": "D",
+        "text": "D. 0"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 43
+  },
+  {
+    "id": 70,
+    "title": "What will be the output (s) of the following code?\nint i = 42;\nString s =((i<40) ? \"life\" : (i>50) ? \"universal\" : \"everything\");",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_70.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. everything"
+      },
+      {
+        "label": "B",
+        "text": "B. universal"
+      },
+      {
+        "label": "C",
+        "text": "D. life"
+      },
+      {
+        "label": "D",
+        "text": "C. null"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "pdfPage": 16
+  },
+  {
+    "id": 71,
+    "title": "Những phương thức nào sau đây khai báo hợp lệ?\npublic short M(){\nbyte m=120;\nreturn m;\n}\npublic int N(){\nlong n=500;\nreturn n;\n}\npublic Boolean P(){\nboolean p=true;\nreturn p;\n}\npublic long Q(){\nfloat q=300F;\nreturn q;\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. M()"
+      },
+      {
+        "label": "B",
+        "text": "B. N()"
+      },
+      {
+        "label": "C",
+        "text": "C. P()"
+      },
+      {
+        "label": "D",
+        "text": "D. Q()"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 40
+  },
+  {
+    "id": 72,
+    "title": "Câu 72: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_72.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "B",
+        "text": "1 1 4"
+      },
+      {
+        "label": "C",
+        "text": "1 1 5"
+      },
+      {
+        "label": "D",
+        "text": "1 3 5"
+      }
+    ],
+    "correctAnswers": [
+      "C",
+      "D"
+    ],
+    "pdfPage": 53
+  },
+  {
+    "id": 73,
+    "title": "Câu 73",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "m = 6"
+      },
+      {
+        "label": "B",
+        "text": "m = 12"
+      },
+      {
+        "label": "C",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "D",
+        "text": "m = 3"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 75
+  },
+  {
+    "id": 74,
+    "title": "Khi phương thức được gọi thì các lệnh trong phương thức được thực hiện cho đến khi nào?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Cho đến khi gặp lệnh \"return\" hoặc \"}\" ở cuối phương thức"
+      },
+      {
+        "label": "B",
+        "text": "B. Cho đến hết phương thức"
+      },
+      {
+        "label": "C",
+        "text": "C. Cho đến khi gặp lệnh \"exit\""
+      },
+      {
+        "label": "D",
+        "text": "D. Cho đến khi gặp lệnh \"break\""
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 17
+  },
+  {
+    "id": 75,
+    "title": "Câu 75: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_75.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "a. 99 99 101"
+      },
+      {
+        "label": "B",
+        "text": "b. 99 100 101"
+      },
+      {
+        "label": "C",
+        "text": "c. 98 99 101"
+      },
+      {
+        "label": "D",
+        "text": "d. 99 100 102"
+      },
+      {
+        "label": "E",
+        "text": "e. 99 100 100"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 7
+  },
+  {
+    "id": 76,
+    "title": "You want to find out the value of the last element of an array. You write the following code. What will happen when you compile and run it?\n\npublic class MyAr{\npublic static void main(String argv[]){\nint[] i = new int[5];\nSystem.out.println(i[5]);\n}\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "a. An error at compile time"
+      },
+      {
+        "label": "B",
+        "text": "b. An error at run time"
+      },
+      {
+        "label": "C",
+        "text": "c. The value 0 will be output"
+      },
+      {
+        "label": "D",
+        "text": "d. The string \"null\" will be output"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 64
+  },
+  {
+    "id": 77,
+    "title": "Phương thức main() nào được biên dịch?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A. static public void main(String args[]) {}"
+      },
+      {
+        "label": "B",
+        "text": "B. public static void main(String []a) {}"
+      },
+      {
+        "label": "C",
+        "text": "C. static public void main(String arg[]) {}"
+      },
+      {
+        "label": "D",
+        "text": "D. All correct"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 62
+  },
+  {
+    "id": 78,
+    "title": "Khẳng định nào đúng với đoạn mã sau?\npublic class A{\npublic static void main(String s[]) {\nint i; \nSystem.out.print(\"i=\"+i); i=25;\n}\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_78.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. Chương trình sẽ biên dịch nhưng sẽ xuất hiện lỗi trong khi thực thi"
+      },
+      {
+        "label": "B",
+        "text": "B. Chương trình sẽ biên dịch và xuất giá trị 0 ra màn hình"
+      },
+      {
+        "label": "C",
+        "text": "C. Chương trình không biên dịch và xuất ra lỗi"
+      },
+      {
+        "label": "D",
+        "text": "D. Tất cả đều sai"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "pdfPage": 42
+  },
+  {
+    "id": 79,
+    "title": "What will be the output of the following program?\npublic class TestPro{\npublic int x=4;\npublic static void main(String s[]){\nnew TestPro().Show();\n}\npublic void Show() { \nint x=2; x=x+5;\nthis.x=this.x - 2;\nx = x - this.x;\nSystem.out.print(x + \" \");\nSystem.out.print(this.x)\n}\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_79.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 2 5"
+      },
+      {
+        "label": "B",
+        "text": "B. 5 2"
+      },
+      {
+        "label": "C",
+        "text": "C. 2 7"
+      },
+      {
+        "label": "D",
+        "text": "D. 7 2"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 11
+  },
+  {
+    "id": 80,
+    "title": "What will be the output of the following program?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_80.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 257"
+      },
+      {
+        "label": "B",
+        "text": "B. 100257"
+      },
+      {
+        "label": "C",
+        "text": "C. The code will not compile"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 16
+  },
+  {
+    "id": 81,
+    "title": "What will be the output of the following program?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_81.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. 22"
+      },
+      {
+        "label": "B",
+        "text": "B. 21"
+      },
+      {
+        "label": "C",
+        "text": "C. 23"
+      },
+      {
+        "label": "D",
+        "text": "D. 33"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 19
+  },
+  {
+    "id": 82,
+    "title": "What will be the output of the following program?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_82.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "A. a=3,a=3"
+      },
+      {
+        "label": "B",
+        "text": "B. a=3,a=6"
+      },
+      {
+        "label": "C",
+        "text": "C. a=3,a=7"
+      },
+      {
+        "label": "D",
+        "text": "D. Another value"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "pdfPage": 48
+  },
+  {
+    "id": 83,
+    "title": "Lớp nào là lớp cơ sở cho mọi đối tượng lỗi",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "A.String"
+      },
+      {
+        "label": "B",
+        "text": "B.Error"
+      },
+      {
+        "label": "C",
+        "text": "C.Throwable"
+      },
+      {
+        "label": "D",
+        "text": "D.Exception"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 70
+  },
+  {
+    "id": 84,
+    "title": "Cho biết kết quả khi chạy đoạn chương trình sau:\nint i = 1; \nfor( i = 0; i = -1; i = 1){\nSystem.out.print(i);\nif(i!=1) break;\n}",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_84.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "label": "B",
+        "text": "Kết quả khác"
+      },
+      {
+        "label": "C",
+        "text": "Lỗi biên dịch"
+      },
+      {
+        "label": "D",
+        "text": "1"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 12
+  },
+  {
+    "id": 85,
+    "title": "Câu 85: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_85.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "12"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "9"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 20
+  },
+  {
+    "id": 86,
+    "title": "Lệnh System.out.println(\"CNTT\"); được thực hiện mấy lần",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "11"
+      },
+      {
+        "label": "B",
+        "text": "0"
+      },
+      {
+        "label": "C",
+        "text": "10"
+      },
+      {
+        "label": "D",
+        "text": "5"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 42
+  },
+  {
+    "id": 87,
+    "title": "Chọn đáp án sai ?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "static void main (String args[]){}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main(String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public void main (String args[]){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main(String a[]) {}"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "pdfPage": 71
+  },
+  {
+    "id": 88,
+    "title": "Câu 88: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_88.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello main"
+      },
+      {
+        "label": "B",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "C",
+        "text": "static block is invoked        Hello main"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 39
+  },
+  {
+    "id": 89,
+    "title": "Câu 89",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "static block is invoked"
+      },
+      {
+        "label": "B",
+        "text": "Runtime error"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 5
+  },
+  {
+    "id": 90,
+    "title": "Chọn đáp án đúng ?",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "public static void main (String args) {}"
+      },
+      {
+        "label": "B",
+        "text": "public static void main (String args[]) {}"
+      },
+      {
+        "label": "C",
+        "text": "public static void main (String[] args){}"
+      },
+      {
+        "label": "D",
+        "text": "public static void main (String[] b){}"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C",
+      "D"
+    ],
+    "pdfPage": 67
+  },
+  {
+    "id": 91,
+    "title": "Câu 91: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_91.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit 5000.0      112 sumit 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit 5000         112 sumit 6000"
+      },
+      {
+        "label": "C",
+        "text": "0 null 0.0         0 null 0.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 50
+  },
+  {
+    "id": 92,
+    "title": "Câu 92: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_92.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "hello a       10"
+      },
+      {
+        "label": "B",
+        "text": "hello a       0"
+      },
+      {
+        "label": "C",
+        "text": "0"
+      },
+      {
+        "label": "D",
+        "text": "Compile error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 49
+  },
+  {
+    "id": 93,
+    "title": "Câu 93: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_93.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "111 ankit java 0.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "B",
+        "text": "111 ankit java 6000.0         112 sumit java 0.0"
+      },
+      {
+        "label": "C",
+        "text": "111 ankit java 6000.0         112 sumit java 6000.0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 38
+  },
+  {
+    "id": 94,
+    "title": "Câu 94: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_94.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Print nothing"
+      },
+      {
+        "label": "B",
+        "text": "method is invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile error"
+      },
+      {
+        "label": "D",
+        "text": "Runtime error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 67
+  },
+  {
+    "id": 95,
+    "title": "Câu 95: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_95.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "eating barking meowing"
+      },
+      {
+        "label": "B",
+        "text": "eating barking"
+      },
+      {
+        "label": "C",
+        "text": "meowing eating barking"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 15
+  },
+  {
+    "id": 96,
+    "title": "Câu 96: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_96.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Hello Welcome"
+      },
+      {
+        "label": "B",
+        "text": "Hello"
+      },
+      {
+        "label": "C",
+        "text": "Welcome"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "pdfPage": 70
+  },
+  {
+    "id": 97,
+    "title": "Câu 97: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_97.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "22 33"
+      },
+      {
+        "label": "B",
+        "text": "33 22"
+      },
+      {
+        "label": "C",
+        "text": "0 0"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 59
+  },
+  {
+    "id": 98,
+    "title": "Câu 98: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_98.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "22"
+      },
+      {
+        "label": "B",
+        "text": "22.0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 58
+  },
+  {
+    "id": 99,
+    "title": "Câu 99",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "main with String[]"
+      },
+      {
+        "label": "B",
+        "text": "main with String"
+      },
+      {
+        "label": "C",
+        "text": "main without args"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 65
+  },
+  {
+    "id": 100,
+    "title": "Câu 100: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_100.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "40 60"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error ( wrong type parameter)"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error ( wrong return type)"
+      },
+      {
+        "label": "D",
+        "text": "Compile Time Error (no visibility mode)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 21
+  },
+  {
+    "id": 101,
+    "title": "Câu 101: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_101.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "int"
+      },
+      {
+        "label": "B",
+        "text": "long"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 29
+  },
+  {
+    "id": 102,
+    "title": "Câu 102: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_102.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 27
+  },
+  {
+    "id": 103,
+    "title": "Câu 103: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_103.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "1 ankit 45000"
+      },
+      {
+        "label": "B",
+        "text": "1 ankit 0"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 19
+  },
+  {
+    "id": 104,
+    "title": "Câu 104: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_104.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "constructor    block    constructor    block"
+      },
+      {
+        "label": "B",
+        "text": "block     constructor      block     constructor"
+      },
+      {
+        "label": "C",
+        "text": "constructor    constructor   block     block"
+      },
+      {
+        "label": "D",
+        "text": "block     block    constructor    constructor"
+      }
+    ],
+    "correctAnswers": [
+      "B",
+      "C"
+    ],
+    "pdfPage": 44
+  },
+  {
+    "id": 105,
+    "title": "Câu 105: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_105.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "block      parent         child"
+      },
+      {
+        "label": "B",
+        "text": "parent       child         block"
+      },
+      {
+        "label": "C",
+        "text": "parent      block         child"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 45
+  },
+  {
+    "id": 106,
+    "title": "Câu 106: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_106.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "running"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error (final cant be inherited)"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 66
+  },
+  {
+    "id": 107,
+    "title": "Câu 107",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "70"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 10
+  },
+  {
+    "id": 108,
+    "title": "Câu 108: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_108.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "150"
+      },
+      {
+        "label": "B",
+        "text": "90"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 61
+  },
+  {
+    "id": 109,
+    "title": "Câu 109: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": "images/q_109.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "animal is eating"
+      },
+      {
+        "label": "B",
+        "text": "dog is eating"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 47
+  },
+  {
+    "id": 110,
+    "title": "Câu 110: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_110.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "ok downcasting performed"
+      },
+      {
+        "label": "B",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "C",
+        "text": "ClassCastException is thrown at runtime"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 34
+  },
+  {
+    "id": 111,
+    "title": "Bạn nhập mã Java vào file nguồn. Bây giờ muốn lưu và biên dịch nó. Hãy chọn đáp án đúng",
+    "desc": "",
+    "type": "checkbox",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Save it in a file called Yourclass.java and compile it with javac Yourclass.java"
+      },
+      {
+        "label": "B",
+        "text": "Save it in a file called Myclass.java and compile it with javac Myclass.java"
+      },
+      {
+        "label": "C",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass.java"
+      },
+      {
+        "label": "D",
+        "text": "None of the above"
+      },
+      {
+        "label": "E",
+        "text": "Save it in a file called Myclass.jav and compile it with javac Myclass"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "pdfPage": 64
+  },
+  {
+    "id": 112,
+    "title": "Hãy chọn đáp án đúng nếu muốn chạy file mã nguồn Simple",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "To Compile: javac Simple.java          To Run: java Simple"
+      },
+      {
+        "label": "B",
+        "text": "To Compile: javac Simple                  To Run: java Simple.java"
+      },
+      {
+        "label": "C",
+        "text": "To Compile: java Simple.java             To Run: javac Simple"
+      },
+      {
+        "label": "D",
+        "text": "To Compile: java  Simple                   To Run: javac Simple.java"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "pdfPage": 70
+  },
+  {
+    "id": 113,
+    "title": "Câu lệnh nào sau đây hợp lệ?",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": true,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "Math.round(8.88)"
+      },
+      {
+        "label": "B",
+        "text": "Math.max(s)"
+      },
+      {
+        "label": "C",
+        "text": "Math.mod(4, 10)"
+      },
+      {
+        "label": "D",
+        "text": "Tất cả đều đúng"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "pdfPage": 52
+  },
+  {
+    "id": 114,
+    "title": "Câu 114: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_114.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "true true true 0"
+      },
+      {
+        "label": "B",
+        "text": "true false true 0"
+      },
+      {
+        "label": "C",
+        "text": "false false true 0"
+      },
+      {
+        "label": "D",
+        "text": "true false false 0"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 57
+  },
+  {
+    "id": 115,
+    "title": "Câu 115",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "false"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 25
+  },
+  {
+    "id": 116,
+    "title": "Câu 116",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "common task completed      rest of the code..."
+      },
+      {
+        "label": "B",
+        "text": "task1 is completed                 rest of the code"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 13
+  },
+  {
+    "id": 117,
+    "title": "Câu 117",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "parent method"
+      },
+      {
+        "label": "B",
+        "text": "TestExceptionChild"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "D",
+        "text": "Runtime Error"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "pdfPage": 2
+  },
+  {
+    "id": 118,
+    "title": "Câu 118: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_118.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "parent method"
+      },
+      {
+        "label": "B",
+        "text": "child method"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "D",
+        "text": "Runtime Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 60
+  },
+  {
+    "id": 119,
+    "title": "Câu 119: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_119.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "Compile Time Error"
+      },
+      {
+        "label": "B",
+        "text": "nice fruits"
+      },
+      {
+        "label": "C",
+        "text": "Runtime Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 36
+  },
+  {
+    "id": 120,
+    "title": "Câu 120",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "text": "true"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 25
+  },
+  {
+    "id": 121,
+    "title": "Câu 121: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_121.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 27
+  },
+  {
+    "id": 122,
+    "title": "Câu 122: Quan sát đoạn mã và chọn kết quả đúng:",
+    "desc": "",
+    "type": "radio",
+    "isMultiple": false,
+    "image": "images/q_122.png",
+    "options": [
+      {
+        "label": "A",
+        "text": "a method invoked"
+      },
+      {
+        "label": "B",
+        "text": "b method invoked"
+      },
+      {
+        "label": "C",
+        "text": "Compile Time Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "pdfPage": 27
+  }
+]
