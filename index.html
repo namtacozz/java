@@ -1587,18 +1587,16 @@
     }
   
     /* ==========================================================================
-       Subject Switcher UI (Multi-Course: .NET vs Java)
+       Subject Switcher UI (Consistent Minimalist Theme - SVG Icons)
        ========================================================================== */
     .subject-switcher-container {
       display: inline-flex;
       align-items: center;
-      background: rgba(241, 245, 249, 0.96);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      background: #FFFFFF;
       padding: 3px;
-      border-radius: 9999px;
-      border: 1px solid #CBD5E1;
-      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+      border-radius: 12px;
+      border: 1.5px solid #E2E8F0;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
       gap: 3px;
       margin-bottom: 2px;
       z-index: 12;
@@ -1607,52 +1605,70 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 5px 14px;
+      padding: 6px 14px;
       font-size: 13px;
-      font-weight: 700;
-      border-radius: 9999px;
-      border: 1px solid transparent;
+      font-weight: 600;
+      border-radius: 9px;
+      border: 1.5px solid transparent;
       background: transparent;
       color: #64748B;
       cursor: pointer;
-      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.16s cubic-bezier(0.16, 1, 0.3, 1);
       user-select: none;
       -webkit-tap-highlight-color: transparent;
     }
+    .subject-pill-btn svg {
+      opacity: 0.75;
+      transition: opacity 0.16s ease;
+      flex-shrink: 0;
+    }
     .subject-pill-btn:hover {
       color: #0F172A;
-      background: rgba(255, 255, 255, 0.6);
+      background: #F8FAFC;
     }
     .subject-pill-btn.is-active {
-      background: #FFFFFF;
+      background: #F8FAFC;
       color: #0F172A;
-      border-color: #E2E8F0;
-      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
+      border-color: #CBD5E1;
+      font-weight: 700;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+    .subject-pill-btn.is-active svg {
+      opacity: 1;
+      stroke: #E0562D;
     }
     .subject-pill-btn .subject-count-badge {
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 700;
       color: #64748B;
-      background: #E2E8F0;
+      background: #F1F5F9;
       padding: 1px 6px;
-      border-radius: 9999px;
-      transition: all 0.18s ease;
+      border-radius: 6px;
+      transition: all 0.16s ease;
     }
     .subject-pill-btn.is-active .subject-count-badge {
-      background: #EEF2FF;
-      color: #4F46E5;
+      background: #FFF7ED;
+      color: #E0562D;
+      border: 1px solid #FFEDD5;
     }
     .top-progress-container {
       flex-direction: column !important;
       align-items: center !important;
-      gap: 10px !important;
+      gap: 12px !important;
     }
     @media (max-width: 640px) {
       .subject-switcher-container {
         width: 100%;
-        max-width: 340px;
+        max-width: 320px;
         justify-content: center;
       }
+      .subject-pill-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 5px 10px;
+        font-size: 12px;
+      }
+    }
       .subject-pill-btn {
         flex: 1;
         justify-content: center;
@@ -1667,17 +1683,28 @@
 
   <!-- Top Progress Bar (Fixed at top center, comfortable spacing, stable fixed width) -->
   <header class="top-progress-container">
-    <!-- Subject Switcher Pills (Toggle between .NET and Java) -->
-    <div class="subject-switcher-container" role="tablist" aria-label="Lựa chọn môn thi">
-      <button type="button" class="subject-pill-btn is-active" id="btn-subject-net" data-subject="net" role="tab" aria-selected="true" title="Luyện thi trắc nghiệm .NET (C#) - Giữa kỳ & Cuối kỳ">
-        <span>🔷</span> <span>.NET (C#)</span>
+    <!-- Subject Switcher (Consistent theme styling, SVG icons, zero emojis) -->
+    <nav class="subject-switcher-container" role="tablist" aria-label="Chọn môn thi">
+      <button type="button" class="subject-pill-btn is-active" id="btn-subject-net" data-subject="net" role="tab" aria-selected="true" title="Luyện thi .NET (C#)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <span>.NET (C#)</span>
         <span class="subject-count-badge">54</span>
       </button>
-      <button type="button" class="subject-pill-btn" id="btn-subject-java" data-subject="java" role="tab" aria-selected="false" title="Luyện thi trắc nghiệm Lập trình Java">
-        <span>☕</span> <span>Java</span>
+      <button type="button" class="subject-pill-btn" id="btn-subject-java" data-subject="java" role="tab" aria-selected="false" title="Luyện thi Java">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="2" x2="6" y2="5"></line>
+          <line x1="10" y1="2" x2="10" y2="5"></line>
+          <line x1="14" y1="2" x2="14" y2="5"></line>
+        </svg>
+        <span>Java</span>
         <span class="subject-count-badge">74</span>
       </button>
-    </div>
+    </nav>
 
     <div class="progress-track-wrapper">
       <div class="progress-label" id="progress-text">Câu 1 / 74</div>
@@ -5943,6 +5970,17 @@
     let STORAGE_KEY = SUBJECT_CONFIGS[currentSubjectId].storageKey;
 
     // STORAGE_KEY is dynamically managed by currentSubjectId
+    // Core exam state variables
+    let currentQuestionIndex = 0;
+    let isAnswerVerified = false;
+    // Map to store user selected options per question id: { 1: Set(['B']), ... }
+    const userSelections = {};
+    // Map to store verification status per question id: { 1: 'unanswered' | 'correct' | 'wrong' }
+    const questionStatus = {};
+
+    BENCHMARK_QUESTIONS.forEach(q => {
+      questionStatus[q.id] = 'unanswered';
+    });
 
     function saveStateToStorage() {
       try {
@@ -6758,7 +6796,6 @@
       updateMainActionButtonState();
       bindOptionClickEvents(q);
       renderMapGrid();
-      initSubjectSwitcher();
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -7155,6 +7192,7 @@
 
     // App initialization
     document.addEventListener('DOMContentLoaded', () => {
+      initSubjectSwitcher();
       loadStateFromStorage();
       renderCurrentQuestion();
       initMapHoverPreview();
@@ -7442,6 +7480,7 @@
       for (const k of Object.keys(questionStatus)) delete questionStatus[k];
 
       updateSubjectSwitcherUI();
+      initSubjectSwitcher();
       loadStateFromStorage();
 
       if (currentQuestionIndex >= BENCHMARK_QUESTIONS.length) {
