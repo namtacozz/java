@@ -1,0 +1,1781 @@
+[
+  {
+    "id": 1,
+    "originalId": 1,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 1/60: Which procedure among the following should be used to implement a 'Has a' or a 'Kind of' relationship between two entities?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_01.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "All of the mentioned"
+      },
+      {
+        "label": "B",
+        "text": "Polymorphism"
+      },
+      {
+        "label": "C",
+        "text": "Templates"
+      },
+      {
+        "label": "D",
+        "text": "Inheritance"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Trong lập trình hướng đối tượng (OOP), quan hệ 'Is-a' hoặc 'Kind of' (một dạng của) giữa hai thực thể/lớp được hiện thực hóa thông qua cơ chế Kế thừa (Inheritance). Lớp dẫn xuất kế thừa từ lớp cơ sở."
+  },
+  {
+    "id": 2,
+    "originalId": 2,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Ngoại lệ",
+    "title": "Câu 2/60: Which of the following is the object oriented way to handle run time errors?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_02.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Exceptions"
+      },
+      {
+        "label": "B",
+        "text": "HRESULT"
+      },
+      {
+        "label": "C",
+        "text": "OnError"
+      },
+      {
+        "label": "D",
+        "text": "Error codes"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Trong OOP, Xử lý Ngoại lệ (Exceptions - khối try/catch/finally) là cơ chế chuẩn hướng đối tượng để bắt và xử lý các lỗi runtime, thay thế cho cách dùng mã lỗi (Error codes) hay HRESULT của lập trình thủ tục."
+  },
+  {
+    "id": 3,
+    "originalId": 3,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 3/60: Which of the following keyword used to declare fields that value is not known at compile time but that should never change once established?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_03.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "static"
+      },
+      {
+        "label": "B",
+        "text": "readonly"
+      },
+      {
+        "label": "C",
+        "text": "constant"
+      },
+      {
+        "label": "D",
+        "text": "sealed"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Từ khóa `readonly` dùng để khai báo trường mà giá trị của nó không nhất thiết phải biết ở compile time (có thể gán trong constructor lúc runtime), nhưng một khi đã được gán thì không bao giờ thay đổi được nữa. Ngược lại, `const` bắt buộc phải biết giá trị tại thời điểm biên dịch."
+  },
+  {
+    "id": 4,
+    "originalId": 4,
+    "chapter": "Chương 4 — Delegates & Events",
+    "chapterTag": "Chương 4 — Events",
+    "title": "Câu 4/60: You are developing a C# program that controls a production line. When an item enters the final step of the process, an event ProcessCompleted is generated. You need to pass value, Frequency, of double data type to all the subscribers of the event. How should you define the event related data in order to accomplish this requirement?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_05.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "class EventData : EventHandler { public double Frequency { get; set; } }"
+      },
+      {
+        "label": "B",
+        "text": "class EventData { public double Frequency { get; set; } }"
+      },
+      {
+        "label": "C",
+        "text": "class EventData : EventArgs { public double Frequency { get; set; } }"
+      },
+      {
+        "label": "D",
+        "text": "class EventArgs : EventData { public double Frequency { get; set; } }"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Theo chuẩn thiết kế Event Pattern trong .NET, lớp dữ liệu sự kiện (event-related data) bắt buộc phải kế thừa từ lớp `System.EventArgs`. Do đó định nghĩa chuẩn là `class EventData : EventArgs { public double Frequency { get; set; } }`."
+  },
+  {
+    "id": 5,
+    "originalId": 5,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 5/60: Choose the correct alternative that utilizes the indexed property such that a group named class has indexed property which stores or retrieves value to/from an array of numbers?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_06.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "group g = group(); g[3] = 34; Console.WriteLine(g[3]);"
+      },
+      {
+        "label": "B",
+        "text": "group[3] = 34; Console.WriteLine(group[3]);"
+      },
+      {
+        "label": "C",
+        "text": "group g = new group(); Console.WriteLine(g[3]);"
+      },
+      {
+        "label": "D",
+        "text": "Console.WriteLine(group[3]);"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trong C#, Indexer (chỉ mục) là thành phần thể hiện (instance member), không thể là `static`. Do đó muốn truy xuất indexer `[3]` thì bắt buộc phải khởi tạo đối tượng trước qua `new group()`, sau đó truy cập thông qua biến thể hiện: `group g = new group(); Console.WriteLine(g[3]);`."
+  },
+  {
+    "id": 6,
+    "originalId": 6,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 6/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Func(params int[] arr) {\n            int[] arr1 = { 1, 2, 3, 4, 5, 6, 7 };\n            for (int i = 0; i < arr.Length; i++)\n                if (arr[i] % 2 == 0) arr1[i] = arr[i];\n            for (int i = 0; i < arr.Length; i++)\n                Console.Write(arr1[i] + \" \");\n        }\n        static void Main(string[] args) {\n            int[] arr = { 2, 21, 34, 46, 85, 88, 90 };\n            Func(arr);\n            Console.Write(arr[\" \"]);\n        }\n    }\n}",
+    "image": "images/proofs_net/net_proof_07.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "2 34 46 88 90"
+      },
+      {
+        "label": "B",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      },
+      {
+        "label": "D",
+        "text": "2 4 34 46 6 88 90"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trong hàm `Main`, dòng `Console.Write(arr[\" \"]);` cố gắng truyền một chuỗi string `\" \"` vào chỉ số mảng `int[] arr`. Mảng trong C# chỉ chấp nhận chỉ số kiểu số nguyên (`int`), không hỗ trợ chuỗi làm indexer, dẫn đến lỗi biên dịch (Compile Error: Cannot convert from 'string' to 'int')."
+  },
+  {
+    "id": 7,
+    "originalId": 7,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Ngoại lệ",
+    "title": "Câu 7/60: Which of these exceptions will occur if we try to access the index of an array beyond its length?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_09.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "ArrayException"
+      },
+      {
+        "label": "B",
+        "text": "ArrayArgumentException"
+      },
+      {
+        "label": "C",
+        "text": "ArithmeticException"
+      },
+      {
+        "label": "D",
+        "text": "IndexOutOfRangeException"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Khi truy cập chỉ mục của mảng vượt quá kích thước hoặc nhỏ hơn 0, CLR của .NET sẽ ném ra ngoại lệ `System.IndexOutOfRangeException`."
+  },
+  {
+    "id": 8,
+    "originalId": 8,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 8/60: Which of the following is a reference type in C#?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_10.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Boolean"
+      },
+      {
+        "label": "B",
+        "text": "None of the above"
+      },
+      {
+        "label": "C",
+        "text": "String"
+      },
+      {
+        "label": "D",
+        "text": "Long"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trong C#, `bool` (`Boolean`) và `long` (`Int64`) là kiểu dữ liệu giá trị (Value Type - struct), lưu trên Stack. Trong khi đó `string` (`System.String`) là kiểu dữ liệu tham chiếu (Reference Type - class), lưu trên Heap."
+  },
+  {
+    "id": 9,
+    "originalId": 9,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 9/60: Accessibility modifier defined in class are?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_11.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "public, internal, protected internal"
+      },
+      {
+        "label": "B",
+        "text": "public, private, protected"
+      },
+      {
+        "label": "C",
+        "text": "public, private, internal, protected internal"
+      },
+      {
+        "label": "D",
+        "text": "public, private, protected, internal, protected internal"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Trong C#, các từ khóa chỉ định phạm vi truy cập (access modifiers) cho thành viên lớp bao gồm đầy đủ 5 mức cơ bản: `public`, `private`, `protected`, `internal`, và `protected internal` (cùng `private protected` từ C# 7.2)."
+  },
+  {
+    "id": 10,
+    "originalId": 10,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 10/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int var_X;\n            while (var_X-- != 0)\n                Console.Write(var_X);\n        }\n    }\n}",
+    "image": "images/proofs_net/net_proof_12.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "0 to 127"
+      },
+      {
+        "label": "B",
+        "text": "Infinite loop condition"
+      },
+      {
+        "label": "C",
+        "text": "-127 to +127"
+      },
+      {
+        "label": "D",
+        "text": "Another Answer"
+      },
+      {
+        "label": "E",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "E"
+    ],
+    "explanation": "Biến cục bộ `var_X` kiểu `int` trong phương thức `Main` chưa hề được khởi tạo giá trị nhưng đã được sử dụng ngay trong biểu thức `var_X--`. Trình biên dịch C# sẽ báo lỗi biên dịch nghiêm ngặt: CS0165 (Use of unassigned local variable 'var_X')."
+  },
+  {
+    "id": 11,
+    "originalId": 11,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 11/60: Which of the following is faster and consume lesser memory?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_13.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "DataSet"
+      },
+      {
+        "label": "B",
+        "text": "SqlDataReader"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "`SqlDataReader` cung cấp luồng đọc dữ liệu chỉ tiến (forward-only), chỉ đọc (read-only) trực tiếp từ database stream mà không nạp toàn bộ dữ liệu vào bộ nhớ, do đó nhanh hơn rất nhiều và tiêu thụ ít bộ nhớ hơn hẳn so với `DataSet` (lưu toàn bộ các bảng vào RAM)."
+  },
+  {
+    "id": 12,
+    "originalId": 12,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 12/60: You are creating a class named Sphere that inherits from Shape. Shape has an abstract method Area(). How should you define Area() in Sphere?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_14.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "class Sphere : Shape { public override void Area() { /* additional code */ } }"
+      },
+      {
+        "label": "B",
+        "text": "class Sphere : Shape { public new void Area() { /* additional code */ } }"
+      },
+      {
+        "label": "C",
+        "text": "class Sphere : Shape { public virtual void Area() { /* additional code */ } }"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Khi một lớp con dẫn xuất từ một lớp trừu tượng (abstract class) có phương thức abstract, lớp con bắt buộc phải ghi đè và cài đặt phương thức đó bằng từ khóa `override`."
+  },
+  {
+    "id": 13,
+    "originalId": 13,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 13/60: What will happen when executing the following code snippet?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "string query = \"select * from Student\";\nSqlCommand cmd = new SqlCommand(query, cnn);\nSqlDataReader reader;\ncnn.Open();\nreader = cmd.ExecuteNonQuery(); // Notice this line\nwhile (reader.Read()) {\n    for (int i = 0; i < reader.FieldCount; ++i)\n        Console.Write(\"{0} {1}\", reader.GetName(i).Trim(), reader.GetValue(i).ToString().Trim());\n    Console.WriteLine();\n}\ncnn.Close();",
+    "image": "images/proofs_net/net_proof_15.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "The code will be executed successfully but nothing will be printed out"
+      },
+      {
+        "label": "B",
+        "text": "The code has compile error"
+      },
+      {
+        "label": "C",
+        "text": "The code will throw exception if it is executed"
+      },
+      {
+        "label": "D",
+        "text": "The code will be executed successfully and will print the content of the Student table"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Phương thức `cmd.ExecuteNonQuery()` trả về kiểu `int` (số dòng bị tác động bởi lệnh INSERT/UPDATE/DELETE). Trong khi đó biến `reader` được khai báo là kiểu `SqlDataReader`. Phép gán `reader = cmd.ExecuteNonQuery();` không tương thích kiểu dữ liệu (cannot convert from 'int' to 'SqlDataReader'), dẫn đến lỗi biên dịch (Compile Error). Để lấy SqlDataReader cần gọi `cmd.ExecuteReader()`."
+  },
+  {
+    "id": 14,
+    "originalId": 14,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 14/60: To read a line from the command line window (console window), which of the following statements should be used?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_16.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "System.Read.ReadLine();"
+      },
+      {
+        "label": "B",
+        "text": "System.ReadLine();"
+      },
+      {
+        "label": "C",
+        "text": "System.Console.ReadLine();"
+      },
+      {
+        "label": "D",
+        "text": "System.Console.WriteLine();"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trong C#, để đọc một dòng ký tự từ console window ta sử dụng phương thức tĩnh `ReadLine()` của lớp `System.Console` (tức `System.Console.ReadLine()`)."
+  },
+  {
+    "id": 15,
+    "originalId": 15,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 15/60: What datatype is returned when calling the ExecuteScalar method of a command object?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_17.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "No. of effected records"
+      },
+      {
+        "label": "B",
+        "text": "Object"
+      },
+      {
+        "label": "C",
+        "text": "None of the above"
+      },
+      {
+        "label": "D",
+        "text": "System.Int32"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Phương thức `ExecuteScalar()` của `SqlCommand` thực thi câu truy vấn và trả về cột đầu tiên của dòng đầu tiên trong tập kết quả dưới dạng kiểu `object` (`System.Object`). Nếu tập kết quả rỗng nó trả về null."
+  },
+  {
+    "id": 16,
+    "originalId": 16,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 16/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int var_X = 0;\n            while (var_X++ < 5)\n                Console.Write(var_X);\n            var_X = 0;\n            while (++var_X < 5)\n                Console.Write(var_X);\n        }\n    }\n}",
+    "image": "images/proofs_net/net_proof_18.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1234512345"
+      },
+      {
+        "label": "B",
+        "text": "1231234"
+      },
+      {
+        "label": "C",
+        "text": "123451234"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Vòng lặp 1: `var_X++ < 5` (hậu tố tăng sau so sánh), in lần lượt `var_X` từ 1, 2, 3, 4, 5 (ra `12345`). Vòng lặp 2: `++var_X < 5` (tiền tố tăng trước so sánh), in lần lượt 1, 2, 3, 4 (ra `1234`). Ghép lại ta được chuỗi `123451234`."
+  },
+  {
+    "id": 17,
+    "originalId": 17,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 17/60: Which of the following cannot be used to declare class member as a virtual?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_19.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Fields"
+      },
+      {
+        "label": "B",
+        "text": "Methods"
+      },
+      {
+        "label": "C",
+        "text": "Properties"
+      },
+      {
+        "label": "D",
+        "text": "Events"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Trong C#, từ khóa `virtual` chỉ có thể áp dụng cho các thành phần hành vi như phương thức (Methods), thuộc tính (Properties), sự kiện (Events), và chỉ mục (Indexers). Các trường dữ liệu (Fields) tuyệt đối không thể khai báo là `virtual`."
+  },
+  {
+    "id": 18,
+    "originalId": 18,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 18/60: How do you determine the actual SQL datatype of a SqlParameter (the type expected by the SQL Server)?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_20.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "It is the .NET Framework data type in your application that the parameter represents"
+      },
+      {
+        "label": "B",
+        "text": "It is the type of column or data in SQL Server that the command expects"
+      },
+      {
+        "label": "C",
+        "text": "It is the type of column in DataTable that it represents"
+      },
+      {
+        "label": "D",
+        "text": "It is any type defined in the SqlDbType enumeration"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Kiểu dữ liệu SQL của `SqlParameter` được xác định thông qua thuộc tính `SqlDbType`, nhận các giá trị được định nghĩa trong enum `System.Data.SqlDbType` (ví dụ SqlDbType.Int, SqlDbType.NVarChar...)."
+  },
+  {
+    "id": 19,
+    "originalId": 19,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 19/60: Which type of architecture that DataSet in ADO.NET supports?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_21.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Disconnected architecture"
+      },
+      {
+        "label": "B",
+        "text": "Multiple connection architecture"
+      },
+      {
+        "label": "C",
+        "text": "Connected architecture"
+      },
+      {
+        "label": "D",
+        "text": "Two-way connection architecture"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "`DataSet` là trung tâm của kiến trúc ngắt kết nối (Disconnected architecture) trong ADO.NET. Nó lưu trữ dữ liệu dạng in-memory cache mà không cần duy trì kết nối liên tục với cơ sở dữ liệu."
+  },
+  {
+    "id": 20,
+    "originalId": 20,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 20/60: In C# generics, what is the valid order of type parameter constraints for a generic class?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public class ClassExam<T> where T : ... {\n    // Code here\n}",
+    "image": "images/proofs_net/net_proof_22.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Iface, class, new()"
+      },
+      {
+        "label": "B",
+        "text": "new(), class, Iface"
+      },
+      {
+        "label": "C",
+        "text": "class, Iface, new()"
+      },
+      {
+        "label": "D",
+        "text": "class, Iface"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Thứ tự ràng buộc kiểu (type constraints) trong C# bắt buộc: Ràng buộc cơ sở/tham chiếu (`class` hoặc `struct`) phải đứng đầu tiên -> tiếp theo là các Interface (`Iface`) -> và ràng buộc constructor không tham số `new()` luôn phải đứng CUỐI CÙNG."
+  },
+  {
+    "id": 21,
+    "originalId": 21,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 21/60: Which ADO.NET class provide Connected Environment?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_23.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "None of the above"
+      },
+      {
+        "label": "B",
+        "text": "DataReader"
+      },
+      {
+        "label": "C",
+        "text": "DataSet"
+      },
+      {
+        "label": "D",
+        "text": "Command"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "`DataReader` (SqlDataReader) hoạt động trong môi trường kết nối trực tiếp (Connected Environment), yêu cầu kết nối với database phải luôn mở trong suốt quá trình đọc dữ liệu."
+  },
+  {
+    "id": 22,
+    "originalId": 22,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 22/60: The process of defining two or more methods within the same class that have same name but different parameters list?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_24.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "None of the mentioned"
+      },
+      {
+        "label": "B",
+        "text": "Method overriding"
+      },
+      {
+        "label": "C",
+        "text": "Encapsulation"
+      },
+      {
+        "label": "D",
+        "text": "Method overloading"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Quá trình định nghĩa nhiều phương thức trong cùng một lớp có cùng tên nhưng khác nhau về danh sách tham số (số lượng, kiểu dữ liệu, thứ tự) được gọi là Nạp chồng phương thức (Method overloading)."
+  },
+  {
+    "id": 23,
+    "originalId": 23,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 23/60: What is the value of the variable val after this code snippet is executed?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "int[] numbers = { 1, 2, 3, 4 };\nint val = numbers[2];",
+    "image": "images/proofs_net/net_proof_25.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1"
+      },
+      {
+        "label": "B",
+        "text": "2"
+      },
+      {
+        "label": "C",
+        "text": "3"
+      },
+      {
+        "label": "D",
+        "text": "4"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Mảng trong C# được đánh chỉ số từ 0 (zero-based index). Với mảng { 1, 2, 3, 4 }, phần tử numbers[0] = 1, numbers[1] = 2, và numbers[2] = 3. Do đó val = 3."
+  },
+  {
+    "id": 24,
+    "originalId": 24,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 24/60: In an inheritance chain through which of the following, the base class and its components are accessible to the derived class?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_26.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Scope resolution operator (:)"
+      },
+      {
+        "label": "B",
+        "text": "Dot operator (.)"
+      },
+      {
+        "label": "C",
+        "text": "All of the mentioned"
+      },
+      {
+        "label": "D",
+        "text": "Class visibility modifiers (public, private, protected etc.)"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Trong chuỗi kế thừa, các thành phần của lớp cơ sở có cho phép lớp con truy cập hay không được kiểm soát bởi các bộ chỉ định khả năng hiển thị (Class visibility modifiers), đặc biệt là `public` và `protected`."
+  },
+  {
+    "id": 25,
+    "originalId": 25,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 25/60: What ADO.NET subcomponent enables the execution of SQL commands against the data store and synchronizes changes between the data set and the data store?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_27.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "DataAdapter"
+      },
+      {
+        "label": "B",
+        "text": "DataTableCollection"
+      },
+      {
+        "label": "C",
+        "text": "DiskReader"
+      },
+      {
+        "label": "D",
+        "text": "DataRelationCollection"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "`DataAdapter` (ví dụ `SqlDataAdapter`) đóng vai trò là cầu nối thực thi các câu lệnh SQL (Select, Insert, Update, Delete) và đồng bộ hóa các thay đổi giữa DataSet và nguồn cơ sở dữ liệu."
+  },
+  {
+    "id": 26,
+    "originalId": 26,
+    "chapter": "Chương 4 — Delegates & Events",
+    "chapterTag": "Chương 4 — Delegates",
+    "title": "Câu 26/60: Which the following are important pieces of information of a delegate type?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "1) The name of the method on which it makes calls.\n2) The arguments (if any) of this method.\n3) The return value of this method must be object type.",
+    "image": "images/proofs_net/net_proof_28.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "1, 2"
+      },
+      {
+        "label": "B",
+        "text": "1, 3"
+      },
+      {
+        "label": "C",
+        "text": "2, 3"
+      },
+      {
+        "label": "D",
+        "text": "1, 2, 3"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Một kiểu delegate lưu giữ thông tin về phương thức mà nó gọi (1) và danh sách tham số của phương thức đó (2). Kiểu trả về của delegate không bắt buộc phải là kiểu `object` mà có thể là bất kỳ kiểu nào (void, int, string, v.v.), do đó ý (3) là sai. Đáp án đúng là 1, 2."
+  },
+  {
+    "id": 27,
+    "originalId": 27,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 27/60: Which among the following is the correct statement: Constructors are used to?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_29.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "none of the mentioned"
+      },
+      {
+        "label": "B",
+        "text": "construct the data members"
+      },
+      {
+        "label": "C",
+        "text": "initialize the objects"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Mục đích chính của hàm tạo (Constructors) là khởi tạo đối tượng (initialize the objects) và thiết lập trạng thái ban đầu cho các trường dữ liệu của đối tượng khi được cấp phát bộ nhớ."
+  },
+  {
+    "id": 28,
+    "originalId": 28,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 28/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class maths {\n    int i;\n    public maths(int x) {\n        i = x;\n        System.Console.WriteLine(\"hello\");\n    }\n}\nclass maths1 : maths {\n    public maths1(int x) : base(x) {\n        System.Console.WriteLine(\"bye\");\n    }\n}\nclass Program {\n    static void Main(string[] args) {\n        maths1 m = new maths1(12);\n        System.Console.ReadKey();\n    }\n}",
+    "image": "images/proofs_net/net_proof_30.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "hello bye"
+      },
+      {
+        "label": "B",
+        "text": "12 hello"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      },
+      {
+        "label": "D",
+        "text": "bye 12"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Khi khởi tạo đối tượng `new maths1(12)`, constructor của lớp dẫn xuất gọi constructor của lớp cha thông qua `: base(x)`. Constructor của `maths` chạy trước in ra 'hello', sau đó phần thân của `maths1` chạy in ra 'bye'. Kết quả là 'hello bye'."
+  },
+  {
+    "id": 29,
+    "originalId": 29,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 30/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "static void Main(string[] args) {\n    char ch = 'p';\n    switch (ch) {\n        case 'p':\n            System.Console.Write(\"coco \" + Convert.ToInt32(ch));\n            break;\n        default:\n            System.Console.Write(\"default\");\n            break;\n    }\n    System.Console.WriteLine(\"main\");\n}",
+    "image": "images/proofs_net/net_proof_31.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "coco 112"
+      },
+      {
+        "label": "B",
+        "text": "coco main"
+      },
+      {
+        "label": "C",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "D",
+        "text": "coco 112main"
+      },
+      {
+        "label": "E",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Mã ASCII của ký tự 'p' là 112. Biểu thức `case 'p':` khớp, in ra `coco 112` (sử dụng Console.Write không xuống dòng). Sau lệnh break, chương trình tiếp tục chạy câu lệnh tiếp theo `Console.WriteLine(\"main\")` in nối chuỗi 'main'. Kết quả hiển thị là `coco 112main`."
+  },
+  {
+    "id": 30,
+    "originalId": 30,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 31/60: In a SQL Statement while working with SqlCommand returns single value, at that time which method of Command Object will be used?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_32.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "ExecuteScalar"
+      },
+      {
+        "label": "B",
+        "text": "ExecuteNonQuery"
+      },
+      {
+        "label": "C",
+        "text": "All of the above"
+      },
+      {
+        "label": "D",
+        "text": "ExecuteReader"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Khi câu lệnh SQL chỉ trả về duy nhất một giá trị đơn (scalar value - ví dụ COUNT(*), MAX(), SUM()), phương thức tối ưu và phù hợp nhất của SqlCommand là `ExecuteScalar()`."
+  },
+  {
+    "id": 31,
+    "originalId": 31,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 32/60: You are developing an application that needs to copy data from a SQL Server table to a DataSet. Which of the following methods should you use to copy the data?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_33.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Fill"
+      },
+      {
+        "label": "B",
+        "text": "GetFillParameters"
+      },
+      {
+        "label": "C",
+        "text": "FillSchema"
+      },
+      {
+        "label": "D",
+        "text": "Update"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Phương thức `Fill` của `SqlDataAdapter` (ví dụ `adapter.Fill(dataSet)`) được sử dụng để truy vấn dữ liệu từ database và nạp (copy) các dòng dữ liệu vào `DataSet`."
+  },
+  {
+    "id": 32,
+    "originalId": 32,
+    "chapter": "Chương 4 — Delegates & Events",
+    "chapterTag": "Chương 4 — Events",
+    "title": "Câu 33/60: You are reviewing the code of a C# application that handles an event. Which of the following statements are incorrect about the way events and delegates work in the .NET Framework?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_34.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Delegates are a way for an object to notify other classes or objects when something of interest happens"
+      },
+      {
+        "label": "B",
+        "text": "The delegate corresponding to an event can specify the signature of the methods that can receive notification for the event"
+      },
+      {
+        "label": "C",
+        "text": "The .NET Framework provides a mechanism for connecting the event publisher and subscriber through special delegate types"
+      },
+      {
+        "label": "D",
+        "text": "A delegate is a special type that can hold a reference to a method"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Khẳng định A là SAI: Sự kiện (Event) mới là cơ chế để một đối tượng thông báo cho các lớp hoặc đối tượng khác khi có điều đáng chú ý xảy ra, trong khi Delegate chỉ là con trỏ hàm an toàn kiểu (type-safe function pointer) làm nền tảng cho event."
+  },
+  {
+    "id": 33,
+    "originalId": 33,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 34/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "static void Main(string[] args) {\n    int a = 0;\n    int b = -1;\n    if (Convert.ToBoolean(+--a | ++b))\n        System.Console.WriteLine(\"a\");\n    else\n        System.Console.WriteLine(\"b\");\n}",
+    "image": "images/proofs_net/net_proof_35.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "B",
+        "text": "Another Answer"
+      },
+      {
+        "label": "C",
+        "text": "Compile Error"
+      },
+      {
+        "label": "D",
+        "text": "Code execute successfully with no output"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Trong biểu thức điều kiện: `--a` biến `a` thành -1 (non-zero), `++b` biến `b` thành 0. Phép toán bitwise `-1 | 0` cho ra `-1`. `Convert.ToBoolean(-1)` trả về `true` (mọi số khác 0 đều là true trong C#). Khi đó khối if chạy và in ra 'a'. Vì đáp án in ra 'a' không nằm trong các phương án liệt kê sẵn (Runtime Error, Compile Error, No output), nên đáp án chính xác là 'Another Answer'."
+  },
+  {
+    "id": 34,
+    "originalId": 34,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 35/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "public abstract class A {\n    public int i = 7;\n    public abstract void display();\n}\nclass B : A {\n    public int j;\n    public override void display() {\n        Console.WriteLine(\"{0}, {1}\", i, j);\n    }\n}\nclass Program {\n    static void Main(string[] args) {\n        B obj = new B();\n        A obj1 = new B();\n        obj.j = 1;\n        obj1.i = 8;\n        obj.display();\n        Console.ReadKey();\n    }\n}",
+    "image": "images/proofs_net/net_proof_36.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "0, 8"
+      },
+      {
+        "label": "B",
+        "text": "7, 1"
+      },
+      {
+        "label": "C",
+        "text": "1, 7"
+      },
+      {
+        "label": "D",
+        "text": "1, 8"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "`obj` và `obj1` là 2 thực thể độc lập nhau. Gán `obj.j = 1;` chỉ thay đổi trường `j` của `obj`. Gán `obj1.i = 8;` chỉ thay đổi trường `i` của `obj1`. Do đó khi gọi `obj.display()`, trường `obj.i` vẫn giữ giá trị khởi tạo ban đầu từ lớp cha là 7, và `obj.j` là 1. Kết quả in ra là '7, 1'."
+  },
+  {
+    "id": 35,
+    "originalId": 35,
+    "chapter": "Chương 4 — Delegates & Events",
+    "chapterTag": "Chương 4 — Delegates",
+    "title": "Câu 39/60: You are writing code to handle events in your program. You define delegate named PolygonHandler: public delegate void PolygonHandler(Polygon p); You also create variable: PolygonHandler handler; Later in the program, you need to add method named CalculateArea to the invocation list of handler without affecting existing event-handling code. Which code line should you write?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_37.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "handler = CalculateArea;"
+      },
+      {
+        "label": "B",
+        "text": "handler = new PolygonHandler(CalculateArea);"
+      },
+      {
+        "label": "C",
+        "text": "handler += new PolygonHandler(CalculateArea);"
+      },
+      {
+        "label": "D",
+        "text": "handler += CalculateArea;"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Để thêm một phương thức vào danh sách gọi (invocation list) của delegate mà không làm mất hay ảnh hưởng đến các hàm đã đăng ký trước đó, ta bắt buộc phải sử dụng toán tử cộng gộp `+=` (thay vì `=` gán đè). Cú pháp chuẩn là `handler += new PolygonHandler(CalculateArea);` hoặc `handler += CalculateArea;`."
+  },
+  {
+    "id": 36,
+    "originalId": 36,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 40/60: What are the steps to create DataTable programmatically?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_38.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Instantiate a new DataSet object"
+      },
+      {
+        "label": "B",
+        "text": "Instantiate a new DataTable and add DataColumn objects to the DataTable Columns Collection"
+      },
+      {
+        "label": "C",
+        "text": "Run the Data Source Configuration Wizard"
+      },
+      {
+        "label": "D",
+        "text": "None of the above"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Để tạo một `DataTable` bằng mã lập trình (programmatically), các bước thực hiện là: Khởi tạo đối tượng `new DataTable()`, sau đó tạo và thêm các đối tượng `DataColumn` vào tập hợp `Columns` của bảng (`table.Columns.Add(...)`)."
+  },
+  {
+    "id": 37,
+    "originalId": 37,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 41/60: Which Data Provider gives the maximum performance when connect to SQL Server?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_39.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "The OLE DB data provider"
+      },
+      {
+        "label": "B",
+        "text": "The Oracle data provider"
+      },
+      {
+        "label": "C",
+        "text": "The SqlClient data provider"
+      },
+      {
+        "label": "D",
+        "text": "All of the above"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "`SqlClient` (`System.Data.SqlClient` / `Microsoft.Data.SqlClient`) là Data Provider được tối ưu trực tiếp cho SQL Server, giao tiếp thông qua giao thức TDS (Tabular Data Stream) độc quyền không qua các tầng trung gian như OLE DB hay ODBC, nên mang lại hiệu năng cao nhất."
+  },
+  {
+    "id": 38,
+    "originalId": 38,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Ngoại lệ",
+    "title": "Câu 42/60: You are developing a C# Windows application that processes orders. When there is an error in printing the packing list, you need to throw an application-specific exception in your code following the best practices for handling exceptions in .NET Framework. Which of the following classes should you inherit from to create an application-specific exception class?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_40.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "System.ApplicationException"
+      },
+      {
+        "label": "B",
+        "text": "System.SystemException"
+      },
+      {
+        "label": "C",
+        "text": "System.Exception"
+      },
+      {
+        "label": "D",
+        "text": "System.ArgumentException"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Theo tài liệu và chuẩn thiết kế chính thức của Microsoft .NET (.NET Framework Design Guidelines), các lớp ngoại lệ do người dùng tự định nghĩa (custom exceptions) NÊN kế thừa trực tiếp từ `System.Exception`. Microsoft khuyến nghị không nên kế thừa từ `ApplicationException` nữa."
+  },
+  {
+    "id": 39,
+    "originalId": 39,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 43/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class sample {\n    public sample() {\n        System.Console.WriteLine(\"This is base class constructor\");\n    }\n}\npublic class sample1 : sample {\n}\nclass Program {\n    static void Main(string[] args) {\n        sample1 obj = new sample1();\n        System.Console.ReadLine();\n    }\n}",
+    "image": "images/proofs_net/net_proof_41.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Code executes successfully prints nothing"
+      },
+      {
+        "label": "B",
+        "text": "This is base class constructor"
+      },
+      {
+        "label": "C",
+        "text": "None of the mentioned"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Khi một lớp con không định nghĩa constructor, trình biên dịch C# sẽ tự động sinh ra một constructor mặc định không tham số và tự động gọi constructor không tham số của lớp cơ sở (`base()`). Khi gọi `new sample1()`, constructor của `sample` sẽ chạy và in ra 'This is base class constructor'."
+  },
+  {
+    "id": 40,
+    "originalId": 40,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 44/60: When would you typically use an Input parameter?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_42.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "When the parameter value is created based on user input"
+      },
+      {
+        "label": "B",
+        "text": "When the parameter is used to send data from the application to the database"
+      },
+      {
+        "label": "C",
+        "text": "When the parameter value is passed to an Insert statement"
+      },
+      {
+        "label": "D",
+        "text": "When the command is set to execute a statement with a Where clause"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Tham số đầu vào (`ParameterDirection.Input`) được sử dụng bất cứ khi nào ứng dụng cần truyền dữ liệu từ phía client/application vào cho câu lệnh SQL hoặc Stored Procedure trên cơ sở dữ liệu xử lý."
+  },
+  {
+    "id": 41,
+    "originalId": 41,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 45/60: On what object would you set the properties to create a primary key for a DataTable?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_44.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "DataSet"
+      },
+      {
+        "label": "B",
+        "text": "DataColumn"
+      },
+      {
+        "label": "C",
+        "text": "DataTable"
+      },
+      {
+        "label": "D",
+        "text": "DataRelation"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Trong ADO.NET, thuộc tính `PrimaryKey` là thuộc tính của đối tượng `DataTable` (`dataTable.PrimaryKey = new DataColumn[] { colId };`). Do đó ta thiết lập khóa chính trên đối tượng `DataTable`."
+  },
+  {
+    "id": 42,
+    "originalId": 42,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 46/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "class Program {\n    static void Func(params int[] arr) {\n        for (int i = 0; i < arr.Length; i++) {\n            arr[i] = arr[i] * 5;\n            Console.Write(arr[i] + \" \");\n        }\n    }\n    static void Main(string[] args) {\n        int[] arr = { 1, 2, 3, 4, 5 };\n        Func(arr);\n    }\n}",
+    "image": "images/proofs_net/net_proof_45.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "5 25 125 625 3125"
+      },
+      {
+        "label": "B",
+        "text": "6 12 18 24 30"
+      },
+      {
+        "label": "C",
+        "text": "1 2 3 4 5"
+      },
+      {
+        "label": "D",
+        "text": "5 10 15 20 25"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Mảng arr gồm các phần tử { 1, 2, 3, 4, 5 }. Trong vòng lặp của hàm Func, từng phần tử được nhân với 5: 1*5=5, 2*5=10, 3*5=15, 4*5=20, 5*5=25 và in ra lần lượt với dấu cách. Kết quả in ra là '5 10 15 20 25'."
+  },
+  {
+    "id": 43,
+    "originalId": 43,
+    "chapter": "Chương 6 — File I/O & Streams",
+    "chapterTag": "Chương 6 — File I/O",
+    "title": "Câu 47/60: You are writing a C# program that needs to perform file operations such as copy, move, or delete. The business logic may require you to perform multiple operations on a file. You need to develop a fast and efficient solution. Which of the following classes should you choose to perform these file operations?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_46.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "FileStream"
+      },
+      {
+        "label": "B",
+        "text": "FileInfo"
+      },
+      {
+        "label": "C",
+        "text": "File"
+      },
+      {
+        "label": "D",
+        "text": "FileSystemInfo"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "Trong `System.IO`, nếu chỉ thực hiện một thao tác đơn lẻ thì nên dùng lớp tĩnh `File`. Tuy nhiên, khi cần thực hiện NHIỀU thao tác (multiple operations) trên cùng một file, sử dụng lớp thể hiện `FileInfo` sẽ nhanh và hiệu quả hơn rất nhiều vì việc kiểm tra quyền truy cập và bảo mật hệ thống tệp chỉ thực hiện một lần khi tạo đối tượng."
+  },
+  {
+    "id": 44,
+    "originalId": 44,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 48/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "static void Func1(out int var) {\n    var++;\n    return;\n}\nstatic void Func(int var) {\n    Func1(out var);\n    Console.WriteLine(var);\n}\nstatic void Main(string[] args) {\n    Func(5);\n    Console.ReadKey();\n}",
+    "image": "images/proofs_net/net_proof_47.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Compile Error"
+      },
+      {
+        "label": "B",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "C",
+        "text": "6"
+      },
+      {
+        "label": "D",
+        "text": "Another Answer"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Tham số `out` trong C# yêu cầu hàm nhận phải gán giá trị cho nó trước khi đọc. Trong `Func1(out int var)`, dòng `var++;` cố gắng đọc giá trị hiện tại của `var` để tăng lên, dẫn đến lỗi biên dịch: CS0269 (Use of unassigned out parameter 'var')."
+  },
+  {
+    "id": 45,
+    "originalId": 45,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 49/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "static void Main(string[] args) {\n    int i = 100;\n    for (int a = 0; a < 5; a++) {\n        int i = 200;\n        System.Console.WriteLine(a * i);\n    }\n}",
+    "image": "images/proofs_net/net_proof_48.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "0, 5, 10, 20"
+      },
+      {
+        "label": "B",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "C",
+        "text": "5, 10, 15, 20"
+      },
+      {
+        "label": "D",
+        "text": "Another Answer"
+      },
+      {
+        "label": "E",
+        "text": "Compile Error"
+      }
+    ],
+    "correctAnswers": [
+      "E"
+    ],
+    "explanation": "Trong C#, bạn không thể khai báo một biến cục bộ trùng tên (`int i = 200;`) trong một khối lồng nhau (vòng lặp for) nếu biến đó đã được khai báo ở phạm vi bên ngoài (`int i = 100;`). Trình biên dịch C# sẽ báo lỗi: CS0136 (A local variable named 'i' cannot be declared in this scope)."
+  },
+  {
+    "id": 46,
+    "originalId": 46,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 51/60: Which of the following statements related to constructor is True?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_49.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "An object constructor executes exactly one time, regardless of how many objects of the type are created"
+      },
+      {
+        "label": "B",
+        "text": "A static constructor have an access modifier and can take any parameters"
+      },
+      {
+        "label": "C",
+        "text": "The static constructor executes before any instance-level constructors"
+      }
+    ],
+    "correctAnswers": [
+      "C"
+    ],
+    "explanation": "Hàm tạo tĩnh (static constructor) được gọi tự động để khởi tạo lớp trước khi thể hiện đầu tiên được tạo hoặc bất kỳ thành viên tĩnh nào được tham chiếu. Do đó, static constructor luôn thực thi trước bất kỳ constructor cấp thể hiện (instance-level constructors) nào."
+  },
+  {
+    "id": 47,
+    "originalId": 47,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 53/60: What enables you to connect and interact with any database supported by ADO.NET?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_50.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "ObjectDataSource control"
+      },
+      {
+        "label": "B",
+        "text": "LinqDataSource"
+      },
+      {
+        "label": "C",
+        "text": "XmlDataSource control"
+      },
+      {
+        "label": "D",
+        "text": "SqlDataSource control"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "`SqlDataSource` (hoặc các điều khiển nguồn dữ liệu dựa trên ADO.NET Data Provider) cho phép kết nối, truy vấn, và tương tác với các hệ quản trị cơ sở dữ liệu quan hệ được hỗ trợ trong kiến trúc ADO.NET."
+  },
+  {
+    "id": 48,
+    "originalId": 48,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 54/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int[] arr = new int[9];\n            for (int i = 9; i >= 0; i--) {\n                arr[i] = i;\n                Console.Write(arr[i]);\n            }\n            Console.ReadKey();\n        }\n    }\n}",
+    "image": "images/proofs_net/net_proof_51.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Runtime Error"
+      },
+      {
+        "label": "B",
+        "text": "Compile Error"
+      },
+      {
+        "label": "C",
+        "text": "12345678"
+      },
+      {
+        "label": "D",
+        "text": "123456789"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Mảng `int[] arr = new int[9];` có 9 phần tử với chỉ số hợp lệ từ `0` đến `8`. Ở bước lặp đầu tiên của vòng for, `i = 9`, biểu thức `arr[9] = 9;` truy cập vượt ra ngoài biên của mảng, dẫn đến việc ném ra ngoại lệ `IndexOutOfRangeException` lúc chạy (Runtime Error)."
+  },
+  {
+    "id": 49,
+    "originalId": 49,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Ngoại lệ",
+    "title": "Câu 55/60: Which of these keywords must be used to monitor exceptions?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_52.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "finally"
+      },
+      {
+        "label": "B",
+        "text": "throw"
+      },
+      {
+        "label": "C",
+        "text": "catch"
+      },
+      {
+        "label": "D",
+        "text": "try"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "Khối `try` được sử dụng để bao bọc và theo dõi (monitor) các đoạn mã có thể phát sinh ngoại lệ lúc runtime. Nếu có ngoại lệ xảy ra trong khối try, luồng điều khiển sẽ chuyển tới khối `catch` tương ứng."
+  },
+  {
+    "id": 50,
+    "originalId": 50,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Collections",
+    "title": "Câu 56/60: You are using an ArrayList collection in your program. You want to modify your program to take advantage of type safety and increased performance offered by the generic types. Which of the following generic types should you use to replace ArrayList with in your program?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_53.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "LinkedList<T>"
+      },
+      {
+        "label": "B",
+        "text": "List<T>"
+      },
+      {
+        "label": "C",
+        "text": "Collection<T>"
+      },
+      {
+        "label": "D",
+        "text": "Dictionary<TKey, TValue>"
+      }
+    ],
+    "correctAnswers": [
+      "B"
+    ],
+    "explanation": "`List<T>` trong `System.Collections.Generic` là phiên bản generic trực tiếp thay thế cho `ArrayList` phi generic trong `System.Collections`, mang lại sự an toàn kiểu dữ liệu (type safety) và loại bỏ hoàn toàn chi phí boxing/unboxing."
+  },
+  {
+    "id": 51,
+    "originalId": 51,
+    "chapter": "Chương 2 — Lập trình Hướng đối tượng C#",
+    "chapterTag": "Chương 2 — OOP C#",
+    "title": "Câu 57/60: Which keyword is used to refer baseclass constructor to subclass constructor?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_54.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "base"
+      },
+      {
+        "label": "B",
+        "text": "this"
+      },
+      {
+        "label": "C",
+        "text": "static"
+      },
+      {
+        "label": "D",
+        "text": "extend"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Từ khóa `base` được dùng trong constructor của lớp con để gọi tường minh constructor của lớp cơ sở, ví dụ: `public DerivedClass(int x) : base(x) { }`."
+  },
+  {
+    "id": 52,
+    "originalId": 52,
+    "chapter": "Chương 5 — ADO.NET & Cơ sở dữ liệu",
+    "chapterTag": "Chương 5 — ADO.NET",
+    "title": "Câu 58/60: Your C# program needs to return the total number of customers in a SQL Server database. The program will be used several times a day. What is the fastest way to return this information from your program? (Select all answers that apply)",
+    "prompt": "Chọn các phương án đúng:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_55.png",
+    "isMultiple": true,
+    "options": [
+      {
+        "label": "A",
+        "text": "Write a stored procedure"
+      },
+      {
+        "label": "B",
+        "text": "Use the OleDbDataAdapter Fill method"
+      },
+      {
+        "label": "C",
+        "text": "Use the SqlDataAdapter Fill method"
+      },
+      {
+        "label": "D",
+        "text": "Use the SqlCommand ExecuteScalar method"
+      },
+      {
+        "label": "E",
+        "text": "Write a SQL query"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "D"
+    ],
+    "explanation": "Cách nhanh nhất để lấy một giá trị tổng hợp đơn lẻ (như tổng số khách hàng) nhiều lần trong ngày là sử dụng một Stored Procedure (được tiền biên dịch và tối ưu kế hoạch thực thi trên SQL Server) kết hợp với phương thức `SqlCommand.ExecuteScalar()` (chỉ lấy giá trị ô đơn lẻ, không tốn tài nguyên dựng bảng như DataAdapter)."
+  },
+  {
+    "id": 53,
+    "originalId": 53,
+    "chapter": "Chương 3 — Xử lý Ngoại lệ & Collections",
+    "chapterTag": "Chương 3 — Ngoại lệ",
+    "title": "Câu 59/60: Which among the following is NOT an exception?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": null,
+    "image": "images/proofs_net/net_proof_56.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "Stack Overflow"
+      },
+      {
+        "label": "B",
+        "text": "All of the mentioned"
+      },
+      {
+        "label": "C",
+        "text": "Arithmetic Overflow or underflow"
+      },
+      {
+        "label": "D",
+        "text": "Incorrect Arithmetic Expression"
+      }
+    ],
+    "correctAnswers": [
+      "D"
+    ],
+    "explanation": "'Incorrect Arithmetic Expression' (biểu thức số học sai cú pháp) là một lỗi biên dịch (Compile-time syntax error), không phải là ngoại lệ lúc chạy (Runtime Exception). Trong khi đó StackOverflowException và OverflowException đều là các ngoại lệ chuẩn trong .NET."
+  },
+  {
+    "id": 54,
+    "originalId": 54,
+    "chapter": "Chương 1 — C# & .NET Framework Cơ bản",
+    "chapterTag": "Chương 1 — C# Cơ bản",
+    "title": "Câu 60/60: What will be the output of the following C# code?",
+    "prompt": "Chọn một phương án đúng nhất:",
+    "code": "static void Main(string[] args) {\n    int var_X = 10;\n    do {\n        Console.Write(var_X++);\n    } while (Convert.ToBoolean(5) && Convert.ToBoolean(4) && Convert.ToBoolean(3) && Convert.ToBoolean(2) && Convert.ToBoolean(1) && Convert.ToBoolean(0));\n}",
+    "image": "images/proofs_net/net_proof_57.png",
+    "isMultiple": false,
+    "options": [
+      {
+        "label": "A",
+        "text": "10"
+      },
+      {
+        "label": "B",
+        "text": "Infinite loop"
+      },
+      {
+        "label": "C",
+        "text": "Another Answer"
+      },
+      {
+        "label": "D",
+        "text": "Compile Error"
+      },
+      {
+        "label": "E",
+        "text": "Runtime Error"
+      }
+    ],
+    "correctAnswers": [
+      "A"
+    ],
+    "explanation": "Trong vòng lặp `do-while`, khối lệnh chạy lần đầu tiên in ra giá trị hiện tại của `var_X` là `10` rồi tăng lên 11. Sau đó điều kiện while được đánh giá: `Convert.ToBoolean(0)` trả về `false`, làm cho toàn bộ biểu thức logic `&&` trở thành `false`. Vòng lặp kết thúc ngay lập tức. Kết quả in ra duy nhất số `10`."
+  }
+]
