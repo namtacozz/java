@@ -1886,6 +1886,70 @@
       border-radius: 6px;
     }
 
+  
+    /* Options Count Badge & Prompt Group */
+    .options-header-prompt {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #64748B;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #F1F5F9;
+      margin-bottom: 16px;
+    }
+    .options-prompt-text-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #334155;
+    }
+    .options-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #E2E8F0;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .options-count-badge.is-multi {
+      background: #FFF7ED;
+      color: #E0562D;
+      border-color: #FFEDD5;
+      box-shadow: 0 1px 3px rgba(224, 86, 45, 0.1);
+    }
+    .explanation-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .explanation-count-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 6px;
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #E2E8F0;
+    }
+    .explanation-count-badge.is-multi {
+      background: #FFF7ED;
+      color: #E0562D;
+      border-color: #FFEDD5;
+    }
+
   </style>
 </head>
 <body>
@@ -2036,27 +2100,27 @@
     <!-- Injected dynamically by JS -->
   </div>
 
-  <!-- Fullscreen Image Lightbox Overlay -->
-  <div id="image-lightbox" class="image-lightbox-overlay" role="dialog" aria-modal="true" aria-label="Đối chiếu đáp án PDF">
-    <div class="image-lightbox-card" id="image-lightbox-card">
-      <div class="image-lightbox-header">
-        <div class="image-lightbox-title-box">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-            <polyline points="21 15 16 10 5 21"></polyline>
+    <!-- Explanation & Theory Modal (Hint & Answers) -->
+  <div id="explanation-modal" class="explanation-modal-overlay" role="dialog" aria-modal="true" aria-label="Giải thích chi tiết & Đáp án">
+    <div class="explanation-modal-card">
+      <div class="explanation-modal-header">
+        <div class="explanation-modal-title-box">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18h6"></path>
+            <path d="M10 22h4"></path>
+            <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
           </svg>
-          <span class="image-lightbox-badge" id="image-lightbox-title">Đối chiếu đáp án PDF</span>
+          <span id="explanation-modal-title">Giải thích câu hỏi & Đáp án</span>
         </div>
-        <button type="button" class="image-lightbox-close" id="btn-close-lightbox" title="Đóng (Escape)" aria-label="Đóng">
+        <button type="button" class="explanation-modal-close" id="btn-close-explanation" title="Đóng (Escape / K / H / P)" aria-label="Đóng">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
-      <div class="image-lightbox-body">
-        <img id="image-lightbox-img" class="image-lightbox-img" src="" alt="Ảnh đối chiếu PDF" />
+      <div class="explanation-modal-body" id="explanation-modal-body">
+        <!-- Content injected dynamically via JavaScript -->
       </div>
     </div>
   </div>
@@ -7000,16 +7064,28 @@
 
       leftHtml += `</div>`;
 
-      // Right column: Options List (No explanation box)
-      const promptText = q.prompt || (q.isMultiple ? "Chọn các phương án đúng:" : "Chọn một phương án đúng nhất:");
+      // Right column: Options List with explicit correct answer count
+      const numCorrect = (q.correctAnswers && q.correctAnswers.length) ? q.correctAnswers.length : 1;
+      let promptText = '';
+      if (numCorrect > 1) {
+        promptText = `Chọn đúng ${numCorrect} đáp án:`;
+      } else {
+        promptText = `Chọn 1 đáp án đúng nhất:`;
+      }
+
       let rightHtml = `
         <div class="question-right-col">
           <div class="options-header-prompt">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 11 12 14 22 4"></polyline>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-            <span>${escapeHtml(promptText)}</span>
+            <div class="options-prompt-text-group">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 11 12 14 22 4"></polyline>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+              <span>${escapeHtml(promptText)}</span>
+            </div>
+            <span class="options-count-badge ${numCorrect > 1 ? 'is-multi' : ''}">
+              ${numCorrect > 1 ? `${numCorrect} đáp án đúng` : '1 đáp án đúng'}
+            </span>
           </div>
       `;
 
@@ -7447,6 +7523,7 @@
       }
 
       const correctLabels = q.correctAnswers || [];
+      const numCorrect = correctLabels.length;
       let correctOptionsHtml = '';
       if (q.options && q.options.length) {
         const correctOpts = q.options.filter(opt => correctLabels.includes(opt.label));
@@ -7464,7 +7541,12 @@
 
       let bodyHtml = `
         <div class="explanation-question-header">
-          <span class="explanation-chapter-tag">${escapeHtml(q.chapterTag || q.chapter || 'Kiến thức cốt lõi')}</span>
+          <div class="explanation-tags-row">
+            <span class="explanation-chapter-tag">${escapeHtml(q.chapterTag || q.chapter || 'Kiến thức cốt lõi')}</span>
+            <span class="explanation-count-badge ${numCorrect > 1 ? 'is-multi' : ''}">
+              ${numCorrect > 1 ? `Đa đáp án (${numCorrect} lựa chọn)` : 'Đơn đáp án (1 lựa chọn)'}
+            </span>
+          </div>
           <h3 class="explanation-question-title">${escapeHtml(q.title)}</h3>
         </div>
       `;
@@ -7476,7 +7558,7 @@
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span>Đáp án chính xác:</span>
+              <span>Đáp án chính xác (${numCorrect} đáp án):</span>
             </div>
             <div class="explanation-correct-list">
               ${correctOptionsHtml}
@@ -7510,7 +7592,7 @@
               </svg>
               <span>Ghi chú ôn tập:</span>
             </div>
-            <div class="explanation-content-text">Đối chiếu phương án đã chọn với đáp án chuẩn bên trên để ghi nhớ cấu trúc cú pháp và nguyên lý ngôn ngữ.</div>
+            <div class="explanation-content-text">Đối chiếu phương án đã chọn với đáp án chuẩn ${correctLabels.join(', ')} bên trên để ghi nhớ cấu trúc cú pháp và nguyên lý cốt lõi.</div>
           </div>
         `;
       }
@@ -7590,23 +7672,30 @@
       const btnProof = document.getElementById('btn-proof-image');
       if (btnProof) {
         btnProof.addEventListener('click', () => {
-          SoundFX.click();
-          const curQ = BENCHMARK_QUESTIONS[currentQuestionIndex];
-          if (curQ) {
-            const proofSrc = curQ.image ? curQ.image : ('images/proofs/proof_' + curQ.id + '.png');
-            const cleanTitle = curQ.title ? curQ.title.split(':')[0] : ('Câu ' + curQ.id);
-            const subjectPrefix = (currentSubjectId === 'net') ? 'Minh chứng đề thi .NET (C#): ' : 'Đối chiếu đáp án PDF: ';
-            openLightbox(proofSrc, subjectPrefix + cleanTitle);
+          const expModal = document.getElementById('explanation-modal');
+          if (expModal && expModal.classList.contains('active')) {
+            closeExplanationModal();
+          } else {
+            openExplanationModal();
           }
         });
       }
 
-      const btnCloseLb = document.getElementById('btn-close-lightbox');
-      if (btnCloseLb) {
-        btnCloseLb.addEventListener('click', (e) => {
+      const btnCloseExp = document.getElementById('btn-close-explanation');
+      if (btnCloseExp) {
+        btnCloseExp.addEventListener('click', (e) => {
           e.stopPropagation();
           SoundFX.click();
           closeExplanationModal();
+        });
+      }
+
+      const expModal = document.getElementById('explanation-modal');
+      if (expModal) {
+        expModal.addEventListener('click', (e) => {
+          if (e.target === expModal) {
+            closeExplanationModal();
+          }
         });
       }
 
@@ -7754,12 +7843,12 @@
           }
         }
 
-        if (e.key === 'p' || e.key === 'P' || e.key === 'i' || e.key === 'I') {
-          if (lb && lb.classList.contains('active')) {
+        if (e.key === 'p' || e.key === 'P' || e.key === 'h' || e.key === 'H' || e.key === 'k' || e.key === 'K' || e.key === 'i' || e.key === 'I') {
+          const expModal = document.getElementById('explanation-modal');
+          if (expModal && expModal.classList.contains('active')) {
             closeExplanationModal();
           } else {
-            const btnProofEl = document.getElementById('btn-proof-image');
-            if (btnProofEl) btnProofEl.click();
+            openExplanationModal();
           }
           return;
         }
