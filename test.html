@@ -1717,24 +1717,17 @@
       color: #E0562D;
       border: 1px solid #FFEDD5;
     }
-    .top-progress-container {
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 12px !important;
-    }
     @media (max-width: 640px) {
+      .top-progress-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+      }
       .subject-switcher-container {
         width: 100%;
         max-width: 320px;
         justify-content: center;
       }
-      .subject-pill-btn {
-        flex: 1;
-        justify-content: center;
-        padding: 5px 10px;
-        font-size: 12px;
-      }
-    }
       .subject-pill-btn {
         flex: 1;
         justify-content: center;
@@ -1748,51 +1741,52 @@
        Explanation & Hint Modal (Strictly Centered Popup, Blur & Dim Backdrop)
        ========================================================================== */
     .explanation-modal-overlay {
-      position: fixed;
-      inset: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100vw;
-      height: 100vh;
-      height: 100dvh;
-      background: rgba(15, 23, 42, 0.72);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      box-sizing: border-box;
+      position: fixed !important;
+      inset: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      background: rgba(15, 23, 42, 0.72) !important;
+      backdrop-filter: blur(14px) !important;
+      -webkit-backdrop-filter: blur(14px) !important;
+      z-index: 999999 !important;
+      display: none; /* Guaranteed hidden until activated */
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 24px !important;
+      box-sizing: border-box !important;
       opacity: 0;
-      visibility: hidden;
       pointer-events: none;
-      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .explanation-modal-overlay.active {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
+      display: flex !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
     }
     .explanation-modal-card {
-      background: #FFFFFF;
-      border-radius: 20px;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 680px;
-      max-height: min(85vh, 85dvh);
-      overflow: hidden;
-      box-sizing: border-box;
-      margin: auto;
-      transform: scale(0.93) translateY(12px);
+      background: #FFFFFF !important;
+      border-radius: 20px !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      max-width: 680px !important;
+      max-height: min(85vh, 85dvh) !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+      margin: auto !important;
+      position: relative !important;
+      z-index: 1000000 !important;
+      transform: scale(0.94) translateY(12px);
       transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .explanation-modal-overlay.active .explanation-modal-card {
-      transform: scale(1) translateY(0);
+      transform: scale(1) translateY(0) !important;
     }
     .explanation-modal-header {
       display: flex;
@@ -2251,7 +2245,7 @@
           </svg>
           <span id="explanation-modal-title">Giải thích câu hỏi & Đáp án</span>
         </div>
-        <button type="button" class="explanation-modal-close" id="btn-close-explanation" title="Đóng (Escape / K / H / P)" aria-label="Đóng">
+        <button type="button" class="explanation-modal-close" id="btn-close-explanation" onclick="closeExplanationModal()" title="Đóng (Escape / K / H / P)" aria-label="Đóng">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -9197,13 +9191,18 @@
       }
 
       bodyEl.innerHTML = bodyHtml;
+      modal.style.display = 'flex';
+      void modal.offsetWidth;
       modal.classList.add('active');
     }
     window.openExplanationModal = openExplanationModal;
 
     function closeExplanationModal() {
       const modal = document.getElementById('explanation-modal');
-      if (modal) modal.classList.remove('active');
+      if (modal) {
+        modal.classList.remove('active');
+        modal.style.display = 'none';
+      }
     }
     window.closeExplanationModal = closeExplanationModal;
 
