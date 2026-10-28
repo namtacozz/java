@@ -1677,6 +1677,215 @@
       }
     }
 
+  
+    /* ==========================================================================
+       Explanation Modal (Clean Theory & Analysis Popup)
+       ========================================================================== */
+    .explanation-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .explanation-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .explanation-modal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      width: min(720px, 94vw);
+      max-height: min(85vh, 720px);
+      overflow: hidden;
+      transform: scale(0.96) translateY(8px);
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .explanation-modal-overlay.active .explanation-modal-card {
+      transform: scale(1) translateY(0);
+    }
+    .explanation-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid #F1F5F9;
+      background: #FAFAFA;
+      flex-shrink: 0;
+    }
+    .explanation-modal-title-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #E0562D;
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+    .explanation-modal-close {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #64748B;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .explanation-modal-close:hover {
+      background: #E2E8F0;
+      color: #0F172A;
+    }
+    .explanation-modal-body {
+      overflow-y: auto;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: #FFFFFF;
+      color: #0F172A;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+    .explanation-chapter-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #E0562D;
+      background: #FFF7ED;
+      border: 1px solid #FFEDD5;
+      padding: 2px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    .explanation-question-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .explanation-correct-box {
+      background: #F0FDF4;
+      border: 1.5px solid #BBF7D0;
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .explanation-correct-box-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #16A34A;
+      font-weight: 700;
+      font-size: 13.5px;
+      margin-bottom: 8px;
+    }
+    .explanation-correct-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .explanation-correct-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #166534;
+    }
+    .explanation-correct-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      background: #16A34A;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .explanation-content-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      color: #334155;
+    }
+    .explanation-content-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748B;
+      margin-bottom: 8px;
+    }
+    .explanation-content-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #1E293B;
+      white-space: pre-wrap;
+    }
+    .explanation-proof-accordion {
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #FAFAFA;
+    }
+    .explanation-proof-summary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #64748B;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+    .explanation-proof-summary:hover {
+      background: #F1F5F9;
+      color: #0F172A;
+    }
+    .explanation-proof-img-wrap {
+      padding: 12px;
+      background: #0F172A;
+      display: flex;
+      justify-content: center;
+    }
+    .explanation-proof-img {
+      max-width: 100%;
+      height: auto;
+      max-height: 260px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
   </style>
 </head>
 <body>
@@ -1770,11 +1979,11 @@
       </button>
 
       <!-- Proof Image Button (Sát bên trái nút Map) -->
-      <button type="button" class="btn-proof-image" id="btn-proof-image" title="Đối chiếu đáp án gốc từ PDF (Phím P)" aria-label="Xem ảnh đối chiếu từ PDF">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-          <circle cx="8.5" cy="8.5" r="1.5"></circle>
-          <polyline points="21 15 16 10 5 21"></polyline>
+      <button type="button" class="btn-proof-image" id="btn-proof-image" title="Xem giải thích chi tiết & đáp án (Phím P)" aria-label="Xem giải thích chi tiết">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18h6"></path>
+          <path d="M10 22h4"></path>
+          <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
         </svg>
       </button>
 
@@ -4175,7 +4384,7 @@
     "title": "Câu 1/60: Which procedure among the following should be used to implement a 'Has a' or a 'Kind of' relationship between two entities?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_01.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4198,7 +4407,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Trong lập trình hướng đối tượng (OOP), quan hệ 'Is-a' hoặc 'Kind of' (một dạng của) giữa hai thực thể/lớp được hiện thực hóa thông qua cơ chế Kế thừa (Inheritance). Lớp dẫn xuất kế thừa từ lớp cơ sở."
+    "explanation": "Trong lập trình hướng đối tượng (OOP), quan hệ 'Is-a' hoặc 'Kind of' (một dạng của) giữa hai thực thể/lớp được hiện thực hóa thông qua cơ chế Kế thừa (Inheritance). Lớp dẫn xuất kế thừa từ lớp cơ sở.",
+    "proofImage": "images/proofs_net/net_proof_01.png"
   },
   {
     "id": 2,
@@ -4208,7 +4418,7 @@
     "title": "Câu 2/60: Which of the following is the object oriented way to handle run time errors?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_02.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4231,7 +4441,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Trong OOP, Xử lý Ngoại lệ (Exceptions - khối try/catch/finally) là cơ chế chuẩn hướng đối tượng để bắt và xử lý các lỗi runtime, thay thế cho cách dùng mã lỗi (Error codes) hay HRESULT của lập trình thủ tục."
+    "explanation": "Trong OOP, Xử lý Ngoại lệ (Exceptions - khối try/catch/finally) là cơ chế chuẩn hướng đối tượng để bắt và xử lý các lỗi runtime, thay thế cho cách dùng mã lỗi (Error codes) hay HRESULT của lập trình thủ tục.",
+    "proofImage": "images/proofs_net/net_proof_02.png"
   },
   {
     "id": 3,
@@ -4241,7 +4452,7 @@
     "title": "Câu 3/60: Which of the following keyword used to declare fields that value is not known at compile time but that should never change once established?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_03.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4264,7 +4475,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Từ khóa `readonly` dùng để khai báo trường mà giá trị của nó không nhất thiết phải biết ở compile time (có thể gán trong constructor lúc runtime), nhưng một khi đã được gán thì không bao giờ thay đổi được nữa. Ngược lại, `const` bắt buộc phải biết giá trị tại thời điểm biên dịch."
+    "explanation": "Từ khóa `readonly` dùng để khai báo trường mà giá trị của nó không nhất thiết phải biết ở compile time (có thể gán trong constructor lúc runtime), nhưng một khi đã được gán thì không bao giờ thay đổi được nữa. Ngược lại, `const` bắt buộc phải biết giá trị tại thời điểm biên dịch.",
+    "proofImage": "images/proofs_net/net_proof_03.png"
   },
   {
     "id": 4,
@@ -4274,7 +4486,7 @@
     "title": "Câu 4/60: You are developing a C# program that controls a production line. When an item enters the final step of the process, an event ProcessCompleted is generated. You need to pass value, Frequency, of double data type to all the subscribers of the event. How should you define the event related data in order to accomplish this requirement?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_05.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4297,7 +4509,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Theo chuẩn thiết kế Event Pattern trong .NET, lớp dữ liệu sự kiện (event-related data) bắt buộc phải kế thừa từ lớp `System.EventArgs`. Do đó định nghĩa chuẩn là `class EventData : EventArgs { public double Frequency { get; set; } }`."
+    "explanation": "Theo chuẩn thiết kế Event Pattern trong .NET, lớp dữ liệu sự kiện (event-related data) bắt buộc phải kế thừa từ lớp `System.EventArgs`. Do đó định nghĩa chuẩn là `class EventData : EventArgs { public double Frequency { get; set; } }`.",
+    "proofImage": "images/proofs_net/net_proof_05.png"
   },
   {
     "id": 5,
@@ -4307,7 +4520,7 @@
     "title": "Câu 5/60: Choose the correct alternative that utilizes the indexed property such that a group named class has indexed property which stores or retrieves value to/from an array of numbers?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_06.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4330,7 +4543,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Trong C#, Indexer (chỉ mục) là thành phần thể hiện (instance member), không thể là `static`. Do đó muốn truy xuất indexer `[3]` thì bắt buộc phải khởi tạo đối tượng trước qua `new group()`, sau đó truy cập thông qua biến thể hiện: `group g = new group(); Console.WriteLine(g[3]);`."
+    "explanation": "Trong C#, Indexer (chỉ mục) là thành phần thể hiện (instance member), không thể là `static`. Do đó muốn truy xuất indexer `[3]` thì bắt buộc phải khởi tạo đối tượng trước qua `new group()`, sau đó truy cập thông qua biến thể hiện: `group g = new group(); Console.WriteLine(g[3]);`.",
+    "proofImage": "images/proofs_net/net_proof_06.png"
   },
   {
     "id": 6,
@@ -4340,7 +4554,7 @@
     "title": "Câu 6/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Func(params int[] arr) {\n            int[] arr1 = { 1, 2, 3, 4, 5, 6, 7 };\n            for (int i = 0; i < arr.Length; i++)\n                if (arr[i] % 2 == 0) arr1[i] = arr[i];\n            for (int i = 0; i < arr.Length; i++)\n                Console.Write(arr1[i] + \" \");\n        }\n        static void Main(string[] args) {\n            int[] arr = { 2, 21, 34, 46, 85, 88, 90 };\n            Func(arr);\n            Console.Write(arr[\" \"]);\n        }\n    }\n}",
-    "image": "images/proofs_net/net_proof_07.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4363,7 +4577,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Trong hàm `Main`, dòng `Console.Write(arr[\" \"]);` cố gắng truyền một chuỗi string `\" \"` vào chỉ số mảng `int[] arr`. Mảng trong C# chỉ chấp nhận chỉ số kiểu số nguyên (`int`), không hỗ trợ chuỗi làm indexer, dẫn đến lỗi biên dịch (Compile Error: Cannot convert from 'string' to 'int')."
+    "explanation": "Trong hàm `Main`, dòng `Console.Write(arr[\" \"]);` cố gắng truyền một chuỗi string `\" \"` vào chỉ số mảng `int[] arr`. Mảng trong C# chỉ chấp nhận chỉ số kiểu số nguyên (`int`), không hỗ trợ chuỗi làm indexer, dẫn đến lỗi biên dịch (Compile Error: Cannot convert from 'string' to 'int').",
+    "proofImage": "images/proofs_net/net_proof_07.png"
   },
   {
     "id": 7,
@@ -4373,7 +4588,7 @@
     "title": "Câu 7/60: Which of these exceptions will occur if we try to access the index of an array beyond its length?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_09.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4396,7 +4611,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Khi truy cập chỉ mục của mảng vượt quá kích thước hoặc nhỏ hơn 0, CLR của .NET sẽ ném ra ngoại lệ `System.IndexOutOfRangeException`."
+    "explanation": "Khi truy cập chỉ mục của mảng vượt quá kích thước hoặc nhỏ hơn 0, CLR của .NET sẽ ném ra ngoại lệ `System.IndexOutOfRangeException`.",
+    "proofImage": "images/proofs_net/net_proof_09.png"
   },
   {
     "id": 8,
@@ -4406,7 +4622,7 @@
     "title": "Câu 8/60: Which of the following is a reference type in C#?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_10.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4429,7 +4645,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Trong C#, `bool` (`Boolean`) và `long` (`Int64`) là kiểu dữ liệu giá trị (Value Type - struct), lưu trên Stack. Trong khi đó `string` (`System.String`) là kiểu dữ liệu tham chiếu (Reference Type - class), lưu trên Heap."
+    "explanation": "Trong C#, `bool` (`Boolean`) và `long` (`Int64`) là kiểu dữ liệu giá trị (Value Type - struct), lưu trên Stack. Trong khi đó `string` (`System.String`) là kiểu dữ liệu tham chiếu (Reference Type - class), lưu trên Heap.",
+    "proofImage": "images/proofs_net/net_proof_10.png"
   },
   {
     "id": 9,
@@ -4439,7 +4656,7 @@
     "title": "Câu 9/60: Accessibility modifier defined in class are?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_11.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4462,7 +4679,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Trong C#, các từ khóa chỉ định phạm vi truy cập (access modifiers) cho thành viên lớp bao gồm đầy đủ 5 mức cơ bản: `public`, `private`, `protected`, `internal`, và `protected internal` (cùng `private protected` từ C# 7.2)."
+    "explanation": "Trong C#, các từ khóa chỉ định phạm vi truy cập (access modifiers) cho thành viên lớp bao gồm đầy đủ 5 mức cơ bản: `public`, `private`, `protected`, `internal`, và `protected internal` (cùng `private protected` từ C# 7.2).",
+    "proofImage": "images/proofs_net/net_proof_11.png"
   },
   {
     "id": 10,
@@ -4472,7 +4690,7 @@
     "title": "Câu 10/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int var_X;\n            while (var_X-- != 0)\n                Console.Write(var_X);\n        }\n    }\n}",
-    "image": "images/proofs_net/net_proof_12.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4499,7 +4717,8 @@
     "correctAnswers": [
       "E"
     ],
-    "explanation": "Biến cục bộ `var_X` kiểu `int` trong phương thức `Main` chưa hề được khởi tạo giá trị nhưng đã được sử dụng ngay trong biểu thức `var_X--`. Trình biên dịch C# sẽ báo lỗi biên dịch nghiêm ngặt: CS0165 (Use of unassigned local variable 'var_X')."
+    "explanation": "Biến cục bộ `var_X` kiểu `int` trong phương thức `Main` chưa hề được khởi tạo giá trị nhưng đã được sử dụng ngay trong biểu thức `var_X--`. Trình biên dịch C# sẽ báo lỗi biên dịch nghiêm ngặt: CS0165 (Use of unassigned local variable 'var_X').",
+    "proofImage": "images/proofs_net/net_proof_12.png"
   },
   {
     "id": 11,
@@ -4509,7 +4728,7 @@
     "title": "Câu 11/60: Which of the following is faster and consume lesser memory?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_13.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4524,7 +4743,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "`SqlDataReader` cung cấp luồng đọc dữ liệu chỉ tiến (forward-only), chỉ đọc (read-only) trực tiếp từ database stream mà không nạp toàn bộ dữ liệu vào bộ nhớ, do đó nhanh hơn rất nhiều và tiêu thụ ít bộ nhớ hơn hẳn so với `DataSet` (lưu toàn bộ các bảng vào RAM)."
+    "explanation": "`SqlDataReader` cung cấp luồng đọc dữ liệu chỉ tiến (forward-only), chỉ đọc (read-only) trực tiếp từ database stream mà không nạp toàn bộ dữ liệu vào bộ nhớ, do đó nhanh hơn rất nhiều và tiêu thụ ít bộ nhớ hơn hẳn so với `DataSet` (lưu toàn bộ các bảng vào RAM).",
+    "proofImage": "images/proofs_net/net_proof_13.png"
   },
   {
     "id": 12,
@@ -4534,7 +4754,7 @@
     "title": "Câu 12/60: You are creating a class named Sphere that inherits from Shape. Shape has an abstract method Area(). How should you define Area() in Sphere?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_14.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4553,7 +4773,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Khi một lớp con dẫn xuất từ một lớp trừu tượng (abstract class) có phương thức abstract, lớp con bắt buộc phải ghi đè và cài đặt phương thức đó bằng từ khóa `override`."
+    "explanation": "Khi một lớp con dẫn xuất từ một lớp trừu tượng (abstract class) có phương thức abstract, lớp con bắt buộc phải ghi đè và cài đặt phương thức đó bằng từ khóa `override`.",
+    "proofImage": "images/proofs_net/net_proof_14.png"
   },
   {
     "id": 13,
@@ -4563,7 +4784,7 @@
     "title": "Câu 13/60: What will happen when executing the following code snippet?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "string query = \"select * from Student\";\nSqlCommand cmd = new SqlCommand(query, cnn);\nSqlDataReader reader;\ncnn.Open();\nreader = cmd.ExecuteNonQuery(); // Notice this line\nwhile (reader.Read()) {\n    for (int i = 0; i < reader.FieldCount; ++i)\n        Console.Write(\"{0} {1}\", reader.GetName(i).Trim(), reader.GetValue(i).ToString().Trim());\n    Console.WriteLine();\n}\ncnn.Close();",
-    "image": "images/proofs_net/net_proof_15.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4586,7 +4807,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Phương thức `cmd.ExecuteNonQuery()` trả về kiểu `int` (số dòng bị tác động bởi lệnh INSERT/UPDATE/DELETE). Trong khi đó biến `reader` được khai báo là kiểu `SqlDataReader`. Phép gán `reader = cmd.ExecuteNonQuery();` không tương thích kiểu dữ liệu (cannot convert from 'int' to 'SqlDataReader'), dẫn đến lỗi biên dịch (Compile Error). Để lấy SqlDataReader cần gọi `cmd.ExecuteReader()`."
+    "explanation": "Phương thức `cmd.ExecuteNonQuery()` trả về kiểu `int` (số dòng bị tác động bởi lệnh INSERT/UPDATE/DELETE). Trong khi đó biến `reader` được khai báo là kiểu `SqlDataReader`. Phép gán `reader = cmd.ExecuteNonQuery();` không tương thích kiểu dữ liệu (cannot convert from 'int' to 'SqlDataReader'), dẫn đến lỗi biên dịch (Compile Error). Để lấy SqlDataReader cần gọi `cmd.ExecuteReader()`.",
+    "proofImage": "images/proofs_net/net_proof_15.png"
   },
   {
     "id": 14,
@@ -4596,7 +4818,7 @@
     "title": "Câu 14/60: To read a line from the command line window (console window), which of the following statements should be used?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_16.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4619,7 +4841,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Trong C#, để đọc một dòng ký tự từ console window ta sử dụng phương thức tĩnh `ReadLine()` của lớp `System.Console` (tức `System.Console.ReadLine()`)."
+    "explanation": "Trong C#, để đọc một dòng ký tự từ console window ta sử dụng phương thức tĩnh `ReadLine()` của lớp `System.Console` (tức `System.Console.ReadLine()`).",
+    "proofImage": "images/proofs_net/net_proof_16.png"
   },
   {
     "id": 15,
@@ -4629,7 +4852,7 @@
     "title": "Câu 15/60: What datatype is returned when calling the ExecuteScalar method of a command object?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_17.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4652,7 +4875,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Phương thức `ExecuteScalar()` của `SqlCommand` thực thi câu truy vấn và trả về cột đầu tiên của dòng đầu tiên trong tập kết quả dưới dạng kiểu `object` (`System.Object`). Nếu tập kết quả rỗng nó trả về null."
+    "explanation": "Phương thức `ExecuteScalar()` của `SqlCommand` thực thi câu truy vấn và trả về cột đầu tiên của dòng đầu tiên trong tập kết quả dưới dạng kiểu `object` (`System.Object`). Nếu tập kết quả rỗng nó trả về null.",
+    "proofImage": "images/proofs_net/net_proof_17.png"
   },
   {
     "id": 16,
@@ -4662,7 +4886,7 @@
     "title": "Câu 16/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int var_X = 0;\n            while (var_X++ < 5)\n                Console.Write(var_X);\n            var_X = 0;\n            while (++var_X < 5)\n                Console.Write(var_X);\n        }\n    }\n}",
-    "image": "images/proofs_net/net_proof_18.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4681,7 +4905,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Vòng lặp 1: `var_X++ < 5` (hậu tố tăng sau so sánh), in lần lượt `var_X` từ 1, 2, 3, 4, 5 (ra `12345`). Vòng lặp 2: `++var_X < 5` (tiền tố tăng trước so sánh), in lần lượt 1, 2, 3, 4 (ra `1234`). Ghép lại ta được chuỗi `123451234`."
+    "explanation": "Vòng lặp 1: `var_X++ < 5` (hậu tố tăng sau so sánh), in lần lượt `var_X` từ 1, 2, 3, 4, 5 (ra `12345`). Vòng lặp 2: `++var_X < 5` (tiền tố tăng trước so sánh), in lần lượt 1, 2, 3, 4 (ra `1234`). Ghép lại ta được chuỗi `123451234`.",
+    "proofImage": "images/proofs_net/net_proof_18.png"
   },
   {
     "id": 17,
@@ -4691,7 +4916,7 @@
     "title": "Câu 17/60: Which of the following cannot be used to declare class member as a virtual?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_19.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4714,7 +4939,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Trong C#, từ khóa `virtual` chỉ có thể áp dụng cho các thành phần hành vi như phương thức (Methods), thuộc tính (Properties), sự kiện (Events), và chỉ mục (Indexers). Các trường dữ liệu (Fields) tuyệt đối không thể khai báo là `virtual`."
+    "explanation": "Trong C#, từ khóa `virtual` chỉ có thể áp dụng cho các thành phần hành vi như phương thức (Methods), thuộc tính (Properties), sự kiện (Events), và chỉ mục (Indexers). Các trường dữ liệu (Fields) tuyệt đối không thể khai báo là `virtual`.",
+    "proofImage": "images/proofs_net/net_proof_19.png"
   },
   {
     "id": 18,
@@ -4724,7 +4950,7 @@
     "title": "Câu 18/60: How do you determine the actual SQL datatype of a SqlParameter (the type expected by the SQL Server)?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_20.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4747,7 +4973,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Kiểu dữ liệu SQL của `SqlParameter` được xác định thông qua thuộc tính `SqlDbType`, nhận các giá trị được định nghĩa trong enum `System.Data.SqlDbType` (ví dụ SqlDbType.Int, SqlDbType.NVarChar...)."
+    "explanation": "Kiểu dữ liệu SQL của `SqlParameter` được xác định thông qua thuộc tính `SqlDbType`, nhận các giá trị được định nghĩa trong enum `System.Data.SqlDbType` (ví dụ SqlDbType.Int, SqlDbType.NVarChar...).",
+    "proofImage": "images/proofs_net/net_proof_20.png"
   },
   {
     "id": 19,
@@ -4757,7 +4984,7 @@
     "title": "Câu 19/60: Which type of architecture that DataSet in ADO.NET supports?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_21.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4780,7 +5007,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "`DataSet` là trung tâm của kiến trúc ngắt kết nối (Disconnected architecture) trong ADO.NET. Nó lưu trữ dữ liệu dạng in-memory cache mà không cần duy trì kết nối liên tục với cơ sở dữ liệu."
+    "explanation": "`DataSet` là trung tâm của kiến trúc ngắt kết nối (Disconnected architecture) trong ADO.NET. Nó lưu trữ dữ liệu dạng in-memory cache mà không cần duy trì kết nối liên tục với cơ sở dữ liệu.",
+    "proofImage": "images/proofs_net/net_proof_21.png"
   },
   {
     "id": 20,
@@ -4790,7 +5018,7 @@
     "title": "Câu 20/60: In C# generics, what is the valid order of type parameter constraints for a generic class?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "public class ClassExam<T> where T : ... {\n    // Code here\n}",
-    "image": "images/proofs_net/net_proof_22.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4813,7 +5041,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Thứ tự ràng buộc kiểu (type constraints) trong C# bắt buộc: Ràng buộc cơ sở/tham chiếu (`class` hoặc `struct`) phải đứng đầu tiên -> tiếp theo là các Interface (`Iface`) -> và ràng buộc constructor không tham số `new()` luôn phải đứng CUỐI CÙNG."
+    "explanation": "Thứ tự ràng buộc kiểu (type constraints) trong C# bắt buộc: Ràng buộc cơ sở/tham chiếu (`class` hoặc `struct`) phải đứng đầu tiên -> tiếp theo là các Interface (`Iface`) -> và ràng buộc constructor không tham số `new()` luôn phải đứng CUỐI CÙNG.",
+    "proofImage": "images/proofs_net/net_proof_22.png"
   },
   {
     "id": 21,
@@ -4823,7 +5052,7 @@
     "title": "Câu 21/60: Which ADO.NET class provide Connected Environment?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_23.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4846,7 +5075,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "`DataReader` (SqlDataReader) hoạt động trong môi trường kết nối trực tiếp (Connected Environment), yêu cầu kết nối với database phải luôn mở trong suốt quá trình đọc dữ liệu."
+    "explanation": "`DataReader` (SqlDataReader) hoạt động trong môi trường kết nối trực tiếp (Connected Environment), yêu cầu kết nối với database phải luôn mở trong suốt quá trình đọc dữ liệu.",
+    "proofImage": "images/proofs_net/net_proof_23.png"
   },
   {
     "id": 22,
@@ -4856,7 +5086,7 @@
     "title": "Câu 22/60: The process of defining two or more methods within the same class that have same name but different parameters list?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_24.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4879,7 +5109,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Quá trình định nghĩa nhiều phương thức trong cùng một lớp có cùng tên nhưng khác nhau về danh sách tham số (số lượng, kiểu dữ liệu, thứ tự) được gọi là Nạp chồng phương thức (Method overloading)."
+    "explanation": "Quá trình định nghĩa nhiều phương thức trong cùng một lớp có cùng tên nhưng khác nhau về danh sách tham số (số lượng, kiểu dữ liệu, thứ tự) được gọi là Nạp chồng phương thức (Method overloading).",
+    "proofImage": "images/proofs_net/net_proof_24.png"
   },
   {
     "id": 23,
@@ -4889,7 +5120,7 @@
     "title": "Câu 23/60: What is the value of the variable val after this code snippet is executed?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "int[] numbers = { 1, 2, 3, 4 };\nint val = numbers[2];",
-    "image": "images/proofs_net/net_proof_25.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4912,7 +5143,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Mảng trong C# được đánh chỉ số từ 0 (zero-based index). Với mảng { 1, 2, 3, 4 }, phần tử numbers[0] = 1, numbers[1] = 2, và numbers[2] = 3. Do đó val = 3."
+    "explanation": "Mảng trong C# được đánh chỉ số từ 0 (zero-based index). Với mảng { 1, 2, 3, 4 }, phần tử numbers[0] = 1, numbers[1] = 2, và numbers[2] = 3. Do đó val = 3.",
+    "proofImage": "images/proofs_net/net_proof_25.png"
   },
   {
     "id": 24,
@@ -4922,7 +5154,7 @@
     "title": "Câu 24/60: In an inheritance chain through which of the following, the base class and its components are accessible to the derived class?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_26.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4945,7 +5177,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Trong chuỗi kế thừa, các thành phần của lớp cơ sở có cho phép lớp con truy cập hay không được kiểm soát bởi các bộ chỉ định khả năng hiển thị (Class visibility modifiers), đặc biệt là `public` và `protected`."
+    "explanation": "Trong chuỗi kế thừa, các thành phần của lớp cơ sở có cho phép lớp con truy cập hay không được kiểm soát bởi các bộ chỉ định khả năng hiển thị (Class visibility modifiers), đặc biệt là `public` và `protected`.",
+    "proofImage": "images/proofs_net/net_proof_26.png"
   },
   {
     "id": 25,
@@ -4955,7 +5188,7 @@
     "title": "Câu 25/60: What ADO.NET subcomponent enables the execution of SQL commands against the data store and synchronizes changes between the data set and the data store?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_27.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -4978,7 +5211,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "`DataAdapter` (ví dụ `SqlDataAdapter`) đóng vai trò là cầu nối thực thi các câu lệnh SQL (Select, Insert, Update, Delete) và đồng bộ hóa các thay đổi giữa DataSet và nguồn cơ sở dữ liệu."
+    "explanation": "`DataAdapter` (ví dụ `SqlDataAdapter`) đóng vai trò là cầu nối thực thi các câu lệnh SQL (Select, Insert, Update, Delete) và đồng bộ hóa các thay đổi giữa DataSet và nguồn cơ sở dữ liệu.",
+    "proofImage": "images/proofs_net/net_proof_27.png"
   },
   {
     "id": 26,
@@ -4988,7 +5222,7 @@
     "title": "Câu 26/60: Which the following are important pieces of information of a delegate type?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "1) The name of the method on which it makes calls.\n2) The arguments (if any) of this method.\n3) The return value of this method must be object type.",
-    "image": "images/proofs_net/net_proof_28.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5011,7 +5245,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Một kiểu delegate lưu giữ thông tin về phương thức mà nó gọi (1) và danh sách tham số của phương thức đó (2). Kiểu trả về của delegate không bắt buộc phải là kiểu `object` mà có thể là bất kỳ kiểu nào (void, int, string, v.v.), do đó ý (3) là sai. Đáp án đúng là 1, 2."
+    "explanation": "Một kiểu delegate lưu giữ thông tin về phương thức mà nó gọi (1) và danh sách tham số của phương thức đó (2). Kiểu trả về của delegate không bắt buộc phải là kiểu `object` mà có thể là bất kỳ kiểu nào (void, int, string, v.v.), do đó ý (3) là sai. Đáp án đúng là 1, 2.",
+    "proofImage": "images/proofs_net/net_proof_28.png"
   },
   {
     "id": 27,
@@ -5021,7 +5256,7 @@
     "title": "Câu 27/60: Which among the following is the correct statement: Constructors are used to?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_29.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5040,7 +5275,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Mục đích chính của hàm tạo (Constructors) là khởi tạo đối tượng (initialize the objects) và thiết lập trạng thái ban đầu cho các trường dữ liệu của đối tượng khi được cấp phát bộ nhớ."
+    "explanation": "Mục đích chính của hàm tạo (Constructors) là khởi tạo đối tượng (initialize the objects) và thiết lập trạng thái ban đầu cho các trường dữ liệu của đối tượng khi được cấp phát bộ nhớ.",
+    "proofImage": "images/proofs_net/net_proof_29.png"
   },
   {
     "id": 28,
@@ -5050,7 +5286,7 @@
     "title": "Câu 28/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "class maths {\n    int i;\n    public maths(int x) {\n        i = x;\n        System.Console.WriteLine(\"hello\");\n    }\n}\nclass maths1 : maths {\n    public maths1(int x) : base(x) {\n        System.Console.WriteLine(\"bye\");\n    }\n}\nclass Program {\n    static void Main(string[] args) {\n        maths1 m = new maths1(12);\n        System.Console.ReadKey();\n    }\n}",
-    "image": "images/proofs_net/net_proof_30.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5073,7 +5309,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Khi khởi tạo đối tượng `new maths1(12)`, constructor của lớp dẫn xuất gọi constructor của lớp cha thông qua `: base(x)`. Constructor của `maths` chạy trước in ra 'hello', sau đó phần thân của `maths1` chạy in ra 'bye'. Kết quả là 'hello bye'."
+    "explanation": "Khi khởi tạo đối tượng `new maths1(12)`, constructor của lớp dẫn xuất gọi constructor của lớp cha thông qua `: base(x)`. Constructor của `maths` chạy trước in ra 'hello', sau đó phần thân của `maths1` chạy in ra 'bye'. Kết quả là 'hello bye'.",
+    "proofImage": "images/proofs_net/net_proof_30.png"
   },
   {
     "id": 29,
@@ -5083,7 +5320,7 @@
     "title": "Câu 30/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "static void Main(string[] args) {\n    char ch = 'p';\n    switch (ch) {\n        case 'p':\n            System.Console.Write(\"coco \" + Convert.ToInt32(ch));\n            break;\n        default:\n            System.Console.Write(\"default\");\n            break;\n    }\n    System.Console.WriteLine(\"main\");\n}",
-    "image": "images/proofs_net/net_proof_31.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5110,7 +5347,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Mã ASCII của ký tự 'p' là 112. Biểu thức `case 'p':` khớp, in ra `coco 112` (sử dụng Console.Write không xuống dòng). Sau lệnh break, chương trình tiếp tục chạy câu lệnh tiếp theo `Console.WriteLine(\"main\")` in nối chuỗi 'main'. Kết quả hiển thị là `coco 112main`."
+    "explanation": "Mã ASCII của ký tự 'p' là 112. Biểu thức `case 'p':` khớp, in ra `coco 112` (sử dụng Console.Write không xuống dòng). Sau lệnh break, chương trình tiếp tục chạy câu lệnh tiếp theo `Console.WriteLine(\"main\")` in nối chuỗi 'main'. Kết quả hiển thị là `coco 112main`.",
+    "proofImage": "images/proofs_net/net_proof_31.png"
   },
   {
     "id": 30,
@@ -5120,7 +5358,7 @@
     "title": "Câu 31/60: In a SQL Statement while working with SqlCommand returns single value, at that time which method of Command Object will be used?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_32.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5143,7 +5381,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Khi câu lệnh SQL chỉ trả về duy nhất một giá trị đơn (scalar value - ví dụ COUNT(*), MAX(), SUM()), phương thức tối ưu và phù hợp nhất của SqlCommand là `ExecuteScalar()`."
+    "explanation": "Khi câu lệnh SQL chỉ trả về duy nhất một giá trị đơn (scalar value - ví dụ COUNT(*), MAX(), SUM()), phương thức tối ưu và phù hợp nhất của SqlCommand là `ExecuteScalar()`.",
+    "proofImage": "images/proofs_net/net_proof_32.png"
   },
   {
     "id": 31,
@@ -5153,7 +5392,7 @@
     "title": "Câu 32/60: You are developing an application that needs to copy data from a SQL Server table to a DataSet. Which of the following methods should you use to copy the data?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_33.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5176,7 +5415,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Phương thức `Fill` của `SqlDataAdapter` (ví dụ `adapter.Fill(dataSet)`) được sử dụng để truy vấn dữ liệu từ database và nạp (copy) các dòng dữ liệu vào `DataSet`."
+    "explanation": "Phương thức `Fill` của `SqlDataAdapter` (ví dụ `adapter.Fill(dataSet)`) được sử dụng để truy vấn dữ liệu từ database và nạp (copy) các dòng dữ liệu vào `DataSet`.",
+    "proofImage": "images/proofs_net/net_proof_33.png"
   },
   {
     "id": 32,
@@ -5186,7 +5426,7 @@
     "title": "Câu 33/60: You are reviewing the code of a C# application that handles an event. Which of the following statements are incorrect about the way events and delegates work in the .NET Framework?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_34.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5209,7 +5449,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Khẳng định A là SAI: Sự kiện (Event) mới là cơ chế để một đối tượng thông báo cho các lớp hoặc đối tượng khác khi có điều đáng chú ý xảy ra, trong khi Delegate chỉ là con trỏ hàm an toàn kiểu (type-safe function pointer) làm nền tảng cho event."
+    "explanation": "Khẳng định A là SAI: Sự kiện (Event) mới là cơ chế để một đối tượng thông báo cho các lớp hoặc đối tượng khác khi có điều đáng chú ý xảy ra, trong khi Delegate chỉ là con trỏ hàm an toàn kiểu (type-safe function pointer) làm nền tảng cho event.",
+    "proofImage": "images/proofs_net/net_proof_34.png"
   },
   {
     "id": 33,
@@ -5219,7 +5460,7 @@
     "title": "Câu 34/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "static void Main(string[] args) {\n    int a = 0;\n    int b = -1;\n    if (Convert.ToBoolean(+--a | ++b))\n        System.Console.WriteLine(\"a\");\n    else\n        System.Console.WriteLine(\"b\");\n}",
-    "image": "images/proofs_net/net_proof_35.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5242,7 +5483,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Trong biểu thức điều kiện: `--a` biến `a` thành -1 (non-zero), `++b` biến `b` thành 0. Phép toán bitwise `-1 | 0` cho ra `-1`. `Convert.ToBoolean(-1)` trả về `true` (mọi số khác 0 đều là true trong C#). Khi đó khối if chạy và in ra 'a'. Vì đáp án in ra 'a' không nằm trong các phương án liệt kê sẵn (Runtime Error, Compile Error, No output), nên đáp án chính xác là 'Another Answer'."
+    "explanation": "Trong biểu thức điều kiện: `--a` biến `a` thành -1 (non-zero), `++b` biến `b` thành 0. Phép toán bitwise `-1 | 0` cho ra `-1`. `Convert.ToBoolean(-1)` trả về `true` (mọi số khác 0 đều là true trong C#). Khi đó khối if chạy và in ra 'a'. Vì đáp án in ra 'a' không nằm trong các phương án liệt kê sẵn (Runtime Error, Compile Error, No output), nên đáp án chính xác là 'Another Answer'.",
+    "proofImage": "images/proofs_net/net_proof_35.png"
   },
   {
     "id": 34,
@@ -5252,7 +5494,7 @@
     "title": "Câu 35/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "public abstract class A {\n    public int i = 7;\n    public abstract void display();\n}\nclass B : A {\n    public int j;\n    public override void display() {\n        Console.WriteLine(\"{0}, {1}\", i, j);\n    }\n}\nclass Program {\n    static void Main(string[] args) {\n        B obj = new B();\n        A obj1 = new B();\n        obj.j = 1;\n        obj1.i = 8;\n        obj.display();\n        Console.ReadKey();\n    }\n}",
-    "image": "images/proofs_net/net_proof_36.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5275,17 +5517,18 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "`obj` và `obj1` là 2 thực thể độc lập nhau. Gán `obj.j = 1;` chỉ thay đổi trường `j` của `obj`. Gán `obj1.i = 8;` chỉ thay đổi trường `i` của `obj1`. Do đó khi gọi `obj.display()`, trường `obj.i` vẫn giữ giá trị khởi tạo ban đầu từ lớp cha là 7, và `obj.j` là 1. Kết quả in ra là '7, 1'."
+    "explanation": "`obj` và `obj1` là 2 thực thể độc lập nhau. Gán `obj.j = 1;` chỉ thay đổi trường `j` của `obj`. Gán `obj1.i = 8;` chỉ thay đổi trường `i` của `obj1`. Do đó khi gọi `obj.display()`, trường `obj.i` vẫn giữ giá trị khởi tạo ban đầu từ lớp cha là 7, và `obj.j` là 1. Kết quả in ra là '7, 1'.",
+    "proofImage": "images/proofs_net/net_proof_36.png"
   },
   {
     "id": 35,
     "originalId": 35,
     "chapter": "Chương 4 — Delegates & Events",
     "chapterTag": "Chương 4 — Delegates",
-    "title": "Câu 39/60: You are writing code to handle events in your program. You define delegate named PolygonHandler: public delegate void PolygonHandler(Polygon p); You also create variable: PolygonHandler handler; Later in the program, you need to add method named CalculateArea to the invocation list of handler without affecting existing event-handling code. Which code line should you write?",
+    "title": "Câu 39/60: You are writing code to handle events in your program. You define a delegate and variable as shown below. Later in the program, you need to add a method named CalculateArea to the invocation list of the handler variable without affecting any existing event-handling code. Which of the following code lines should you write?",
     "prompt": "Chọn một phương án đúng nhất:",
-    "code": null,
-    "image": "images/proofs_net/net_proof_37.png",
+    "code": "public delegate void PolygonHandler(Polygon p);\nPolygonHandler handler;",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5308,7 +5551,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Để thêm một phương thức vào danh sách gọi (invocation list) của delegate mà không làm mất hay ảnh hưởng đến các hàm đã đăng ký trước đó, ta bắt buộc phải sử dụng toán tử cộng gộp `+=` (thay vì `=` gán đè). Cú pháp chuẩn là `handler += new PolygonHandler(CalculateArea);` hoặc `handler += CalculateArea;`."
+    "explanation": "Để thêm một phương thức vào danh sách gọi (invocation list) của delegate mà không làm mất hay ảnh hưởng đến các hàm đã đăng ký trước đó, ta bắt buộc phải sử dụng toán tử cộng gộp `+=` (thay vì `=` gán đè). Cú pháp chuẩn là `handler += new PolygonHandler(CalculateArea);` hoặc `handler += CalculateArea;`.",
+    "proofImage": "images/proofs_net/net_proof_37.png"
   },
   {
     "id": 36,
@@ -5318,7 +5562,7 @@
     "title": "Câu 40/60: What are the steps to create DataTable programmatically?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_38.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5341,7 +5585,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Để tạo một `DataTable` bằng mã lập trình (programmatically), các bước thực hiện là: Khởi tạo đối tượng `new DataTable()`, sau đó tạo và thêm các đối tượng `DataColumn` vào tập hợp `Columns` của bảng (`table.Columns.Add(...)`)."
+    "explanation": "Để tạo một `DataTable` bằng mã lập trình (programmatically), các bước thực hiện là: Khởi tạo đối tượng `new DataTable()`, sau đó tạo và thêm các đối tượng `DataColumn` vào tập hợp `Columns` của bảng (`table.Columns.Add(...)`).",
+    "proofImage": "images/proofs_net/net_proof_38.png"
   },
   {
     "id": 37,
@@ -5351,7 +5596,7 @@
     "title": "Câu 41/60: Which Data Provider gives the maximum performance when connect to SQL Server?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_39.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5374,7 +5619,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "`SqlClient` (`System.Data.SqlClient` / `Microsoft.Data.SqlClient`) là Data Provider được tối ưu trực tiếp cho SQL Server, giao tiếp thông qua giao thức TDS (Tabular Data Stream) độc quyền không qua các tầng trung gian như OLE DB hay ODBC, nên mang lại hiệu năng cao nhất."
+    "explanation": "`SqlClient` (`System.Data.SqlClient` / `Microsoft.Data.SqlClient`) là Data Provider được tối ưu trực tiếp cho SQL Server, giao tiếp thông qua giao thức TDS (Tabular Data Stream) độc quyền không qua các tầng trung gian như OLE DB hay ODBC, nên mang lại hiệu năng cao nhất.",
+    "proofImage": "images/proofs_net/net_proof_39.png"
   },
   {
     "id": 38,
@@ -5384,7 +5630,7 @@
     "title": "Câu 42/60: You are developing a C# Windows application that processes orders. When there is an error in printing the packing list, you need to throw an application-specific exception in your code following the best practices for handling exceptions in .NET Framework. Which of the following classes should you inherit from to create an application-specific exception class?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_40.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5407,7 +5653,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Theo tài liệu và chuẩn thiết kế chính thức của Microsoft .NET (.NET Framework Design Guidelines), các lớp ngoại lệ do người dùng tự định nghĩa (custom exceptions) NÊN kế thừa trực tiếp từ `System.Exception`. Microsoft khuyến nghị không nên kế thừa từ `ApplicationException` nữa."
+    "explanation": "Theo tài liệu và chuẩn thiết kế chính thức của Microsoft .NET (.NET Framework Design Guidelines), các lớp ngoại lệ do người dùng tự định nghĩa (custom exceptions) NÊN kế thừa trực tiếp từ `System.Exception`. Microsoft khuyến nghị không nên kế thừa từ `ApplicationException` nữa.",
+    "proofImage": "images/proofs_net/net_proof_40.png"
   },
   {
     "id": 39,
@@ -5417,7 +5664,7 @@
     "title": "Câu 43/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "class sample {\n    public sample() {\n        System.Console.WriteLine(\"This is base class constructor\");\n    }\n}\npublic class sample1 : sample {\n}\nclass Program {\n    static void Main(string[] args) {\n        sample1 obj = new sample1();\n        System.Console.ReadLine();\n    }\n}",
-    "image": "images/proofs_net/net_proof_41.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5440,7 +5687,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Khi một lớp con không định nghĩa constructor, trình biên dịch C# sẽ tự động sinh ra một constructor mặc định không tham số và tự động gọi constructor không tham số của lớp cơ sở (`base()`). Khi gọi `new sample1()`, constructor của `sample` sẽ chạy và in ra 'This is base class constructor'."
+    "explanation": "Khi một lớp con không định nghĩa constructor, trình biên dịch C# sẽ tự động sinh ra một constructor mặc định không tham số và tự động gọi constructor không tham số của lớp cơ sở (`base()`). Khi gọi `new sample1()`, constructor của `sample` sẽ chạy và in ra 'This is base class constructor'.",
+    "proofImage": "images/proofs_net/net_proof_41.png"
   },
   {
     "id": 40,
@@ -5450,7 +5698,7 @@
     "title": "Câu 44/60: When would you typically use an Input parameter?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_42.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5473,7 +5721,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Tham số đầu vào (`ParameterDirection.Input`) được sử dụng bất cứ khi nào ứng dụng cần truyền dữ liệu từ phía client/application vào cho câu lệnh SQL hoặc Stored Procedure trên cơ sở dữ liệu xử lý."
+    "explanation": "Tham số đầu vào (`ParameterDirection.Input`) được sử dụng bất cứ khi nào ứng dụng cần truyền dữ liệu từ phía client/application vào cho câu lệnh SQL hoặc Stored Procedure trên cơ sở dữ liệu xử lý.",
+    "proofImage": "images/proofs_net/net_proof_42.png"
   },
   {
     "id": 41,
@@ -5483,7 +5732,7 @@
     "title": "Câu 45/60: On what object would you set the properties to create a primary key for a DataTable?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_44.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5506,7 +5755,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Trong ADO.NET, thuộc tính `PrimaryKey` là thuộc tính của đối tượng `DataTable` (`dataTable.PrimaryKey = new DataColumn[] { colId };`). Do đó ta thiết lập khóa chính trên đối tượng `DataTable`."
+    "explanation": "Trong ADO.NET, thuộc tính `PrimaryKey` là thuộc tính của đối tượng `DataTable` (`dataTable.PrimaryKey = new DataColumn[] { colId };`). Do đó ta thiết lập khóa chính trên đối tượng `DataTable`.",
+    "proofImage": "images/proofs_net/net_proof_44.png"
   },
   {
     "id": 42,
@@ -5516,7 +5766,7 @@
     "title": "Câu 46/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "class Program {\n    static void Func(params int[] arr) {\n        for (int i = 0; i < arr.Length; i++) {\n            arr[i] = arr[i] * 5;\n            Console.Write(arr[i] + \" \");\n        }\n    }\n    static void Main(string[] args) {\n        int[] arr = { 1, 2, 3, 4, 5 };\n        Func(arr);\n    }\n}",
-    "image": "images/proofs_net/net_proof_45.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5539,7 +5789,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Mảng arr gồm các phần tử { 1, 2, 3, 4, 5 }. Trong vòng lặp của hàm Func, từng phần tử được nhân với 5: 1*5=5, 2*5=10, 3*5=15, 4*5=20, 5*5=25 và in ra lần lượt với dấu cách. Kết quả in ra là '5 10 15 20 25'."
+    "explanation": "Mảng arr gồm các phần tử { 1, 2, 3, 4, 5 }. Trong vòng lặp của hàm Func, từng phần tử được nhân với 5: 1*5=5, 2*5=10, 3*5=15, 4*5=20, 5*5=25 và in ra lần lượt với dấu cách. Kết quả in ra là '5 10 15 20 25'.",
+    "proofImage": "images/proofs_net/net_proof_45.png"
   },
   {
     "id": 43,
@@ -5549,7 +5800,7 @@
     "title": "Câu 47/60: You are writing a C# program that needs to perform file operations such as copy, move, or delete. The business logic may require you to perform multiple operations on a file. You need to develop a fast and efficient solution. Which of the following classes should you choose to perform these file operations?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_46.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5572,7 +5823,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "Trong `System.IO`, nếu chỉ thực hiện một thao tác đơn lẻ thì nên dùng lớp tĩnh `File`. Tuy nhiên, khi cần thực hiện NHIỀU thao tác (multiple operations) trên cùng một file, sử dụng lớp thể hiện `FileInfo` sẽ nhanh và hiệu quả hơn rất nhiều vì việc kiểm tra quyền truy cập và bảo mật hệ thống tệp chỉ thực hiện một lần khi tạo đối tượng."
+    "explanation": "Trong `System.IO`, nếu chỉ thực hiện một thao tác đơn lẻ thì nên dùng lớp tĩnh `File`. Tuy nhiên, khi cần thực hiện NHIỀU thao tác (multiple operations) trên cùng một file, sử dụng lớp thể hiện `FileInfo` sẽ nhanh và hiệu quả hơn rất nhiều vì việc kiểm tra quyền truy cập và bảo mật hệ thống tệp chỉ thực hiện một lần khi tạo đối tượng.",
+    "proofImage": "images/proofs_net/net_proof_46.png"
   },
   {
     "id": 44,
@@ -5582,7 +5834,7 @@
     "title": "Câu 48/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "static void Func1(out int var) {\n    var++;\n    return;\n}\nstatic void Func(int var) {\n    Func1(out var);\n    Console.WriteLine(var);\n}\nstatic void Main(string[] args) {\n    Func(5);\n    Console.ReadKey();\n}",
-    "image": "images/proofs_net/net_proof_47.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5605,7 +5857,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Tham số `out` trong C# yêu cầu hàm nhận phải gán giá trị cho nó trước khi đọc. Trong `Func1(out int var)`, dòng `var++;` cố gắng đọc giá trị hiện tại của `var` để tăng lên, dẫn đến lỗi biên dịch: CS0269 (Use of unassigned out parameter 'var')."
+    "explanation": "Tham số `out` trong C# yêu cầu hàm nhận phải gán giá trị cho nó trước khi đọc. Trong `Func1(out int var)`, dòng `var++;` cố gắng đọc giá trị hiện tại của `var` để tăng lên, dẫn đến lỗi biên dịch: CS0269 (Use of unassigned out parameter 'var').",
+    "proofImage": "images/proofs_net/net_proof_47.png"
   },
   {
     "id": 45,
@@ -5615,7 +5868,7 @@
     "title": "Câu 49/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "static void Main(string[] args) {\n    int i = 100;\n    for (int a = 0; a < 5; a++) {\n        int i = 200;\n        System.Console.WriteLine(a * i);\n    }\n}",
-    "image": "images/proofs_net/net_proof_48.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5642,7 +5895,8 @@
     "correctAnswers": [
       "E"
     ],
-    "explanation": "Trong C#, bạn không thể khai báo một biến cục bộ trùng tên (`int i = 200;`) trong một khối lồng nhau (vòng lặp for) nếu biến đó đã được khai báo ở phạm vi bên ngoài (`int i = 100;`). Trình biên dịch C# sẽ báo lỗi: CS0136 (A local variable named 'i' cannot be declared in this scope)."
+    "explanation": "Trong C#, bạn không thể khai báo một biến cục bộ trùng tên (`int i = 200;`) trong một khối lồng nhau (vòng lặp for) nếu biến đó đã được khai báo ở phạm vi bên ngoài (`int i = 100;`). Trình biên dịch C# sẽ báo lỗi: CS0136 (A local variable named 'i' cannot be declared in this scope).",
+    "proofImage": "images/proofs_net/net_proof_48.png"
   },
   {
     "id": 46,
@@ -5652,7 +5906,7 @@
     "title": "Câu 51/60: Which of the following statements related to constructor is True?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_49.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5671,7 +5925,8 @@
     "correctAnswers": [
       "C"
     ],
-    "explanation": "Hàm tạo tĩnh (static constructor) được gọi tự động để khởi tạo lớp trước khi thể hiện đầu tiên được tạo hoặc bất kỳ thành viên tĩnh nào được tham chiếu. Do đó, static constructor luôn thực thi trước bất kỳ constructor cấp thể hiện (instance-level constructors) nào."
+    "explanation": "Hàm tạo tĩnh (static constructor) được gọi tự động để khởi tạo lớp trước khi thể hiện đầu tiên được tạo hoặc bất kỳ thành viên tĩnh nào được tham chiếu. Do đó, static constructor luôn thực thi trước bất kỳ constructor cấp thể hiện (instance-level constructors) nào.",
+    "proofImage": "images/proofs_net/net_proof_49.png"
   },
   {
     "id": 47,
@@ -5681,7 +5936,7 @@
     "title": "Câu 53/60: What enables you to connect and interact with any database supported by ADO.NET?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_50.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5704,7 +5959,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "`SqlDataSource` (hoặc các điều khiển nguồn dữ liệu dựa trên ADO.NET Data Provider) cho phép kết nối, truy vấn, và tương tác với các hệ quản trị cơ sở dữ liệu quan hệ được hỗ trợ trong kiến trúc ADO.NET."
+    "explanation": "`SqlDataSource` (hoặc các điều khiển nguồn dữ liệu dựa trên ADO.NET Data Provider) cho phép kết nối, truy vấn, và tương tác với các hệ quản trị cơ sở dữ liệu quan hệ được hỗ trợ trong kiến trúc ADO.NET.",
+    "proofImage": "images/proofs_net/net_proof_50.png"
   },
   {
     "id": 48,
@@ -5714,7 +5970,7 @@
     "title": "Câu 54/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "using System;\nnamespace Exam {\n    class Program {\n        static void Main(string[] args) {\n            int[] arr = new int[9];\n            for (int i = 9; i >= 0; i--) {\n                arr[i] = i;\n                Console.Write(arr[i]);\n            }\n            Console.ReadKey();\n        }\n    }\n}",
-    "image": "images/proofs_net/net_proof_51.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5737,7 +5993,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Mảng `int[] arr = new int[9];` có 9 phần tử với chỉ số hợp lệ từ `0` đến `8`. Ở bước lặp đầu tiên của vòng for, `i = 9`, biểu thức `arr[9] = 9;` truy cập vượt ra ngoài biên của mảng, dẫn đến việc ném ra ngoại lệ `IndexOutOfRangeException` lúc chạy (Runtime Error)."
+    "explanation": "Mảng `int[] arr = new int[9];` có 9 phần tử với chỉ số hợp lệ từ `0` đến `8`. Ở bước lặp đầu tiên của vòng for, `i = 9`, biểu thức `arr[9] = 9;` truy cập vượt ra ngoài biên của mảng, dẫn đến việc ném ra ngoại lệ `IndexOutOfRangeException` lúc chạy (Runtime Error).",
+    "proofImage": "images/proofs_net/net_proof_51.png"
   },
   {
     "id": 49,
@@ -5747,7 +6004,7 @@
     "title": "Câu 55/60: Which of these keywords must be used to monitor exceptions?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_52.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5770,7 +6027,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "Khối `try` được sử dụng để bao bọc và theo dõi (monitor) các đoạn mã có thể phát sinh ngoại lệ lúc runtime. Nếu có ngoại lệ xảy ra trong khối try, luồng điều khiển sẽ chuyển tới khối `catch` tương ứng."
+    "explanation": "Khối `try` được sử dụng để bao bọc và theo dõi (monitor) các đoạn mã có thể phát sinh ngoại lệ lúc runtime. Nếu có ngoại lệ xảy ra trong khối try, luồng điều khiển sẽ chuyển tới khối `catch` tương ứng.",
+    "proofImage": "images/proofs_net/net_proof_52.png"
   },
   {
     "id": 50,
@@ -5780,7 +6038,7 @@
     "title": "Câu 56/60: You are using an ArrayList collection in your program. You want to modify your program to take advantage of type safety and increased performance offered by the generic types. Which of the following generic types should you use to replace ArrayList with in your program?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_53.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5803,7 +6061,8 @@
     "correctAnswers": [
       "B"
     ],
-    "explanation": "`List<T>` trong `System.Collections.Generic` là phiên bản generic trực tiếp thay thế cho `ArrayList` phi generic trong `System.Collections`, mang lại sự an toàn kiểu dữ liệu (type safety) và loại bỏ hoàn toàn chi phí boxing/unboxing."
+    "explanation": "`List<T>` trong `System.Collections.Generic` là phiên bản generic trực tiếp thay thế cho `ArrayList` phi generic trong `System.Collections`, mang lại sự an toàn kiểu dữ liệu (type safety) và loại bỏ hoàn toàn chi phí boxing/unboxing.",
+    "proofImage": "images/proofs_net/net_proof_53.png"
   },
   {
     "id": 51,
@@ -5813,7 +6072,7 @@
     "title": "Câu 57/60: Which keyword is used to refer baseclass constructor to subclass constructor?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_54.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5836,7 +6095,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Từ khóa `base` được dùng trong constructor của lớp con để gọi tường minh constructor của lớp cơ sở, ví dụ: `public DerivedClass(int x) : base(x) { }`."
+    "explanation": "Từ khóa `base` được dùng trong constructor của lớp con để gọi tường minh constructor của lớp cơ sở, ví dụ: `public DerivedClass(int x) : base(x) { }`.",
+    "proofImage": "images/proofs_net/net_proof_54.png"
   },
   {
     "id": 52,
@@ -5846,7 +6106,7 @@
     "title": "Câu 58/60: Your C# program needs to return the total number of customers in a SQL Server database. The program will be used several times a day. What is the fastest way to return this information from your program? (Select all answers that apply)",
     "prompt": "Chọn các phương án đúng:",
     "code": null,
-    "image": "images/proofs_net/net_proof_55.png",
+    "image": null,
     "isMultiple": true,
     "options": [
       {
@@ -5874,7 +6134,8 @@
       "A",
       "D"
     ],
-    "explanation": "Cách nhanh nhất để lấy một giá trị tổng hợp đơn lẻ (như tổng số khách hàng) nhiều lần trong ngày là sử dụng một Stored Procedure (được tiền biên dịch và tối ưu kế hoạch thực thi trên SQL Server) kết hợp với phương thức `SqlCommand.ExecuteScalar()` (chỉ lấy giá trị ô đơn lẻ, không tốn tài nguyên dựng bảng như DataAdapter)."
+    "explanation": "Cách nhanh nhất để lấy một giá trị tổng hợp đơn lẻ (như tổng số khách hàng) nhiều lần trong ngày là sử dụng một Stored Procedure (được tiền biên dịch và tối ưu kế hoạch thực thi trên SQL Server) kết hợp với phương thức `SqlCommand.ExecuteScalar()` (chỉ lấy giá trị ô đơn lẻ, không tốn tài nguyên dựng bảng như DataAdapter).",
+    "proofImage": "images/proofs_net/net_proof_55.png"
   },
   {
     "id": 53,
@@ -5884,7 +6145,7 @@
     "title": "Câu 59/60: Which among the following is NOT an exception?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": null,
-    "image": "images/proofs_net/net_proof_56.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5907,7 +6168,8 @@
     "correctAnswers": [
       "D"
     ],
-    "explanation": "'Incorrect Arithmetic Expression' (biểu thức số học sai cú pháp) là một lỗi biên dịch (Compile-time syntax error), không phải là ngoại lệ lúc chạy (Runtime Exception). Trong khi đó StackOverflowException và OverflowException đều là các ngoại lệ chuẩn trong .NET."
+    "explanation": "'Incorrect Arithmetic Expression' (biểu thức số học sai cú pháp) là một lỗi biên dịch (Compile-time syntax error), không phải là ngoại lệ lúc chạy (Runtime Exception). Trong khi đó StackOverflowException và OverflowException đều là các ngoại lệ chuẩn trong .NET.",
+    "proofImage": "images/proofs_net/net_proof_56.png"
   },
   {
     "id": 54,
@@ -5917,7 +6179,7 @@
     "title": "Câu 60/60: What will be the output of the following C# code?",
     "prompt": "Chọn một phương án đúng nhất:",
     "code": "static void Main(string[] args) {\n    int var_X = 10;\n    do {\n        Console.Write(var_X++);\n    } while (Convert.ToBoolean(5) && Convert.ToBoolean(4) && Convert.ToBoolean(3) && Convert.ToBoolean(2) && Convert.ToBoolean(1) && Convert.ToBoolean(0));\n}",
-    "image": "images/proofs_net/net_proof_57.png",
+    "image": null,
     "isMultiple": false,
     "options": [
       {
@@ -5944,7 +6206,8 @@
     "correctAnswers": [
       "A"
     ],
-    "explanation": "Trong vòng lặp `do-while`, khối lệnh chạy lần đầu tiên in ra giá trị hiện tại của `var_X` là `10` rồi tăng lên 11. Sau đó điều kiện while được đánh giá: `Convert.ToBoolean(0)` trả về `false`, làm cho toàn bộ biểu thức logic `&&` trở thành `false`. Vòng lặp kết thúc ngay lập tức. Kết quả in ra duy nhất số `10`."
+    "explanation": "Trong vòng lặp `do-while`, khối lệnh chạy lần đầu tiên in ra giá trị hiện tại của `var_X` là `10` rồi tăng lên 11. Sau đó điều kiện while được đánh giá: `Convert.ToBoolean(0)` trả về `false`, làm cho toàn bộ biểu thức logic `&&` trở thành `false`. Vòng lặp kết thúc ngay lập tức. Kết quả in ra duy nhất số `10`.",
+    "proofImage": "images/proofs_net/net_proof_57.png"
   }
 ];
 
@@ -7168,27 +7431,122 @@
         .replace(/'/g, "&#039;");
     }
 
-    function openLightbox(src, title) {
-      const lightbox = document.getElementById('image-lightbox');
-      const img = document.getElementById('image-lightbox-img');
-      const titleEl = document.getElementById('image-lightbox-title');
-      if (!lightbox || !img) return;
-      img.src = src;
-      if (titleEl) {
-        titleEl.textContent = title || 'Đối chiếu đáp án PDF';
-      }
-      lightbox.classList.add('active');
-    }
-    window.openLightbox = openLightbox;
+    function openExplanationModal() {
+      SoundFX.click();
+      const q = BENCHMARK_QUESTIONS[currentQuestionIndex];
+      if (!q) return;
 
-    function closeLightbox() {
-      const lightbox = document.getElementById('image-lightbox');
-      const img = document.getElementById('image-lightbox-img');
-      if (!lightbox) return;
-      lightbox.classList.remove('active');
-      if (img) img.src = '';
+      const modal = document.getElementById('explanation-modal');
+      const titleEl = document.getElementById('explanation-modal-title');
+      const bodyEl = document.getElementById('explanation-modal-body');
+      if (!modal || !bodyEl) return;
+
+      const cleanTitle = q.title ? q.title.split(':')[0] : `Câu ${currentQuestionIndex + 1}`;
+      if (titleEl) {
+        titleEl.textContent = `Giải thích & Đáp án — ${cleanTitle}`;
+      }
+
+      const correctLabels = q.correctAnswers || [];
+      let correctOptionsHtml = '';
+      if (q.options && q.options.length) {
+        const correctOpts = q.options.filter(opt => correctLabels.includes(opt.label));
+        if (correctOpts.length > 0) {
+          correctOptionsHtml = correctOpts.map(opt => `
+            <div class="explanation-correct-item">
+              <span class="explanation-correct-badge">${escapeHtml(opt.label)}</span>
+              <span class="explanation-correct-text">${escapeHtml(opt.text.replace(/^[A-Ga-g]\.\s*/, ''))}</span>
+            </div>
+          `).join('');
+        }
+      }
+
+      const proofImgSrc = q.proofImage || q.image;
+
+      let bodyHtml = `
+        <div class="explanation-question-header">
+          <span class="explanation-chapter-tag">${escapeHtml(q.chapterTag || q.chapter || 'Kiến thức cốt lõi')}</span>
+          <h3 class="explanation-question-title">${escapeHtml(q.title)}</h3>
+        </div>
+      `;
+
+      if (correctOptionsHtml) {
+        bodyHtml += `
+          <div class="explanation-correct-box">
+            <div class="explanation-correct-box-header">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Đáp án chính xác:</span>
+            </div>
+            <div class="explanation-correct-list">
+              ${correctOptionsHtml}
+            </div>
+          </div>
+        `;
+      }
+
+      if (q.explanation) {
+        bodyHtml += `
+          <div class="explanation-content-box">
+            <div class="explanation-content-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Phân tích & Cơ sở lý thuyết:</span>
+            </div>
+            <div class="explanation-content-text">${escapeHtml(q.explanation)}</div>
+          </div>
+        `;
+      } else {
+        bodyHtml += `
+          <div class="explanation-content-box">
+            <div class="explanation-content-title">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Ghi chú ôn tập:</span>
+            </div>
+            <div class="explanation-content-text">Đối chiếu phương án đã chọn với đáp án chuẩn bên trên để ghi nhớ cấu trúc cú pháp và nguyên lý ngôn ngữ.</div>
+          </div>
+        `;
+      }
+
+      if (proofImgSrc) {
+        bodyHtml += `
+          <details class="explanation-proof-accordion">
+            <summary class="explanation-proof-summary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span>Xem ảnh chụp đề bài gốc để đối chiếu</span>
+            </summary>
+            <div class="explanation-proof-img-wrap">
+              <img src="${proofImgSrc}" alt="Ảnh chụp đề bài gốc" class="explanation-proof-img" />
+            </div>
+          </details>
+        `;
+      }
+
+      bodyEl.innerHTML = bodyHtml;
+      modal.classList.add('active');
     }
-    window.closeLightbox = closeLightbox;
+    window.openExplanationModal = openExplanationModal;
+
+    function closeExplanationModal() {
+      const modal = document.getElementById('explanation-modal');
+      if (modal) modal.classList.remove('active');
+    }
+    window.closeExplanationModal = closeExplanationModal;
+
+    // Backward compatibility aliases
+    window.openLightbox = openExplanationModal;
+    window.closeLightbox = closeExplanationModal;
 
     // App initialization
     document.addEventListener('DOMContentLoaded', () => {
@@ -7248,7 +7606,7 @@
         btnCloseLb.addEventListener('click', (e) => {
           e.stopPropagation();
           SoundFX.click();
-          closeLightbox();
+          closeExplanationModal();
         });
       }
 
@@ -7371,7 +7729,7 @@
       if (lightbox) {
         lightbox.addEventListener('click', (e) => {
           if (e.target === lightbox) {
-            closeLightbox();
+            closeExplanationModal();
           }
         });
       }
@@ -7383,10 +7741,10 @@
           return;
         }
 
-        const lb = document.getElementById('image-lightbox');
+        const lb = document.getElementById('explanation-modal');
         if (e.key === 'Escape') {
           if (lb && lb.classList.contains('active')) {
-            closeLightbox();
+            closeExplanationModal();
             return;
           }
           const mapPopover = document.getElementById('map-popover');
@@ -7398,7 +7756,7 @@
 
         if (e.key === 'p' || e.key === 'P' || e.key === 'i' || e.key === 'I') {
           if (lb && lb.classList.contains('active')) {
-            closeLightbox();
+            closeExplanationModal();
           } else {
             const btnProofEl = document.getElementById('btn-proof-image');
             if (btnProofEl) btnProofEl.click();
