@@ -877,8 +877,11 @@
       right: calc(100% + 14px);
       bottom: 0;
       width: 340px;
-      max-height: 420px;
-      overflow: hidden;
+      max-width: calc(100vw - 440px);
+      max-height: min(420px, calc(100vh - 120px));
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
       border-radius: 16px;
@@ -1682,14 +1685,17 @@
 
   
     /* ==========================================================================
-       Explanation Modal (Clean Theory & Analysis Popup)
+       Explanation Modal (Clean Theory & Analysis Popup - Fully Responsive)
        ========================================================================== */
     .explanation-modal-overlay {
       position: fixed;
+      inset: 0;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
       height: 100dvh;
       min-height: 100vh;
       min-height: 100dvh;
@@ -1700,6 +1706,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      overscroll-behavior: contain;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1711,12 +1721,16 @@
     .explanation-modal-card {
       background: #FFFFFF;
       border-radius: 20px;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
-      width: min(720px, 94vw);
-      max-height: min(85vh, 720px);
+      width: 100%;
+      max-width: 680px;
+      max-height: calc(100dvh - 40px);
+      max-height: calc(100vh - 40px);
       overflow: hidden;
+      box-sizing: border-box;
+      margin: auto;
       transform: scale(0.96) translateY(8px);
       transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -1739,18 +1753,22 @@
       color: #E0562D;
       font-weight: 700;
       font-size: 14.5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .explanation-modal-close {
       background: transparent;
       border: none;
       cursor: pointer;
       color: #64748B;
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       transition: all 0.15s ease;
     }
     .explanation-modal-close:hover {
@@ -1758,7 +1776,11 @@
       color: #0F172A;
     }
     .explanation-modal-body {
+      flex: 1 1 auto;
+      min-height: 0;
       overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
       padding: 22px;
       display: flex;
       flex-direction: column;
@@ -1767,6 +1789,20 @@
       color: #0F172A;
       font-size: 14px;
       line-height: 1.65;
+      box-sizing: border-box;
+    }
+    .explanation-modal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+    .explanation-modal-body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .explanation-modal-body::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 9999px;
+    }
+    .explanation-modal-body::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
     }
     .explanation-chapter-tag {
       display: inline-block;
@@ -1779,7 +1815,6 @@
       border: 1px solid #FFEDD5;
       padding: 2px 10px;
       border-radius: 6px;
-      margin-bottom: 8px;
     }
     .explanation-question-title {
       font-size: 15px;
@@ -1787,6 +1822,8 @@
       color: #0F172A;
       line-height: 1.5;
       margin: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .explanation-correct-box {
       background: #F0FDF4;
@@ -1815,6 +1852,7 @@
       font-size: 14px;
       font-weight: 600;
       color: #166534;
+      word-break: break-word;
     }
     .explanation-correct-badge {
       display: inline-flex;
@@ -1852,6 +1890,8 @@
       line-height: 1.7;
       color: #1E293B;
       white-space: pre-wrap;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     .explanation-proof-accordion {
       border: 1px solid #E2E8F0;
@@ -1884,7 +1924,7 @@
     .explanation-proof-img {
       max-width: 100%;
       height: auto;
-      max-height: 260px;
+      max-height: min(340px, 40vh);
       object-fit: contain;
       border-radius: 6px;
     }
@@ -1953,6 +1993,18 @@
       border-color: #FFEDD5;
     }
 
+  @media (max-width: 640px) {
+      .explanation-modal-overlay {
+        padding: 10px;
+      }
+      .explanation-modal-card {
+        max-height: calc(100dvh - 20px);
+        border-radius: 16px;
+      }
+      .explanation-modal-body {
+        padding: 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -7453,16 +7505,21 @@
         const popRect = mapPopover.getBoundingClientRect();
         const previewHeight = previewCard.offsetHeight || 220;
 
-        // Distance from bottom of mapPopover to the cell's center
-        const cellCenterFromPopBottom = popRect.bottom - (cellRect.top + cellRect.height / 2);
-        let bottomOffset = cellCenterFromPopBottom - (previewHeight / 2);
-
-        // Clamp so it never extends below popover bottom (0px) or above popover top
-        const minBottom = 0;
-        const maxBottom = Math.max(0, popRect.height - previewHeight);
-        bottomOffset = Math.max(minBottom, Math.min(maxBottom, bottomOffset));
-
-        previewCard.style.bottom = `${bottomOffset}px`;
+        // If screen to the left is tight (< 360px), dock preview safely
+        if (popRect.left < 360) {
+          previewCard.style.right = 'auto';
+          previewCard.style.left = '14px';
+          previewCard.style.bottom = '14px';
+        } else {
+          previewCard.style.right = 'calc(100% + 14px)';
+          previewCard.style.left = 'auto';
+          const cellCenterFromPopBottom = popRect.bottom - (cellRect.top + cellRect.height / 2);
+          let bottomOffset = cellCenterFromPopBottom - (previewHeight / 2);
+          const minBottom = 0;
+          const maxBottom = Math.max(0, popRect.height - previewHeight);
+          bottomOffset = Math.max(minBottom, Math.min(maxBottom, bottomOffset));
+          previewCard.style.bottom = `${bottomOffset}px`;
+        }
         previewCard.classList.add('is-visible');
       });
 
