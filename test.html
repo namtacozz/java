@@ -25,15 +25,25 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    html, body {
+      height: 100%;
+      height: 100vh;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin: 0;
+      padding: 0;
       background-color: #F8FAFC;
       color: #0F172A;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       line-height: 1.6;
-      min-height: 100vh;
-      min-height: 100dvh;
       display: flex;
       flex-direction: column;
+    }
+
+    @media (min-width: 769px) {
+      html, body {
+        overflow: hidden; /* Desktop: Absolutely NO page scrolling; fits 1 single frame */
+      }
     }
 
     /* Fixed Top Progress Header: Centered at top, matching full view width */
@@ -41,9 +51,10 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 20px 32px 0;
+      padding: 10px 24px 4px;
       flex-shrink: 0;
       z-index: 10;
+      box-sizing: border-box;
     }
 
     /* Progress Tracker: Constant fixed width matching full view card */
@@ -90,19 +101,25 @@
       white-space: nowrap;
     }
 
-    /* Container: Full view across web, consistent width across all questions */
+    /* Container: Fits strictly within remaining viewport height above bottom actions */
     .test-container {
-      width: min(1520px, 94vw);
+      width: min(1560px, 96vw);
       max-width: 100%;
-      margin: auto;
-      padding: 16px 0 65px;
+      margin: 0 auto;
+      flex: 1 1 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 4px 16px 66px; /* 66px clearance prevents bottom actions from covering card corners */
       box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
     }
 
     @keyframes cardTransitionIn {
       0% {
         opacity: 0;
-        transform: translateY(12px) scale(0.99);
+        transform: translateY(8px) scale(0.992);
       }
       100% {
         opacity: 1;
@@ -110,38 +127,76 @@
       }
     }
 
-    /* Question Card: Large full-view presentation, zoom scaled */
+    /* Question Card: Stretches neatly to available height in single frame */
     .question-card {
       background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-radius: 20px;
-      padding: 28px 36px;
-      box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.07);
+      border: 1.5px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 18px 26px;
+      box-shadow: 0 4px 24px -4px rgba(15, 23, 42, 0.06);
+      flex: 1 1 0;
+      min-height: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      overflow: hidden;
       margin-bottom: 0;
     }
 
     .question-card.animating-in {
-      animation: cardTransitionIn 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation: cardTransitionIn 0.22s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* 2-Column Horizontal Grid: Generous proportions */
+    /* 2-Column Horizontal Grid: Stretches full card height */
     .question-grid-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
-      gap: 36px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 28px;
+      flex: 1 1 0;
+      min-height: 0;
+      height: 100%;
+      align-items: stretch;
     }
 
     .question-left-col {
       display: flex;
       flex-direction: column;
       min-width: 0;
+      height: 100%;
+      max-height: 100%;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 8px;
     }
 
     .question-right-col {
       display: flex;
       flex-direction: column;
       min-width: 0;
+      height: 100%;
+      max-height: 100%;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 8px;
+    }
+
+    .question-left-col::-webkit-scrollbar,
+    .question-right-col::-webkit-scrollbar {
+      width: 5px;
+    }
+    .question-left-col::-webkit-scrollbar-track,
+    .question-right-col::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .question-left-col::-webkit-scrollbar-thumb,
+    .question-right-col::-webkit-scrollbar-thumb {
+      background: #E2E8F0;
+      border-radius: 9999px;
+    }
+    .question-left-col::-webkit-scrollbar-thumb:hover,
+    .question-right-col::-webkit-scrollbar-thumb:hover {
+      background: #CBD5E1;
     }
 
     .question-subject-badge {
@@ -159,11 +214,11 @@
     }
 
     .question-title {
-      font-size: 18.5px;
+      font-size: 17.5px;
       font-weight: 700;
       color: #0F172A;
-      line-height: 1.55;
-      margin-bottom: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
       white-space: pre-wrap;
     }
 
@@ -171,17 +226,19 @@
     .code-box {
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 12px;
-      padding: 16px 22px;
-      margin: 10px 0 14px;
-      overflow-x: hidden;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 6px 0 10px;
+      max-height: 240px;
+      overflow-y: auto;
+      overflow-x: auto;
     }
 
     .code-box pre {
       margin: 0;
       font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
-      font-size: 14.5px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.55;
       color: #0F172A;
       white-space: pre-wrap;
       word-break: break-word;
@@ -190,21 +247,21 @@
 
     /* Image Wrapper */
     .question-image-wrapper {
-      margin: 10px 0 14px;
+      margin: 6px 0 10px;
       border: 1px solid #E2E8F0;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
       background: #F8FAFC;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
-      max-height: 320px;
+      padding: 8px;
+      max-height: 240px;
     }
 
     .question-image {
       max-width: 100%;
-      max-height: 300px;
+      max-height: 220px;
       height: auto;
       width: auto;
       object-fit: contain;
@@ -234,7 +291,8 @@
     .options-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
+      flex: 1 1 auto;
     }
 
     .option-row {
@@ -242,15 +300,15 @@
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      padding: 12px 16px;
-      min-height: 48px;
+      padding: 10px 14px;
+      min-height: 44px;
       background: #FFFFFF;
       border: 1.5px solid #E2E8F0;
       border-radius: 10px;
       cursor: pointer;
       user-select: none;
       transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-      font-size: 15px;
+      font-size: 14px;
       color: #1E293B;
       line-height: 1.45;
     }
@@ -424,25 +482,26 @@
     }
 
 
-    /* Floating Action Bar (Fixed Bottom-Right) */
+    /* Floating Action Bar (Fixed Bottom-Right within clear safety zone) */
     .test-actions-bar {
       position: fixed;
-      bottom: 24px;
-      right: 28px;
+      bottom: 12px;
+      right: 24px;
       z-index: 99;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      height: 46px;
     }
 
     .btn-next-question {
       background: #E0562D;
       color: #FFFFFF;
       font-family: 'Inter', sans-serif;
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 700;
-      height: 48px;
-      padding: 0 24px;
+      height: 44px;
+      padding: 0 22px;
       border-radius: 9999px;
       border: none;
       cursor: pointer;
@@ -450,7 +509,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      box-shadow: 0 4px 16px rgba(224, 86, 45, 0.4), 0 2px 4px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 16px rgba(224, 86, 45, 0.35), 0 2px 4px rgba(0, 0, 0, 0.08);
       transition: all 0.2s ease;
       box-sizing: border-box;
     }
@@ -471,8 +530,8 @@
 
     /* Previous Question Button */
     .btn-prev-question {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #FFFFFF;
       border: 1.5px solid #E2E8F0;
@@ -502,10 +561,10 @@
       pointer-events: none;
     }
 
-    /* Proof Image Button (Right next to Map button) */
+    /* Proof / Hint Button (Right next to Map button) */
     .btn-proof-image {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #FFFFFF;
       border: 1.5px solid #E2E8F0;
@@ -537,8 +596,8 @@
     }
 
     .btn-sound-toggle {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #FFFFFF;
       color: #0F172A;
@@ -680,8 +739,8 @@
     }
 
     .btn-map-toggle {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #E0562D;
       color: #FFFFFF;
@@ -701,21 +760,22 @@
       box-shadow: 0 6px 20px rgba(224, 86, 45, 0.5);
     }
 
-    /* Secondary Actions Bar (Fixed Bottom-Left) */
+    /* Secondary Actions Bar (Fixed Bottom-Left within clear safety zone) */
     .test-secondary-actions-bar {
       position: fixed;
-      bottom: 24px;
-      left: 28px;
+      bottom: 12px;
+      left: 24px;
       z-index: 99;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      height: 46px;
     }
 
     .btn-reset-toggle,
     .btn-timer-toggle {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: #FFFFFF;
       color: #0F172A;
@@ -728,7 +788,7 @@
       transition: all 0.2s ease;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       user-select: none;
       flex-shrink: 0;
@@ -745,9 +805,9 @@
 
     .btn-timer-toggle.is-counting {
       width: auto;
-      min-width: 48px;
-      height: 48px;
-      padding: 0 16px;
+      min-width: 44px;
+      height: 44px;
+      padding: 0 14px;
       border-radius: 9999px;
       gap: 7px;
       background: #FFFFFF;
@@ -1209,7 +1269,7 @@
     .quote-vfx-stage {
       position: fixed;
       left: 50%;
-      bottom: 24px;
+      bottom: 12px;
       transform: translate(-50%, 60px) scale(0.9);
       z-index: 95;
       pointer-events: none;
@@ -1685,7 +1745,7 @@
 
   
     /* ==========================================================================
-       Explanation Modal (Clean Theory & Analysis Popup - Fully Responsive)
+       Explanation & Hint Modal (Strictly Centered Popup, Blur & Dim Backdrop)
        ========================================================================== */
     .explanation-modal-overlay {
       position: fixed;
@@ -1694,44 +1754,41 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       height: 100dvh;
-      min-height: 100vh;
-      min-height: 100dvh;
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      z-index: 9999;
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 99999;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
       box-sizing: border-box;
-      overflow-y: auto;
-      overscroll-behavior: contain;
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
-      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.22s;
     }
     .explanation-modal-overlay.active {
       opacity: 1;
+      visibility: visible;
       pointer-events: auto;
     }
     .explanation-modal-card {
       background: #FFFFFF;
       border-radius: 20px;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
       width: 100%;
       max-width: 680px;
-      max-height: calc(100dvh - 40px);
-      max-height: calc(100vh - 40px);
+      max-height: min(85vh, 85dvh);
       overflow: hidden;
       box-sizing: border-box;
       margin: auto;
-      transform: scale(0.96) translateY(8px);
+      transform: scale(0.93) translateY(12px);
       transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .explanation-modal-overlay.active .explanation-modal-card {
@@ -1949,6 +2006,33 @@
       gap: 8px;
       color: #334155;
     }
+    /* Card Inline Hint Button */
+    .btn-hint-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #D97706;
+      background: #FEF3C7;
+      border: 1px solid #FDE68A;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: inherit;
+      line-height: 1;
+    }
+    .btn-hint-pill:hover {
+      background: #FDE68A;
+      color: #B45309;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+    }
+    .btn-hint-pill svg {
+      color: #D97706;
+      flex-shrink: 0;
+    }
     .options-count-badge {
       display: inline-flex;
       align-items: center;
@@ -2097,8 +2181,8 @@
         </svg>
       </button>
 
-      <!-- Proof Image Button (Sát bên trái nút Map) -->
-      <button type="button" class="btn-proof-image" id="btn-proof-image" title="Xem giải thích chi tiết & đáp án (Phím P)" aria-label="Xem giải thích chi tiết">
+      <!-- Hint / Explanation Button (Sát bên trái nút Map) -->
+      <button type="button" class="btn-proof-image" id="btn-proof-image" title="Gợi ý & Đáp án chi tiết (Phím H / P / K)" aria-label="Gợi ý & Đáp án chi tiết">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M9 18h6"></path>
           <path d="M10 22h4"></path>
@@ -8566,9 +8650,19 @@
               </svg>
               <span>${escapeHtml(promptText)}</span>
             </div>
-            <span class="options-count-badge ${numCorrect > 1 ? 'is-multi' : ''}">
-              ${numCorrect > 1 ? `${numCorrect} đáp án đúng` : '1 đáp án đúng'}
-            </span>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <button type="button" class="btn-hint-pill" onclick="openExplanationModal()" title="Xem gợi ý & giải thích chi tiết (Phím H / P / K)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                  <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"></path>
+                </svg>
+                <span>Gợi ý</span>
+              </button>
+              <span class="options-count-badge ${numCorrect > 1 ? 'is-multi' : ''}">
+                ${numCorrect > 1 ? `${numCorrect} đáp án đúng` : '1 đáp án đúng'}
+              </span>
+            </div>
           </div>
       `;
 
