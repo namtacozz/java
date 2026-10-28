@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>ViT - Ôn tập Java</title>
+  <title>ViT - Luyện thi Trắc nghiệm .NET & Java</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="shortcut icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
@@ -7432,6 +7432,7 @@
 
       currentSubjectId = subjectId;
       localStorage.setItem('vit_exam_selected_subject', subjectId);
+      document.title = (subjectId === 'net') ? 'ViT - Ôn tập .NET (C#)' : 'ViT - Ôn tập Java';
       BENCHMARK_QUESTIONS = SUBJECT_CONFIGS[subjectId].questions;
       STORAGE_KEY = SUBJECT_CONFIGS[subjectId].storageKey;
 
